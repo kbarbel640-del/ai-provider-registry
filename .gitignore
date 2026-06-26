@@ -6,3 +6,9 @@ __pycache__/
 *.pyc
 .env
 upload.sh
+openapi_*.json
+providers.yaml
+dork_templates.yaml
+mcp_osint_builder_prompt.md
+README.md
+package*.json

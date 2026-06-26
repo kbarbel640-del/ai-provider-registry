@@ -1,5 +1,5 @@
 # AI Provider Registry Index
-# https://sayhey.site.je/
+# https://kbarbel640-del.github.io/ai-provider-registry/
 # For LLM consumption - discover all files in the registry.
 
 ## Providers
