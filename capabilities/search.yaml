@@ -1,0 +1,12 @@
+description: Supports web search or knowledge retrieval.
+schema:
+  type: object
+  properties:
+    query:
+      type: string
+    search_context_size:
+      type: string
+    search_domain_filter:
+      type: array
+      items:
+        type: string

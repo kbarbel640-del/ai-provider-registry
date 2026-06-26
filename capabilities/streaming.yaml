@@ -1,0 +1,11 @@
+description: Supports server-sent events (SSE) for real-time token delivery.
+schema:
+  type: object
+  properties:
+    stream:
+      type: boolean
+    stream_options:
+      type: object
+      properties:
+        include_usage:
+          type: boolean

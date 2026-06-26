@@ -1,0 +1,14 @@
+description: Supports re-ranking documents based on relevance to a query.
+schema:
+  type: object
+  properties:
+    query:
+      type: string
+    documents:
+      type: array
+      items:
+        type: string
+    top_n:
+      type: integer
+    model:
+      type: string

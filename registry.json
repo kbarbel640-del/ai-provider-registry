@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "name": "AI Provider Registry",
+    "description": "A structured registry of AI providers, models, and capabilities for LLM consumption.",
+    "version": "1.0.0",
+    "last_updated": "2026-06-26",
+    "homepage": "https://sayhey.site.je/",
+    "llms_txt": "https://sayhey.site.je/llms.txt",
+    "registry_json": "https://sayhey.site.je/registry.json"
+  },
+  "providers": [
+    {"id": "openai",     "free": false, "api_style": "openai",    "supports": ["chat", "vision", "image", "tools", "json_mode", "streaming", "speech", "moderation", "embeddings"]},
+    {"id": "anthropic",  "free": false, "api_style": "anthropic", "supports": ["chat", "vision", "tools", "json_mode", "streaming"]},
+    {"id": "groq",       "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "json_mode", "streaming", "vision"]},
+    {"id": "mistral",    "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "json_mode", "streaming", "vision", "embeddings", "code"]},
+    {"id": "google",     "free": true,  "api_style": "google",    "supports": ["chat", "vision", "tools", "json_mode", "streaming", "embeddings"]},
+    {"id": "openrouter", "free": true,  "api_style": "openai",    "supports": ["chat", "vision", "tools", "json_mode", "streaming", "image"]},
+    {"id": "together",   "free": true,  "api_style": "openai",    "supports": ["chat", "vision", "tools", "json_mode", "streaming", "image", "embeddings"]},
+    {"id": "deepseek",   "free": false, "api_style": "openai",    "supports": ["chat", "tools", "json_mode", "streaming", "vision"]},
+    {"id": "cohere",     "free": true,  "api_style": "cohere",    "supports": ["chat", "tools", "streaming", "embeddings", "rerank", "classification"]},
+    {"id": "cerebras",   "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "json_mode", "streaming"]},
+    {"id": "perplexity", "free": false, "api_style": "openai",    "supports": ["chat", "streaming", "search"]}
+  ],
+  "capabilities": [
+    "chat", "vision", "image", "tools", "streaming", "json_mode",
+    "embeddings", "rerank", "speech", "moderation", "search"
+  ]
+}

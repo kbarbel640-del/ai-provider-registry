@@ -1,0 +1,17 @@
+name: Perplexity AI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.perplexity.ai/guides/getting-started
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.perplexity.ai/docs/pricing
+supports:
+  - chat
+  - streaming
+  - search
+models:
+  - sonar-pro
+  - sonar
+endpoint: https://api.perplexity.ai

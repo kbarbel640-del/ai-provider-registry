@@ -1,0 +1,13 @@
+description: Supports text-to-speech (TTS) and/or speech-to-text (STT).
+schema:
+  type: object
+  properties:
+    input:
+      type: string
+      description: Text for TTS or audio for STT
+    model:
+      type: string
+    voice:
+      type: string
+    response_format:
+      type: string

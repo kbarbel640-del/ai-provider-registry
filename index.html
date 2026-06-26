@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Provider Registry</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --fg: #e1e4e8;
+      --accent: #58a6ff;
+      --border: #30363d;
+      --card: #161b22;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 2rem; margin-bottom: 8px; color: #fff; }
+    h2 { font-size: 1.3rem; margin: 32px 0 12px; color: var(--accent); }
+    p { margin-bottom: 16px; color: #8b949e; }
+    ul { list-style: none; margin-bottom: 20px; }
+    li { margin: 6px 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .badge {
+      display: inline-block;
+      background: #1f2937;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      margin-left: 6px;
+      color: #8b949e;
+    }
+    .stats { display: flex; gap: 24px; margin: 20px 0; flex-wrap: wrap; }
+    .stat { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 24px; text-align: center; flex: 1; min-width: 100px; }
+    .stat-value { font-size: 1.5rem; font-weight: 700; color: #fff; }
+    .stat-label { font-size: 0.8rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }
+    footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.85rem; color: #484f58; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>AI Provider Registry</h1>
+  <p>Structured, machine-readable metadata for AI providers, models, and capabilities.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-value">11</div><div class="stat-label">Providers</div></div>
+    <div class="stat"><div class="stat-value">9</div><div class="stat-label">Model Families</div></div>
+    <div class="stat"><div class="stat-value">11</div><div class="stat-label">Capabilities</div></div>
+  </div>
+
+  <h2>Files</h2>
+  <ul>
+    <li><a href="llms.txt">llms.txt</a><span class="badge">LLM entry point</span></li>
+    <li><a href="registry.json">registry.json</a><span class="badge">machine metadata</span></li>
+  </ul>
+
+  <h2>Providers</h2>
+  <ul>
+    <li><a href="providers/openai.yaml">openai.yaml</a> <span class="badge">free tier: no</span></li>
+    <li><a href="providers/anthropic.yaml">anthropic.yaml</a> <span class="badge">free tier: no</span></li>
+    <li><a href="providers/groq.yaml">groq.yaml</a> <span class="badge">free tier: yes</span></li>
+    <li><a href="providers/mistral.yaml">mistral.yaml</a> <span class="badge">free tier: yes</span></li>
+    <li><a href="providers/google.yaml">google.yaml</a> <span class="badge">free tier: yes</span></li>
+    <li><a href="providers/openrouter.yaml">openrouter.yaml</a> <span class="badge">free tier: yes</span></li>
+    <li><a href="providers/together.yaml">together.yaml</a> <span class="badge">free tier: yes</span></li>
+    <li><a href="providers/deepseek.yaml">deepseek.yaml</a> <span class="badge">free tier: no</span></li>
+    <li><a href="providers/cohere.yaml">cohere.yaml</a> <span class="badge">free tier: yes</span></li>
+    <li><a href="providers/cerebras.yaml">cerebras.yaml</a> <span class="badge">free tier: yes</span></li>
+    <li><a href="providers/perplexity.yaml">perplexity.yaml</a> <span class="badge">free tier: no</span></li>
+  </ul>
+
+  <h2>Models</h2>
+  <ul>
+    <li><a href="models/llama.yaml">llama.yaml</a></li>
+    <li><a href="models/qwen.yaml">qwen.yaml</a></li>
+    <li><a href="models/gemma.yaml">gemma.yaml</a></li>
+    <li><a href="models/mixtral.yaml">mixtral.yaml</a></li>
+    <li><a href="models/mistral.yaml">mistral.yaml</a></li>
+    <li><a href="models/gpt.yaml">gpt.yaml</a></li>
+    <li><a href="models/claude.yaml">claude.yaml</a></li>
+    <li><a href="models/gemini.yaml">gemini.yaml</a></li>
+    <li><a href="models/deepseek.yaml">deepseek.yaml</a></li>
+  </ul>
+
+  <h2>Capabilities</h2>
+  <ul>
+    <li><a href="capabilities/chat.yaml">chat.yaml</a></li>
+    <li><a href="capabilities/vision.yaml">vision.yaml</a></li>
+    <li><a href="capabilities/image.yaml">image.yaml</a></li>
+    <li><a href="capabilities/tools.yaml">tools.yaml</a></li>
+    <li><a href="capabilities/streaming.yaml">streaming.yaml</a></li>
+    <li><a href="capabilities/json_mode.yaml">json_mode.yaml</a></li>
+    <li><a href="capabilities/embeddings.yaml">embeddings.yaml</a></li>
+    <li><a href="capabilities/rerank.yaml">rerank.yaml</a></li>
+    <li><a href="capabilities/speech.yaml">speech.yaml</a></li>
+    <li><a href="capabilities/moderation.yaml">moderation.yaml</a></li>
+    <li><a href="capabilities/search.yaml">search.yaml</a></li>
+  </ul>
+
+  <h2>Documentation</h2>
+  <ul>
+    <li><a href="docs/provider-schema.md">provider-schema.md</a></li>
+    <li><a href="docs/capability-schema.md">capability-schema.md</a></li>
+    <li><a href="docs/model-schema.md">model-schema.md</a></li>
+    <li><a href="docs/api-styles.md">api-styles.md</a></li>
+  </ul>
+
+  <footer>
+    AI Provider Registry &mdash; automatically updated &mdash; <a href="https://sayhey.site.je/">sayhey.site.je</a>
+  </footer>
+</body>
+</html>

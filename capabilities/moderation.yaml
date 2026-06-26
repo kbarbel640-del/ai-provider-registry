@@ -1,0 +1,12 @@
+description: Supports content moderation and safety classification.
+schema:
+  type: object
+  properties:
+    input:
+      type: string
+    model:
+      type: string
+    categories:
+      type: array
+      items:
+        type: string

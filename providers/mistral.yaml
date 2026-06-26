@@ -1,0 +1,23 @@
+name: Mistral AI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://console.mistral.ai/api-keys/
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://mistral.ai/products/la-plateforme#pricing
+supports:
+  - chat
+  - tools
+  - json_mode
+  - streaming
+  - vision
+  - embeddings
+  - code
+models:
+  - mistral-large-2411
+  - mistral-small-2503
+  - codestral-2505
+  - mistral-embed
+endpoint: https://api.mistral.ai/v1

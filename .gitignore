@@ -1,0 +1,8 @@
+node_modules/
+.venv/
+osint/
+osint_output/
+__pycache__/
+*.pyc
+.env
+upload.sh

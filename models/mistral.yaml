@@ -1,0 +1,19 @@
+name: Mistral
+provider: mistral
+context_window: 128000
+capabilities:
+  - chat
+  - tools
+  - json_mode
+  - streaming
+  - vision
+  - code
+variants:
+  - name: mistral-large-2411
+    provider: mistral
+  - name: mistral-small-2503
+    provider: mistral
+  - name: codestral-2505
+    provider: mistral
+  - name: ministral-3b-2410
+    provider: mistral

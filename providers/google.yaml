@@ -1,0 +1,22 @@
+name: Google AI (Gemini)
+api_style: google
+auth:
+  type: api_key
+  doc_url: https://ai.google.dev/gemini-api/docs/api-key
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://ai.google.dev/pricing
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - embeddings
+models:
+  - gemini-2.5-pro
+  - gemini-2.5-flash
+  - gemini-2.0-flash
+  - text-embedding-004
+endpoint: https://generativelanguage.googleapis.com/v1beta

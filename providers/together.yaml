@@ -1,0 +1,23 @@
+name: Together AI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://api.together.ai/settings/api-keys
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://www.together.ai/pricing
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - image
+  - embeddings
+models:
+  - meta-llama/Llama-3.3-70B-Instruct-Turbo
+  - meta-llama/Llama-3.1-8B-Instruct-Turbo
+  - deepseek-ai/DeepSeek-V3
+  - Qwen/Qwen2.5-72B-Instruct-Turbo
+endpoint: https://api.together.xyz/v1

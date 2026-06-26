@@ -1,0 +1,21 @@
+name: Groq
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://console.groq.com/docs/quickstart
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://wow.groq.com/
+supports:
+  - chat
+  - tools
+  - json_mode
+  - streaming
+  - vision
+models:
+  - llama-3.3-70b-versatile
+  - llama-3.1-8b-instant
+  - mixtral-8x7b-32768
+  - gemma2-9b-it
+endpoint: https://api.groq.com/openai/v1

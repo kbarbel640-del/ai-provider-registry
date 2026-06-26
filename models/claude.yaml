@@ -1,0 +1,16 @@
+name: Claude
+provider: anthropic
+context_window: 200000
+capabilities:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+variants:
+  - name: claude-3.5-sonnet
+    provider: anthropic
+  - name: claude-3.5-haiku
+    provider: anthropic
+  - name: claude-3-opus
+    provider: anthropic

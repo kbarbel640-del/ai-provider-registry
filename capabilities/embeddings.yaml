@@ -1,0 +1,11 @@
+description: Supports generating vector embeddings from text input.
+schema:
+  type: object
+  properties:
+    input:
+      type: string
+    model:
+      type: string
+    encoding_format:
+      type: string
+      enum: [float, base64]

@@ -1,0 +1,12 @@
+description: Supports generative image creation from text prompts.
+schema:
+  type: object
+  properties:
+    prompt:
+      type: string
+    model:
+      type: string
+    n:
+      type: integer
+    size:
+      type: string

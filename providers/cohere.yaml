@@ -1,0 +1,22 @@
+name: Cohere
+api_style: cohere
+auth:
+  type: bearer
+  doc_url: https://dashboard.cohere.com/api-keys
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://cohere.com/pricing
+supports:
+  - chat
+  - tools
+  - streaming
+  - embeddings
+  - rerank
+  - classification
+models:
+  - command-r-plus
+  - command-r
+  - embed-english-v3.0
+  - embed-multilingual-v3.0
+endpoint: https://api.cohere.com/v1

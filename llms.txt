@@ -1,0 +1,46 @@
+# AI Provider Registry Index
+# https://sayhey.site.je/
+# For LLM consumption - discover all files in the registry.
+
+## Providers
+providers/openai.yaml
+providers/anthropic.yaml
+providers/groq.yaml
+providers/mistral.yaml
+providers/google.yaml
+providers/openrouter.yaml
+providers/together.yaml
+providers/deepseek.yaml
+providers/cohere.yaml
+providers/cerebras.yaml
+providers/perplexity.yaml
+
+## Models
+models/llama.yaml
+models/qwen.yaml
+models/gemma.yaml
+models/mixtral.yaml
+models/mistral.yaml
+models/gpt.yaml
+models/claude.yaml
+models/gemini.yaml
+models/deepseek.yaml
+
+## Capabilities
+capabilities/chat.yaml
+capabilities/vision.yaml
+capabilities/image.yaml
+capabilities/tools.yaml
+capabilities/streaming.yaml
+capabilities/json_mode.yaml
+capabilities/embeddings.yaml
+capabilities/rerank.yaml
+capabilities/speech.yaml
+capabilities/moderation.yaml
+capabilities/search.yaml
+
+## Documentation
+docs/provider-schema.md
+docs/capability-schema.md
+docs/model-schema.md
+docs/api-styles.md

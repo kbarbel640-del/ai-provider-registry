@@ -1,0 +1,17 @@
+# Chat Capability
+
+description: Supports conversational interactions with LLMs.
+schema:
+  type: object
+  properties:
+    messages:
+      type: array
+      items:
+        type: object
+        properties:
+          role:
+            type: string
+            enum: [system, user, assistant]
+          content:
+            type: string
+  required: [messages]

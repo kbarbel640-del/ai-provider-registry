@@ -1,0 +1,29 @@
+name: OpenAI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://platform.openai.com/api-keys
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://openai.com/pricing
+supports:
+  - chat
+  - vision
+  - image
+  - tools
+  - json_mode
+  - streaming
+  - speech
+  - moderation
+  - embeddings
+models:
+  - gpt-4o
+  - gpt-4o-mini
+  - o3
+  - o4-mini
+  - gpt-4.1
+  - gpt-4.1-mini
+  - text-embedding-3-large
+  - text-embedding-3-small
+endpoint: https://api.openai.com/v1

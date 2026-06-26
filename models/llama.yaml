@@ -1,0 +1,18 @@
+# Llama Model Family
+
+name: Llama
+provider: meta
+context_window: 128000
+capabilities:
+  - chat
+  - tools
+  - json_mode
+  - streaming
+  - vision
+variants:
+  - name: llama-3.1-8b
+    provider: groq
+  - name: llama-3.1-70b
+    provider: groq
+  - name: llama-3.1-405b
+    provider: meta

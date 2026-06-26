@@ -1,0 +1,24 @@
+name: GPT
+provider: openai
+context_window: 128000
+capabilities:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - image
+  - speech
+variants:
+  - name: gpt-4o
+    provider: openai
+  - name: gpt-4o-mini
+    provider: openai
+  - name: o3
+    provider: openai
+  - name: o4-mini
+    provider: openai
+  - name: gpt-4.1
+    provider: openai
+  - name: gpt-4.1-mini
+    provider: openai

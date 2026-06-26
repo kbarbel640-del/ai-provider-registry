@@ -1,0 +1,10 @@
+description: Supports image input and understanding in chat interactions.
+schema:
+  type: object
+  properties:
+    image_url:
+      type: string
+      description: URL or base64-encoded image data
+    detail:
+      type: string
+      enum: [low, high, auto]

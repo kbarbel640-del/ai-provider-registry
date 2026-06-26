@@ -1,0 +1,20 @@
+name: Anthropic
+api_style: anthropic
+auth:
+  type: x-api-key
+  doc_url: https://docs.anthropic.com/en/api/getting-started
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://www.anthropic.com/pricing
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+models:
+  - claude-3.5-sonnet
+  - claude-3.5-haiku
+  - claude-3-opus
+endpoint: https://api.anthropic.com/v1

@@ -1,0 +1,18 @@
+name: Cerebras
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://cloud.cerebras.ai/
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://cerebras.ai/pricing
+supports:
+  - chat
+  - tools
+  - json_mode
+  - streaming
+models:
+  - llama-3.1-8b
+  - llama-3.1-70b
+endpoint: https://api.cerebras.ai/v1

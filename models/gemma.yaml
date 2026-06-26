@@ -1,0 +1,14 @@
+name: Gemma
+provider: google
+context_window: 8192
+capabilities:
+  - chat
+  - json_mode
+  - streaming
+variants:
+  - name: gemma2-9b-it
+    provider: groq
+  - name: gemma2-27b-it
+    provider: google
+  - name: gemma-7b-it
+    provider: groq

@@ -1,0 +1,19 @@
+name: DeepSeek
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://platform.deepseek.com/api_keys
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://api-docs.deepseek.com/quick_start/pricing
+supports:
+  - chat
+  - tools
+  - json_mode
+  - streaming
+  - vision
+models:
+  - deepseek-chat
+  - deepseek-reasoner
+endpoint: https://api.deepseek.com/v1

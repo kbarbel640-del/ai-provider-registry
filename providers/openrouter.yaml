@@ -1,0 +1,19 @@
+name: OpenRouter
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://openrouter.ai/docs/credentials
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://openrouter.ai/models
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - image
+models:
+  - auto
+endpoint: https://openrouter.ai/api/v1

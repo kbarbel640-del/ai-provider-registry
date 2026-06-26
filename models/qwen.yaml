@@ -1,0 +1,23 @@
+name: Qwen
+provider: alibaba
+context_window: 131072
+capabilities:
+  - chat
+  - tools
+  - json_mode
+  - streaming
+  - vision
+  - code
+variants:
+  - name: Qwen2.5-72B-Instruct
+    provider: together
+  - name: Qwen2.5-32B-Instruct
+    provider: together
+  - name: Qwen2.5-7B-Instruct
+    provider: together
+  - name: qwen-turbo
+    provider: alibaba
+  - name: qwen-plus
+    provider: alibaba
+  - name: qwen-max
+    provider: alibaba
