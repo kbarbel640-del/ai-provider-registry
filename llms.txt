@@ -15,6 +15,7 @@ providers/cohere.yaml
 providers/cerebras.yaml
 providers/perplexity.yaml
 providers/pollinations.yaml
+providers/opencode.yaml
 
 ## Models
 models/llama.yaml
@@ -39,6 +40,7 @@ capabilities/rerank.yaml
 capabilities/speech.yaml
 capabilities/moderation.yaml
 capabilities/search.yaml
+capabilities/reasoning.yaml
 
 ## Documentation
 docs/provider-schema.md

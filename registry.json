@@ -22,10 +22,11 @@
     {"id": "cohere",     "free": true,  "api_style": "cohere",    "supports": ["chat", "tools", "streaming", "embeddings", "rerank", "classification"]},
     {"id": "cerebras",   "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "json_mode", "streaming"]},
     {"id": "perplexity",  "free": false, "api_style": "openai",    "supports": ["chat", "streaming", "search"]},
-    {"id": "pollinations","free": true,  "api_style": "openai",    "supports": ["chat", "vision", "image", "video", "audio", "embeddings", "streaming", "tools", "realtime"]}
+    {"id": "pollinations","free": true,  "api_style": "openai",    "supports": ["chat", "vision", "image", "video", "audio", "embeddings", "streaming", "tools", "realtime"]},
+    {"id": "opencode",    "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "streaming", "json_mode", "reasoning"]}
   ],
   "capabilities": [
     "chat", "vision", "image", "tools", "streaming", "json_mode",
-    "embeddings", "rerank", "speech", "moderation", "search", "video", "audio", "realtime"
+    "embeddings", "rerank", "speech", "moderation", "search", "video", "audio", "realtime", "reasoning"
   ]
 }

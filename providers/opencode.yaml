@@ -1,0 +1,22 @@
+name: OpenCode
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://opencode.ai/docs/zen/
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://opencode.ai/docs/zen/#pricing
+supports:
+  - chat
+  - tools
+  - streaming
+  - json_mode
+  - reasoning
+models:
+  - big-pickle
+  - deepseek-v4-flash-free
+  - mimo-v2.5-free
+  - north-mini-code-free
+  - nemotron-3-ultra-free
+endpoint: https://opencode.ai/zen/v1
