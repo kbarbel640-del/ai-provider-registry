@@ -1,0 +1,16 @@
+id: exposed_cloudfront
+name: Exposed CloudFront Distributions
+description: Öffentliche CloudFront-Distributionen mit Direct-Access
+category: cloud_storage
+severity: medium
+risk: medium
+tags:
+- aws
+- cloudfront
+- cdn
+- misconfiguration
+platform_dorks:
+  google:
+  - site:cloudfront.net "Index of"
+  shodan:
+  - http.title:"Index of" "cloudfront.net"

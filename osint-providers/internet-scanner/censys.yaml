@@ -1,0 +1,40 @@
+id: censys
+name: Censys
+url: https://search.censys.io
+api_base: https://search.censys.io/api/v2
+api_type: REST
+auth_type: api_id_secret (HTTP Basic)
+env_var: CENSYS_API_ID, CENSYS_API_SECRET
+rate_limit: 0.4 req/s (Free), 2.5 req/s (Paid)
+free_tier: true
+priority: 1
+category:
+- internet_scanner
+- certificates
+- attack_surface
+description: Host- & Zertifikats-Suche, Internet-Atlas
+typical_queries:
+- 'host_search: /hosts/search'
+- 'host_lookup: /hosts/{ip}'
+- 'cert_search: /certificates/search'
+dork_syntax: 'services.port: 2375
+
+  services.http.response.body: "Docker"
+
+  services.software.vendor: apache
+
+  location.country: DE
+
+  autonomous_system.name: GOOGLE
+
+  '
+dork_fields:
+- services.port
+- services.service_name
+- services.http.response.body
+- services.http.response.headers
+- services.software.vendor
+- location.country
+- autonomous_system.name
+_category: internet-scanner
+_category_label: Internet Scanner / Attack Surface

@@ -1,0 +1,20 @@
+id: builtwith
+name: BuiltWith
+url: https://builtwith.com
+api_base: https://api.builtwith.com
+api_type: REST
+auth_type: api_key
+env_var: BUILTWITH_API_KEY
+rate_limit: Varies by plan
+free_tier: false
+priority: 5
+category:
+- web_archive
+- tech_detection
+- analytics
+description: Technologie-Erkennung – welches CMS, CDN, Analytics eine Website nutzt
+typical_queries:
+- 'domain_lookup: /v21/api.json?KEY={key}&LOOKUP={domain}'
+- 'domain_tech: /v21/api.json?KEY={key}&HIDETEXT=yes&NOMETA=yes&NOLOGO=yes&LOOKUP={domain}'
+_category: web-archive
+_category_label: Web Archive / Source Code / Tech Detection

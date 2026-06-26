@@ -1,0 +1,16 @@
+id: exposed_rsync
+name: Exposed Rsync
+description: Offene Rsync-Dienste (Port 873)
+category: exposed_services
+severity: high
+risk: high
+tags:
+- rsync
+- misconfiguration
+- file_sharing
+platform_dorks:
+  shodan:
+  - port:873 product:"Rsync"
+  - port:873 "@RSYNCD"
+  censys:
+  - 'services.port: 873 AND services.service_name: RSYNC'

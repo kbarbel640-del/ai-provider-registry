@@ -1,0 +1,28 @@
+id: publicwww
+name: PublicWWW
+url: https://publicwww.com
+api_base: https://publicwww.com
+api_type: REST
+auth_type: api_key (GET-Param)
+env_var: PUBLICWWW_API_KEY
+rate_limit: Varies by plan
+free_tier: false
+priority: 3
+category:
+- web_archive
+- source_code
+- tech_detection
+description: Durchsucht Source-Code des gesamten Webs (HTML, JS, CSS)
+typical_queries:
+- 'snippet_search: /websites/{snippet}/?export=jsonu&key={key}'
+dork_syntax: '"google-analytics.com/ga.js"
+
+  "phpmyadmin"
+
+  "X-Api-Key:"
+
+  file:wp-config.php
+
+  '
+_category: web-archive
+_category_label: Web Archive / Source Code / Tech Detection

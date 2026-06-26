@@ -1,0 +1,17 @@
+id: exposed_hmi
+name: Exposed Human-Machine Interfaces
+description: exponierte HMI-Systeme (Web-basierte Steuerschnittstellen)
+category: iot_ics
+severity: critical
+risk: critical
+tags:
+- hmi
+- scada
+- web_interface
+- industrial
+platform_dorks:
+  shodan:
+  - title:"HMI" OR title:"SCADA" OR title:"Human Machine Interface"
+  - product:"Advantech" OR product:"Moxa" OR product:"Omron"
+  censys:
+  - 'services.http.response.body: "HMI" OR "SCADA"'

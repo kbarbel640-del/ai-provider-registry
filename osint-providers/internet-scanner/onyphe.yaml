@@ -1,0 +1,36 @@
+id: onyphe
+name: Onyphe
+url: https://www.onyphe.io
+api_base: https://www.onyphe.io/api/v2
+api_type: REST
+auth_type: 'api_key (Header: Authorization: apikey xxx)'
+env_var: ONYPHE_API_KEY
+rate_limit: 5 req/min (Free)
+free_tier: true
+priority: 3
+category:
+- internet_scanner
+- threat_intel
+- paste_search
+description: Port-Scan + Geolocation + Threat Intel + Paste-Suche in einem
+typical_queries:
+- 'ip_summary: /summary/ip/{ip}'
+- 'search: /search/{category}?query={query}'
+- 'categories: [inetnum, threat, geo, pastries, dataleak, resolver, sniffer, synscan]'
+dork_syntax: 'category:inetnum port:2375
+
+  category:synscan os:linux
+
+  category:threat tag:c2
+
+  '
+dork_fields:
+- port
+- os
+- domain
+- asn
+- country
+- tag
+- category
+_category: internet-scanner
+_category_label: Internet Scanner / Attack Surface

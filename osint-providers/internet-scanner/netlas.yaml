@@ -1,0 +1,36 @@
+id: netlas
+name: Netlas
+url: https://netlas.io
+api_base: https://app.netlas.io/api
+api_type: REST
+auth_type: api_key
+env_var: NETLAS_API_KEY
+rate_limit: 50 req/day (Free)
+free_tier: true
+priority: 2
+category:
+- internet_scanner
+- dork_search
+description: IP/Domain-Suche, Zertifikate, WHOIS, DNS
+typical_queries:
+- 'search: /responses/?q={query}'
+- 'ip_info: /host/{ip}'
+dork_syntax: 'port:2375
+
+  http.body:"ApiVersion"
+
+  country:DE
+
+  protocol:http
+
+  '
+dork_fields:
+- port
+- http.body
+- http.title
+- country
+- protocol
+- certificate.subject
+- service.name
+_category: internet-scanner
+_category_label: Internet Scanner / Attack Surface

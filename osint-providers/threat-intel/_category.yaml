@@ -1,0 +1,14 @@
+category: threat-intel
+label: Threat Intelligence / Malware / Reputation
+provider_count: 10
+providers:
+- virustotal
+- alienvault_otx
+- abuseipdb
+- maltiverse
+- urlhaus
+- malwarebazaar
+- threatfox
+- hybrid_analysis
+- triage
+- pulsedive

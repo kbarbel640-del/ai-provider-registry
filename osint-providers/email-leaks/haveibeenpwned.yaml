@@ -1,0 +1,21 @@
+id: haveibeenpwned
+name: Have I Been Pwned
+url: https://haveibeenpwned.com
+api_base: https://haveibeenpwned.com/api/v3
+api_type: REST
+auth_type: 'api_key (Header: hibp-api-key) – benötigt für Domain-Search'
+env_var: HIBP_API_KEY
+rate_limit: 10 req/min (Free account email check), domain search needs key
+free_tier: true
+priority: 4
+category:
+- email
+- breaches
+- pii
+description: Breach-Benachrichtigungen – E-Mail/Breach-Check, Domain-Monitoring, Passwörter
+typical_queries:
+- 'breach_account: /breachedaccount/{account}'
+- 'breaches: /breaches'
+- 'domain_breaches: /breaches?domain={domain}'
+_category: email-leaks
+_category_label: Email / People / Leaks

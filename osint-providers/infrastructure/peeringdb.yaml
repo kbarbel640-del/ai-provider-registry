@@ -1,0 +1,21 @@
+id: peeringdb
+name: PeeringDB
+url: https://www.peeringdb.com
+api_base: https://www.peeringdb.com/api
+api_type: REST
+auth_type: none
+env_var: null
+rate_limit: None (Public)
+free_tier: true
+priority: 5
+category:
+- infrastructure
+- peering
+- network
+description: Network-Facilities, IXPs, Peering-Kontakte
+typical_queries:
+- 'net_search: /net?name__contains={query}'
+- 'ix_search: /ix?name__contains={query}'
+- 'fac_search: /fac?name__contains={query}'
+_category: infrastructure
+_category_label: Infrastructure / Network / Geolocation

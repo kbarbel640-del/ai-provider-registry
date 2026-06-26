@@ -1,0 +1,21 @@
+id: exposed_iot_devices
+name: Exposed IoT Devices
+description: Offene IoT-Geräte und Embedded Systems
+category: iot_ics
+severity: high
+risk: high
+tags:
+- iot
+- embedded
+- devices
+- misconfiguration
+- industrial
+platform_dorks:
+  shodan:
+  - device:"IoT" OR os:"Linux embedded"
+  - product:"Raspberry Pi"
+  - product:"OpenWRT"
+  - product:"DD-WRT"
+  censys:
+  - 'services.device_type: IoT'
+  - 'services.software.vendor: raspberry'

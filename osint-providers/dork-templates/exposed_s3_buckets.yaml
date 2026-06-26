@@ -1,0 +1,22 @@
+id: exposed_s3_buckets
+name: Exposed AWS S3 Buckets
+description: Öffentliche S3 Buckets mit sensiblen Daten
+category: cloud_storage
+severity: critical
+risk: critical
+tags:
+- aws
+- s3
+- cloud_storage
+- misconfiguration
+- bucket
+platform_dorks:
+  google:
+  - site:s3.amazonaws.com "Index of"
+  - inurl:.s3.amazonaws.com filetype:sql OR filetype:env
+  - inurl:s3.amazonaws.com "ListBucketResult"
+  shodan:
+  - http.title:"Index of" "s3.amazonaws.com"
+  - host:"*.s3.amazonaws.com" http.code:200
+  fofa:
+  - host="s3.amazonaws.com" && body="ListBucketResult"

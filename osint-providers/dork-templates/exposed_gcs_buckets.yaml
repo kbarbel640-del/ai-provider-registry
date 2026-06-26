@@ -1,0 +1,17 @@
+id: exposed_gcs_buckets
+name: Exposed Google Cloud Storage Buckets
+description: Öffentliche Google Cloud Storage Buckets
+category: cloud_storage
+severity: critical
+risk: critical
+tags:
+- gcp
+- google_cloud
+- cloud_storage
+- misconfiguration
+platform_dorks:
+  google:
+  - site:storage.googleapis.com "Index of"
+  - inurl:storage.googleapis.com filetype:db OR filetype:env
+  shodan:
+  - http.title:"Index of" "storage.googleapis.com"

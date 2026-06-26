@@ -44,3 +44,7 @@ docs/provider-schema.md
 docs/capability-schema.md
 docs/model-schema.md
 docs/api-styles.md
+
+## OSINT Provider Registry (separate)
+osint-providers/osint-llms.txt
+osint-providers/osint-registry.json

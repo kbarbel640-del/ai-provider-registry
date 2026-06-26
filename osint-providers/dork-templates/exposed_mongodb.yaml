@@ -1,0 +1,25 @@
+id: exposed_mongodb
+name: Exposed MongoDB
+description: Findet offene MongoDB-Instanzen ohne Auth (Port 27017)
+category: exposed_services
+severity: critical
+risk: critical
+tags:
+- mongodb
+- misconfiguration
+- database
+- nosql
+platform_dorks:
+  shodan:
+  - product:"MongoDB" port:27017 -authentication
+  - port:27017 "MongoDB" "version"
+  - '"MongoDB Server Information" port:27017'
+  censys:
+  - 'services.port: 27017 AND services.service_name: MONGODB'
+  - 'services.port: 27017 AND services.mongodb.is_master: *'
+  fofa:
+  - port="27017" && protocol="mongodb"
+  zoomeye:
+  - port:27017 service:"mongodb"
+  binaryedge:
+  - port:27017 AND mongodb

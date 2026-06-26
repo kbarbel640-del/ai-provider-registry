@@ -1,0 +1,25 @@
+id: crtsh
+name: crt.sh (Certificate Transparency)
+url: https://crt.sh
+api_base: https://crt.sh
+api_type: REST (JSON via ?output=json)
+auth_type: none
+env_var: null
+rate_limit: ~5 req/min (Public, kein Key!)
+free_tier: true
+priority: 2
+category:
+- certificates
+- dns
+- subdomain
+- passive_dns
+description: Certificate Transparency Logs – gratis Zertifikatssuche & Subdomain-Finder
+typical_queries:
+- 'domain_search: /?q=%.example.com&output=json'
+- 'identity_search: /?identity={domain}&output=json'
+- 'sha256: /?sha256={fingerprint}&output=json'
+dork_syntax: '%.example.com (Wildcard-Subdomain-Suche)
+
+  '
+_category: dns-domain
+_category_label: DNS / Domain / Subdomain Enumeration

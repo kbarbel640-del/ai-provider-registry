@@ -1,0 +1,25 @@
+id: exposed_git_repos
+name: Exposed .git Repositories
+description: Öffentlich erreichbare .git-Ordner mit Quellcode
+category: information_disclosure
+severity: critical
+risk: critical
+tags:
+- git
+- source_code
+- information_disclosure
+- version_control
+platform_dorks:
+  shodan:
+  - '"Index of /.git"'
+  - http.title:"Index of /.git" port:80
+  censys:
+  - 'services.http.response.body: "Index of /.git"'
+  fofa:
+  - body="Index of /.git"
+  zoomeye:
+  - '"Index of /.git"'
+  google:
+  - intitle:"Index of" ".git"
+  bing:
+  - index of /.git

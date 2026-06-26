@@ -1,0 +1,19 @@
+id: snusbase
+name: Snusbase
+url: https://snusbase.com
+api_base: https://api.snusbase.com/v1
+api_type: REST
+auth_type: 'api_key (Header: Authorization)'
+env_var: SNUSBASE_API_KEY
+rate_limit: Varies by plan
+free_tier: false
+priority: 5
+category:
+- email
+- breaches
+- pii
+description: Breach-Suchmaschine – Email, User, Hash, IP, Domain
+typical_queries:
+- 'search: /data/search?terms={query}'
+_category: email-leaks
+_category_label: Email / People / Leaks

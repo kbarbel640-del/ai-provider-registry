@@ -1,0 +1,22 @@
+id: maltiverse
+name: Maltiverse
+url: https://maltiverse.com
+api_base: https://api.maltiverse.com
+api_type: REST
+auth_type: none (Free tier) / Bearer token (Paid)
+env_var: MALTIVERSE_API_KEY
+rate_limit: Varies
+free_tier: true
+priority: 4
+category:
+- threat_intel
+- ioc
+- reputation
+description: IP/Domain/URL/Hash-Reputation mit IoC-Tagging
+typical_queries:
+- 'ip: /ip/{ip}'
+- 'domain: /hostname/{hostname}'
+- 'url: /url/{url_b64}'
+- 'search: /search?query={query}'
+_category: threat-intel
+_category_label: Threat Intelligence / Malware / Reputation

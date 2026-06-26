@@ -1,0 +1,22 @@
+id: exposed_redis
+name: Exposed Redis (No Auth)
+description: Findet Redis-Instanzen ohne Passwort (Port 6379)
+category: exposed_services
+severity: high
+risk: high
+tags:
+- redis
+- misconfiguration
+- database
+- cache
+- nosql
+platform_dorks:
+  shodan:
+  - product:"Redis" port:6379
+  - port:6379 "redis_version" -"requirepass"
+  censys:
+  - 'services.port: 6379 AND services.service_name: REDIS'
+  fofa:
+  - port="6379" && protocol="redis" && "-NOAUTH Authentication required"
+  zoomeye:
+  - port:6379 service:"redis"

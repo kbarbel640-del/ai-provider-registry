@@ -1,0 +1,23 @@
+id: c99nl
+name: C99.nl
+url: https://api.c99.nl
+api_base: https://api.c99.nl
+api_type: REST
+auth_type: api_key
+env_var: C99_API_KEY
+rate_limit: Varies by plan
+free_tier: true
+priority: 4
+category:
+- dns
+- subdomain
+- certificates
+- email
+description: 'Multi-Tool API: Subdomain, DNS, Cert-Lookup, Email-Verify'
+typical_queries:
+- 'subdomains: /subdomainfinder?key={key}&domain={domain}'
+- 'port_scanner: /portscanner?key={key}&host={host}'
+- 'email_validator: /emailvalidator?key={key}&email={email}'
+- 'domain_history: /domainhistory?key={key}&domain={domain}'
+_category: dns-domain
+_category_label: DNS / Domain / Subdomain Enumeration

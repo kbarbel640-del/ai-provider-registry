@@ -1,0 +1,9 @@
+category: search-engines
+label: Search Engines & Web Search
+provider_count: 5
+providers:
+- google
+- bing
+- brave_search
+- kagi
+- searxng

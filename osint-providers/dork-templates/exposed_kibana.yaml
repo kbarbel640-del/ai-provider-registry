@@ -1,0 +1,22 @@
+id: exposed_kibana
+name: Exposed Kibana
+description: Kibana-Dashboards ohne Auth (Port 5601)
+category: exposed_services
+severity: medium
+risk: medium
+tags:
+- kibana
+- elasticsearch
+- monitoring
+- misconfiguration
+- dashboard
+platform_dorks:
+  shodan:
+  - title:"Kibana" port:5601
+  - port:5601 "kbn-name"
+  censys:
+  - 'services.port: 5601 AND services.http.response.body: "kibana"'
+  fofa:
+  - port="5601" && body="kibana"
+  zoomeye:
+  - port:5601 "kibana"

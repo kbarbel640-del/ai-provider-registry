@@ -1,0 +1,21 @@
+id: urlhaus
+name: URLhaus (abuse.ch)
+url: https://urlhaus.abuse.ch
+api_base: https://urlhaus-api.abuse.ch/v1
+api_type: REST
+auth_type: none
+env_var: null
+rate_limit: None (Free community)
+free_tier: true
+priority: 4
+category:
+- threat_intel
+- malware_url
+description: Datenbank für Malware-URLs, Payloads, Tags
+typical_queries:
+- 'url_info: /url/ (POST)'
+- 'host_info: /host/ (POST)'
+- 'payload: /payload/ (POST)'
+- 'recent_urls: /urls/recent/'
+_category: threat-intel
+_category_label: Threat Intelligence / Malware / Reputation

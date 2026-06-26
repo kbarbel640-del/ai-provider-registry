@@ -1,0 +1,21 @@
+id: hunter
+name: Hunter.io
+url: https://hunter.io
+api_base: https://api.hunter.io/v2
+api_type: REST
+auth_type: api_key
+env_var: HUNTER_API_KEY
+rate_limit: 25 req/month (Free), 50k req/month (Business)
+free_tier: true
+priority: 1
+category:
+- email
+- domain
+- people
+description: E-Mail-Finder, Domain-Suche, Verifikation
+typical_queries:
+- 'domain_search: /domain-search?domain={domain}'
+- 'email_finder: /email-finder?domain={domain}&first_name={name}'
+- 'email_verifier: /email-verifier?email={email}'
+_category: email-leaks
+_category_label: Email / People / Leaks

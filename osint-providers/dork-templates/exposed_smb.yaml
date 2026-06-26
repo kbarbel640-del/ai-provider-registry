@@ -1,0 +1,20 @@
+id: exposed_smb
+name: Exposed SMB
+description: SMB/Samba-Freigaben offen (Port 445/139)
+category: exposed_services
+severity: high
+risk: high
+tags:
+- smb
+- samba
+- file_sharing
+- windows
+platform_dorks:
+  shodan:
+  - port:445 product:"SMB"
+  - port:445 authentication:disabled
+  censys:
+  - 'services.port: 445 AND services.service_name: SMB'
+  - 'services.port: 445 AND services.smb.shares: *'
+  fofa:
+  - port="445" && protocol="smb"

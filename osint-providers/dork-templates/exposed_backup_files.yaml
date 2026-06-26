@@ -1,0 +1,22 @@
+id: exposed_backup_files
+name: Exposed Backup & Database Dumps
+description: Öffentliche Backup-Dateien (.sql, .gz, .tar, .zip)
+category: information_disclosure
+severity: critical
+risk: critical
+tags:
+- backup
+- database
+- information_disclosure
+- dump
+platform_dorks:
+  google:
+  - intitle:"index of" "backup" "sql"
+  - filetype:sql "password"
+  - filetype:sql "INSERT INTO"
+  - filetype:gz inurl:backup
+  bing:
+  - filetype:sql "CREATE TABLE"
+  shodan:
+  - http.title:"Index of /backup"
+  - port:80 "mysqldump"

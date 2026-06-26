@@ -1,0 +1,18 @@
+id: searxng
+name: SearxNG
+url: https://docs.searxng.org
+api_base: '{self_hosted_url}'
+api_type: REST
+auth_type: none (self-hosted)
+env_var: SEARXNG_BASE_URL
+rate_limit: Selbst definiert
+free_tier: true
+priority: 5
+category:
+- search_engine
+- meta_search
+description: Self-hosted Meta-Suchmaschine (kein API-Key nötig)
+typical_queries:
+- 'search: /search?q={query}&format=json'
+_category: search-engines
+_category_label: Search Engines & Web Search

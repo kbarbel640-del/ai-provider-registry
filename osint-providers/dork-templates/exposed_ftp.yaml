@@ -1,0 +1,19 @@
+id: exposed_ftp
+name: Exposed FTP (Anonymous)
+description: FTP-Server mit anonymer Anmeldung (Port 21)
+category: exposed_services
+severity: high
+risk: high
+tags:
+- ftp
+- misconfiguration
+- file_sharing
+- anonymous
+platform_dorks:
+  shodan:
+  - port:21 "Anonymous access allowed"
+  - port:21 230 -"user" -"password"
+  censys:
+  - 'services.port: 21 AND services.ftp.authentication: anonymous'
+  fofa:
+  - port="21" && banner="Anonymous"

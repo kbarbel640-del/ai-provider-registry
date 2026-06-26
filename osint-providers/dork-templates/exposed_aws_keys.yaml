@@ -1,0 +1,23 @@
+id: exposed_aws_keys
+name: Exposed AWS Credentials
+description: Öffentlich geleakte AWS Access Keys
+category: information_disclosure
+severity: critical
+risk: critical
+tags:
+- aws
+- credentials
+- secrets
+- cloud_security
+- api_keys
+platform_dorks:
+  google:
+  - AKIA filetype:log
+  - '"AKIA" "aws_secret"'
+  bing:
+  - AKIA filetype:txt
+  publicwww:
+  - '"AKIA" "SecretAccessKey"'
+  github:
+  - AKIA filename:.env
+  - AKIA filename:credentials

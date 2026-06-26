@@ -1,0 +1,20 @@
+id: dnsdumpster
+name: DNSDumpster
+url: https://dnsdumpster.com
+api_base: https://dnsdumpster.com (keine offizielle API)
+api_type: Web-Scrape
+auth_type: none
+env_var: null
+rate_limit: Vorsichtig scrapen
+free_tier: true
+priority: 5
+category:
+- dns
+- domain
+- subdomain
+- reconnaissance
+description: Visueller DNS-Recon – Subdomains, MX, TXT, Hosting-Info
+typical_queries:
+- 'domain_scan: POST / (Form-Submit)'
+_category: dns-domain
+_category_label: DNS / Domain / Subdomain Enumeration

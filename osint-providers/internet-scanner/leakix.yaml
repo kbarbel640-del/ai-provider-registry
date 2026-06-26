@@ -1,0 +1,33 @@
+id: leakix
+name: LeakIX
+url: https://leakix.net
+api_base: https://leakix.net/api
+api_type: REST
+auth_type: api_key
+env_var: LEAKIX_API_KEY
+rate_limit: Varies
+free_tier: true
+priority: 2
+category:
+- internet_scanner
+- misconfiguration
+- leak
+description: Fokussiert auf Fehlkonfigurationen, Datenlecks, offene Services
+typical_queries:
+- 'search: /search?scope=leak&q={query}'
+- 'search_service: /search?scope=service&q={query}'
+dork_syntax: 'plugin:DockerAPI
+
+  +port:2375
+
+  +country:DE
+
+  '
+dork_fields:
+- plugin
+- port
+- country
+- protocol
+- service.software
+_category: internet-scanner
+_category_label: Internet Scanner / Attack Surface

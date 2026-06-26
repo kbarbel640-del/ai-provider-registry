@@ -1,0 +1,20 @@
+id: fullhunt
+name: FullHunt
+url: https://fullhunt.io
+api_base: https://fullhunt.com/api/v1
+api_type: REST
+auth_type: 'api_key (Header: X-API-Key)'
+env_var: FULLHUNT_API_KEY
+rate_limit: Varies by plan
+free_tier: true
+priority: 3
+category:
+- internet_scanner
+- attack_surface
+- subdomain_enum
+description: Subdomain-Bruteforce + Service-Discovery + Attack-Surface-Management
+typical_queries:
+- 'domain_details: /domain/{domain}'
+- 'subdomains: /domain/{domain}/subdomains'
+_category: internet-scanner
+_category_label: Internet Scanner / Attack Surface

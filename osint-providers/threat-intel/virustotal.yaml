@@ -1,0 +1,23 @@
+id: virustotal
+name: VirusTotal
+url: https://www.virustotal.com
+api_base: https://www.virustotal.com/api/v3
+api_type: REST
+auth_type: 'api_key (Header: x-apikey)'
+env_var: VIRUSTOTAL_API_KEY
+rate_limit: 4 req/min (Free), 500 req/day (Paid)
+free_tier: true
+priority: 1
+category:
+- threat_intel
+- malware
+- reputation
+description: Multi-AV-Scanner für IPs, Domains, URLs, Files
+typical_queries:
+- 'ip_report: /ip_addresses/{ip}'
+- 'domain_report: /domains/{domain}'
+- 'url_scan: /urls'
+- 'file_scan: /files'
+- 'search: /intelligence/search?query={query}'
+_category: threat-intel
+_category_label: Threat Intelligence / Malware / Reputation

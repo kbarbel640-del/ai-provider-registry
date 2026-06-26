@@ -1,0 +1,20 @@
+id: exposed_etcd
+name: Exposed etcd
+description: Offene etcd-Datenbanken (Port 2379)
+category: exposed_services
+severity: high
+risk: high
+tags:
+- etcd
+- kubernetes
+- misconfiguration
+- database
+- configuration
+platform_dorks:
+  shodan:
+  - port:2379 product:"etcd"
+  - port:2379 "etcdserver"
+  censys:
+  - 'services.port: 2379 AND services.service_name: ETCD'
+  fofa:
+  - port="2379" && body="etcd"

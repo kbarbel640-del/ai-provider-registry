@@ -1,0 +1,25 @@
+id: exposed_jenkins
+name: Exposed Jenkins CI/CD
+description: Findet offene Jenkins-Instanzen (Port 8080)
+category: exposed_services
+severity: high
+risk: high
+tags:
+- jenkins
+- misconfiguration
+- cicd
+- devops
+- ci_cd
+platform_dorks:
+  shodan:
+  - '"X-Jenkins" port:8080'
+  - product:"Jenkins" port:8080
+  - '"Dashboard [Jenkins]" port:8080'
+  censys:
+  - 'services.port: 8080 AND services.http.response.headers.x_jenkins: *'
+  - 'services.port: 8080 AND services.http.response.body: "Dashboard [Jenkins]"'
+  fofa:
+  - port="8080" && header="X-Jenkins"
+  - port="8080" && body="Dashboard [Jenkins]"
+  zoomeye:
+  - port:8080 "Jenkins"

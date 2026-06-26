@@ -1,0 +1,27 @@
+id: dehashed
+name: Dehashed
+url: https://dehashed.com
+api_base: https://api.dehashed.com
+api_type: REST
+auth_type: api_key + email (HTTP Basic)
+env_var: DEHASHED_EMAIL, DEHASHED_API_KEY
+rate_limit: Varies by plan
+free_tier: true
+priority: 4
+category:
+- email
+- leaks
+- breaches
+- pii
+description: Breach-Datenbank – Suche nach Email, User, IP, VIN, Phone
+typical_queries:
+- 'search: /search?query={query}'
+dork_syntax: 'email:user@example.com
+
+  ip_address:8.8.8.8
+
+  username:admin
+
+  '
+_category: email-leaks
+_category_label: Email / People / Leaks

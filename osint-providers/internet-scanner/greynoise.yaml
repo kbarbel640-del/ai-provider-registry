@@ -1,0 +1,22 @@
+id: greynoise
+name: GreyNoise
+url: https://www.greynoise.io
+api_base: https://api.greynoise.io/v2
+api_type: REST
+auth_type: 'api_key (Header: key)'
+env_var: GREYNOISE_API_KEY
+rate_limit: 50 req/month (Community)
+free_tier: true
+priority: 3
+category:
+- internet_scanner
+- threat_intel
+- noise_analysis
+description: Trennt Internet-Background-Noise von gezielten Angriffen
+typical_queries:
+- 'ip_context: /noise/context/{ip}'
+- 'quick_check: /noise/quick/{ip}'
+- 'riot: /noise/multi/riot?ips={ip_list}'
+- 'gnql: /experimental/gnql?query={query}'
+_category: internet-scanner
+_category_label: Internet Scanner / Attack Surface

@@ -1,0 +1,21 @@
+id: exposed_rdp
+name: Exposed RDP
+description: Windows RDP öffentlich erreichbar (Port 3389)
+category: exposed_services
+severity: high
+risk: high
+tags:
+- rdp
+- remote_access
+- windows
+- desktop
+platform_dorks:
+  shodan:
+  - port:3389 os:"Windows"
+  - port:3389 "Remote Desktop"
+  censys:
+  - 'services.port: 3389 AND services.service_name: RDP'
+  fofa:
+  - port="3389" && protocol="rdp"
+  zoomeye:
+  - port:3389 service:"rdp"

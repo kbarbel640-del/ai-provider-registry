@@ -1,0 +1,34 @@
+id: bing
+name: Bing Web Search
+url: https://www.microsoft.com/en-us/bing/apis/bing-web-search-api
+api_base: https://api.bing.microsoft.com/v7.0
+api_type: REST
+auth_type: 'api_key (Header: Ocp-Apim-Subscription-Key)'
+env_var: BING_API_KEY
+rate_limit: 1k req/month (Free), 30k req/month (Paid)
+free_tier: true
+priority: 1
+category:
+- search_engine
+- dork_search
+description: Bing Web Search API – Alternative zu Google für Dork-Suche
+typical_queries:
+- 'search: /search?q={query}'
+dork_syntax: 'site:example.com
+
+  ip:8.8.8.8
+
+  contains:backup
+
+  loc:de
+
+  '
+dork_fields:
+- site
+- ip
+- contains
+- loc
+- language
+- filetype
+_category: search-engines
+_category_label: Search Engines & Web Search

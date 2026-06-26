@@ -1,0 +1,22 @@
+id: alienvault_otx
+name: AlienVault OTX
+url: https://otx.alienvault.com
+api_base: https://otx.alienvault.com/api/v1
+api_type: REST
+auth_type: 'api_key (Header: X-OTX-API-KEY)'
+env_var: OTX_API_KEY
+rate_limit: None (Free community)
+free_tier: true
+priority: 1
+category:
+- threat_intel
+- ioc
+- pulse
+description: Open Threat Exchange – IoCs, Pulses, Community-Intel
+typical_queries:
+- 'ip_general: /indicators/IPv4/{ip}/general'
+- 'ip_reputation: /indicators/IPv4/{ip}/reputation'
+- 'domain_general: /indicators/domain/{domain}/general'
+- 'search_pulses: /search/pulses?q={query}'
+_category: threat-intel
+_category_label: Threat Intelligence / Malware / Reputation

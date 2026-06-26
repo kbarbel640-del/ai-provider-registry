@@ -1,0 +1,21 @@
+id: triage
+name: Triage (Recorded Future)
+url: https://tria.ge
+api_base: https://tria.ge/api/v0
+api_type: REST
+auth_type: 'api_key (Header: Authorization: Bearer xxx)'
+env_var: TRIAGE_API_KEY
+rate_limit: Free tier available
+free_tier: true
+priority: 4
+category:
+- threat_intel
+- malware_analysis
+- sandbox
+description: Malware-Analyse-Sandbox von Recorded Future
+typical_queries:
+- 'search: /search?q={query}'
+- 'sample: /samples/{sample_id}'
+- 'overview: /samples/{sample_id}/overview.json'
+_category: threat-intel
+_category_label: Threat Intelligence / Malware / Reputation

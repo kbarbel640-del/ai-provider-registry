@@ -1,0 +1,19 @@
+id: leakcheck
+name: LeakCheck
+url: https://leakcheck.io
+api_base: https://leakcheck.io/api/v1
+api_type: REST
+auth_type: api_key
+env_var: LEAKCHECK_API_KEY
+rate_limit: Varies by plan
+free_tier: false
+priority: 5
+category:
+- email
+- breaches
+- password
+description: Passwort-/Email-Incident-Datenbank mit API
+typical_queries:
+- 'lookup: /check?key={key}&check={email/hash}'
+_category: email-leaks
+_category_label: Email / People / Leaks

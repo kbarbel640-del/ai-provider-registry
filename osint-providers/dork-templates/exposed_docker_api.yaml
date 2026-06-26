@@ -1,0 +1,53 @@
+id: exposed_docker_api
+name: Exposed Docker API
+description: Findet exponierte Docker Daemon APIs (Port 2375/2376) ohne Authentifizierung
+category: exposed_services
+severity: critical
+risk: critical
+tags:
+- docker
+- api
+- port2375
+- port2376
+- misconfiguration
+- container
+- infrastructure
+platform_dorks:
+  shodan:
+  - 'shodan: "Docker/1." port:2375'
+  - 'shodan: "Api-Version" "Docker" port:2375'
+  - '{"Platform":{"Name":"Docker"}} port:2375'
+  - '"ServerVersion" port:2375'
+  - '"ContainersRunning" port:2375'
+  - '"Docker-Distribution-Api-Version" port:5000'
+  censys:
+  - 'services.port: 2375 AND services.http.response.headers.api_version: *'
+  - 'services.port: 2375 AND services.http.response.body: {"Platform":{"Name":"Docker"}}'
+  - 'services.port: 2375 AND services.http.response.body: "ServerVersion"'
+  - 'services.port: 2375 AND services.http.response.body: "ContainersRunning"'
+  - 'services.port: [2375, 2376] AND services.http.response.body: "ApiVersion"'
+  - 'services.port: 2375 AND services.http.response.body: "Command"'
+  - 'services.software.vendor: docker AND services.port: 2375'
+  - 'services.service_name: DOCKER'
+  - 'services.port: 2376 AND services.http.response.body: "Platform"'
+  fofa:
+  - port="2375" && body="Api-Version" && body="Docker"
+  - port="2375" && body="Platform" && body="Name" && body="Docker"
+  - port="2375" && body="ServerVersion"
+  - port="2376" && body="Platform" && body="Name" && body="Docker"
+  zoomeye:
+  - port:2375 "Docker/1."
+  - port:2375 "Api-Version" "Docker"
+  - port:2375 "ServerVersion"
+  binaryedge:
+  - port:2375 AND docker
+  - port:2376 AND docker
+  hunter_qianxin:
+  - port=2375 && header="Api-Version"
+  - port=2375 && body="Docker" && body="Platform"
+  criminalip:
+  - port:2375 AND product:Docker
+  netlas:
+  - port:2375 AND http.body:"ApiVersion"
+  leakix:
+  - docker port 2375

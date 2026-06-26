@@ -1,0 +1,19 @@
+id: exposed_couchdb
+name: Exposed CouchDB
+description: Offene CouchDB-Instanzen (Port 5984)
+category: exposed_services
+severity: high
+risk: high
+tags:
+- couchdb
+- misconfiguration
+- database
+- nosql
+platform_dorks:
+  shodan:
+  - product:"CouchDB" port:5984
+  - '"couchdb":"Welcome" port:5984'
+  fofa:
+  - port="5984" && body="couchdb"
+  zoomeye:
+  - port:5984 "couchdb"

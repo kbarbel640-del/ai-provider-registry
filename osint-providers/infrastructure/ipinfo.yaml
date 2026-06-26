@@ -1,0 +1,22 @@
+id: ipinfo
+name: IPinfo
+url: https://ipinfo.io
+api_base: https://ipinfo.io
+api_type: REST
+auth_type: api_key (Bearer / URL-Param)
+env_var: IPINFO_API_KEY
+rate_limit: 50k req/month (Free)
+free_tier: true
+priority: 1
+category:
+- infrastructure
+- geolocation
+- asn
+- whois
+description: IP-Geolocation, ASN, ISP, Company, Privacy-Detection
+typical_queries:
+- 'ip_lookup: /{ip}?token={token}'
+- 'asn_lookup: /{asn}?token={token}'
+- 'ip_ranges: /{org}/ranges?token={token}'
+_category: infrastructure
+_category_label: Infrastructure / Network / Geolocation

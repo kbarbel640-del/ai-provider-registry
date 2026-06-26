@@ -1,0 +1,28 @@
+id: exposed_kubernetes
+name: Exposed Kubernetes Dashboards & APIs
+description: Findet exponierte K8s-APIs (6443) und Dashboards
+category: exposed_services
+severity: critical
+risk: critical
+tags:
+- kubernetes
+- misconfiguration
+- container
+- orchestration
+- api
+platform_dorks:
+  shodan:
+  - product:"Kubernetes" port:6443
+  - '"kube-system" port:10250'
+  - port:10255 "Kubernetes"
+  - port:8001 "kubernetes-dashboard"
+  censys:
+  - 'services.port: 6443 AND services.service_name: KUBERNETES'
+  - 'services.port: 10250 AND services.application_protocol: HTTP'
+  - 'services.http.response.body: "kube-system"'
+  fofa:
+  - port="6443" && cert="kubernetes"
+  - port="10250" && body="kubelet"
+  zoomeye:
+  - port:6443 service:"kubernetes"
+  - port:8001 "kubernetes-dashboard"

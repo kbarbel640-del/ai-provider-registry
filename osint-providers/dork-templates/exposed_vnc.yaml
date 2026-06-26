@@ -1,0 +1,23 @@
+id: exposed_vnc
+name: Exposed VNC (No Auth)
+description: VNC-Server ohne Authentifizierung
+category: exposed_services
+severity: critical
+risk: critical
+tags:
+- vnc
+- misconfiguration
+- remote_access
+- desktop
+platform_dorks:
+  shodan:
+  - '"authentication disabled" port:5900'
+  - port:5900 -"authentication enabled"
+  - product:"VNC" port:5900 "RFB"
+  censys:
+  - 'services.port: 5900 AND services.service_name: VNC'
+  - 'services.port: 5900 AND services.vnc.auth_disabled: true'
+  fofa:
+  - port="5900" && protocol="vnc"
+  zoomeye:
+  - port:5900 "RFB" "VNC"

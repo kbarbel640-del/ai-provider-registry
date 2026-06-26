@@ -1,0 +1,20 @@
+id: wayback
+name: Wayback Machine (CDX API)
+url: https://web.archive.org
+api_base: https://web.archive.org/cdx/search/cdx
+api_type: REST (CDX Server)
+auth_type: none
+env_var: null
+rate_limit: ~10 req/min (Public, kein Key!)
+free_tier: true
+priority: 4
+category:
+- web_archive
+- history
+- url_enum
+description: Historical Snapshots – URL-Enumeration, alte Versionen wiederfinden
+typical_queries:
+- 'cdx_search: ?url={domain}/*&output=json&collapse=urlkey'
+- 'snapshot_url: /web/{timestamp}/{url}'
+_category: web-archive
+_category_label: Web Archive / Source Code / Tech Detection

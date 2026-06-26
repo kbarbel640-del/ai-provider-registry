@@ -1,0 +1,37 @@
+id: google
+name: Google Custom Search
+url: https://programmablesearchengine.google.com
+api_base: https://www.googleapis.com/customsearch/v1
+api_type: REST
+auth_type: api_key + cx (Search Engine ID)
+env_var: GOOGLE_API_KEY, GOOGLE_CX
+rate_limit: 100 req/day (Free), 10k req/day ($5/1k)
+free_tier: true
+priority: 1
+category:
+- search_engine
+- dork_search
+description: Google Programmable Search Engine – Web-Suche nach Dorks/Indicators
+typical_queries:
+- 'search: ?q={query}&key={key}&cx={cx}'
+dork_syntax: 'site:example.com
+
+  intitle:"index of"
+
+  inurl:admin
+
+  filetype:pdf
+
+  link:example.com
+
+  '
+dork_fields:
+- site
+- intitle
+- inurl
+- filetype
+- intext
+- link
+- cache
+_category: search-engines
+_category_label: Search Engines & Web Search

@@ -1,0 +1,24 @@
+id: exposed_prometheus
+name: Exposed Prometheus & Grafana
+description: Monitoring-Dashboards ohne Auth
+category: exposed_services
+severity: medium
+risk: medium
+tags:
+- prometheus
+- grafana
+- monitoring
+- misconfiguration
+- dashboard
+platform_dorks:
+  shodan:
+  - title:"Prometheus" port:9090
+  - title:"Grafana" port:3000
+  - product:"Prometheus Node Exporter"
+  - port:9100 "node_exporter"
+  censys:
+  - 'services.port: 9090 AND services.http.response.body: "prometheus"'
+  - 'services.port: 3000 AND services.service_name: GRAFANA'
+  fofa:
+  - port="9090" && body="Prometheus"
+  - port="3000" && body="grafana"

@@ -1,0 +1,149 @@
+# OSINT Provider Registry Index
+# https://kbarbel640-del.github.io/ai-provider-registry/osint-providers/
+# For LLM consumption - discover all OSINT provider files in the registry.
+
+# ============================================================
+# QUICK START
+# ============================================================
+# This registry catalogs OSINT/search platforms with:
+# - API endpoints & authentication methods
+# - Free tier availability & rate limits
+# - Dork/search syntax per platform
+# - Use-case dork templates
+#
+# All data is in per-provider YAML files organized by category.
+# The registry.json has the full machine-readable index.
+
+# ============================================================
+# PROVIDERS BY CATEGORY
+# ============================================================
+
+## Internet Scanner
+# (14 providers)
+internet-scanner/shodan.yaml  # Shodan [FREE] - 1 req/s (Free), unlimited (Enterprise)
+internet-scanner/censys.yaml  # Censys [FREE] - 0.4 req/s (Free), 2.5 req/s (Paid)
+internet-scanner/zoomeye.yaml  # ZoomEye [FREE] - 30 req/month (Free), 1000 req/month (Basic)
+internet-scanner/fofa.yaml  # FOFA [FREE] - Varies by plan
+internet-scanner/binaryedge.yaml  # BinaryEdge [FREE] - 250 req/month (Free), pay-as-you-go (Paid)
+internet-scanner/netlas.yaml  # Netlas [FREE] - 50 req/day (Free)
+internet-scanner/leakix.yaml  # LeakIX [FREE] - Varies
+internet-scanner/hunter_qianxin.yaml  # Hunter (Qianxin) [FREE] - Varies by plan (Chinese provider)
+internet-scanner/quake.yaml  # Quake (360) [FREE] - Varies by plan (free tier with limits available)
+internet-scanner/criminalip.yaml  # CriminalIP [FREE] - 100 req/day (Free)
+internet-scanner/onyphe.yaml  # Onyphe [FREE] - 5 req/min (Free)
+internet-scanner/fullhunt.yaml  # FullHunt [FREE] - Varies by plan
+internet-scanner/greynoise.yaml  # GreyNoise [FREE] - 50 req/month (Community)
+internet-scanner/urlscan.yaml  # urlscan.io [FREE] - 50 scans/day (Free)
+
+## Threat Intel
+# (10 providers)
+threat-intel/virustotal.yaml  # VirusTotal [FREE] - 4 req/min (Free), 500 req/day (Paid)
+threat-intel/alienvault_otx.yaml  # AlienVault OTX [FREE] - None (Free community)
+threat-intel/abuseipdb.yaml  # AbuseIPDB [FREE] - 1000 req/day (Free)
+threat-intel/maltiverse.yaml  # Maltiverse [FREE] - Varies
+threat-intel/urlhaus.yaml  # URLhaus (abuse.ch) [FREE] - None (Free community)
+threat-intel/malwarebazaar.yaml  # MalwareBazaar (abuse.ch) [FREE] - None (Free community)
+threat-intel/threatfox.yaml  # ThreatFox (abuse.ch) [FREE] - None (Free community)
+threat-intel/hybrid_analysis.yaml  # Hybrid Analysis [FREE] - 200 req/hr (Free)
+threat-intel/triage.yaml  # Triage (Recorded Future) [FREE] - Free tier available
+threat-intel/pulsedive.yaml  # PulseDive [FREE] - 30 req/day (Free)
+
+## Search Engines
+# (5 providers)
+search-engines/google.yaml  # Google Custom Search [FREE] - 100 req/day (Free), 10k req/day ($5/1k)
+search-engines/bing.yaml  # Bing Web Search [FREE] - 1k req/month (Free), 30k req/month (Paid)
+search-engines/brave_search.yaml  # Brave Search [FREE] - 2k req/month (Free), 20k req/month (Paid)
+search-engines/kagi.yaml  # Kagi - Pay-as-you-go
+search-engines/searxng.yaml  # SearxNG [FREE] - Selbst definiert
+
+## Dns Domain
+# (4 providers)
+dns-domain/securitytrails.yaml  # SecurityTrails [FREE] - 50 req/month (Free), unlimited (Paid)
+dns-domain/crtsh.yaml  # crt.sh (Certificate Transparency) [FREE] - ~5 req/min (Public, kein Key!)
+dns-domain/c99nl.yaml  # C99.nl [FREE] - Varies by plan
+dns-domain/dnsdumpster.yaml  # DNSDumpster [FREE] - Vorsichtig scrapen
+
+## Email Leaks
+# (6 providers)
+email-leaks/hunter.yaml  # Hunter.io [FREE] - 25 req/month (Free), 50k req/month (Business)
+email-leaks/dehashed.yaml  # Dehashed [FREE] - Varies by plan
+email-leaks/intelx.yaml  # Intelligence X (IntelX) [FREE] - Varies by plan
+email-leaks/haveibeenpwned.yaml  # Have I Been Pwned [FREE] - 10 req/min (Free account email check), domain search needs key
+email-leaks/leakcheck.yaml  # LeakCheck - Varies by plan
+email-leaks/snusbase.yaml  # Snusbase - Varies by plan
+
+## Infrastructure
+# (3 providers)
+infrastructure/ipinfo.yaml  # IPinfo [FREE] - 50k req/month (Free)
+infrastructure/bgpview.yaml  # BGPView / BGP.Tools [FREE] - None (Public)
+infrastructure/peeringdb.yaml  # PeeringDB [FREE] - None (Public)
+
+## Web Archive
+# (3 providers)
+web-archive/publicwww.yaml  # PublicWWW - Varies by plan
+web-archive/wayback.yaml  # Wayback Machine (CDX API) [FREE] - ~10 req/min (Public, kein Key!)
+web-archive/builtwith.yaml  # BuiltWith - Varies by plan
+
+## Code Search
+# (1 providers)
+code-search/github.yaml  # GitHub (Code Search) [FREE] - 60 req/h (unauth), 5000 req/h (auth) – Free tier very generous
+
+# ============================================================
+# DORK TEMPLATES
+# ============================================================
+# ({len(dork_templates)} templates)
+
+dork-templates/exposed_docker_api.yaml  # [CRIT] Exposed Docker API
+dork-templates/exposed_elasticsearch.yaml  # [CRIT] Exposed Elasticsearch
+dork-templates/exposed_mongodb.yaml  # [CRIT] Exposed MongoDB
+dork-templates/exposed_kubernetes.yaml  # [CRIT] Exposed Kubernetes Dashboards & APIs
+dork-templates/exposed_vnc.yaml  # [CRIT] Exposed VNC (No Auth)
+dork-templates/exposed_git_repos.yaml  # [CRIT] Exposed .git Repositories
+dork-templates/exposed_env_files.yaml  # [CRIT] Exposed .env Files
+dork-templates/exposed_aws_keys.yaml  # [CRIT] Exposed AWS Credentials
+dork-templates/exposed_backup_files.yaml  # [CRIT] Exposed Backup & Database Dumps
+dork-templates/exposed_s3_buckets.yaml  # [CRIT] Exposed AWS S3 Buckets
+dork-templates/exposed_azure_blobs.yaml  # [CRIT] Exposed Azure Blob Storage
+dork-templates/exposed_gcs_buckets.yaml  # [CRIT] Exposed Google Cloud Storage Buckets
+dork-templates/github_secrets_env_files.yaml  # [CRIT] GitHub Secret Hunting - Environment Files
+dork-templates/github_secrets_aws.yaml  # [CRIT] GitHub Secret Hunting - AWS Credentials
+dork-templates/github_secrets_github_tokens.yaml  # [CRIT] GitHub Secret Hunting - GitHub Tokens & PATs
+dork-templates/github_secrets_private_keys.yaml  # [CRIT] GitHub Secret Hunting - Private Keys & Cryptographic Material
+dork-templates/github_secrets_database.yaml  # [CRIT] GitHub Secret Hunting - Database Credentials
+dork-templates/github_secrets_ci_cd.yaml  # [CRIT] GitHub Secret Hunting - CI/CD Secrets
+dork-templates/github_secrets_high_impact.yaml  # [CRIT] GitHub Secret Hunting - High-Impact Combinations
+dork-templates/exposed_ics_systems.yaml  # [CRIT] Exposed Industrial Control Systems
+dork-templates/exposed_hmi.yaml  # [CRIT] Exposed Human-Machine Interfaces
+dork-templates/exposed_plc.yaml  # [CRIT] Exposed Programmable Logic Controllers
+dork-templates/exposed_redis.yaml  # [HIGH] Exposed Redis (No Auth)
+dork-templates/exposed_memcached.yaml  # [HIGH] Exposed Memcached
+dork-templates/exposed_jenkins.yaml  # [HIGH] Exposed Jenkins CI/CD
+dork-templates/exposed_cassandra.yaml  # [HIGH] Exposed Cassandra
+dork-templates/exposed_couchdb.yaml  # [HIGH] Exposed CouchDB
+dork-templates/exposed_rsync.yaml  # [HIGH] Exposed Rsync
+dork-templates/exposed_rdp.yaml  # [HIGH] Exposed RDP
+dork-templates/exposed_smb.yaml  # [HIGH] Exposed SMB
+dork-templates/exposed_ftp.yaml  # [HIGH] Exposed FTP (Anonymous)
+dork-templates/exposed_etcd.yaml  # [HIGH] Exposed etcd
+dork-templates/exposed_phpmyadmin.yaml  # [HIGH] Exposed phpMyAdmin
+dork-templates/github_secrets_api_keys.yaml  # [HIGH] GitHub Secret Hunting - Common API Keys & Tokens
+dork-templates/github_secrets_jwt.yaml  # [HIGH] GitHub Secret Hunting - JWT Tokens
+dork-templates/github_secrets_slack.yaml  # [HIGH] GitHub Secret Hunting - Slack Tokens & Webhooks
+dork-templates/exposed_iot_devices.yaml  # [HIGH] Exposed IoT Devices
+dork-templates/exposed_prometheus.yaml  # [MED] Exposed Prometheus & Grafana
+dork-templates/exposed_phpinfo.yaml  # [MED] Exposed phpinfo()
+dork-templates/exposed_kibana.yaml  # [MED] Exposed Kibana
+dork-templates/exposed_cloudfront.yaml  # [MED] Exposed CloudFront Distributions
+
+# ============================================================
+# CATEGORY INDEXES
+# ============================================================
+internet-scanner/_category.yaml
+threat-intel/_category.yaml
+search-engines/_category.yaml
+dns-domain/_category.yaml
+email-leaks/_category.yaml
+infrastructure/_category.yaml
+web-archive/_category.yaml
+code-search/_category.yaml
+dork-templates/_category.yaml

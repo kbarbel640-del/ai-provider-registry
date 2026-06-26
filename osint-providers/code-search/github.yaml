@@ -1,0 +1,46 @@
+id: github
+name: GitHub (Code Search)
+url: https://github.com
+api_base: https://api.github.com
+api_type: REST
+auth_type: 'api_key (Header: Authorization: Bearer ghp_xxx)'
+env_var: GITHUB_TOKEN
+rate_limit: 60 req/h (unauth), 5000 req/h (auth) – Free tier very generous
+free_tier: true
+priority: 1
+category:
+- code_search
+- secrets
+- source_code
+- information_disclosure
+description: Suche in öffentlichen GitHub-Repos nach Code, Secrets, Credentials, Config-Dateien
+notes: 'Extrem wertvoll für Credential-Hunting. Qualifier wie filename:, path:, extension:,
+  language: verfügbar.'
+typical_queries:
+- 'code_search: /search/code?q={query}'
+- 'repo_search: /search/repositories?q={query}'
+- 'user_repos: /users/{username}/repos'
+dork_syntax: 'filename:.env DB_PASSWORD
+
+  path:.env AWS_SECRET
+
+  "BEGIN RSA PRIVATE KEY" extension:key
+
+  "AKIA" filename:credentials
+
+  "password" filename:.env
+
+  extension:pem "BEGIN"
+
+  '
+dork_fields:
+- filename
+- path
+- extension
+- language
+- user
+- org
+- repo
+- size
+_category: code-search
+_category_label: Code Search / Repository Intel / Secret Hunting

@@ -1,0 +1,7 @@
+category: infrastructure
+label: Infrastructure / Network / Geolocation
+provider_count: 3
+providers:
+- ipinfo
+- bgpview
+- peeringdb

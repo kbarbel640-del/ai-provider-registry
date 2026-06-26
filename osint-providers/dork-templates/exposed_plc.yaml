@@ -1,0 +1,18 @@
+id: exposed_plc
+name: Exposed Programmable Logic Controllers
+description: exponierte PLCs (SPS)
+category: iot_ics
+severity: critical
+risk: critical
+tags:
+- plc
+- logic_controller
+- automation
+- industrial
+platform_dorks:
+  shodan:
+  - product:"S7-200" OR product:"S7-300" OR product:"S7-1200"
+  - product:"Allen-Bradley" OR product:"GE Fanuc"
+  - port:502 "S7 Communication"
+  censys:
+  - 'services.port: 502 AND services.product: "Siemens S7"'

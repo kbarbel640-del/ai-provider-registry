@@ -1,0 +1,23 @@
+id: exposed_phpmyadmin
+name: Exposed phpMyAdmin
+description: phpMyAdmin-Instanzen ohne Zugriffsschutz
+category: exposed_services
+severity: high
+risk: high
+tags:
+- phpmyadmin
+- database
+- misconfiguration
+- mysql
+platform_dorks:
+  shodan:
+  - title:"phpMyAdmin" port:80
+  - port:80 "phpMyAdmin" "MySQL"
+  censys:
+  - 'services.http.response.body: "phpMyAdmin" AND services.http.response.body: "MySQL"'
+  fofa:
+  - title="phpMyAdmin"
+  zoomeye:
+  - '"phpMyAdmin" "Welcome to"'
+  google:
+  - intitle:"phpMyAdmin" "Welcome to phpMyAdmin"

@@ -1,0 +1,37 @@
+id: urlscan
+name: urlscan.io
+url: https://urlscan.io
+api_base: https://urlscan.io/api/v1
+api_type: REST
+auth_type: 'api_key (Header: API-Key)'
+env_var: URLSCAN_API_KEY
+rate_limit: 50 scans/day (Free)
+free_tier: true
+priority: 3
+category:
+- internet_scanner
+- url_analysis
+- phishing
+description: URL-Screenshots, Redirect-Ketten, DOM-Analyse, Phishing-Erkennung
+typical_queries:
+- 'scan: /scan/ (POST)'
+- 'search: /search/?q={query}'
+- 'result: /result/{uuid}'
+dork_syntax: 'page.domain:example.com
+
+  page.ip:8.8.8.8
+
+  page.server:nginx
+
+  task.tags:phishing
+
+  '
+dork_fields:
+- page.domain
+- page.ip
+- page.server
+- page.country
+- task.tags
+- page.url
+_category: internet-scanner
+_category_label: Internet Scanner / Attack Surface

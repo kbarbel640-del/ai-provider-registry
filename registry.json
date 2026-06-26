@@ -4,9 +4,11 @@
     "description": "A structured registry of AI providers, models, and capabilities for LLM consumption.",
     "version": "1.0.0",
     "last_updated": "2026-06-26",
-    "homepage": "https://sayhey.site.je/",
-    "llms_txt": "https://sayhey.site.je/llms.txt",
-    "registry_json": "https://sayhey.site.je/registry.json"
+    "homepage": "https://kbarbel640-del.github.io/ai-provider-registry/",
+    "llms_txt": "https://kbarbel640-del.github.io/ai-provider-registry/llms.txt",
+    "registry_json": "https://kbarbel640-del.github.io/ai-provider-registry/registry.json",
+    "osint_registry": "https://kbarbel640-del.github.io/ai-provider-registry/osint-providers/osint-llms.txt",
+    "osint_registry_json": "https://kbarbel640-del.github.io/ai-provider-registry/osint-providers/osint-registry.json"
   },
   "providers": [
     {"id": "openai",     "free": false, "api_style": "openai",    "supports": ["chat", "vision", "image", "tools", "json_mode", "streaming", "speech", "moderation", "embeddings"]},

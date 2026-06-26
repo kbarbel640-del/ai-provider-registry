@@ -1,0 +1,21 @@
+id: abuseipdb
+name: AbuseIPDB
+url: https://www.abuseipdb.com
+api_base: https://api.abuseipdb.com/api/v2
+api_type: REST
+auth_type: 'api_key (Header: Key)'
+env_var: ABUSEIPDB_API_KEY
+rate_limit: 1000 req/day (Free)
+free_tier: true
+priority: 1
+category:
+- threat_intel
+- reputation
+- abuse_report
+description: IP-Reputation, Abuse-Reports, Community-Blacklist
+typical_queries:
+- 'check: /check?ipAddress={ip}&maxAgeInDays=90'
+- 'blacklist: /blacklist'
+- 'report: /report'
+_category: threat-intel
+_category_label: Threat Intelligence / Malware / Reputation

@@ -1,0 +1,21 @@
+id: hybrid_analysis
+name: Hybrid Analysis
+url: https://www.hybrid-analysis.com
+api_base: https://www.hybrid-analysis.com/api/v2
+api_type: REST
+auth_type: 'api_key (Header: api-key)'
+env_var: HYBRID_ANALYSIS_API_KEY
+rate_limit: 200 req/hr (Free)
+free_tier: true
+priority: 4
+category:
+- threat_intel
+- malware_analysis
+- sandbox
+description: CrowdStrike-Sandbox für File-/URL-Analyse mit detaillierten Reports
+typical_queries:
+- 'search_hash: /search/hash/{hash}'
+- 'search_terms: /search/terms?q={query}'
+- 'overview: /overview/{sha256}/summary'
+_category: threat-intel
+_category_label: Threat Intelligence / Malware / Reputation

@@ -1,0 +1,32 @@
+id: exposed_elasticsearch
+name: Exposed Elasticsearch
+description: Findet offene Elasticsearch-Instanzen ohne Auth (Port 9200)
+category: exposed_services
+severity: critical
+risk: critical
+tags:
+- elasticsearch
+- misconfiguration
+- database
+- exposed_api
+- search_engine
+platform_dorks:
+  shodan:
+  - product:"Elasticsearch" port:9200
+  - '"cluster_name" port:9200'
+  - port:9200 "name" "Lucene"
+  - port:9200 -authentication
+  censys:
+  - 'services.port: 9200 AND services.service_name: ELASTICSEARCH'
+  - 'services.port: 9200 AND services.http.response.body: "cluster_name"'
+  - 'services.port: 9200 AND services.http.response.body: "lucene_version"'
+  fofa:
+  - port="9200" && body="cluster_name"
+  - port="9200" && protocol="elasticsearch"
+  zoomeye:
+  - port:9200 service:"elasticsearch"
+  - port:9200 "cluster_name"
+  binaryedge:
+  - port:9200 AND elasticsearch
+  criminalip:
+  - port:9200 AND product:Elasticsearch

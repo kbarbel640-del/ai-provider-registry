@@ -1,0 +1,24 @@
+id: securitytrails
+name: SecurityTrails
+url: https://securitytrails.com
+api_base: https://api.securitytrails.com/v1
+api_type: REST
+auth_type: 'api_key (Header: APIKEY)'
+env_var: SECURITYTRAILS_API_KEY
+rate_limit: 50 req/month (Free), unlimited (Paid)
+free_tier: true
+priority: 1
+category:
+- dns
+- domain
+- subdomain
+- passive_dns
+description: Passive DNS, Subdomain-History, WHOIS, DNS-Records
+typical_queries:
+- 'domain_details: /domain/{domain}'
+- 'subdomains: /domain/{domain}/subdomains'
+- 'dns_history: /history/{domain}/dns/a'
+- 'whois: /domain/{domain}/whois'
+- 'ip_nearby: /ips/nearby/{ip}'
+_category: dns-domain
+_category_label: DNS / Domain / Subdomain Enumeration

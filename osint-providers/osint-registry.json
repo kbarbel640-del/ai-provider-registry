@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "name": "OSINT Provider Registry",
+    "description": "A structured registry of OSINT/search platforms with API details, free tier info, and dork syntax, optimized for LLM and security researcher consumption.",
+    "version": "1.0.0",
+    "last_updated": "2026-06-26",
+    "llms_txt": "osint-llms.txt"
+  },
+  "categories": {
+    "code-search": [
+      "github"
+    ],
+    "dns-domain": [
+      "securitytrails",
+      "crtsh",
+      "dnsdumpster",
+      "c99nl"
+    ],
+    "email-leaks": [
+      "hunter",
+      "dehashed",
+      "intelx",
+      "haveibeenpwned",
+      "leakcheck",
+      "snusbase"
+    ],
+    "infrastructure": [
+      "ipinfo",
+      "bgpview",
+      "peeringdb"
+    ],
+    "internet-scanner": [
+      "shodan",
+      "censys",
+      "zoomeye",
+      "fofa",
+      "onyphe",
+      "binaryedge",
+      "fullhunt",
+      "netlas",
+      "leakix",
+      "hunter_qianxin",
+      "quake",
+      "criminalip",
+      "greynoise",
+      "urlscan"
+    ],
+    "search-engines": [
+      "google",
+      "bing",
+      "brave_search",
+      "kagi",
+      "searxng"
+    ],
+    "threat-intel": [
+      "virustotal",
+      "alienvault_otx",
+      "abuseipdb",
+      "maltiverse",
+      "urlhaus",
+      "malwarebazaar",
+      "threatfox",
+      "hybrid_analysis",
+      "triage",
+      "pulsedive"
+    ],
+    "web-archive": [
+      "wayback",
+      "publicwww",
+      "builtwith"
+    ]
+  },
+  "dork_templates": [
+    "exposed_docker_api",
+    "exposed_elasticsearch",
+    "exposed_mongodb",
+    "exposed_redis",
+    "exposed_memcached",
+    "exposed_kubernetes",
+    "exposed_jenkins",
+    "exposed_cassandra",
+    "exposed_couchdb",
+    "exposed_rsync",
+    "exposed_vnc",
+    "exposed_rdp",
+    "exposed_smb",
+    "exposed_ftp",
+    "exposed_prometheus",
+    "exposed_etcd",
+    "exposed_phpinfo",
+    "exposed_git_repos",
+    "exposed_env_files",
+    "exposed_aws_keys",
+    "exposed_backup_files",
+    "exposed_kibana",
+    "exposed_phpmyadmin",
+    "exposed_s3_buckets",
+    "exposed_azure_blobs",
+    "exposed_gcs_buckets",
+    "exposed_cloudfront",
+    "github_secrets_env_files",
+    "github_secrets_aws",
+    "github_secrets_github_tokens",
+    "github_secrets_api_keys",
+    "github_secrets_private_keys",
+    "github_secrets_database",
+    "github_secrets_jwt",
+    "github_secrets_slack",
+    "github_secrets_ci_cd",
+    "github_secrets_high_impact",
+    "exposed_iot_devices",
+    "exposed_ics_systems",
+    "exposed_hmi",
+    "exposed_plc"
+  ],
+  "total_providers": 46,
+  "total_dork_templates": 41
+}

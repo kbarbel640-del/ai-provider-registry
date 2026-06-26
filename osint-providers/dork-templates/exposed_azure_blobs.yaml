@@ -1,0 +1,17 @@
+id: exposed_azure_blobs
+name: Exposed Azure Blob Storage
+description: Öffentliche Azure Blob Container
+category: cloud_storage
+severity: critical
+risk: critical
+tags:
+- azure
+- blob_storage
+- cloud_storage
+- misconfiguration
+platform_dorks:
+  google:
+  - site:blob.core.windows.net "Index of"
+  - inurl:blob.core.windows.net filetype:json OR filetype:csv
+  shodan:
+  - http.title:"Index of" "blob.core.windows.net"

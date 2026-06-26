@@ -1,0 +1,22 @@
+id: exposed_ics_systems
+name: Exposed Industrial Control Systems
+description: exponierte ICS/SCADA-Systeme
+category: iot_ics
+severity: critical
+risk: critical
+tags:
+- ics
+- scada
+- industrial
+- critical_infrastructure
+platform_dorks:
+  shodan:
+  - product:"Siemens" (port:102 OR port:161 OR port:1962)
+  - product:"Schneider Electric" (port:502 OR port:4840)
+  - product:"Rockwell" port:44818
+  - product:"Modbus" port:502
+  - product:"DNP3" port:20000
+  - product:"BACnet" port:47808
+  censys:
+  - 'services.port: 502 AND services.service_name: MODBUS'
+  - 'services.port: 44818 AND services.service_name: CIP'

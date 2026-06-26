@@ -1,0 +1,43 @@
+id: fofa
+name: FOFA
+url: https://fofa.info
+api_base: https://fofa.info/api/v1
+api_type: REST
+auth_type: api_key (email + key)
+env_var: FOFA_EMAIL, FOFA_API_KEY
+rate_limit: Varies by plan
+free_tier: true
+priority: 1
+category:
+- internet_scanner
+- dork_search
+description: Chinesischer Asset-Mapper (ähnlich ZoomEye)
+typical_queries:
+- 'search: /search/all?qbase64={query_b64}&key={key}'
+dork_syntax: 'port="2375"
+
+  country="DE"
+
+  protocol="http"
+
+  body="Docker"
+
+  header="Server"
+
+  cert="*.google.com"
+
+  '
+dork_fields:
+- port
+- country
+- city
+- protocol
+- body
+- header
+- cert
+- title
+- server
+- domain
+- ip
+_category: internet-scanner
+_category_label: Internet Scanner / Attack Surface

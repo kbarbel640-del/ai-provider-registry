@@ -1,0 +1,17 @@
+id: exposed_cassandra
+name: Exposed Cassandra
+description: Offene Cassandra-Datenbanken (Port 9042/9160)
+category: exposed_services
+severity: high
+risk: high
+tags:
+- cassandra
+- misconfiguration
+- database
+- nosql
+platform_dorks:
+  shodan:
+  - port:9042 product:"Cassandra"
+  - port:9160 "cassandra"
+  censys:
+  - 'services.port: [9042, 9160] AND services.service_name: CASSANDRA'

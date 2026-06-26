@@ -1,0 +1,19 @@
+id: threatfox
+name: ThreatFox (abuse.ch)
+url: https://threatfox.abuse.ch
+api_base: https://threatfox-api.abuse.ch/api/v1
+api_type: REST
+auth_type: api_key
+env_var: THREATFOX_API_KEY
+rate_limit: None (Free community)
+free_tier: true
+priority: 4
+category:
+- threat_intel
+- ioc_sharing
+description: IoC-Sharing-Plattform (IPs, Domains, URLs, Hashes)
+typical_queries:
+- 'search_ioc: / (POST, query: search_ioc, search_term: xxx)'
+- 'recent: / (POST, query: get_recent, days: 7)'
+_category: threat-intel
+_category_label: Threat Intelligence / Malware / Reputation

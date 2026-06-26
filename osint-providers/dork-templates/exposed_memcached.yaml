@@ -1,0 +1,19 @@
+id: exposed_memcached
+name: Exposed Memcached
+description: Findet offene Memcached-Dienste (Port 11211) – Amplification-Risiko
+category: exposed_services
+severity: high
+risk: high
+tags:
+- memcached
+- misconfiguration
+- dos_amplification
+- cache
+platform_dorks:
+  shodan:
+  - port:11211 product:"Memcached"
+  - port:11211 "STAT pid"
+  censys:
+  - 'services.port: 11211 AND services.service_name: MEMCACHED'
+  fofa:
+  - port="11211" && protocol="memcache"

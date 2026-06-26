@@ -1,0 +1,10 @@
+category: email-leaks
+label: Email / People / Leaks
+provider_count: 6
+providers:
+- hunter
+- dehashed
+- intelx
+- haveibeenpwned
+- leakcheck
+- snusbase

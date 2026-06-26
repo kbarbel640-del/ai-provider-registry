@@ -1,0 +1,45 @@
+id: shodan
+name: Shodan
+url: https://www.shodan.io
+api_base: https://api.shodan.io
+api_type: REST
+auth_type: api_key
+env_var: SHODAN_API_KEY
+rate_limit: 1 req/s (Free), unlimited (Enterprise)
+free_tier: true
+priority: 1
+category:
+- internet_scanner
+- threat_intel
+description: Internetscanner für exponierte Geräte, Services, ICS
+typical_queries:
+- 'ip_lookup: /shodan/host/{ip}'
+- 'search: /shodan/host/search?query={query}'
+dork_syntax: 'field:value
+
+  port:2375
+
+  country:DE
+
+  org:"Amazon"
+
+  product:"nginx"
+
+  "Server: Apache/2.4.1"
+
+  '
+dork_fields:
+- port
+- country
+- city
+- org
+- isp
+- product
+- os
+- version
+- hostname
+- asn
+- http.title
+- http.component
+_category: internet-scanner
+_category_label: Internet Scanner / Attack Surface

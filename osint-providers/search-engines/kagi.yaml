@@ -1,0 +1,20 @@
+id: kagi
+name: Kagi
+url: https://kagi.com
+api_base: https://kagi.com/api/v0
+api_type: REST
+auth_type: 'api_key (Header: Authorization: Bot xxx)'
+env_var: KAGI_API_KEY
+rate_limit: Pay-as-you-go
+free_tier: false
+priority: 5
+category:
+- search_engine
+- summarizer
+description: Premium-Suche mit FastGPT-Summarizer
+typical_queries:
+- 'search: /search?q={query}'
+- 'summarize: /summarize?url={url}'
+- 'enrich: /enrich/web?q={query}'
+_category: search-engines
+_category_label: Search Engines & Web Search

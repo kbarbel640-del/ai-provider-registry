@@ -1,0 +1,42 @@
+id: quake
+name: Quake (360)
+url: https://quake.360.net
+api_base: https://quake.360.net/api/v3
+api_type: REST
+auth_type: api_key
+env_var: QUAKE_API_KEY
+rate_limit: Varies by plan (free tier with limits available)
+free_tier: true
+priority: 2
+category:
+- internet_scanner
+- dork_search
+description: Asset-Suchmaschine von 360 Security (gute Ergänzung zu FOFA/ZoomEye)
+notes: Starke Dork-Syntax, oft andere Ergebnisse als FOFA/ZoomEye. Von Subfinder als
+  Quelle genutzt.
+typical_queries:
+- 'search: /search/quake_service?query={query}&start={start}&size={size}'
+- 'search_aggregated: /aggregation/quake_search?query={query}'
+dork_syntax: 'port:2375
+
+  country:"DE"
+
+  app:"Docker"
+
+  service:"http"
+
+  '
+dork_fields:
+- port
+- country
+- city
+- app
+- service
+- os
+- domain
+- cert
+- title
+- header
+last_tested: '2026-06-25'
+_category: internet-scanner
+_category_label: Internet Scanner / Attack Surface

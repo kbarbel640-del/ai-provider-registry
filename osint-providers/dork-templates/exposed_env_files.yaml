@@ -1,0 +1,24 @@
+id: exposed_env_files
+name: Exposed .env Files
+description: Öffentlich zugängliche .env-Dateien mit Secrets/Credentials
+category: information_disclosure
+severity: critical
+risk: critical
+tags:
+- credentials
+- secrets
+- information_disclosure
+- configuration
+platform_dorks:
+  google:
+  - intitle:"index of" ".env"
+  - filetype:env "DB_PASSWORD"
+  - filetype:env "MAIL_HOST"
+  - filetype:env "AWS_SECRET"
+  bing:
+  - '"DB_PASSWORD" filetype:env'
+  - '"SECRET_KEY" filetype:env'
+  publicwww:
+  - '"DB_PASSWORD="'
+  - '"AWS_SECRET_ACCESS_KEY="'
+  - '"STRIPE_SECRET_KEY="'

@@ -1,0 +1,19 @@
+id: pulsedive
+name: PulseDive
+url: https://pulsedive.com
+api_base: https://pulsedive.com/api
+api_type: REST
+auth_type: api_key
+env_var: PULSEDIVE_API_KEY
+rate_limit: 30 req/day (Free)
+free_tier: true
+priority: 4
+category:
+- threat_intel
+- ioc_aggregator
+description: Threat-Intel-Aggregator – scannt IoCs gegen viele Quellen
+typical_queries:
+- 'query: /query.php?q={ioc}&type={type}'
+- 'info: /info.php?indicator={ioc}'
+_category: threat-intel
+_category_label: Threat Intelligence / Malware / Reputation

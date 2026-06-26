@@ -1,0 +1,24 @@
+id: exposed_phpinfo
+name: Exposed phpinfo()
+description: Öffentlich erreichbare phpinfo()-Seiten
+category: information_disclosure
+severity: medium
+risk: medium
+tags:
+- php
+- information_disclosure
+- misconfiguration
+- phpinfo
+platform_dorks:
+  shodan:
+  - title:"phpinfo()"
+  - port:80 "PHP Version" http.title:"phpinfo()"
+  censys:
+  - 'services.http.response.body: "phpinfo()" AND services.http.response.body: "PHP
+    Version"'
+  fofa:
+  - title="phpinfo()" && body="PHP Version"
+  google:
+  - intitle:"phpinfo()" "PHP Version"
+  bing:
+  - intitle:phpinfo() "PHP Version"

@@ -1,0 +1,40 @@
+id: zoomeye
+name: ZoomEye
+url: https://www.zoomeye.org
+api_base: https://api.zoomeye.org
+api_type: REST
+auth_type: 'api_key (Header: API-KEY)'
+env_var: ZOOMEYE_API_KEY
+rate_limit: 30 req/month (Free), 1000 req/month (Basic)
+free_tier: true
+priority: 1
+category:
+- internet_scanner
+- dork_search
+description: Chinesischer Scanner für Hosts & Web-Technologien
+typical_queries:
+- 'host_search: /host/search?query={query}'
+- 'web_search: /web/search?query={query}'
+dork_syntax: 'port:2375
+
+  country:"DE"
+
+  app:"nginx"
+
+  service:"http"
+
+  +"Docker/1."
+
+  '
+dork_fields:
+- port
+- country
+- city
+- app
+- service
+- device
+- os
+- title
+- headers
+_category: internet-scanner
+_category_label: Internet Scanner / Attack Surface

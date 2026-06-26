@@ -1,0 +1,20 @@
+id: brave_search
+name: Brave Search
+url: https://brave.com/search/api/
+api_base: https://api.search.brave.com/res/v1
+api_type: REST
+auth_type: 'api_key (Header: X-Subscription-Token)'
+env_var: BRAVE_SEARCH_API_KEY
+rate_limit: 2k req/month (Free), 20k req/month (Paid)
+free_tier: true
+priority: 4
+category:
+- search_engine
+- dork_search
+description: Privacy-freundliche Suchmaschine mit Web- & Goggles-API
+typical_queries:
+- 'web_search: /web/search?q={query}'
+- 'news_search: /news/search?q={query}'
+- 'goggles_search: /goggles/search?q={query}'
+_category: search-engines
+_category_label: Search Engines & Web Search

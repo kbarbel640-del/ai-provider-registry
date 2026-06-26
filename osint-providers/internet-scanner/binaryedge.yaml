@@ -1,0 +1,37 @@
+id: binaryedge
+name: BinaryEdge
+url: https://www.binaryedge.io
+api_base: https://api.binaryedge.io/v2
+api_type: REST
+auth_type: 'api_key (Header: X-Key)'
+env_var: BINARYEDGE_API_KEY
+rate_limit: 250 req/month (Free), pay-as-you-go (Paid)
+free_tier: true
+priority: 2
+category:
+- internet_scanner
+- attack_surface
+- torrent_tracker
+description: 40+ Daten-Module, Streaming-API, Torrent-Monitoring
+typical_queries:
+- 'query_ip: /query/ip/{ip}'
+- 'query_domain: /query/domains/subdomain/{domain}'
+- 'search: /query/search?query={query}'
+dork_syntax: 'port:2375
+
+  type:docker
+
+  country:DE
+
+  tag:c2
+
+  '
+dork_fields:
+- port
+- type
+- country
+- service
+- product
+- tag
+_category: internet-scanner
+_category_label: Internet Scanner / Attack Surface

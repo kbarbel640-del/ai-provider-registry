@@ -1,0 +1,22 @@
+id: bgpview
+name: BGPView / BGP.Tools
+url: https://bgpview.io
+api_base: https://api.bgpview.io
+api_type: REST
+auth_type: none
+env_var: null
+rate_limit: None (Public)
+free_tier: true
+priority: 4
+category:
+- infrastructure
+- bgp
+- asn
+- peering
+description: BGP-Daten – ASN, Prefix, IXP, Peering, Upstreams
+typical_queries:
+- 'ip_view: /ip/{ip}'
+- 'asn_view: /asn/{asn}'
+- 'prefix_view: /prefix/{prefix}'
+_category: infrastructure
+_category_label: Infrastructure / Network / Geolocation

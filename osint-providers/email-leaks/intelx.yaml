@@ -1,0 +1,22 @@
+id: intelx
+name: Intelligence X (IntelX)
+url: https://intelx.io
+api_base: https://2.intelx.io
+api_type: REST
+auth_type: 'api_key (Header: x-key)'
+env_var: INTELX_API_KEY
+rate_limit: Varies by plan
+free_tier: true
+priority: 4
+category:
+- email
+- leaks
+- deepweb
+- documents
+description: Leak/Deepweb-Suche, Files, E-Mails, Domains, Bitcoin
+typical_queries:
+- 'search: /intelligent/search?q={query}'
+- 'file_view: /file/view?sid={sid}'
+- 'phonebook: /phonebook/search?q={query}'
+_category: email-leaks
+_category_label: Email / People / Leaks
