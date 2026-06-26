@@ -1,0 +1,31 @@
+name: OpenCode Go
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://opencode.ai/go
+pricing:
+  free: false
+  pay_as_you_go: false
+  doc_url: https://opencode.ai/docs/go/#pricing
+supports:
+  - chat
+  - tools
+  - streaming
+  - json_mode
+  - reasoning
+models:
+  - glm-5.2
+  - glm-5.1
+  - kimi-k2.7
+  - kimi-k2.6
+  - deepseek-v4-pro
+  - deepseek-v4-flash
+  - mimo-v2.5-pro
+  - mimo-v2.5
+  - minimax-m3
+  - minimax-m2.7
+  - minimax-m2.5
+  - qwen3.7-max
+  - qwen3.7-plus
+  - qwen3.6-plus
+endpoint: https://opencode.ai/zen/go/v1

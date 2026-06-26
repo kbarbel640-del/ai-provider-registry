@@ -16,6 +16,7 @@ providers/cerebras.yaml
 providers/perplexity.yaml
 providers/pollinations.yaml
 providers/opencode.yaml
+providers/opencode-go.yaml
 
 ## Models
 models/llama.yaml
