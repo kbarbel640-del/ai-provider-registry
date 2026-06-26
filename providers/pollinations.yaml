@@ -1,0 +1,22 @@
+name: Pollinations
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://enter.pollinations.ai
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://enter.pollinations.ai
+supports:
+  - chat
+  - vision
+  - image
+  - video
+  - audio
+  - embeddings
+  - streaming
+  - tools
+  - realtime
+models:
+  - auto
+endpoint: https://gen.pollinations.ai
