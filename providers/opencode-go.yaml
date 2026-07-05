@@ -34,4 +34,5 @@ models:
   - mimo-v2.5-pro
   - mimo-v2.5
   - hy3-preview
+api_spec: https://opencode.ai/openapi.json
 endpoint: https://opencode.ai/zen/go/v1

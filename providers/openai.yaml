@@ -26,4 +26,5 @@ models:
   - gpt-4.1-mini
   - text-embedding-3-large
   - text-embedding-3-small
+api_spec: https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml
 endpoint: https://api.openai.com/v1

@@ -19,4 +19,5 @@ models:
   - gemini-2.5-flash
   - gemini-2.0-flash
   - text-embedding-004
+api_spec: https://generativelanguage.googleapis.com/$discovery/rest?version=v1beta
 endpoint: https://generativelanguage.googleapis.com/v1beta

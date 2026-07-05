@@ -1,0 +1,1059 @@
+openapi: 3.1.0
+info:
+  title: Anthropic Messages API
+  description: >
+    Send a structured list of input messages with text and/or image content, and
+    the model will generate the next message in the conversation. The Messages
+    API can be used for both single-turn and multi-turn conversations. It
+    supports text, images, tool use, extended thinking, streaming, and
+    structured output.
+  version: 2023-06-01
+  contact:
+    name: Anthropic Support
+    url: https://support.anthropic.com
+  license:
+    name: Anthropic Terms of Service
+    url: https://www.anthropic.com/terms
+
+servers:
+  - url: https://api.anthropic.com
+    description: Production Server
+
+security:
+  - ApiKeyAuth: []
+
+tags:
+  - name: Messages
+    description: Create messages using Claude models
+
+paths:
+  /v1/messages:
+    post:
+      summary: Anthropic Create A Message
+      description: >
+        Send a structured list of input messages with text and/or image content,
+        and the model will generate the next message in the conversation. The
+        Messages API can be used for both single-turn and multi-turn
+        conversations.
+      operationId: createMessage
+      tags:
+        - Messages
+      x-microcks-operation:
+        dispatcher: FALLBACK
+        dispatcherRules: ""
+        delay: 100
+      parameters:
+        - $ref: '#/components/parameters/AnthropicVersionHeader'
+        - $ref: '#/components/parameters/ApiKeyHeader'
+        - $ref: '#/components/parameters/ContentTypeHeader'
+        - $ref: '#/components/parameters/AnthropicBetaHeader'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateMessageRequest'
+            examples:
+              SimpleMessage:
+                $ref: '#/components/examples/SimpleMessageRequestExample'
+              ToolUseMessage:
+                $ref: '#/components/examples/ToolUseMessageRequestExample'
+              ThinkingMessage:
+                $ref: '#/components/examples/ThinkingMessageRequestExample'
+      responses:
+        '200':
+          description: Successful message response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+              examples:
+                SimpleResponse:
+                  $ref: '#/components/examples/SimpleMessageResponseExample'
+                ToolUseResponse:
+                  $ref: '#/components/examples/ToolUseMessageResponseExample'
+        '400':
+          description: Bad Request - Invalid input parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              examples:
+                BadRequestExample:
+                  $ref: '#/components/examples/ErrorBadRequestExample'
+        '401':
+          description: Unauthorized - Invalid or missing API key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              examples:
+                UnauthorizedExample:
+                  $ref: '#/components/examples/ErrorUnauthorizedExample'
+        '403':
+          description: Forbidden - Access denied
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              examples:
+                ForbiddenExample:
+                  $ref: '#/components/examples/ErrorForbiddenExample'
+        '429':
+          description: Too Many Requests - Rate limit exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              examples:
+                RateLimitExample:
+                  $ref: '#/components/examples/ErrorRateLimitExample'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              examples:
+                ServerErrorExample:
+                  $ref: '#/components/examples/ErrorServerExample'
+        '529':
+          description: API Overloaded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              examples:
+                OverloadedExample:
+                  $ref: '#/components/examples/ErrorOverloadedExample'
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+      description: Anthropic API key for authentication
+
+  parameters:
+    AnthropicVersionHeader:
+      name: anthropic-version
+      in: header
+      required: true
+      description: The version of the Anthropic API to use (e.g. 2023-06-01).
+      schema:
+        type: string
+        default: '2023-06-01'
+
+    ApiKeyHeader:
+      name: x-api-key
+      in: header
+      required: true
+      description: A valid Anthropic API key.
+      schema:
+        type: string
+
+    ContentTypeHeader:
+      name: Content-Type
+      in: header
+      required: true
+      description: The content type of the request body.
+      schema:
+        type: string
+        default: application/json
+
+    AnthropicBetaHeader:
+      name: anthropic-beta
+      in: header
+      description: >
+        Optional header to specify the beta version(s) you want to use. To use
+        multiple betas, use a comma separated list or specify the header
+        multiple times.
+      required: false
+      schema:
+        type: array
+        items:
+          type: string
+      style: simple
+      explode: false
+
+  schemas:
+    # ---- Request Schemas ----
+
+    CreateMessageRequest:
+      type: object
+      required:
+        - model
+        - messages
+        - max_tokens
+      properties:
+        model:
+          type: string
+          description: >
+            The model that will complete your prompt. See the list of available
+            models.
+          examples:
+            - claude-opus-4-6
+            - claude-sonnet-4-6
+            - claude-haiku-4-5
+        messages:
+          type: array
+          description: >
+            Input messages. Each message has a role and content. Roles must
+            alternate between user and assistant. The first message must use the
+            user role.
+          items:
+            $ref: '#/components/schemas/MessageParam'
+          minItems: 1
+        max_tokens:
+          type: integer
+          description: >
+            The maximum number of tokens to generate before stopping. The model
+            may stop before reaching this limit. This parameter was previously
+            called max_tokens_to_sample.
+          minimum: 1
+        system:
+          description: >
+            A system prompt is a way of providing context and instructions to
+            Claude. Can be a string or an array of content blocks.
+          oneOf:
+            - type: string
+            - type: array
+              items:
+                $ref: '#/components/schemas/TextBlockParam'
+        temperature:
+          type: number
+          description: >
+            Amount of randomness injected into the response. Ranges from 0.0 to
+            1.0. Use temperature closer to 0.0 for analytical or multiple choice
+            tasks, and closer to 1.0 for creative and generative tasks. Default
+            is 1.0.
+          minimum: 0.0
+          maximum: 1.0
+          default: 1.0
+        top_p:
+          type: number
+          description: >
+            Use nucleus sampling. In nucleus sampling, we compute the cumulative
+            distribution over all the options for each subsequent token in
+            decreasing probability order and cut it off once it reaches a
+            particular probability specified by top_p. Recommended for advanced
+            use cases only. Use either temperature or top_p, not both.
+          minimum: 0.0
+          maximum: 1.0
+        top_k:
+          type: integer
+          description: >
+            Only sample from the top K options for each subsequent token. Used to
+            remove long tail low probability responses. Recommended for advanced
+            use cases only.
+          minimum: 0
+        stop_sequences:
+          type: array
+          description: >
+            Custom text sequences that will cause the model to stop generating.
+            If the model encounters one of the custom sequences, the
+            stop_reason in the response will be stop_sequence and the
+            stop_sequence value will contain the matched stop sequence.
+          items:
+            type: string
+        stream:
+          type: boolean
+          description: >
+            Whether to incrementally stream the response using server-sent
+            events.
+          default: false
+        metadata:
+          $ref: '#/components/schemas/Metadata'
+        tools:
+          type: array
+          description: >
+            Definitions of tools that the model may use. If you include tools in
+            your API request, the model may return tool_use content blocks. Each
+            tool definition includes a name, description, and input schema.
+          items:
+            $ref: '#/components/schemas/ToolUnion'
+        tool_choice:
+          $ref: '#/components/schemas/ToolChoice'
+        thinking:
+          $ref: '#/components/schemas/ThinkingConfig'
+        service_tier:
+          type: string
+          description: >
+            The service tier to use for this request. Defaults to auto, which
+            will use the highest priority tier available.
+          enum:
+            - auto
+            - standard_only
+        output_config:
+          $ref: '#/components/schemas/OutputConfig'
+
+    # ---- Message Parameters ----
+
+    MessageParam:
+      type: object
+      required:
+        - role
+        - content
+      properties:
+        role:
+          type: string
+          description: The role of the message sender.
+          enum:
+            - user
+            - assistant
+        content:
+          description: >
+            The content of the message. Can be a string for simple text messages
+            or an array of content blocks for multi-modal input.
+          oneOf:
+            - type: string
+            - type: array
+              items:
+                $ref: '#/components/schemas/ContentBlockParam'
+
+    # ---- Content Block Parameters (Request) ----
+
+    ContentBlockParam:
+      description: A content block in a request message.
+      oneOf:
+        - $ref: '#/components/schemas/TextBlockParam'
+        - $ref: '#/components/schemas/ImageBlockParam'
+        - $ref: '#/components/schemas/DocumentBlockParam'
+        - $ref: '#/components/schemas/ToolUseBlockParam'
+        - $ref: '#/components/schemas/ToolResultBlockParam'
+      discriminator:
+        propertyName: type
+        mapping:
+          text: '#/components/schemas/TextBlockParam'
+          image: '#/components/schemas/ImageBlockParam'
+          document: '#/components/schemas/DocumentBlockParam'
+          tool_use: '#/components/schemas/ToolUseBlockParam'
+          tool_result: '#/components/schemas/ToolResultBlockParam'
+
+    TextBlockParam:
+      type: object
+      required:
+        - type
+        - text
+      properties:
+        type:
+          type: string
+          enum:
+            - text
+        text:
+          type: string
+          description: The text content.
+        cache_control:
+          $ref: '#/components/schemas/CacheControl'
+
+    ImageBlockParam:
+      type: object
+      required:
+        - type
+        - source
+      properties:
+        type:
+          type: string
+          enum:
+            - image
+        source:
+          $ref: '#/components/schemas/ImageSource'
+        cache_control:
+          $ref: '#/components/schemas/CacheControl'
+
+    ImageSource:
+      type: object
+      required:
+        - type
+      properties:
+        type:
+          type: string
+          description: The source type of the image.
+          enum:
+            - base64
+            - url
+        media_type:
+          type: string
+          description: The media type of the image.
+          enum:
+            - image/jpeg
+            - image/png
+            - image/gif
+            - image/webp
+        data:
+          type: string
+          description: Base64-encoded image data (for base64 source type).
+        url:
+          type: string
+          format: uri
+          description: URL of the image (for url source type).
+
+    DocumentBlockParam:
+      type: object
+      required:
+        - type
+        - source
+      properties:
+        type:
+          type: string
+          enum:
+            - document
+        source:
+          $ref: '#/components/schemas/DocumentSource'
+        title:
+          type: string
+          description: Optional title for the document.
+        context:
+          type: string
+          description: Optional context about the document.
+        cache_control:
+          $ref: '#/components/schemas/CacheControl'
+
+    DocumentSource:
+      type: object
+      required:
+        - type
+      properties:
+        type:
+          type: string
+          description: The source type of the document.
+          enum:
+            - base64
+            - text
+            - url
+            - content
+        media_type:
+          type: string
+          description: The media type of the document.
+          enum:
+            - application/pdf
+            - text/plain
+        data:
+          type: string
+          description: Base64-encoded document data (for base64 source type).
+        text:
+          type: string
+          description: The plain text content (for text source type).
+        url:
+          type: string
+          format: uri
+          description: URL of the document (for url source type).
+
+    ToolUseBlockParam:
+      type: object
+      required:
+        - type
+        - id
+        - name
+        - input
+      properties:
+        type:
+          type: string
+          enum:
+            - tool_use
+        id:
+          type: string
+          description: A unique identifier for this particular tool use block.
+        name:
+          type: string
+          description: The name of the tool being used.
+        input:
+          type: object
+          description: An object containing the input passed to the tool.
+          additionalProperties: true
+        cache_control:
+          $ref: '#/components/schemas/CacheControl'
+
+    ToolResultBlockParam:
+      type: object
+      required:
+        - type
+        - tool_use_id
+      properties:
+        type:
+          type: string
+          enum:
+            - tool_result
+        tool_use_id:
+          type: string
+          description: >
+            The id of the tool use request this result corresponds to.
+        content:
+          description: The result of the tool call. Can be a string or array of content blocks.
+          oneOf:
+            - type: string
+            - type: array
+              items:
+                $ref: '#/components/schemas/TextBlockParam'
+        is_error:
+          type: boolean
+          description: Whether the tool call resulted in an error.
+          default: false
+        cache_control:
+          $ref: '#/components/schemas/CacheControl'
+
+    # ---- Tool Definitions ----
+
+    ToolUnion:
+      description: >
+        A tool definition. Can be a custom tool or an Anthropic-defined server
+        tool.
+      oneOf:
+        - $ref: '#/components/schemas/Tool'
+        - $ref: '#/components/schemas/ServerTool'
+
+    Tool:
+      type: object
+      required:
+        - name
+        - input_schema
+      properties:
+        type:
+          type: string
+          description: The type of tool. Defaults to custom.
+          enum:
+            - custom
+          default: custom
+        name:
+          type: string
+          description: >
+            Name of the tool. Must match the regex ^[a-zA-Z0-9_-]{1,64}$.
+          pattern: '^[a-zA-Z0-9_-]{1,64}$'
+        description:
+          type: string
+          description: >
+            Description of what this tool does. Tool descriptions should be as
+            detailed as possible to help the model understand when and how to
+            use the tool.
+        input_schema:
+          type: object
+          description: >
+            JSON Schema object defining the expected parameters for the tool.
+          required:
+            - type
+          properties:
+            type:
+              type: string
+              enum:
+                - object
+            properties:
+              type: object
+              additionalProperties: true
+            required:
+              type: array
+              items:
+                type: string
+          additionalProperties: true
+        cache_control:
+          $ref: '#/components/schemas/CacheControl'
+
+    ServerTool:
+      type: object
+      required:
+        - type
+        - name
+      properties:
+        type:
+          type: string
+          description: The Anthropic-defined server tool type.
+          enum:
+            - web_search_20250305
+            - web_search_20260209
+            - web_fetch_20250910
+            - web_fetch_20260209
+            - code_execution_20250825
+            - code_execution_20260120
+            - bash_20250124
+            - text_editor_20250728
+            - memory_20250818
+        name:
+          type: string
+          description: The server tool name.
+
+    # ---- Tool Choice ----
+
+    ToolChoice:
+      description: >
+        How the model should use the provided tools. The model can use a
+        specific tool, any available tool, decide by itself, or not use tools.
+      type: object
+      required:
+        - type
+      properties:
+        type:
+          type: string
+          description: The type of tool choice.
+          enum:
+            - auto
+            - any
+            - tool
+            - none
+        name:
+          type: string
+          description: >
+            The name of the tool to use. Required when type is tool.
+        disable_parallel_tool_use:
+          type: boolean
+          description: >
+            Whether to disable parallel tool use. Defaults to false.
+          default: false
+
+    # ---- Thinking Configuration ----
+
+    ThinkingConfig:
+      description: Configuration for extended thinking.
+      type: object
+      required:
+        - type
+      properties:
+        type:
+          type: string
+          description: The type of thinking configuration.
+          enum:
+            - enabled
+            - disabled
+            - adaptive
+        budget_tokens:
+          type: integer
+          description: >
+            The maximum number of tokens to use for thinking. Must be at least
+            1024 and less than max_tokens. Required when type is enabled.
+          minimum: 1024
+
+    # ---- Output Configuration ----
+
+    OutputConfig:
+      type: object
+      description: Configuration for structured output.
+      properties:
+        format:
+          type: object
+          description: The output format configuration.
+          properties:
+            type:
+              type: string
+              description: The output format type.
+              enum:
+                - json_schema
+            schema:
+              type: object
+              description: A JSON Schema that the output must conform to.
+              additionalProperties: true
+        effort:
+          type: string
+          description: The effort level for the response.
+          enum:
+            - low
+            - medium
+            - high
+            - max
+
+    # ---- Metadata ----
+
+    Metadata:
+      type: object
+      description: An object describing metadata about the request.
+      properties:
+        user_id:
+          type: string
+          description: >
+            An external identifier for the user who is associated with the
+            request. This should be a UUID, hash value, or other opaque
+            identifier. Do not include any identifying information such as name,
+            email, or phone number.
+
+    # ---- Cache Control ----
+
+    CacheControl:
+      type: object
+      description: Cache control configuration for prompt caching.
+      properties:
+        type:
+          type: string
+          description: The type of cache control.
+          enum:
+            - ephemeral
+        ttl:
+          type: string
+          description: The time-to-live for the cached content.
+          enum:
+            - 5m
+            - 1h
+
+    # ---- Response Schemas ----
+
+    MessageResponse:
+      type: object
+      required:
+        - id
+        - type
+        - role
+        - content
+        - model
+        - stop_reason
+        - usage
+      properties:
+        id:
+          type: string
+          description: >
+            Unique object identifier. The format and length of IDs may change
+            over time.
+          examples:
+            - msg_01XFDUDYJgAACzvnptvVoYEL
+        type:
+          type: string
+          description: Object type. Always "message" for the Messages API.
+          enum:
+            - message
+        role:
+          type: string
+          description: >
+            Conversational role of the generated message. This will always be
+            "assistant".
+          enum:
+            - assistant
+        content:
+          type: array
+          description: >
+            Content generated by the model. This is an array of content blocks,
+            each of which has a type that determines its shape.
+          items:
+            $ref: '#/components/schemas/ContentBlock'
+        model:
+          type: string
+          description: The model that handled the request.
+          examples:
+            - claude-opus-4-6
+            - claude-sonnet-4-6
+        stop_reason:
+          type:
+            - string
+            - 'null'
+          description: >
+            The reason the model stopped generating tokens. This will be
+            end_turn if the model reached a natural stopping point, max_tokens
+            if the requested max_tokens limit was reached, stop_sequence if one
+            of the provided stop sequences was generated, or tool_use if the
+            model invoked a tool.
+          enum:
+            - end_turn
+            - max_tokens
+            - stop_sequence
+            - tool_use
+            - pause_turn
+            - 
+        stop_sequence:
+          type:
+            - string
+            - 'null'
+          description: >
+            Which custom stop sequence was generated, if any. Will be null if
+            the stop reason was not stop_sequence.
+        usage:
+          $ref: '#/components/schemas/Usage'
+
+    # ---- Response Content Blocks ----
+
+    ContentBlock:
+      description: A content block in a response message.
+      oneOf:
+        - $ref: '#/components/schemas/TextBlock'
+        - $ref: '#/components/schemas/ToolUseBlock'
+        - $ref: '#/components/schemas/ThinkingBlock'
+      discriminator:
+        propertyName: type
+        mapping:
+          text: '#/components/schemas/TextBlock'
+          tool_use: '#/components/schemas/ToolUseBlock'
+          thinking: '#/components/schemas/ThinkingBlock'
+
+    TextBlock:
+      type: object
+      required:
+        - type
+        - text
+      properties:
+        type:
+          type: string
+          enum:
+            - text
+        text:
+          type: string
+          description: The generated text.
+        citations:
+          type: array
+          description: Citations for the generated text, if any.
+          items:
+            $ref: '#/components/schemas/Citation'
+
+    Citation:
+      type: object
+      required:
+        - type
+        - cited_text
+      properties:
+        type:
+          type: string
+          description: The type of citation.
+          enum:
+            - char_location
+            - page_location
+            - content_block_location
+        cited_text:
+          type: string
+          description: The text being cited.
+        document_index:
+          type: integer
+          description: The index of the cited document.
+        document_title:
+          type: string
+          description: The title of the cited document.
+        file_id:
+          type: string
+          description: The file ID of the cited document.
+        start_char_index:
+          type: integer
+          description: The starting character index of the citation.
+        end_char_index:
+          type: integer
+          description: The ending character index of the citation.
+
+    ToolUseBlock:
+      type: object
+      required:
+        - type
+        - id
+        - name
+        - input
+      properties:
+        type:
+          type: string
+          enum:
+            - tool_use
+        id:
+          type: string
+          description: A unique identifier for this tool use request.
+        name:
+          type: string
+          description: The name of the tool the model wants to call.
+        input:
+          type: object
+          description: >
+            An object containing the tool input generated by the model, conforming
+            to the tool's input_schema.
+          additionalProperties: true
+
+    ThinkingBlock:
+      type: object
+      required:
+        - type
+        - thinking
+        - signature
+      properties:
+        type:
+          type: string
+          enum:
+            - thinking
+        thinking:
+          type: string
+          description: >
+            The model's thinking process. This is the internal reasoning the
+            model performed before generating its response.
+        signature:
+          type: string
+          description: >
+            A cryptographic signature verifying this thinking block was generated
+            by Claude.
+
+    # ---- Usage ----
+
+    Usage:
+      type: object
+      required:
+        - input_tokens
+        - output_tokens
+      properties:
+        input_tokens:
+          type: integer
+          description: The number of input tokens consumed.
+          minimum: 0
+        output_tokens:
+          type: integer
+          description: The number of output tokens generated.
+          minimum: 0
+        cache_creation_input_tokens:
+          type: integer
+          description: >
+            The number of input tokens used to create a cache entry.
+          minimum: 0
+        cache_read_input_tokens:
+          type: integer
+          description: >
+            The number of input tokens read from a cache.
+          minimum: 0
+
+    # ---- Error Schemas ----
+
+    ErrorResponse:
+      type: object
+      required:
+        - type
+        - error
+      properties:
+        type:
+          type: string
+          enum:
+            - error
+        error:
+          type: object
+          required:
+            - type
+            - message
+          properties:
+            type:
+              type: string
+              description: The type of error.
+              enum:
+                - invalid_request_error
+                - authentication_error
+                - permission_error
+                - not_found_error
+                - rate_limit_error
+                - api_error
+                - overloaded_error
+            message:
+              type: string
+              description: A human-readable error message.
+
+  examples:
+    SimpleMessageRequestExample:
+      summary: Simple text message
+      value:
+        model: claude-opus-4-6
+        max_tokens: 1024
+        messages:
+          - role: user
+            content: Hello, Claude
+
+    ToolUseMessageRequestExample:
+      summary: Message with tool definitions
+      value:
+        model: claude-opus-4-6
+        max_tokens: 1024
+        tools:
+          - name: get_weather
+            description: Get the current weather in a given location
+            input_schema:
+              type: object
+              properties:
+                location:
+                  type: string
+                  description: The city and state, e.g. San Francisco, CA
+              required:
+                - location
+        messages:
+          - role: user
+            content: What is the weather like in San Francisco?
+
+    ThinkingMessageRequestExample:
+      summary: Message with extended thinking enabled
+      value:
+        model: claude-opus-4-6
+        max_tokens: 16000
+        thinking:
+          type: enabled
+          budget_tokens: 10000
+        messages:
+          - role: user
+            content: Solve this step-by-step - what is 27 * 453?
+
+    SimpleMessageResponseExample:
+      summary: Simple text response
+      value:
+        id: msg_01XFDUDYJgAACzvnptvVoYEL
+        type: message
+        role: assistant
+        content:
+          - type: text
+            text: Hi! How can I help you today?
+        model: claude-opus-4-6
+        stop_reason: end_turn
+        stop_sequence:
+        usage:
+          input_tokens: 10
+          output_tokens: 15
+          cache_creation_input_tokens: 0
+          cache_read_input_tokens: 0
+
+    ToolUseMessageResponseExample:
+      summary: Tool use response
+      value:
+        id: msg_01Aq9w938a90dw8q
+        type: message
+        role: assistant
+        content:
+          - type: text
+            text: I'll check the current weather in San Francisco for you.
+          - type: tool_use
+            id: toolu_01A09q90qw90lq917835lq9
+            name: get_weather
+            input:
+              location: San Francisco, CA
+              unit: celsius
+        model: claude-opus-4-6
+        stop_reason: tool_use
+        stop_sequence:
+        usage:
+          input_tokens: 380
+          output_tokens: 65
+          cache_creation_input_tokens: 0
+          cache_read_input_tokens: 0
+
+    ErrorBadRequestExample:
+      summary: Bad request error
+      value:
+        type: error
+        error:
+          type: invalid_request_error
+          message: "messages: Input messages must have alternating roles"
+
+    ErrorUnauthorizedExample:
+      summary: Unauthorized error
+      value:
+        type: error
+        error:
+          type: authentication_error
+          message: Invalid API Key
+
+    ErrorForbiddenExample:
+      summary: Forbidden error
+      value:
+        type: error
+        error:
+          type: permission_error
+          message: Your API key does not have permission to use this resource
+
+    ErrorRateLimitExample:
+      summary: Rate limit error
+      value:
+        type: error
+        error:
+          type: rate_limit_error
+          message: Rate limit exceeded. Please retry after some time.
+
+    ErrorServerExample:
+      summary: Server error
+      value:
+        type: error
+        error:
+          type: api_error
+          message: An internal server error occurred
+
+    ErrorOverloadedExample:
+      summary: API overloaded error
+      value:
+        type: error
+        error:
+          type: overloaded_error
+          message: Anthropic's API is temporarily overloaded

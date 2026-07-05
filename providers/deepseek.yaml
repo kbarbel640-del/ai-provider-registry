@@ -16,4 +16,5 @@ supports:
 models:
   - deepseek-chat
   - deepseek-reasoner
+api_spec: https://raw.githubusercontent.com/api-evangelist/deepseek/main/openapi/deepseek-chat-completion-api-openapi.yml
 endpoint: https://api.deepseek.com/v1

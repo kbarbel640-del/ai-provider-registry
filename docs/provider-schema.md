@@ -10,4 +10,5 @@
 | pricing     | object   | Pricing model and docs               | Yes      |
 | supports    | array    | List of supported capabilities       | Yes      |
 | models      | array    | List of supported models             | Yes      |
+| api_spec    | string   | URL to the API specification (OpenAPI, Discovery, etc.) | No       |
 | endpoint    | string   | API base URL                         | No       |

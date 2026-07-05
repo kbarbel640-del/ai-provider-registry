@@ -19,4 +19,5 @@ models:
   - command-r
   - embed-english-v3.0
   - embed-multilingual-v3.0
+api_spec: https://raw.githubusercontent.com/cohere-ai/cohere-developer-experience/main/cohere-openapi.yaml
 endpoint: https://api.cohere.com/v1

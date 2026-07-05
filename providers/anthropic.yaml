@@ -17,4 +17,5 @@ models:
   - claude-3.5-sonnet
   - claude-3.5-haiku
   - claude-3-opus
+api_spec: https://raw.githubusercontent.com/api-evangelist/anthropic/refs/heads/main/openapi/anthropic-messages-api-openapi.yml
 endpoint: https://api.anthropic.com/v1

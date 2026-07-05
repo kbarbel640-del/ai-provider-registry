@@ -22,5 +22,6 @@ supports:
   - guardrails
 models:
   - auto
+api_spec: https://openrouter.ai/openapi.yaml
 endpoint: https://openrouter.ai/api/v1
 docs_url: https://openrouter.ai/docs

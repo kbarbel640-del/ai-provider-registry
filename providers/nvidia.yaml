@@ -1,0 +1,36 @@
+name: NVIDIA NIM
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://build.nvidia.com/
+pricing:
+  free: true
+  pay_as_you_go: false
+  doc_url: https://www.nvidia.com/en-us/ai/
+supports:
+  - chat
+  - vision
+  - tools
+  - streaming
+  - json_mode
+  - image
+models:
+  - meta/llama-3.3-70b-instruct
+  - meta/llama-3.1-70b-instruct
+  - meta/llama-3.1-8b-instruct
+  - deepseek-ai/deepseek-v4-flash
+  - deepseek-ai/deepseek-v4-pro
+  - mistralai/mixtral-8x7b-instruct
+  - microsoft/phi-4-mini-instruct
+  - qwen/qwen2.5-coder-32b-instruct
+  - qwen/qwen3.5-122b-a10b
+  - qwen/qwen3.5-397b-a17b
+  - nvidia/nemotron-3-ultra-550b-a55b
+  - mistralai/mistral-large-3-675b-instruct
+  - google/gemma-2-2b-it
+  - meta/llama-3.2-11b-vision-instruct
+  - meta/llama-3.2-90b-vision-instruct
+  - meta/llama-4-maverick-17b-128e-instruct
+api_spec: api-specs/nvidia.md
+endpoint: https://integrate.api.nvidia.com/v1
+docs_url: https://build.nvidia.com/docs

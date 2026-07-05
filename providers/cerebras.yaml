@@ -15,4 +15,5 @@ supports:
 models:
   - llama-3.1-8b
   - llama-3.1-70b
+api_spec: https://storage.googleapis.com/stainless-sdk-openapi-specs/cerebras/cerebras-cloud-4aaffc73ab32fa03ee756cc294fb940e2060f8c57108d5b479651dcc77db59ee.yml
 endpoint: https://api.cerebras.ai/v1

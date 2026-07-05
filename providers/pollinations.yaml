@@ -19,4 +19,5 @@ supports:
   - realtime
 models:
   - auto
+api_spec: https://api.pollination.solutions/openapi.json
 endpoint: https://gen.pollinations.ai

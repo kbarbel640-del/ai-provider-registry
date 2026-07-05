@@ -3,6 +3,7 @@
 # For LLM consumption - discover all files in the registry.
 
 ## Providers
+providers/nvidia.yaml
 providers/openai.yaml
 providers/anthropic.yaml
 providers/groq.yaml

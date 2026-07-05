@@ -20,4 +20,5 @@ models:
   - mistral-small-2503
   - codestral-2505
   - mistral-embed
+api_spec: https://raw.githubusercontent.com/mistralai/platform-docs-public/main/openapi.yaml
 endpoint: https://api.mistral.ai/v1

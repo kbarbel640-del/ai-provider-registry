@@ -20,4 +20,5 @@ models:
   - meta-llama/Llama-3.1-8B-Instruct-Turbo
   - deepseek-ai/DeepSeek-V3
   - Qwen/Qwen2.5-72B-Instruct-Turbo
+api_spec: https://docs.together.ai/openapi.yaml
 endpoint: https://api.together.xyz/v1

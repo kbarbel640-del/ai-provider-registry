@@ -18,4 +18,5 @@ models:
   - llama-3.1-8b-instant
   - mixtral-8x7b-32768
   - gemma2-9b-it
+api_spec: https://storage.googleapis.com/stainless-sdk-openapi-specs/groqcloud/groqcloud-debd965baa031e12228c41e538741fa6055bf2813bcd062840a19f84a17cea95.yml
 endpoint: https://api.groq.com/openai/v1
