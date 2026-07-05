@@ -1,11 +1,15 @@
-name: OpenCode
+name: OpenCode Zen
 api_style: openai
 auth:
   type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: OPENCODE_ZEN_API_KEY
   doc_url: https://opencode.ai/docs/zen/
 pricing:
   free: true
   pay_as_you_go: true
+  auto_reload: true
   doc_url: https://opencode.ai/docs/zen/#pricing
 supports:
   - chat
@@ -13,57 +17,414 @@ supports:
   - streaming
   - json_mode
   - reasoning
-models:
-  # Free models
-  - big-pickle
-  - deepseek-v4-flash-free
-  - mimo-v2.5-free
-  - nemotron-3-ultra-free
-  - north-mini-code-free
-  - minimax-m3-free
-  - qwen3.6-plus-free
-  # Paid models (pay-as-you-go)
-  - claude-fable-5
-  - claude-opus-4-8
-  - claude-opus-4-7
-  - claude-opus-4-6
-  - claude-opus-4-5
-  - claude-opus-4-1
-  - claude-sonnet-4-6
-  - claude-sonnet-4-5
-  - claude-sonnet-4
-  - claude-haiku-4-5
-  - gemini-3.5-flash
-  - gemini-3.1-pro
-  - gemini-3-flash
-  - gpt-5.5
-  - gpt-5.5-pro
-  - gpt-5.4
-  - gpt-5.4-pro
-  - gpt-5.4-mini
-  - gpt-5.4-nano
-  - gpt-5.3-codex-spark
-  - gpt-5.3-codex
-  - gpt-5.2
-  - gpt-5.2-codex
-  - gpt-5.1
-  - gpt-5.1-codex-max
-  - gpt-5.1-codex
-  - gpt-5.1-codex-mini
-  - gpt-5
-  - gpt-5-codex
-  - gpt-5-nano
-  - grok-build-0.1
-  - deepseek-v4-pro
-  - deepseek-v4-flash
-  - glm-5.2
-  - glm-5.1
-  - glm-5
-  - minimax-m2.7
-  - minimax-m2.5
-  - kimi-k2.6
-  - kimi-k2.5
-  - qwen3.6-plus
-  - qwen3.5-plus
-api_spec: https://opencode.ai/openapi.json
 endpoint: https://opencode.ai/zen/v1
+api_spec: https://opencode.ai/openapi.json
+models:
+  # GPT Family (OpenAI compatible - /responses)
+  - id: gpt-5.5
+    endpoint: /responses
+    context_window: 272000
+    pricing:
+      input: 5.00
+      output: 30.00
+      cached_read: 0.50
+    tags: [coding_optimized, flagship, high_quality, long_context]
+  - id: gpt-5.5-pro
+    endpoint: /responses
+    context_window: 272000
+    pricing:
+      input: 30.00
+      output: 180.00
+      cached_read: 30.00
+    tags: [coding_optimized, highest_quality, expensive]
+  - id: gpt-5.4
+    endpoint: /responses
+    context_window: 272000
+    pricing:
+      input: 2.50
+      output: 15.00
+      cached_read: 0.25
+    tags: [coding_optimized, balanced]
+  - id: gpt-5.4-pro
+    endpoint: /responses
+    pricing:
+      input: 30.00
+      output: 180.00
+      cached_read: 30.00
+    tags: [coding_optimized, high_quality]
+  - id: gpt-5.4-mini
+    endpoint: /responses
+    pricing:
+      input: 0.75
+      output: 4.50
+      cached_read: 0.075
+    tags: [coding_optimized, fast, cost_effective]
+  - id: gpt-5.4-nano
+    endpoint: /responses
+    pricing:
+      input: 0.20
+      output: 1.25
+      cached_read: 0.02
+    tags: [coding_optimized, fastest, cheap]
+  - id: gpt-5.3-codex
+    endpoint: /responses
+    pricing:
+      input: 1.75
+      output: 14.00
+      cached_read: 0.175
+    tags: [coding_optimized, codex_specialized]
+  - id: gpt-5.3-codex-spark
+    endpoint: /responses
+    pricing:
+      input: 1.75
+      output: 14.00
+      cached_read: 0.175
+    tags: [coding_optimized, fast_coding]
+  - id: gpt-5.2
+    endpoint: /responses
+    pricing:
+      input: 1.75
+      output: 14.00
+      cached_read: 0.175
+    tags: [coding_optimized]
+  - id: gpt-5.2-codex
+    endpoint: /responses
+    pricing:
+      input: 1.75
+      output: 14.00
+      cached_read: 0.175
+    tags: [coding_optimized, codex_specialized]
+    deprecated: true
+    deprecation_date: 2026-07-23
+    replacement: gpt-5.3-codex
+  - id: gpt-5.1
+    endpoint: /responses
+    pricing:
+      input: 1.07
+      output: 8.50
+      cached_read: 0.107
+    tags: [coding_optimized]
+  - id: gpt-5.1-codex
+    endpoint: /responses
+    pricing:
+      input: 1.07
+      output: 8.50
+      cached_read: 0.107
+    tags: [coding_optimized, codex_specialized]
+    deprecated: true
+    deprecation_date: 2026-07-23
+    replacement: gpt-5.3-codex
+  - id: gpt-5.1-codex-max
+    endpoint: /responses
+    pricing:
+      input: 1.25
+      output: 10.00
+      cached_read: 0.125
+    tags: [coding_optimized, high_quality_coding]
+    deprecated: true
+    deprecation_date: 2026-07-23
+  - id: gpt-5.1-codex-mini
+    endpoint: /responses
+    pricing:
+      input: 0.25
+      output: 2.00
+      cached_read: 0.025
+    tags: [coding_optimized, fast_coding]
+    deprecated: true
+    deprecation_date: 2026-07-23
+  - id: gpt-5
+    endpoint: /responses
+    pricing:
+      input: 1.07
+      output: 8.50
+      cached_read: 0.107
+    tags: [coding_optimized]
+  - id: gpt-5-codex
+    endpoint: /responses
+    pricing:
+      input: 1.07
+      output: 8.50
+      cached_read: 0.107
+    tags: [coding_optimized, codex_specialized]
+    deprecated: true
+    deprecation_date: 2026-07-23
+  - id: gpt-5-nano
+    endpoint: /responses
+    pricing:
+      input: 0.05
+      output: 0.40
+      cached_read: 0.005
+    tags: [coding_optimized, very_fast, ultra_cheap]
+
+  # Claude Family (Anthropic compatible - /messages)
+  - id: claude-fable-5
+    endpoint: /messages
+    pricing:
+      input: 10.00
+      output: 50.00
+      cached_read: 1.00
+      cached_write: 12.50
+    tags: [coding_optimized, creative, high_quality]
+  - id: claude-opus-4.8
+    endpoint: /messages
+    pricing:
+      input: 5.00
+      output: 25.00
+      cached_read: 0.50
+      cached_write: 6.25
+    tags: [coding_optimized, reasoning, flagship]
+  - id: claude-opus-4.7
+    endpoint: /messages
+    pricing:
+      input: 5.00
+      output: 25.00
+      cached_read: 0.50
+      cached_write: 6.25
+    tags: [coding_optimized, reasoning]
+  - id: claude-opus-4.6
+    endpoint: /messages
+    pricing:
+      input: 5.00
+      output: 25.00
+      cached_read: 0.50
+      cached_write: 6.25
+    tags: [coding_optimized, reasoning]
+  - id: claude-opus-4.5
+    endpoint: /messages
+    pricing:
+      input: 5.00
+      output: 25.00
+      cached_read: 0.50
+      cached_write: 6.25
+    tags: [coding_optimized, reasoning]
+  - id: claude-sonnet-5
+    endpoint: /messages
+    pricing:
+      input: 2.00
+      output: 10.00
+      cached_read: 0.20
+      cached_write: 2.50
+    tags: [coding_optimized, balanced, recommended]
+  - id: claude-sonnet-4.6
+    endpoint: /messages
+    pricing:
+      input: 3.00
+      output: 15.00
+      cached_read: 0.30
+      cached_write: 3.75
+    tags: [coding_optimized]
+  - id: claude-sonnet-4.5
+    endpoint: /messages
+    context_window: 200000
+    pricing:
+      input: 3.00
+      output: 15.00
+      cached_read: 0.30
+      cached_write: 3.75
+    tags: [coding_optimized, long_context]
+  - id: claude-haiku-4.5
+    endpoint: /messages
+    pricing:
+      input: 1.00
+      output: 5.00
+      cached_read: 0.10
+      cached_write: 1.25
+    tags: [coding_optimized, fast, cost_effective]
+
+  # Gemini Family
+  - id: gemini-3.5-flash
+    endpoint: /models/gemini-3.5-flash
+    family: gemini
+    pricing:
+      input: 1.50
+      output: 9.00
+      cached_read: 0.15
+    tags: [coding_optimized, fast]
+  - id: gemini-3.1-pro
+    endpoint: /models/gemini-3.1-pro
+    family: gemini
+    context_window: 200000
+    pricing:
+      input: 2.00
+      output: 12.00
+      cached_read: 0.20
+    tags: [coding_optimized, reasoning, long_context]
+  - id: gemini-3-flash
+    endpoint: /models/gemini-3-flash
+    family: gemini
+    pricing:
+      input: 0.50
+      output: 3.00
+      cached_read: 0.05
+    tags: [coding_optimized, fast, cheap]
+
+  # Qwen Family (Anthropic compatible - /messages)
+  - id: qwen3.7-max
+    endpoint: /messages
+    pricing:
+      input: 2.50
+      output: 7.50
+      cached_read: 0.50
+      cached_write: 3.125
+    tags: [coding_optimized, high_quality, strong_reasoning]
+  - id: qwen3.7-plus
+    endpoint: /messages
+    pricing:
+      input: 0.40
+      output: 1.60
+      cached_read: 0.04
+      cached_write: 0.50
+    tags: [coding_optimized, balanced, cost_effective]
+  - id: qwen3.6-plus
+    endpoint: /messages
+    pricing:
+      input: 0.50
+      output: 3.00
+      cached_read: 0.05
+      cached_write: 0.625
+    tags: [coding_optimized]
+  - id: qwen3.5-plus
+    endpoint: /messages
+    pricing:
+      input: 0.20
+      output: 1.20
+      cached_read: 0.02
+      cached_write: 0.25
+    tags: [coding_optimized, cheap, good_value]
+
+  # DeepSeek Family (OpenAI compatible - /chat/completions)
+  - id: deepseek-v4-pro
+    endpoint: /chat/completions
+    pricing:
+      input: 1.74
+      output: 3.48
+      cached_read: 0.145
+    tags: [coding_optimized, strong_coding, reasoning]
+  - id: deepseek-v4-flash
+    endpoint: /chat/completions
+    pricing:
+      input: 0.14
+      output: 0.28
+      cached_read: 0.028
+    tags: [coding_optimized, fast, cheap]
+
+  # MiniMax Family (OpenAI compatible)
+  - id: minimax-m3
+    endpoint: /chat/completions
+    pricing:
+      input: 0.30
+      output: 1.20
+      cached_read: 0.06
+    tags: [coding_optimized]
+  - id: minimax-m2.7
+    endpoint: /chat/completions
+    pricing:
+      input: 0.30
+      output: 1.20
+      cached_read: 0.06
+    tags: [coding_optimized]
+  - id: minimax-m2.5
+    endpoint: /chat/completions
+    pricing:
+      input: 0.30
+      output: 1.20
+      cached_read: 0.06
+    tags: [coding_optimized]
+    deprecated: true
+    deprecation_date: 2026-08-05
+
+  # GLM Family (OpenAI compatible)
+  - id: glm-5.2
+    endpoint: /chat/completions
+    pricing:
+      input: 1.40
+      output: 4.40
+      cached_read: 0.26
+    tags: [coding_optimized]
+  - id: glm-5.1
+    endpoint: /chat/completions
+    pricing:
+      input: 1.40
+      output: 4.40
+      cached_read: 0.26
+    tags: [coding_optimized]
+  - id: glm-5
+    endpoint: /chat/completions
+    pricing:
+      input: 1.00
+      output: 3.20
+      cached_read: 0.20
+    tags: [coding_optimized]
+    deprecated: true
+    deprecation_date: 2026-05-14
+
+  # Kimi Family (OpenAI compatible)
+  - id: kimi-k2.5
+    endpoint: /chat/completions
+    pricing:
+      input: 0.60
+      output: 3.00
+      cached_read: 0.10
+    tags: [coding_optimized]
+    deprecated: true
+    deprecation_date: 2026-08-05
+  - id: kimi-k2.6
+    endpoint: /chat/completions
+    pricing:
+      input: 0.95
+      output: 4.00
+      cached_read: 0.16
+    tags: [coding_optimized]
+  - id: kimi-k2.7-code
+    endpoint: /chat/completions
+    pricing:
+      input: 0.95
+      output: 4.00
+      cached_read: 0.19
+    tags: [coding_optimized, codex_specialized]
+
+  # Other Models
+  - id: grok-build-0.1
+    endpoint: /chat/completions
+    family: grok
+    pricing:
+      input: 1.00
+      output: 2.00
+      cached_read: 0.20
+    tags: [coding_optimized, xai_related]
+
+  # Free / Testing Models
+  - id: big-pickle
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [free, stealth, testing]
+
+  - id: mimo-v2.5-free
+    endpoint: /chat/completions
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [free, testing]
+
+  - id: north-mini-code-free
+    endpoint: /chat/completions
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [free, testing]
+
+  - id: nemotron-3-ultra-free
+    endpoint: /chat/completions
+    family: nvidia
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [free, testing, nvidia]
+
+  - id: deepseek-v4-flash-free
+    endpoint: /chat/completions
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [free, testing, fast]

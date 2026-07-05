@@ -22,3 +22,23 @@ variants:
     provider: openai
   - name: gpt-4.1-mini
     provider: openai
+  - name: gpt-5
+    provider: opencode
+  - name: gpt-5.1
+    provider: opencode
+  - name: gpt-5.2
+    provider: opencode
+  - name: gpt-5.4
+    provider: opencode
+  - name: gpt-5.4-mini
+    provider: opencode
+  - name: gpt-5.4-nano
+    provider: opencode
+  - name: gpt-5.4-pro
+    provider: opencode
+  - name: gpt-5.5
+    provider: opencode
+  - name: gpt-5.5-pro
+    provider: opencode
+  - name: gpt-5-nano
+    provider: opencode

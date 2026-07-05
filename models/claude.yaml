@@ -14,3 +14,21 @@ variants:
     provider: anthropic
   - name: claude-3-opus
     provider: anthropic
+  - name: claude-sonnet-5
+    provider: opencode
+  - name: claude-haiku-4.5
+    provider: opencode
+  - name: claude-sonnet-4.5
+    provider: opencode
+  - name: claude-sonnet-4.6
+    provider: opencode
+  - name: claude-opus-4.5
+    provider: opencode
+  - name: claude-opus-4.6
+    provider: opencode
+  - name: claude-opus-4.7
+    provider: opencode
+  - name: claude-opus-4.8
+    provider: opencode
+  - name: claude-fable-5
+    provider: opencode

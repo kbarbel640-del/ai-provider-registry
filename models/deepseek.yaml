@@ -12,3 +12,7 @@ variants:
     provider: deepseek
   - name: deepseek-reasoner
     provider: deepseek
+  - name: deepseek-v4-pro
+    provider: opencode
+  - name: deepseek-v4-flash
+    provider: opencode

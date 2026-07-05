@@ -24,7 +24,7 @@
     {"id": "cerebras",   "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "json_mode", "streaming"], "api_spec": "https://storage.googleapis.com/stainless-sdk-openapi-specs/cerebras/cerebras-cloud-4aaffc73ab32fa03ee756cc294fb940e2060f8c57108d5b479651dcc77db59ee.yml"},
     {"id": "perplexity",  "free": false, "api_style": "openai",    "supports": ["chat", "streaming", "search"], "api_spec": "https://docs.perplexity.ai/openapi.json"},
     {"id": "pollinations","free": true,  "api_style": "openai",    "supports": ["chat", "vision", "image", "video", "audio", "embeddings", "streaming", "tools", "realtime"], "api_spec": "https://api.pollination.solutions/openapi.json"},
-    {"id": "opencode",    "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "streaming", "json_mode", "reasoning"], "api_spec": "https://opencode.ai/openapi.json"},
+    {"id": "opencode",    "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "streaming", "json_mode", "reasoning"], "api_spec": "https://opencode.ai/openapi.json", "endpoint": "https://opencode.ai/zen/v1", "model_count": 44},
     {"id": "opencode-go", "free": false, "api_style": "openai",    "supports": ["chat", "tools", "streaming", "json_mode", "reasoning"], "api_spec": "https://opencode.ai/openapi.json"}
   ],
   "capabilities": [

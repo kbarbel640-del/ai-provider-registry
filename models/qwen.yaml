@@ -21,3 +21,11 @@ variants:
     provider: alibaba
   - name: qwen-max
     provider: alibaba
+  - name: qwen3.7-max
+    provider: opencode
+  - name: qwen3.7-plus
+    provider: opencode
+  - name: qwen3.6-plus
+    provider: opencode
+  - name: qwen3.5-plus
+    provider: opencode
