@@ -20,8 +20,8 @@ supports:
   - web_search
   - file_extraction
   - reasoning
-endpoint: https://api.moonshot.cn/v1
-api_spec: https://platform.kimi.ai/docs/openapi.json
+endpoint: https://api.moonshot.ai/v1
+api_spec: https://raw.githubusercontent.com/api-evangelist/moonshot-ai/refs/heads/main/openapi/moonshot-ai-openapi.json
 rate_limits:
   tier0:
     concurrency: 1

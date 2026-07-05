@@ -30,7 +30,6 @@
               "user",
               "assistant"
             ],
-            "example": "user",
             "description": "The role of the message sender"
           },
           "content": {
@@ -133,7 +132,6 @@
                 }
               }
             ],
-            "example": "Hello",
             "description": "The content of the message. Can be a plain text string, or an array of objects with text/image_url/video_url types (for multimodal input)"
           },
           "name": {
@@ -175,7 +173,7 @@
               },
               "parameters": {
                 "type": "object",
-                "description": "Function parameters as JSON Schema. Must conform to the [MFJS (Moonshot Flavored JSON Schema) specification](https://github.com/MoonshotAI/walle/blob/main/docs/mfjs-spec.md).",
+                "description": "Function parameters as JSON Schema. Must conform to the MFJS (Moonshot Flavored JSON Schema) specification",
                 "additionalProperties": true
               },
               "strict": {
@@ -376,6 +374,135 @@
           }
         ]
       },
+      "KimiK2ChatRequest": {
+        "title": "kimi-k2",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ChatRequestBase"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "model": {
+                "type": "string",
+                "description": "Model ID",
+                "enum": [
+                  "kimi-k2-0905-preview",
+                  "kimi-k2-0711-preview",
+                  "kimi-k2-turbo-preview"
+                ],
+                "default": "kimi-k2-0905-preview"
+              },
+              "temperature": {
+                "type": "number",
+                "format": "float",
+                "description": "The sampling temperature to use, ranging from 0 to 1. A higher value (e.g., 0.7) will make the output more random, while a lower value (e.g., 0.2) will make it more focused and deterministic. Default is 0.6.",
+                "default": 0.6,
+                "minimum": 0,
+                "maximum": 1
+              },
+              "top_p": {
+                "type": "number",
+                "format": "float",
+                "description": "Another sampling method, where the model considers the results of tokens with a cumulative probability mass of top_p. Thus, 0.1 means only considering the top 10% of tokens by probability mass. Generally, we suggest changing either this or the temperature, but not both at the same time. Default is 1.0.",
+                "default": 1,
+                "minimum": 0,
+                "maximum": 1
+              },
+              "n": {
+                "type": "integer",
+                "description": "The number of results to generate for each input message. Default is 1, must not exceed 5. When the temperature is very close to 0, only 1 result can be returned.",
+                "default": 1,
+                "minimum": 1,
+                "maximum": 5
+              },
+              "presence_penalty": {
+                "type": "number",
+                "format": "float",
+                "description": "Presence penalty, a number between -2.0 and 2.0. A positive value will penalize new tokens based on whether they appear in the text, increasing the likelihood of the model discussing new topics",
+                "default": 0,
+                "minimum": -2,
+                "maximum": 2
+              },
+              "frequency_penalty": {
+                "type": "number",
+                "format": "float",
+                "description": "Frequency penalty, a number between -2.0 and 2.0. A positive value will penalize new tokens based on their existing frequency in the text, reducing the likelihood of the model repeating the same phrases verbatim",
+                "default": 0,
+                "minimum": -2,
+                "maximum": 2
+              }
+            },
+            "required": [
+              "model"
+            ]
+          }
+        ]
+      },
+      "KimiK2ThinkingChatRequest": {
+        "title": "kimi-k2-thinking",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ChatRequestBase"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "model": {
+                "type": "string",
+                "description": "Model ID",
+                "enum": [
+                  "kimi-k2-thinking",
+                  "kimi-k2-thinking-turbo"
+                ],
+                "default": "kimi-k2-thinking"
+              },
+              "temperature": {
+                "type": "number",
+                "format": "float",
+                "description": "The sampling temperature to use, ranging from 0 to 1. A higher value (e.g., 0.7) will make the output more random, while a lower value (e.g., 0.2) will make it more focused and deterministic. Default is 1.0.",
+                "default": 1,
+                "minimum": 0,
+                "maximum": 1
+              },
+              "top_p": {
+                "type": "number",
+                "format": "float",
+                "description": "Another sampling method, where the model considers the results of tokens with a cumulative probability mass of top_p. Thus, 0.1 means only considering the top 10% of tokens by probability mass. Generally, we suggest changing either this or the temperature, but not both at the same time. Default is 1.0.",
+                "default": 1,
+                "minimum": 0,
+                "maximum": 1
+              },
+              "n": {
+                "type": "integer",
+                "description": "The number of results to generate for each input message. Default is 1, must not exceed 5. When the temperature is very close to 0, only 1 result can be returned.",
+                "default": 1,
+                "minimum": 1,
+                "maximum": 5
+              },
+              "presence_penalty": {
+                "type": "number",
+                "format": "float",
+                "description": "Presence penalty, a number between -2.0 and 2.0. A positive value will penalize new tokens based on whether they appear in the text, increasing the likelihood of the model discussing new topics",
+                "default": 0,
+                "minimum": -2,
+                "maximum": 2
+              },
+              "frequency_penalty": {
+                "type": "number",
+                "format": "float",
+                "description": "Frequency penalty, a number between -2.0 and 2.0. A positive value will penalize new tokens based on their existing frequency in the text, reducing the likelihood of the model repeating the same phrases verbatim",
+                "default": 0,
+                "minimum": -2,
+                "maximum": 2
+              }
+            },
+            "required": [
+              "model"
+            ]
+          }
+        ]
+      },
       "KimiK25ChatRequest": {
         "title": "kimi-k2.5",
         "allOf": [
@@ -457,59 +584,6 @@
                       null
                     ],
                     "description": "Controls whether reasoning_content from previous turns is preserved across a multi-turn conversation, i.e. whether to enable Preserved Thinking. Defaults to `null`, meaning historical thinking is NOT preserved.\n\n- `null` (default) or omitted: The server ignores reasoning_content from historical turns.\n- `\"all\"`: Preserves reasoning_content from historical turns and provides it to the model as part of the context, enabling Preserved Thinking. When using this, keep the reasoning_content from every historical assistant message in messages as-is. Recommended to use together with `type: \"enabled\"`.\n- Note: This parameter only affects reasoning_content from historical turns; it does not change whether the model produces/outputs thinking within the current turn (that is controlled by `type`). For best practices, see [Preserved Thinking](/guide/use-kimi-k2-thinking-model#preserved-thinking)."
-                  }
-                },
-                "required": [
-                  "type"
-                ],
-                "additionalProperties": false
-              }
-            },
-            "required": [
-              "model"
-            ]
-          }
-        ]
-      },
-      "KimiK27CodeChatRequest": {
-        "title": "kimi-k2.7-code",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/ChatRequestBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "model": {
-                "type": "string",
-                "description": "Model ID. Either `kimi-k2.7-code` or its high-speed variant `kimi-k2.7-code-highspeed`; the two are the same model with identical parameters, while the high-speed variant outputs at approximately 180 Tokens/s (up to 260 Tokens/s in short-context scenarios).",
-                "enum": [
-                  "kimi-k2.7-code",
-                  "kimi-k2.7-code-highspeed"
-                ],
-                "default": "kimi-k2.7-code"
-              },
-              "thinking": {
-                "type": "object",
-                "description": "Controls thinking for the kimi-k2.7-code model, and whether to fully preserve reasoning_content across multi-turn conversations. Optional parameter. Default value is {\"type\": \"enabled\", \"keep\": \"all\"}.\n\nDifferences from kimi-k2.6:\n- `type` only accepts `\"enabled\"`. Unlike kimi-k2.6, `\"disabled\"` is NOT supported — passing it returns an error. Thinking is always on for this model.\n- `keep` only accepts the valid value `\"all\"`; omitting it or passing `\"all\"` is treated as `\"all\"` on the server, while any other invalid value returns an error. Preserved Thinking is therefore always enabled for this model.",
-                "properties": {
-                  "type": {
-                    "type": "string",
-                    "enum": [
-                      "enabled"
-                    ],
-                    "description": "Enable thinking capability. For kimi-k2.7-code, only `\"enabled\"` is accepted; passing `\"disabled\"` returns an error. This differs from kimi-k2.6, which also supports `\"disabled\"`."
-                  },
-                  "keep": {
-                    "type": [
-                      "string",
-                      "null"
-                    ],
-                    "enum": [
-                      "all",
-                      null
-                    ],
-                    "description": "Controls whether reasoning_content from previous turns is preserved across a multi-turn conversation, i.e. whether to enable Preserved Thinking.\n\n- For kimi-k2.7-code this parameter only accepts the valid value `\"all\"`: passing `\"all\"`, passing `null`, or omitting it all behave identically and are treated as `\"all\"` on the server — reasoning_content from historical turns is always preserved; passing any other invalid value returns an error. This differs from kimi-k2.6, whose default is `null` (historical thinking NOT preserved unless you explicitly set `\"all\"`).\n- Because Preserved Thinking is always on, keep the reasoning_content from every historical assistant message in messages as-is.\n- Note: This parameter only affects reasoning_content from historical turns; it does not change whether the model produces/outputs thinking within the current turn (that is controlled by `type`). For best practices, see [Preserved Thinking](/guide/use-kimi-k2-thinking-model#preserved-thinking)."
                   }
                 },
                 "required": [
@@ -692,10 +766,11 @@
             "description": "Model ID",
             "default": "kimi-k2.5",
             "enum": [
-              "kimi-k2.7-code",
-              "kimi-k2.7-code-highspeed",
               "kimi-k2.6",
               "kimi-k2.5",
+              "kimi-k2-0905-preview",
+              "kimi-k2-0711-preview",
+              "kimi-k2-turbo-preview",
               "moonshot-v1-8k",
               "moonshot-v1-32k",
               "moonshot-v1-128k",
@@ -1552,13 +1627,16 @@
               "schema": {
                 "oneOf": [
                   {
-                    "$ref": "#/components/schemas/KimiK27CodeChatRequest"
-                  },
-                  {
                     "$ref": "#/components/schemas/KimiK26ChatRequest"
                   },
                   {
                     "$ref": "#/components/schemas/KimiK25ChatRequest"
+                  },
+                  {
+                    "$ref": "#/components/schemas/KimiK2ChatRequest"
+                  },
+                  {
+                    "$ref": "#/components/schemas/KimiK2ThinkingChatRequest"
                   },
                   {
                     "$ref": "#/components/schemas/MoonshotV1ChatRequest"
@@ -1567,10 +1645,13 @@
                 "discriminator": {
                   "propertyName": "model",
                   "mapping": {
-                    "kimi-k2.7-code": "#/components/schemas/KimiK27CodeChatRequest",
-                    "kimi-k2.7-code-highspeed": "#/components/schemas/KimiK27CodeChatRequest",
                     "kimi-k2.6": "#/components/schemas/KimiK26ChatRequest",
                     "kimi-k2.5": "#/components/schemas/KimiK25ChatRequest",
+                    "kimi-k2-0905-preview": "#/components/schemas/KimiK2ChatRequest",
+                    "kimi-k2-0711-preview": "#/components/schemas/KimiK2ChatRequest",
+                    "kimi-k2-turbo-preview": "#/components/schemas/KimiK2ChatRequest",
+                    "kimi-k2-thinking": "#/components/schemas/KimiK2ThinkingChatRequest",
+                    "kimi-k2-thinking-turbo": "#/components/schemas/KimiK2ThinkingChatRequest",
                     "moonshot-v1-8k": "#/components/schemas/MoonshotV1ChatRequest",
                     "moonshot-v1-32k": "#/components/schemas/MoonshotV1ChatRequest",
                     "moonshot-v1-128k": "#/components/schemas/MoonshotV1ChatRequest",
