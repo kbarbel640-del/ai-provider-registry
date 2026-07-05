@@ -1,0 +1,33 @@
+name: Kimi
+provider: moonshot
+context_window: 262144
+capabilities:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+  - file_extraction
+  - web_search
+variants:
+  - name: kimi-k2.5
+    provider: kimi
+  - name: kimi-k2.6
+    provider: kimi
+  - name: kimi-k2.7-code
+    provider: kimi
+  - name: kimi-k2.7-code-highspeed
+    provider: kimi
+  - name: moonshot-v1-8k
+    provider: kimi
+  - name: moonshot-v1-32k
+    provider: kimi
+  - name: moonshot-v1-128k
+    provider: kimi
+  - name: moonshot-v1-8k-vision-preview
+    provider: kimi
+  - name: moonshot-v1-32k-vision-preview
+    provider: kimi
+  - name: moonshot-v1-128k-vision-preview
+    provider: kimi

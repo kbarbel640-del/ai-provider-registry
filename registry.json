@@ -24,11 +24,13 @@
     {"id": "cerebras",   "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "json_mode", "streaming"], "api_spec": "https://storage.googleapis.com/stainless-sdk-openapi-specs/cerebras/cerebras-cloud-4aaffc73ab32fa03ee756cc294fb940e2060f8c57108d5b479651dcc77db59ee.yml"},
     {"id": "perplexity",  "free": false, "api_style": "openai",    "supports": ["chat", "streaming", "search"], "api_spec": "https://docs.perplexity.ai/openapi.json"},
     {"id": "pollinations","free": true,  "api_style": "openai",    "supports": ["chat", "vision", "image", "video", "audio", "embeddings", "streaming", "tools", "realtime"], "api_spec": "https://api.pollination.solutions/openapi.json"},
+    {"id": "kimi",       "free": false, "api_style": "openai",    "supports": ["chat", "vision", "tools", "streaming", "json_mode", "web_search", "file_extraction", "reasoning"], "api_spec": "https://platform.kimi.ai/docs/openapi.json", "endpoint": "https://api.moonshot.cn/v1", "model_count": 10},
     {"id": "opencode",    "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "streaming", "json_mode", "reasoning"], "api_spec": "https://opencode.ai/openapi.json", "endpoint": "https://opencode.ai/zen/v1", "model_count": 44},
     {"id": "opencode-go", "free": false, "api_style": "openai",    "supports": ["chat", "tools", "streaming", "json_mode", "reasoning"], "api_spec": "https://opencode.ai/openapi.json"}
   ],
   "capabilities": [
     "chat", "vision", "image", "tools", "streaming", "json_mode",
-    "embeddings", "rerank", "speech", "moderation", "search", "video", "audio", "realtime", "reasoning"
+    "embeddings", "rerank", "speech", "moderation", "search", "video", "audio",
+    "realtime", "reasoning", "web_search", "file_extraction"
   ]
 }

@@ -16,6 +16,7 @@ providers/cohere.yaml
 providers/cerebras.yaml
 providers/perplexity.yaml
 providers/pollinations.yaml
+providers/kimi.yaml
 providers/opencode.yaml
 providers/opencode-go.yaml
 
@@ -29,6 +30,7 @@ models/gpt.yaml
 models/claude.yaml
 models/gemini.yaml
 models/deepseek.yaml
+models/kimi.yaml
 
 ## Capabilities
 capabilities/chat.yaml
@@ -43,12 +45,17 @@ capabilities/speech.yaml
 capabilities/moderation.yaml
 capabilities/search.yaml
 capabilities/reasoning.yaml
+capabilities/web_search.yaml
+capabilities/file_extraction.yaml
 
 ## Documentation
 docs/provider-schema.md
 docs/capability-schema.md
 docs/model-schema.md
 docs/api-styles.md
+
+## External Provider llms.txt
+- https://platform.kimi.ai/docs/llms.txt
 
 ## OSINT Provider Registry (separate)
 osint-providers/osint-llms.txt

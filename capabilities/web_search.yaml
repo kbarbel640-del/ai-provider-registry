@@ -1,0 +1,6 @@
+name: Web Search
+description: Provider supports grounding responses with live internet search results.
+example_providers:
+  - perplexity
+  - kimi
+  - openrouter

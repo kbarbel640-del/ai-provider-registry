@@ -1,0 +1,96 @@
+name: Kimi (Moonshot AI)
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: MOONSHOT_API_KEY
+  doc_url: https://platform.kimi.ai/docs/overview.md
+pricing:
+  free: false
+  pay_as_you_go: true
+  minimum_recharge: 1.00
+  doc_url: https://platform.kimi.ai/docs/pricing/limits.md
+supports:
+  - chat
+  - vision
+  - tools
+  - streaming
+  - json_mode
+  - web_search
+  - file_extraction
+  - reasoning
+endpoint: https://api.moonshot.cn/v1
+api_spec: https://platform.kimi.ai/docs/openapi.json
+rate_limits:
+  tier0:
+    concurrency: 1
+    rpm: 3
+    tpm: 500000
+    tpd: 1500000
+    requirement: "Cumulative recharge >= $1"
+models:
+  - id: kimi-k2.7-code
+    context_window: 262144
+    pricing:
+      input: 0.95
+      cached_read: 0.19
+      output: 4.00
+    tags: [coding, reasoning, multimodal]
+  - id: kimi-k2.7-code-highspeed
+    context_window: 262144
+    pricing:
+      input: 1.90
+      cached_read: 0.38
+      output: 8.00
+    tags: [coding, reasoning, high_speed]
+  - id: kimi-k2.6
+    context_window: 262144
+    pricing:
+      input: 0.95
+      cached_read: 0.16
+      output: 4.00
+    tags: [flagship, reasoning, multimodal, agent]
+  - id: kimi-k2.5
+    context_window: 262144
+    pricing:
+      input: 0.60
+      cached_read: 0.10
+      output: 3.00
+    tags: [reasoning, multimodal, agent]
+  - id: moonshot-v1-8k
+    context_window: 8192
+    pricing:
+      input: 0.20
+      output: 2.00
+    tags: [generation, short_context]
+  - id: moonshot-v1-32k
+    context_window: 32768
+    pricing:
+      input: 1.00
+      output: 3.00
+    tags: [generation, medium_context]
+  - id: moonshot-v1-128k
+    context_window: 131072
+    pricing:
+      input: 2.00
+      output: 5.00
+    tags: [generation, long_context]
+  - id: moonshot-v1-8k-vision-preview
+    context_window: 8192
+    pricing:
+      input: 0.20
+      output: 2.00
+    tags: [vision, generation]
+  - id: moonshot-v1-32k-vision-preview
+    context_window: 32768
+    pricing:
+      input: 1.00
+      output: 3.00
+    tags: [vision, generation]
+  - id: moonshot-v1-128k-vision-preview
+    context_window: 131072
+    pricing:
+      input: 2.00
+      output: 5.00
+    tags: [vision, generation]

@@ -1,0 +1,5 @@
+name: File Extraction
+description: Provider supports uploading and extracting content from files (PDF, images, video, etc.) for processing.
+example_providers:
+  - kimi
+  - google
