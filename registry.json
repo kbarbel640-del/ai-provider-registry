@@ -3,7 +3,7 @@
     "name": "AI Provider Registry",
     "description": "A structured registry of AI providers, models, and capabilities for LLM consumption.",
     "version": "1.0.0",
-    "last_updated": "2026-06-26",
+    "last_updated": "2026-07-10",
     "homepage": "https://kbarbel640-del.github.io/ai-provider-registry/",
     "llms_txt": "https://kbarbel640-del.github.io/ai-provider-registry/llms.txt",
     "registry_json": "https://kbarbel640-del.github.io/ai-provider-registry/registry.json",
@@ -26,7 +26,8 @@
     {"id": "pollinations","free": true,  "api_style": "openai",    "supports": ["chat", "vision", "image", "video", "audio", "embeddings", "streaming", "tools", "realtime"], "api_spec": "https://api.pollination.solutions/openapi.json"},
     {"id": "kimi",       "free": false, "api_style": "openai",    "supports": ["chat", "vision", "tools", "streaming", "json_mode", "web_search", "file_extraction", "reasoning"], "api_spec": "https://raw.githubusercontent.com/api-evangelist/moonshot-ai/refs/heads/main/openapi/moonshot-ai-openapi.json", "endpoint": "https://api.moonshot.ai/v1", "model_count": 10},
     {"id": "opencode",    "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "streaming", "json_mode", "reasoning"], "api_spec": "https://opencode.ai/openapi.json", "endpoint": "https://opencode.ai/zen/v1", "model_count": 44},
-    {"id": "opencode-go", "free": false, "api_style": "openai",    "supports": ["chat", "tools", "streaming", "json_mode", "reasoning"], "api_spec": "https://opencode.ai/openapi.json"}
+    {"id": "opencode-go", "free": false, "api_style": "openai",    "supports": ["chat", "tools", "streaming", "json_mode", "reasoning"], "api_spec": "https://opencode.ai/openapi.json"},
+    {"id": "zai",         "free": true,  "api_style": "openai",    "supports": ["chat", "vision", "image", "video", "audio", "tools", "streaming", "json_mode", "reasoning", "web_search"], "api_spec": "https://docs.z.ai/openapi.json", "endpoint": "https://api.z.ai/api/paas/v4", "model_count": 28}
   ],
   "capabilities": [
     "chat", "vision", "image", "tools", "streaming", "json_mode",

@@ -1,0 +1,224 @@
+name: Z.ai (Zhipu AI)
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: ZAI_API_KEY
+  doc_url: https://z.ai/manage-apikey/apikey-list
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://docs.z.ai/guides/overview/pricing
+supports:
+  - chat
+  - vision
+  - image
+  - video
+  - audio
+  - tools
+  - streaming
+  - json_mode
+  - reasoning
+  - web_search
+endpoint: https://api.z.ai/api/paas/v4
+api_spec: https://docs.z.ai/openapi.json
+notes:
+  coding_plan_endpoint: https://api.z.ai/api/coding/paas/v4   # OpenAI protocol
+  anthropic_protocol_endpoint: https://api.z.ai/api/anthropic  # drop-in for Claude SDK
+  auth_alternative: JWT (HS256, id.secret key format) for higher-security scenarios
+  rate_limits_doc: https://z.ai/manage-apikey/rate-limits      # account-tier dependent, behind login
+  free_models: [glm-4.7-flash, glm-4.5-flash, glm-4.6v-flash]
+models:
+  # Flagship text models
+  - id: glm-5.2
+    context_window: 1000000
+    pricing:
+      input: 1.40
+      cached_read: 0.26
+      output: 4.40
+    tags: [flagship, reasoning, coding, long_context, multimodal]
+    reasoning_effort: [max, xhigh, high, medium, low, minimal, none]
+  - id: glm-5.1
+    context_window: 200000
+    pricing:
+      input: 1.40
+      cached_read: 0.26
+      output: 4.40
+    tags: [reasoning, coding]
+  - id: glm-5-turbo
+    context_window: 200000
+    pricing:
+      input: 1.20
+      cached_read: 0.24
+      output: 4.00
+    tags: [reasoning, fast]
+  - id: glm-5
+    context_window: 200000
+    pricing:
+      input: 1.00
+      cached_read: 0.20
+      output: 3.20
+    tags: [reasoning]
+  # Mid-tier text models
+  - id: glm-4.7
+    context_window: 200000
+    pricing:
+      input: 0.60
+      cached_read: 0.11
+      output: 2.20
+    tags: [reasoning]
+  - id: glm-4.7-flashx
+    context_window: 200000
+    pricing:
+      input: 0.07
+      cached_read: 0.01
+      output: 0.40
+    tags: [fast, low_cost]
+  - id: glm-4.7-flash
+    context_window: 200000
+    pricing:
+      free: true
+    tags: [free, fast]
+  - id: glm-4.6
+    context_window: 200000
+    pricing:
+      input: 0.60
+      cached_read: 0.11
+      output: 2.20
+    tags: [coding]
+  - id: glm-4.5
+    context_window: 128000
+    pricing:
+      input: 0.60
+      cached_read: 0.11
+      output: 2.20
+    tags: [general]
+  - id: glm-4.5-x
+    context_window: 128000
+    pricing:
+      input: 2.20
+      cached_read: 0.45
+      output: 8.90
+    tags: [high_throughput]
+  - id: glm-4.5-air
+    context_window: 128000
+    pricing:
+      input: 0.20
+      cached_read: 0.03
+      output: 1.10
+    tags: [low_cost]
+  - id: glm-4.5-airx
+    context_window: 128000
+    pricing:
+      input: 1.10
+      cached_read: 0.22
+      output: 4.50
+    tags: [high_throughput, low_cost]
+  - id: glm-4.5-flash
+    context_window: 128000
+    pricing:
+      free: true
+    tags: [free]
+  - id: glm-4-32b-0414-128k
+    context_window: 128000
+    pricing:
+      input: 0.10
+      output: 0.10
+    tags: [open_weight, generation]
+  # Vision models
+  - id: glm-5v-turbo
+    context_window: 200000
+    pricing:
+      input: 1.20
+      cached_read: 0.24
+      output: 4.00
+    tags: [vision, coding, multimodal]
+  - id: glm-4.6v
+    context_window: 131072
+    pricing:
+      input: 0.30
+      cached_read: 0.05
+      output: 0.90
+    tags: [vision]
+  - id: glm-4.6v-flashx
+    context_window: 131072
+    pricing:
+      input: 0.04
+      cached_read: 0.004
+      output: 0.40
+    tags: [vision, fast]
+  - id: glm-4.6v-flash
+    context_window: 131072
+    pricing:
+      free: true
+    tags: [vision, free]
+  - id: glm-4.5v
+    context_window: 65536
+    pricing:
+      input: 0.60
+      cached_read: 0.11
+      output: 1.80
+    tags: [vision]
+  - id: glm-ocr
+    context_window: 131072
+    pricing:
+      input: 0.03
+      output: 0.03
+    tags: [vision, ocr]
+  # Non-chat modalities (priced per unit, not per-token)
+  - id: glm-image
+    modality: image
+    pricing:
+      per_unit: 0.015
+    tags: [image_generation]
+  - id: cogview-4
+    modality: image
+    pricing:
+      per_unit: 0.01
+    tags: [image_generation]
+  - id: cogvideox-3
+    modality: video
+    pricing:
+      per_unit: 0.20
+    tags: [video_generation]
+  - id: vidu2-image
+    modality: video
+    pricing:
+      per_unit: 0.20
+    tags: [video_generation]
+  - id: vidu2-start-end
+    modality: video
+    pricing:
+      per_unit: 0.20
+    tags: [video_generation]
+  - id: vidu2-reference
+    modality: video
+    pricing:
+      per_unit: 0.40
+    tags: [video_generation]
+  - id: viduq1-text
+    modality: video
+    pricing:
+      per_unit: 0.40
+    tags: [video_generation]
+  - id: viduq1-image
+    modality: video
+    pricing:
+      per_unit: 0.40
+    tags: [video_generation]
+  - id: viduq1-start-end
+    modality: video
+    pricing:
+      per_unit: 0.40
+    tags: [video_generation]
+  - id: glm-asr-2512
+    modality: audio
+    pricing:
+      per_mtok: 0.03
+    tags: [speech_to_text]
+  - id: web_search
+    modality: tool
+    pricing:
+      per_use: 0.01
+    tags: [builtin_tool]

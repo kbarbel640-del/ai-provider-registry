@@ -19,6 +19,7 @@ providers/pollinations.yaml
 providers/kimi.yaml
 providers/opencode.yaml
 providers/opencode-go.yaml
+providers/zai.yaml
 
 ## Models
 models/llama.yaml
