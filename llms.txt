@@ -20,6 +20,7 @@ providers/kimi.yaml
 providers/opencode.yaml
 providers/opencode-go.yaml
 providers/zai.yaml
+providers/huggingface.yaml
 
 ## Models
 models/llama.yaml

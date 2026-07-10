@@ -1,0 +1,128 @@
+name: Hugging Face
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: HF_TOKEN
+  doc_url: https://huggingface.co/settings/tokens
+pricing:
+  free: true
+  pay_as_you_go: true
+  monthly_credit_free: 0.10            # USD/month for free users, subject to change
+  monthly_credit_pro: 2.00             # USD/month for PRO users
+  monthly_credit_team_per_seat: 2.00  # per seat, Team/Enterprise
+  markup: 0.0                          # HF passes provider costs through, no markup
+  doc_url: https://huggingface.co/docs/inference-providers/pricing
+supports:
+  - chat
+  - vision
+  - image
+  - video
+  - audio
+  - embeddings
+  - tools
+  - streaming
+  - json_mode
+  - reasoning
+endpoint: https://router.huggingface.co/v1
+# Keine oeffentliche OpenAPI-Spec veroeffentlicht (Stand 07/2026); das Feld wird
+# daher weggelassen. Autoritative Live-Modellliste: GET https://router.huggingface.co/v1/models
+notes:
+  description: "Router/Proxy: ein HF-Token gibt Zugriff auf 17+ Backend-Provider
+    (Cerebras, Cohere, DeepInfra, Fal, Fireworks, Groq, Novita, Nscale, OVHcloud,
+    Replicate, Scaleway, Together, Z.ai, ...) ohne Vendor-Lock-in."
+  openai_compatible: "Drop-in OpenAI-Replace via base_url https://router.huggingface.co/v1,
+    ABER nur fuer Chat-Completions. Bild/Video/Audio/Embeddings brauchen die nativen
+    SDKs (@huggingface/inference JS bzw. huggingface_hub Python InferenceClient)."
+  provider_selection: "Modell-Suffix steuert die Backend-Auswahl:
+    :fastest (Default) | :cheapest | :preferred | :<provider> (z.B. :groq)."
+  responses_api: "Beta: POST /v1/responses (OpenAI Responses API) mit Tool-Orchestrierung,
+    strukturierten Outputs, Remote-MCP-Tools und Reasoning-Effort."
+  billing: "X-HF-Bill-To: <org> header fuer Team/Enterprise-Zentralabrechnung;
+    alternativ Custom-Provider-Key (dann Provider-seitig abgerechnet, keine HF-Credits)."
+  free_tier_detail: "Free = $0.10/Monat Credits (aenderbar), keine Modelle mit $0;
+    nach Aufbrauchen Credits zukaufen. is_free ist in /v1/models fuer alle Modelle false."
+  failover: "Bei :fastest/auto automatisches Failover auf alternative Provider."
+models:
+  # --- Flaggschiff / grosse Kontextfenster ---
+  - id: zai-org/GLM-5.2
+    context_window: 1048576
+    pricing: { input: 1.40, output: 4.40 }
+    tags: [flagship, reasoning, long_context]
+    supports_tools: true
+    supports_structured_output: true
+  - id: deepseek-ai/DeepSeek-V4-Pro
+    context_window: 1048576
+    tags: [flagship, reasoning, long_context]
+    supports_tools: true
+  - id: deepseek-ai/DeepSeek-V4-Flash
+    context_window: 1048576
+    tags: [flagship, reasoning, long_context]
+    supports_tools: true
+  - id: XiaomiMiMo/MiMo-V2.5-Pro
+    context_window: 1048576
+    tags: [reasoning, long_context]
+    supports_tools: true
+  - id: MiniMaxAI/MiniMax-M3
+    context_window: 1000000
+    tags: [reasoning, long_context]
+    supports_tools: true
+  - id: meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8
+    context_window: 1048576
+    pricing: { input: 0.27, output: 0.85 }
+    tags: [vision, long_context]
+  # --- DeepSeek ---
+  - id: deepseek-ai/DeepSeek-V3.2
+    context_window: 163840
+    pricing: { input: 0.269, output: 0.40 }
+    tags: [reasoning, coding]
+    supports_tools: true
+  - id: deepseek-ai/DeepSeek-V3.1
+    context_window: 131072
+    pricing: { input: 0.27, output: 1.00 }
+    tags: [reasoning, coding]
+    supports_tools: true
+  - id: deepseek-ai/DeepSeek-V3-0324
+    context_window: 163840
+    pricing: { input: 0.27, output: 1.12 }
+    tags: [reasoning]
+    supports_tools: true
+  # --- Qwen Coder ---
+  - id: Qwen/Qwen3-Coder-480B-A35B-Instruct
+    context_window: 262144
+    pricing: { input: 0.38, output: 1.55 }
+    tags: [coding]
+    supports_tools: true
+    supports_structured_output: true
+  - id: Qwen/Qwen3-Coder-Next
+    context_window: 262144
+    pricing: { input: 0.20, output: 1.50 }
+    tags: [coding]
+    supports_tools: true
+  # --- OpenAI open-weights (gpt-oss) ---
+  - id: openai/gpt-oss-120b
+    context_window: 131072
+    pricing: { input: 0.15, output: 0.75 }
+    tags: [reasoning, open_weights]
+    supports_tools: true
+  - id: openai/gpt-oss-20b
+    context_window: 131072
+    pricing: { input: 0.10, output: 0.50 }
+    tags: [reasoning, open_weights, low_cost]
+    supports_tools: true
+  # --- GLM (Z.ai via Router) ---
+  - id: zai-org/GLM-4.6
+    context_window: 204800
+    pricing: { input: 0.55, output: 2.20 }
+    tags: [coding]
+    supports_tools: true
+  - id: zai-org/GLM-4.6V-Flash
+    context_window: 131072
+    pricing: { input: 0.30, output: 0.90 }
+    tags: [vision, fast]
+    supports_tools: true
+  # --- Multimodal / sonstige (nicht-Chat via native SDKs) ---
+  - id: black-forest-labs/FLUX.1-dev
+    modality: image
+    tags: [text_to_image]

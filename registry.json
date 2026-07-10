@@ -27,7 +27,8 @@
     {"id": "kimi",       "free": false, "api_style": "openai",    "supports": ["chat", "vision", "tools", "streaming", "json_mode", "web_search", "file_extraction", "reasoning"], "api_spec": "https://raw.githubusercontent.com/api-evangelist/moonshot-ai/refs/heads/main/openapi/moonshot-ai-openapi.json", "endpoint": "https://api.moonshot.ai/v1", "model_count": 10},
     {"id": "opencode",    "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "streaming", "json_mode", "reasoning"], "api_spec": "https://opencode.ai/openapi.json", "endpoint": "https://opencode.ai/zen/v1", "model_count": 44},
     {"id": "opencode-go", "free": false, "api_style": "openai",    "supports": ["chat", "tools", "streaming", "json_mode", "reasoning"], "api_spec": "https://opencode.ai/openapi.json"},
-    {"id": "zai",         "free": true,  "api_style": "openai",    "supports": ["chat", "vision", "image", "video", "audio", "tools", "streaming", "json_mode", "reasoning", "web_search"], "api_spec": "https://docs.z.ai/openapi.json", "endpoint": "https://api.z.ai/api/paas/v4", "model_count": 28}
+    {"id": "zai",         "free": true,  "api_style": "openai",    "supports": ["chat", "vision", "image", "video", "audio", "tools", "streaming", "json_mode", "reasoning", "web_search"], "api_spec": "https://docs.z.ai/openapi.json", "endpoint": "https://api.z.ai/api/paas/v4", "model_count": 28},
+    {"id": "huggingface", "free": true,  "api_style": "openai",    "supports": ["chat", "vision", "image", "video", "audio", "embeddings", "tools", "streaming", "json_mode", "reasoning"], "endpoint": "https://router.huggingface.co/v1", "model_count": 122, "note": "router/proxy to 17+ backend providers; no public OpenAPI spec; free tier is monthly credits, no $0 models"}
   ],
   "capabilities": [
     "chat", "vision", "image", "tools", "streaming", "json_mode",
