@@ -1,0 +1,115 @@
+name: Llama
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://llama.developer.meta.com/docs/models
+  env_var: LLAMA_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://llama.developer.meta.com/docs/models
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- tools
+- streaming
+endpoint: https://api.llama.com/compat/v1/
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 7
+  listed_models: 7
+models:
+- id: llama-4-scout-17b-16e-instruct-fp8
+  name: Llama-4-Scout-17B-16E-Instruct-FP8
+  description: Open multimodal Llama model for long-context analysis and efficient agents
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-04-05'
+  tags:
+  - vision
+  - open_weights
+  - free
+- id: cerebras-llama-4-maverick-17b-128e-instruct
+  name: Cerebras-Llama-4-Maverick-17B-128E-Instruct
+  description: Open multimodal Llama model for strong reasoning and fast responses
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-04-05'
+  tags:
+  - vision
+  - open_weights
+  - free
+- id: llama-3.3-70b-instruct
+  name: Llama-3.3-70B-Instruct
+  description: Open Llama instruction model for multilingual chat, reasoning, and coding
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2024-12-06'
+  tags:
+  - vision
+  - open_weights
+  - free
+- id: groq-llama-4-maverick-17b-128e-instruct
+  name: Groq-Llama-4-Maverick-17B-128E-Instruct
+  description: Open multimodal Llama model for strong reasoning and fast responses
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-04-05'
+  tags:
+  - vision
+  - open_weights
+  - free
+- id: cerebras-llama-4-scout-17b-16e-instruct
+  name: Cerebras-Llama-4-Scout-17B-16E-Instruct
+  description: Open multimodal Llama model for long-context analysis and efficient agents
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-04-05'
+  tags:
+  - vision
+  - open_weights
+  - free
+- id: llama-3.3-8b-instruct
+  name: Llama-3.3-8B-Instruct
+  description: Open Llama instruction model for multilingual chat, reasoning, and coding
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2024-12-06'
+  tags:
+  - vision
+  - open_weights
+  - free
+- id: llama-4-maverick-17b-128e-instruct-fp8
+  name: Llama-4-Maverick-17B-128E-Instruct-FP8
+  description: Open multimodal Llama model for strong reasoning and fast responses
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-04-05'
+  tags:
+  - vision
+  - open_weights
+  - free

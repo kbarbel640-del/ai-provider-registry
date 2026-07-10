@@ -1,0 +1,219 @@
+name: Azure Cognitive Services
+api_style: azure
+auth:
+  type: azure_api_key
+  doc_url: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models
+  env_var: AZURE_COGNITIVE_SERVICES_RESOURCE_NAME
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- image
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 95
+  listed_models: 14
+models:
+- id: grok-4-fast-reasoning
+  name: Grok 4 Fast (Reasoning)
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 30000
+  pricing:
+    input: 0.2
+    cached_read: 0.05
+    output: 0.5
+  release_date: '2025-09-19'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5.4
+  name: GPT-5.4
+  description: Agent-ready GPT for coding and computer-use workflows at a lower cost
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 2.5
+    cached_read: 0.25
+    output: 15
+  structured_output: true
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5.4-pro
+  name: GPT-5.4 Pro
+  description: More exact GPT-5.4 tier for demanding professional reasoning and agent tasks
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 30
+    output: 180
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5.5
+  name: GPT-5.5
+  description: Default frontier GPT for coding, computer use, research, and knowledge work
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 30
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-4.1-mini
+  name: GPT-4.1 mini
+  description: Affordable GPT-4.1 lane for fast coding help and structured extraction
+  context_window: 1047576
+  output_limit: 32768
+  pricing:
+    input: 0.4
+    cached_read: 0.1
+    output: 1.6
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+- id: gpt-4.1
+  name: GPT-4.1
+  description: Long-lived GPT workhorse for coding, instruction following, and production apps
+  context_window: 1047576
+  output_limit: 32768
+  pricing:
+    input: 2
+    cached_read: 0.5
+    output: 8
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+- id: gpt-4.1-nano
+  name: GPT-4.1 nano
+  description: Tiny GPT-4.1 option for classification, routing, and very high-volume tasks
+  context_window: 1047576
+  output_limit: 32768
+  pricing:
+    input: 0.1
+    cached_read: 0.025
+    output: 0.4
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+  - low_cost
+- id: gpt-5.4-nano
+  name: GPT-5.4 Nano
+  description: Cheapest GPT-5.4 lane for simple routing, extraction, and bulk automation
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 0.2
+    cached_read: 0.02
+    output: 1.25
+  structured_output: true
+  release_date: '2026-03-17'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5.4-mini
+  name: GPT-5.4 Mini
+  description: Strong small GPT for coding subagents, quick tool use, and high-volume work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 0.75
+    cached_read: 0.075
+    output: 4.5
+  structured_output: true
+  release_date: '2026-03-17'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5.2-codex
+  name: GPT-5.2 Codex
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic software work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.75
+    cached_read: 0.175
+    output: 14
+  structured_output: true
+  release_date: '2026-01-14'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5-codex
+  name: GPT-5-Codex
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic software work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.25
+    cached_read: 0.13
+    output: 10
+  release_date: '2025-09-15'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5.1-codex-mini
+  name: GPT-5.1 Codex Mini
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic software work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 0.25
+    cached_read: 0.025
+    output: 2
+  structured_output: true
+  release_date: '2025-11-14'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5.3-codex
+  name: GPT-5.3 Codex
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic software work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.75
+    cached_read: 0.175
+    output: 14
+  structured_output: true
+  release_date: '2026-02-24'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5.2
+  name: GPT-5.2
+  description: GPT model for general reasoning, writing, coding, and tool-assisted tasks
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.75
+    cached_read: 0.125
+    output: 14
+  structured_output: true
+  release_date: '2025-12-11'
+  tags:
+  - vision
+  - reasoning

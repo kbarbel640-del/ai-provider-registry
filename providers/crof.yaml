@@ -1,0 +1,251 @@
+name: CrofAI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://crof.ai/docs
+  env_var: CROF_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://crof.ai/docs
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://crof.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 23
+  listed_models: 14
+models:
+- id: mimo-v2.5-pro
+  name: MiMo-V2.5-Pro
+  description: Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution
+  context_window: 1048576
+  output_limit: 131072
+  pricing:
+    input: 0.4
+    cached_read: 0.003
+    output: 0.8
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: deepseek-v4-flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work
+  context_window: 1000000
+  output_limit: 131072
+  pricing:
+    input: 0.12
+    cached_read: 0.003
+    output: 0.21
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+  - low_cost
+- id: deepseek-v4-pro-lightning
+  name: DeepSeek V4 Pro Lightning
+  description: Open MoE flagship with million-token context for coding and long agent runs
+  context_window: 1000000
+  output_limit: 131072
+  pricing:
+    input: 0.8
+    cached_read: 0.02
+    output: 1.6
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: deepseek-v4-pro
+  name: DeepSeek V4 Pro
+  description: Open MoE flagship with million-token context for coding and long agent runs
+  context_window: 1000000
+  output_limit: 131072
+  pricing:
+    input: 0.35
+    cached_read: 0.003
+    output: 0.8
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: glm-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 1000000
+  output_limit: 131072
+  pricing:
+    input: 0.5
+    cached_read: 0.08
+    output: 2.2
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: gemma-4-31b-it
+  name: Gemma 4 31B IT
+  description: Largest Gemma 4 instruction model for open, self-hosted chat and reasoning
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.1
+    cached_read: 0.02
+    output: 0.3
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-02'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+  - low_cost
+- id: kimi-k2.7-code
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.55
+    cached_read: 0.05
+    output: 2.25
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: kimi-k2.5
+  name: Kimi K2.5
+  description: Earlier Kimi frontier model for long-context agents, coding, and multimodal work
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.35
+    cached_read: 0.07
+    output: 1.7
+  open_weights: true
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: kimi-k2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.5
+    cached_read: 0.05
+    output: 1.99
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-21'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: qwen3.6-27b
+  name: Qwen3.6 27B
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.2
+    cached_read: 0.04
+    output: 1.5
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-22'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: qwen3.5-9b
+  name: Qwen3.5 9B
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.04
+    cached_read: 0.008
+    output: 0.15
+  open_weights: true
+  structured_output: true
+  release_date: '2026-03-13'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - low_cost
+- id: qwen3.5-397b-a17b
+  name: Qwen3.5 397B-A17B
+  description: Large open Qwen multimodal MoE for visual agents and long technical tasks
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.35
+    cached_read: 0.07
+    output: 1.75
+  open_weights: true
+  structured_output: true
+  release_date: '2026-02-15'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: greg-2-ultra
+  name: Greg 2 Ultra
+  description: Flagship model for demanding analysis, coding, and production agent workflows
+  context_window: 229376
+  output_limit: 229376
+  pricing:
+    input: 3
+    cached_read: 0.5
+    output: 10
+  release_date: '2026-06-14'
+  tags:
+  - general
+- id: greg-rp
+  name: Greg (Roleplay)
+  description: General-purpose chat model for instruction following, writing, and analysis
+  context_window: 229376
+  output_limit: 229376
+  pricing:
+    input: 0.1
+    cached_read: 0.02
+    output: 0.3
+  release_date: '2026-01-27'
+  tags:
+  - low_cost

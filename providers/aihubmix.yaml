@@ -1,0 +1,247 @@
+name: AIHubMix
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.aihubmix.com
+  env_var: AIHUBMIX_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://docs.aihubmix.com
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 55
+  listed_models: 14
+models:
+- id: gpt-5.4
+  name: GPT-5.4
+  description: Frontier GPT model for professional reasoning, coding, and multimodal work
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 2.5
+    cached_read: 0.25
+    output: 15
+  structured_output: true
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5.5
+  name: GPT-5.5
+  description: Frontier GPT model for professional reasoning, coding, and multimodal work
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 30
+  structured_output: true
+  release_date: '2026-04-23'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gemini-3.1-flash-lite
+  name: Gemini 3.1 Flash Lite
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.25
+    cached_read: 0.025
+    output: 1.5
+  structured_output: true
+  release_date: '2026-05-07'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: xiaomi-mimo-v2.5-pro
+  name: Xiaomi MiMo-V2.5-Pro
+  description: Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution
+  context_window: 1048576
+  output_limit: 131072
+  pricing:
+    input: 1.1
+    cached_read: 0.22
+    output: 3.3
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: coding-xiaomi-mimo-v2.5-pro
+  name: Coding Xiaomi MiMo-V2.5-Pro
+  description: Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution
+  context_window: 1048576
+  output_limit: 131072
+  pricing:
+    input: 0.2
+    cached_read: 0.04
+    output: 0.6
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: gemini-2.5-pro
+  name: Gemini 2.5 Pro
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 1.25
+    cached_read: 0.125
+    output: 10
+  structured_output: true
+  release_date: '2025-03-20'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-2.5-flash
+  name: Gemini 2.5 Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.3
+    cached_read: 0.03
+    output: 2.5
+  structured_output: true
+  release_date: '2025-03-20'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: xiaomi-mimo-v2.5-free
+  name: Xiaomi MiMo-V2.5 (free)
+  description: Open MiMo model for multimodal coding agents and long-context automation
+  context_window: 1048576
+  output_limit: 131072
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - long_context
+  - free
+- id: xiaomi-mimo-v2.5-pro-free
+  name: Xiaomi MiMo-V2.5-Pro (free)
+  description: Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution
+  context_window: 1048576
+  output_limit: 131072
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+  - free
+- id: xiaomi-mimo-v2.5
+  name: Xiaomi MiMo-V2.5
+  description: Open MiMo model for multimodal coding agents and long-context automation
+  context_window: 1048576
+  output_limit: 131072
+  pricing:
+    input: 0.44
+    cached_read: 0.088
+    output: 2.2
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - long_context
+- id: coding-xiaomi-mimo-v2.5
+  name: Coding Xiaomi MiMo-V2.5
+  description: Open MiMo model for multimodal coding agents and long-context automation
+  context_window: 1048576
+  output_limit: 131072
+  pricing:
+    input: 0.08
+    cached_read: 0.016
+    output: 0.4
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - long_context
+  - low_cost
+- id: gemini-3.1-pro-preview-customtools
+  name: Gemini 3.1 Pro Preview Custom Tools
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 2
+    cached_read: 0.2
+    output: 12
+  structured_output: true
+  release_date: '2026-02-19'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-3.1-pro-preview
+  name: Gemini 3.1 Pro Preview
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 2
+    cached_read: 0.2
+    output: 12
+  structured_output: true
+  release_date: '2026-02-19'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-3-flash-preview
+  name: Gemini 3 Flash Preview
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.5
+    cached_read: 0.05
+    output: 3
+  structured_output: true
+  release_date: '2025-12-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context

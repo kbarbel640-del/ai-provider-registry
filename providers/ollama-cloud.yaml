@@ -1,0 +1,191 @@
+name: Ollama Cloud
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.ollama.com/cloud
+  env_var: OLLAMA_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.ollama.com/cloud
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://ollama.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 43
+  listed_models: 14
+models:
+- id: deepseek-v4-flash
+  name: deepseek-v4-flash
+  description: Fast DeepSeek model for efficient chat, coding help, and agent loops
+  context_window: 1048576
+  output_limit: 1048576
+  pricing: {}
+  open_weights: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: nemotron-3-nano:30b
+  name: nemotron-3-nano:30b
+  description: Small Nemotron 3 MoE for efficient coding, math, and long-context agents
+  context_window: 1048576
+  output_limit: 131072
+  pricing: {}
+  open_weights: true
+  release_date: '2025-12-15'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: deepseek-v4-pro
+  name: deepseek-v4-pro
+  description: Flagship DeepSeek model for coding, reasoning, and agentic work
+  context_window: 1048576
+  output_limit: 1048576
+  pricing: {}
+  open_weights: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: gemini-3-flash-preview
+  name: gemini-3-flash-preview
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  pricing: {}
+  open_weights: true
+  release_date: '2025-12-17'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+  - long_context
+- id: glm-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 976000
+  output_limit: 131072
+  pricing: {}
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: minimax-m3
+  name: minimax-m3
+  description: MiniMax multimodal coding model for long-context reasoning and agent tasks
+  context_window: 512000
+  output_limit: 131072
+  pricing: {}
+  open_weights: true
+  release_date: '2026-05-31'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - long_context
+- id: devstral-small-2:24b
+  name: devstral-small-2:24b
+  description: Mistral coding agent model for repository tasks and software engineering workflows
+  context_window: 262144
+  output_limit: 262144
+  pricing: {}
+  open_weights: true
+  release_date: '2025-12-09'
+  tags:
+  - vision
+  - open_weights
+- id: ministral-3:8b
+  name: ministral-3:8b
+  description: Compact Mistral model for edge, latency-sensitive, and cost-efficient workloads
+  context_window: 262144
+  output_limit: 128000
+  pricing: {}
+  open_weights: true
+  release_date: '2024-12-01'
+  tags:
+  - vision
+  - open_weights
+- id: kimi-k2.7-code
+  name: kimi-k2.7-code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking
+  context_window: 262144
+  output_limit: 262144
+  pricing: {}
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: kimi-k2-thinking
+  name: kimi-k2-thinking
+  description: Legacy model retained for compatibility with older integrations
+  context_window: 262144
+  output_limit: 262144
+  pricing: {}
+  open_weights: true
+  release_date: '2025-11-06'
+  tags:
+  - reasoning
+  - open_weights
+- id: nemotron-3-super
+  name: nemotron-3-super
+  description: Nemotron middle tier for collaborative agents and high-volume reasoning workloads
+  context_window: 262144
+  output_limit: 65536
+  pricing: {}
+  open_weights: true
+  release_date: '2026-03-11'
+  tags:
+  - reasoning
+  - open_weights
+- id: ministral-3:14b
+  name: ministral-3:14b
+  description: Compact Mistral model for edge, latency-sensitive, and cost-efficient workloads
+  context_window: 262144
+  output_limit: 128000
+  pricing: {}
+  open_weights: true
+  release_date: '2024-12-01'
+  tags:
+  - vision
+  - open_weights
+- id: qwen3-next:80b
+  name: qwen3-next:80b
+  description: Legacy model retained for compatibility with older integrations
+  context_window: 262144
+  output_limit: 32768
+  pricing: {}
+  open_weights: true
+  release_date: '2025-09-15'
+  tags:
+  - reasoning
+  - open_weights
+- id: qwen3-coder:480b
+  name: qwen3-coder:480b
+  description: Qwen coding model for software agents, repository edits, and code reasoning
+  context_window: 262144
+  output_limit: 65536
+  pricing: {}
+  open_weights: true
+  release_date: '2025-07-22'
+  tags:
+  - open_weights

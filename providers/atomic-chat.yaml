@@ -1,0 +1,86 @@
+name: Atomic Chat
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://atomic.chat
+  env_var: ATOMIC_CHAT_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://atomic.chat
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- tools
+- streaming
+endpoint: http://127.0.0.1:1337/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 5
+  listed_models: 5
+models:
+- id: Meta-Llama-3_1-8B-Instruct-GGUF
+  name: Meta Llama 3.1 8B Instruct (GGUF)
+  description: Open Llama instruction model for multilingual chat, reasoning, and coding
+  context_window: 131072
+  output_limit: 4096
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2024-07-23'
+  tags:
+  - open_weights
+  - free
+- id: gemma-4-E4B-it-IQ4_XS
+  name: Gemma 4 E4B Instruct (IQ4_XS)
+  description: Open Gemma instruction model for efficient chat and self-hosted deployments
+  context_window: 32768
+  output_limit: 8192
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-04-02'
+  tags:
+  - open_weights
+  - free
+- id: Qwen3_5-9B-MLX-4bit
+  name: Qwen 3.5 9B (MLX 4-bit)
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 32768
+  output_limit: 8192
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - open_weights
+  - free
+- id: gemma-4-E4B-it-MLX-4bit
+  name: Gemma 4 E4B Instruct (MLX 4-bit)
+  description: Open Gemma instruction model for efficient chat and self-hosted deployments
+  context_window: 32768
+  output_limit: 8192
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-04-02'
+  tags:
+  - open_weights
+  - free
+- id: Qwen3_5-9B-Q4_K_M
+  name: Qwen 3.5 9B (Q4_K_M)
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 32768
+  output_limit: 8192
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - open_weights
+  - free

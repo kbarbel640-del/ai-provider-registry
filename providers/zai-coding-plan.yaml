@@ -1,0 +1,104 @@
+name: Z.AI Coding Plan
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.z.ai/devpack/overview
+  env_var: ZHIPU_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://docs.z.ai/devpack/overview
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.z.ai/api/coding/paas/v4
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 6
+  listed_models: 6
+models:
+- id: glm-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 1000000
+  output_limit: 131072
+  pricing:
+    free: true
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+  - free
+- id: glm-4.7
+  name: GLM-4.7
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 204800
+  output_limit: 131072
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-12-22'
+  tags:
+  - reasoning
+  - open_weights
+  - free
+- id: glm-5.1
+  name: GLM-5.1
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 200000
+  output_limit: 131072
+  pricing:
+    free: true
+  structured_output: true
+  release_date: '2026-03-27'
+  tags:
+  - reasoning
+  - free
+- id: glm-5v-turbo
+  name: GLM-5V-Turbo
+  description: Fast GLM vision model for screenshots, documents, and multimodal agent tasks
+  context_window: 200000
+  output_limit: 131072
+  pricing:
+    free: true
+  release_date: '2026-04-01'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - free
+- id: glm-5-turbo
+  name: GLM-5-Turbo
+  description: Efficient GLM model for fast reasoning, coding, and agent workflows
+  context_window: 200000
+  output_limit: 131072
+  pricing:
+    free: true
+  structured_output: true
+  release_date: '2026-03-16'
+  tags:
+  - reasoning
+  - free
+- id: glm-4.5-air
+  name: GLM-4.5-Air
+  description: Efficient GLM model for fast reasoning, coding, and agent workflows
+  context_window: 131072
+  output_limit: 98304
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-07-28'
+  tags:
+  - reasoning
+  - open_weights
+  - free

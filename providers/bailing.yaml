@@ -1,0 +1,49 @@
+name: Bailing
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://alipaytbox.yuque.com/sxs0ba/ling/intro
+  env_var: BAILING_API_TOKEN
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://alipaytbox.yuque.com/sxs0ba/ling/intro
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- tools
+- reasoning
+- streaming
+endpoint: https://api.tbox.cn/api/llm/v1/chat/completions
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 2
+  listed_models: 2
+models:
+- id: Ring-1T
+  name: Ring-1T
+  description: Reasoning model for deliberate analysis, multi-step problem solving, and tool use
+  context_window: 128000
+  output_limit: 32000
+  pricing:
+    input: 0.57
+    output: 2.29
+  open_weights: true
+  release_date: 2025-10
+  tags:
+  - reasoning
+  - open_weights
+- id: Ling-1T
+  name: Ling-1T
+  description: Open-weight instruction model for adaptable chat and self-hosted production workloads
+  context_window: 128000
+  output_limit: 32000
+  pricing:
+    input: 0.57
+    output: 2.29
+  open_weights: true
+  release_date: 2025-10
+  tags:
+  - open_weights

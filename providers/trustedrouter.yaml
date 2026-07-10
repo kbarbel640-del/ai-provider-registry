@@ -1,0 +1,113 @@
+name: TrustedRouter
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://trustedrouter.com/docs
+  env_var: TRUSTEDROUTER_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://trustedrouter.com/docs
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.trustedrouter.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 7
+  listed_models: 7
+models:
+- id: zdr
+  name: Zero Data Retention
+  description: TrustedRouter privacy routing alias that prefers zero data retention model endpoints.
+  context_window: 1000000
+  output_limit: 131072
+  pricing: {}
+  structured_output: true
+  release_date: '2026-06-01'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: e2e
+  name: End-to-End Encrypted
+  description: TrustedRouter privacy routing alias for end-to-end encrypted provider routes where available.
+  context_window: 1000000
+  output_limit: 131072
+  pricing: {}
+  structured_output: true
+  release_date: '2026-06-01'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: synth-code
+  name: Synth Code
+  description: TrustedRouter code synthesis orchestration alias that combines multiple model responses
+    into one answer.
+  context_window: 1000000
+  output_limit: 131072
+  pricing: {}
+  structured_output: true
+  release_date: '2026-06-20'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: fast
+  name: Fast
+  description: TrustedRouter speed routing alias that prefers low-latency healthy model endpoints.
+  context_window: 1000000
+  output_limit: 131072
+  pricing: {}
+  structured_output: true
+  release_date: '2026-06-01'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: synth
+  name: Synth
+  description: TrustedRouter synthesis orchestration alias that combines multiple model responses into
+    one answer.
+  context_window: 1000000
+  output_limit: 131072
+  pricing: {}
+  structured_output: true
+  release_date: '2026-06-20'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: auto
+  name: Auto
+  description: TrustedRouter automatic routing alias that chooses a healthy supported model endpoint for
+    the request.
+  context_window: 1000000
+  output_limit: 131072
+  pricing: {}
+  structured_output: true
+  release_date: '2026-05-01'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: cheap
+  name: Cheap
+  description: TrustedRouter low-cost routing alias that prefers inexpensive healthy model endpoints.
+  context_window: 1000000
+  output_limit: 131072
+  pricing: {}
+  structured_output: true
+  release_date: '2026-05-01'
+  tags:
+  - vision
+  - reasoning
+  - long_context

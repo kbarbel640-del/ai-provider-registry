@@ -1,0 +1,182 @@
+name: Vertex (Anthropic)
+api_style: anthropic
+auth:
+  type: oauth
+  doc_url: https://cloud.google.com/vertex-ai/generative-ai/docs/partner-models/claude
+  env_var: GOOGLE_VERTEX_PROJECT
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://cloud.google.com/vertex-ai/generative-ai/docs/partner-models/claude
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- reasoning
+- streaming
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 12
+  listed_models: 12
+models:
+- id: claude-opus-4-7@default
+  name: Claude Opus 4.7
+  description: Stronger Opus tier for advanced software work and high-stakes reasoning
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-04-16'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-sonnet-5@default
+  name: Claude Sonnet 5
+  description: Everyday Claude agent model for coding, planning, browsing, and general work
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 2
+    cached_read: 0.2
+    output: 10
+  release_date: '2026-06-30'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-opus-4-6@default
+  name: Claude Opus 4.6
+  description: High-end Claude for difficult coding, planning, and slower expert reasoning
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-opus-4-8@default
+  name: Claude Opus 4.8
+  description: Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-05-28'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-sonnet-4-6@default
+  name: Claude Sonnet 4.6
+  description: Claude workhorse for coding agents, careful analysis, and production cost control
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2026-02-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-haiku-4-5@20251001
+  name: Claude Haiku 4.5
+  description: Fast Claude model for responsive assistance, classification, and lightweight agents
+  context_window: 200000
+  output_limit: 64000
+  pricing:
+    input: 1
+    cached_read: 0.1
+    output: 5
+  release_date: '2025-10-15'
+  tags:
+  - vision
+  - reasoning
+- id: claude-opus-4@20250514
+  name: Claude Opus 4
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 32000
+  pricing:
+    input: 15
+    cached_read: 1.5
+    output: 75
+  release_date: '2025-05-22'
+  tags:
+  - vision
+  - reasoning
+- id: claude-opus-4-1@20250805
+  name: Claude Opus 4.1
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 32000
+  pricing:
+    input: 15
+    cached_read: 1.5
+    output: 75
+  release_date: '2025-08-05'
+  tags:
+  - vision
+  - reasoning
+- id: claude-opus-4-5@20251101
+  name: Claude Opus 4.5
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 64000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2025-11-01'
+  tags:
+  - vision
+  - reasoning
+- id: claude-3-5-haiku@20241022
+  name: Claude Haiku 3.5
+  description: Fast Claude model for responsive assistance, classification, and lightweight agents
+  context_window: 200000
+  output_limit: 8192
+  pricing:
+    input: 0.8
+    cached_read: 0.08
+    output: 4
+  release_date: '2024-10-22'
+  tags:
+  - vision
+- id: claude-sonnet-4@20250514
+  name: Claude Sonnet 4
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost control
+  context_window: 200000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2025-05-22'
+  tags:
+  - vision
+  - reasoning
+- id: claude-sonnet-4-5@20250929
+  name: Claude Sonnet 4.5
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost control
+  context_window: 200000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2025-09-29'
+  tags:
+  - vision
+  - reasoning

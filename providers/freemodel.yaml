@@ -1,0 +1,167 @@
+name: FreeModel
+api_style: anthropic
+auth:
+  type: bearer
+  doc_url: https://freemodel.dev
+  env_var: FREEMODEL_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://freemodel.dev
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://cc.freemodel.dev/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 10
+  listed_models: 10
+models:
+- id: gpt-5.4
+  name: GPT-5.4
+  description: Agent-ready GPT for coding and computer-use workflows at a lower cost
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 2.5
+    cached_read: 0.25
+    output: 15
+  structured_output: true
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5.5
+  name: GPT-5.5
+  description: Default frontier GPT for coding, computer use, research, and knowledge work
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 30
+  structured_output: true
+  release_date: '2026-04-23'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-opus-4-7
+  name: Claude Opus 4.7
+  description: Stronger Opus tier for advanced software work and high-stakes reasoning
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-04-16'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-opus-4-8
+  name: Claude Opus 4.8
+  description: Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-05-28'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-fable-5
+  name: Claude Fable 5
+  description: Claude model for creative writing, analysis, and controlled agent workflows
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 10
+    cached_read: 1
+    output: 50
+  release_date: '2026-06-09'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-opus-4-6
+  name: Claude Opus 4.6
+  description: High-end Claude for difficult coding, planning, and slower expert reasoning
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-sonnet-4-6
+  name: Claude Sonnet 4.6
+  description: Claude workhorse for coding agents, careful analysis, and production cost control
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2026-02-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5.3-codex
+  name: GPT-5.3 Codex
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic software work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.75
+    cached_read: 0.175
+    output: 14
+  structured_output: true
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5.4-mini
+  name: GPT-5.4 mini
+  description: Strong small GPT for coding subagents, quick tool use, and high-volume work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 0.75
+    cached_read: 0.075
+    output: 4.5
+  structured_output: true
+  release_date: '2026-03-17'
+  tags:
+  - vision
+  - reasoning
+- id: claude-haiku-4-5-20251001
+  name: Claude Haiku 4.5
+  description: Fast Claude model for responsive assistance, classification, and lightweight agents
+  context_window: 200000
+  output_limit: 64000
+  pricing:
+    input: 1
+    cached_read: 0.1
+    output: 5
+  release_date: '2025-10-15'
+  tags:
+  - vision
+  - reasoning

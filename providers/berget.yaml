@@ -1,0 +1,147 @@
+name: Berget.AI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://api.berget.ai
+  env_var: BERGET_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://api.berget.ai
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.berget.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 8
+  listed_models: 8
+models:
+- id: zai-org/GLM-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 524288
+  output_limit: 32768
+  pricing:
+    input: 1.54
+    output: 4.84
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: moonshotai/Kimi-K2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.83
+    cached_read: 0.16
+    output: 3.85
+  open_weights: true
+  structured_output: true
+  release_date: '2026-05-07'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: mistralai/Mistral-Medium-3.5-128B
+  name: Mistral Medium 3.5 128B
+  description: Mistral model for multilingual chat, reasoning, and tool-assisted workflows
+  context_window: 262144
+  output_limit: 131072
+  pricing:
+    input: 1.65
+    output: 5.5
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-29'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: meta-llama/Llama-3.3-70B-Instruct
+  name: Llama 3.3 70B Instruct
+  description: Open Llama instruction model for multilingual chat, reasoning, and coding
+  context_window: 128000
+  output_limit: 8192
+  pricing:
+    input: 0.99
+    output: 0.99
+  open_weights: true
+  structured_output: true
+  release_date: '2025-04-27'
+  tags:
+  - reasoning
+  - open_weights
+- id: google/gemma-4-31B-it
+  name: Gemma 4 31B Instruct
+  description: Open Gemma instruction model for efficient chat and self-hosted deployments
+  context_window: 128000
+  output_limit: 8192
+  pricing:
+    input: 0.275
+    output: 0.55
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-02'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: openai/gpt-oss-120b
+  name: GPT-OSS-120B
+  description: Open GPT reasoning model for self-hosted agents and controllable deployments
+  context_window: 128000
+  output_limit: 8192
+  pricing:
+    input: 0.22
+    output: 0.83
+  open_weights: true
+  structured_output: true
+  release_date: '2025-08-05'
+  tags:
+  - reasoning
+  - open_weights
+- id: zai-org/GLM-4.7
+  name: GLM 4.7
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 128000
+  output_limit: 8192
+  pricing:
+    input: 0.77
+    output: 2.75
+  open_weights: true
+  structured_output: true
+  release_date: '2026-01-19'
+  tags:
+  - reasoning
+  - open_weights
+- id: mistralai/Mistral-Small-3.2-24B-Instruct-2506
+  name: Mistral Small 3.2 24B Instruct 2506
+  description: Efficient Mistral model for fast chat, extraction, and production assistants
+  context_window: 32000
+  output_limit: 8192
+  pricing:
+    input: 0.33
+    output: 0.33
+  open_weights: true
+  structured_output: true
+  release_date: '2025-10-01'
+  tags:
+  - reasoning
+  - open_weights
+  - low_cost

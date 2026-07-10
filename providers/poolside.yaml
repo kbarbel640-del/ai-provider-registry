@@ -1,0 +1,63 @@
+name: Poolside
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://platform.poolside.ai
+  env_var: POOLSIDE_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://platform.poolside.ai
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- tools
+- reasoning
+- streaming
+endpoint: https://inference.poolside.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 3
+  listed_models: 3
+models:
+- id: poolside/laguna-xs.2
+  name: Laguna XS.2
+  description: Agentic coding model from Poolside in the XS size class for local deployment
+  context_window: 262144
+  output_limit: 32768
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-04-28'
+  tags:
+  - reasoning
+  - open_weights
+  - free
+- id: poolside/laguna-m.1
+  name: Laguna M.1
+  description: Poolside's flagship agentic coding model for long-horizon work
+  context_window: 262144
+  output_limit: 32768
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-04-28'
+  tags:
+  - reasoning
+  - open_weights
+  - free
+- id: poolside/laguna-xs-2.1
+  name: Laguna XS 2.1
+  description: Agentic coding model from Poolside in the XS size class for local deployment
+  context_window: 262144
+  output_limit: 32768
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-07-02'
+  tags:
+  - reasoning
+  - open_weights
+  - free

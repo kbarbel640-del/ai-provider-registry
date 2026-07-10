@@ -1,0 +1,262 @@
+name: Weights & Biases
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.wandb.ai/guides/integrations/inference/
+  env_var: WANDB_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.wandb.ai/guides/integrations/inference/
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.inference.wandb.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 29
+  listed_models: 14
+models:
+- id: deepseek-ai/DeepSeek-V4-Flash
+  name: DeepSeek V4 Flash
+  description: DeepSeek V4-Flash is an MoE model with 1M context length great for coding, reasoning, and
+    agentic workloads.
+  context_window: 1048576
+  output_limit: 1048576
+  pricing:
+    input: 0.14
+    cached_read: 0.07
+    output: 0.28
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+  - low_cost
+- id: deepseek-ai/DeepSeek-V4-Pro
+  name: DeepSeek V4 Pro
+  description: DeepSeek V4-Pro is a 1.6T-parameter MoE model with 49B active parameters excelling at advanced
+    reasoning, coding, and complex agentic workloads.
+  context_window: 1048576
+  output_limit: 1048576
+  pricing:
+    input: 1.74
+    cached_read: 0.14
+    output: 3.48
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: moonshotai/Kimi-K2.6
+  name: Kimi K2.6
+  description: Kimi K2.6 is a multimodal Mixture-of-Experts language model featuring 32 billion activated
+    parameters and a total of 1 trillion parameters.
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.95
+    cached_read: 0.16
+    output: 4
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-20'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: moonshotai/Kimi-K2.5
+  name: Kimi K2.5
+  description: Kimi K2.5 is a multimodal Mixture-of-Experts language model featuring 32 billion activated
+    parameters and a total of 1 trillion parameters.
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.6
+    cached_read: 0.1
+    output: 3
+  open_weights: true
+  structured_output: true
+  release_date: '2026-02-02'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: moonshotai/Kimi-K2.7-Code
+  name: Kimi K2.7 Code
+  description: Kimi K2.7 Code is a 1T-parameter MoE model with 32B active parameters purpose-built for
+    long-horizon agentic coding and software engineering.
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.94
+    cached_read: 0.19
+    output: 4
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: google/gemma-4-31B-it
+  name: Gemma 4 31B
+  description: Gemma 4 31B Dense is designed for advanced reasoning, agentic workflows, and longer context
+    and is natively trained on 140+ languages.
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.12
+    cached_read: 0.09
+    output: 0.35
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-02'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+  - low_cost
+- id: Qwen/Qwen3.6-35B-A3B
+  name: Qwen3.6 35B A3B
+  description: Qwen3.6-35B-A3B is an MoE multimodal model with 262K context optimized for agentic coding
+    workflows.
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.25
+    cached_read: 0.25
+    output: 1.25
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-15'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: Qwen/Qwen3.6-27B
+  name: Qwen3.6 27B
+  description: Qwen3.6-27B is a 27B dense multimodal model with 262K context built for flagship-level
+    agentic coding.
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.6
+    cached_read: 0.12
+    output: 3.6
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-22'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: Qwen/Qwen3-235B-A22B-Thinking-2507
+  name: Qwen3 235B A22B Thinking-2507
+  description: High-performance Mixture-of-Experts model optimized for structured reasoning, math, and
+    long-form generation.
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.1
+    cached_read: 0.1
+    output: 0.1
+  open_weights: true
+  structured_output: true
+  release_date: '2025-07-25'
+  tags:
+  - reasoning
+  - open_weights
+  - low_cost
+- id: Qwen/Qwen3-Coder-480B-A35B-Instruct
+  name: Qwen3 Coder 480B A35B
+  description: Mixture-of-Experts model optimized for agentic coding tasks such as function calling, tool
+    use, and long-context reasoning.
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 1
+    cached_read: 1
+    output: 1.5
+  open_weights: true
+  structured_output: true
+  release_date: '2025-07-22'
+  tags:
+  - open_weights
+- id: Qwen/Qwen3.5-27B
+  name: Qwen3.5-27B
+  description: Qwen3.5-27B is a dense model from the Qwen3.5 family built for high performance across
+    a large range of benchmarks.
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.39
+    cached_read: 0.08
+    output: 3.12
+  open_weights: true
+  structured_output: true
+  release_date: '2026-02-24'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: Qwen/Qwen3-30B-A3B-Instruct-2507
+  name: Qwen3 30B A3B Instruct 2507
+  description: Qwen3-30B-A3B-Instruct-2507 is a 30.5B MoE instruction-tuned model with enhanced reasoning,
+    coding, and long-context understanding.
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.1
+    cached_read: 0.1
+    output: 0.3
+  open_weights: true
+  structured_output: true
+  release_date: '2025-07-29'
+  tags:
+  - open_weights
+  - low_cost
+- id: Qwen/Qwen3-235B-A22B-Instruct-2507
+  name: Qwen3 235B A22B-2507
+  description: Efficient multilingual, Mixture-of-Experts, instruction-tuned model, optimized for logical
+    reasoning.
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.1
+    cached_read: 0.1
+    output: 0.1
+  open_weights: true
+  structured_output: true
+  release_date: '2025-07-22'
+  tags:
+  - open_weights
+  - low_cost
+- id: Qwen/Qwen3.5-35B-A3B
+  name: Qwen3.5-35B-A3B
+  description: Qwen3.5-35B-A3B is an open-weights multimodal MoE model built for efficient, high-throughput
+    inference across chat, reasoning, and agentic tasks.
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.25
+    cached_read: 0.25
+    output: 1.25
+  open_weights: true
+  structured_output: true
+  release_date: '2026-02-24'
+  tags:
+  - vision
+  - reasoning
+  - open_weights

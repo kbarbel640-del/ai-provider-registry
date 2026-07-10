@@ -1,0 +1,209 @@
+name: IO.NET
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://io.net/docs/guides/intelligence/io-intelligence
+  env_var: IOINTELLIGENCE_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://io.net/docs/guides/intelligence/io-intelligence
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- reasoning
+- streaming
+endpoint: https://api.intelligence.io.solutions/api/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 17
+  listed_models: 14
+models:
+- id: meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8
+  name: Llama 4 Maverick 17B 128E Instruct
+  description: Open multimodal Llama model for strong reasoning and fast responses
+  context_window: 430000
+  output_limit: 4096
+  pricing:
+    input: 0.15
+    cached_read: 0.075
+    output: 0.6
+  open_weights: true
+  release_date: '2025-01-15'
+  tags:
+  - vision
+  - open_weights
+- id: Qwen/Qwen3-Next-80B-A3B-Instruct
+  name: Qwen 3 Next 80B Instruct
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262144
+  output_limit: 4096
+  pricing:
+    input: 0.1
+    cached_read: 0.05
+    output: 0.8
+  open_weights: true
+  release_date: '2025-01-10'
+  tags:
+  - open_weights
+- id: Qwen/Qwen3-235B-A22B-Thinking-2507
+  name: Qwen 3 235B Thinking
+  description: Qwen reasoning model for deliberate problem solving, math, and coding
+  context_window: 262144
+  output_limit: 4096
+  pricing:
+    input: 0.11
+    cached_read: 0.055
+    output: 0.6
+  open_weights: true
+  release_date: '2025-07-01'
+  tags:
+  - reasoning
+  - open_weights
+- id: zai-org/GLM-4.6
+  name: GLM 4.6
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 200000
+  output_limit: 4096
+  pricing:
+    input: 0.4
+    cached_read: 0.2
+    output: 1.75
+  release_date: '2024-11-15'
+  tags:
+  - general
+- id: openai/gpt-oss-120b
+  name: GPT-OSS 120B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following workloads
+  context_window: 131072
+  output_limit: 4096
+  pricing:
+    input: 0.04
+    cached_read: 0.02
+    output: 0.4
+  open_weights: true
+  release_date: '2024-12-01'
+  tags:
+  - open_weights
+  - low_cost
+- id: meta-llama/Llama-3.3-70B-Instruct
+  name: Llama 3.3 70B Instruct
+  description: Open Llama instruction model for multilingual chat, reasoning, and coding
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    input: 0.13
+    cached_read: 0.065
+    output: 0.38
+  open_weights: true
+  release_date: '2024-12-06'
+  tags:
+  - open_weights
+  - low_cost
+- id: mistralai/Devstral-Small-2505
+  name: Devstral Small 2505
+  description: Mistral coding agent model for repository tasks and software engineering workflows
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    input: 0.05
+    cached_read: 0.025
+    output: 0.22
+  release_date: '2025-05-01'
+  tags:
+  - low_cost
+- id: mistralai/Magistral-Small-2506
+  name: Magistral Small 2506
+  description: Mistral reasoning model for transparent analysis, math, and complex decisions
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    input: 0.5
+    cached_read: 0.25
+    output: 1.5
+  release_date: '2025-06-01'
+  tags:
+  - general
+- id: mistralai/Mistral-Large-Instruct-2411
+  name: Mistral Large Instruct 2411
+  description: Flagship Mistral model for advanced reasoning, coding, and multilingual work
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    input: 2
+    cached_read: 1
+    output: 6
+  release_date: '2024-11-01'
+  tags:
+  - vision
+- id: mistralai/Mistral-Nemo-Instruct-2407
+  name: Mistral Nemo Instruct 2407
+  description: Mistral model for multilingual chat, reasoning, and tool-assisted workflows
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    input: 0.02
+    cached_read: 0.01
+    output: 0.04
+  open_weights: true
+  release_date: '2024-07-01'
+  tags:
+  - open_weights
+  - low_cost
+- id: deepseek-ai/DeepSeek-R1-0528
+  name: DeepSeek R1
+  description: DeepSeek reasoning model for multi-step analysis, math, coding, and tools
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    input: 2
+    cached_read: 1
+    output: 8.75
+  open_weights: true
+  release_date: '2025-01-20'
+  tags:
+  - reasoning
+  - open_weights
+- id: Intel/Qwen3-Coder-480B-A35B-Instruct-int4-mixed-ar
+  name: Qwen 3 Coder 480B
+  description: Qwen coding model for software agents, repository edits, and code reasoning
+  context_window: 106000
+  output_limit: 4096
+  pricing:
+    input: 0.22
+    cached_read: 0.11
+    output: 0.95
+  open_weights: true
+  release_date: '2025-01-15'
+  tags:
+  - open_weights
+- id: openai/gpt-oss-20b
+  name: GPT-OSS 20B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following workloads
+  context_window: 64000
+  output_limit: 4096
+  pricing:
+    input: 0.03
+    cached_read: 0.015
+    output: 0.14
+  open_weights: true
+  release_date: '2024-12-01'
+  tags:
+  - open_weights
+  - low_cost
+- id: moonshotai/Kimi-K2-Thinking
+  name: Kimi K2 Thinking
+  description: Kimi reasoning model for long-horizon research, planning, and tool use
+  context_window: 32768
+  output_limit: 4096
+  pricing:
+    input: 0.55
+    cached_read: 0.275
+    output: 2.25
+  release_date: '2024-11-01'
+  tags:
+  - reasoning

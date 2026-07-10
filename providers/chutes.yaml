@@ -1,0 +1,230 @@
+name: Chutes
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://llm.chutes.ai/v1/models
+  env_var: CHUTES_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://llm.chutes.ai/v1/models
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://llm.chutes.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 13
+  listed_models: 13
+models:
+- id: zai-org/GLM-5.2-TEE
+  name: GLM 5.2 TEE
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 1048576
+  output_limit: 65535
+  pricing:
+    input: 1.4
+    cached_read: 0.7
+    output: 4.4
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: moonshotai/Kimi-K2.6-TEE
+  name: Kimi K2.6 TEE
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 65535
+  pricing:
+    input: 0.66
+    cached_read: 0.33
+    output: 3.5
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-21'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: moonshotai/Kimi-K2.5-TEE
+  name: Kimi K2.5 TEE
+  description: Earlier Kimi frontier model for long-context agents, coding, and multimodal work
+  context_window: 262144
+  output_limit: 65535
+  pricing:
+    input: 0.44
+    cached_read: 0.22
+    output: 2
+  open_weights: true
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: Qwen/Qwen3.6-27B-TEE
+  name: Qwen3.6 27B TEE
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 262144
+  output_limit: 65536
+  pricing:
+    input: 0.3
+    cached_read: 0.15
+    output: 2
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-22'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: Qwen/Qwen3-235B-A22B-Thinking-2507-TEE
+  name: Qwen3 235B A22B Thinking 2507 TEE
+  description: Qwen reasoning model for deliberate problem solving, math, and coding
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.2989
+    cached_read: 0.14945
+    output: 1.1957
+  open_weights: true
+  structured_output: true
+  release_date: 2025-07
+  tags:
+  - reasoning
+  - open_weights
+- id: Qwen/Qwen3.5-397B-A17B-TEE
+  name: Qwen3.5 397B A17B TEE
+  description: Large open Qwen multimodal MoE for visual agents and long technical tasks
+  context_window: 262144
+  output_limit: 65536
+  pricing:
+    input: 0.45
+    cached_read: 0.225
+    output: 3
+  open_weights: true
+  structured_output: true
+  release_date: '2026-02-15'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: zai-org/GLM-5-TEE
+  name: GLM 5 TEE
+  description: General GLM flagship for coding, analysis, and tool-heavy engineering workflows
+  context_window: 202752
+  output_limit: 65535
+  pricing:
+    input: 0.95
+    cached_read: 0.475
+    output: 2.55
+  open_weights: true
+  structured_output: true
+  release_date: '2026-02-12'
+  tags:
+  - reasoning
+  - open_weights
+- id: zai-org/GLM-5.1-TEE
+  name: GLM 5.1 TEE
+  description: Strong GLM coding model for agentic engineering, terminals, and repository generation
+  context_window: 202752
+  output_limit: 65535
+  pricing:
+    input: 0.98
+    cached_read: 0.49
+    output: 3.08
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-07'
+  tags:
+  - reasoning
+  - open_weights
+- id: MiniMaxAI/MiniMax-M2.5-TEE
+  name: MiniMax M2.5 TEE
+  description: Prior MiniMax coding model for agent workflows, office edits, and automation
+  context_window: 196608
+  output_limit: 65536
+  pricing:
+    input: 0.15
+    cached_read: 0.075
+    output: 1.2
+  open_weights: true
+  structured_output: true
+  release_date: '2026-02-12'
+  tags:
+  - reasoning
+  - open_weights
+- id: google/gemma-4-31B-turbo-TEE
+  name: gemma 4 31B turbo TEE
+  description: Largest Gemma 4 instruction model for open, self-hosted chat and reasoning
+  context_window: 131072
+  output_limit: 65536
+  pricing:
+    input: 0.12
+    cached_read: 0.06
+    output: 0.37
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-02'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+  - low_cost
+- id: unsloth/Mistral-Nemo-Instruct-2407-TEE
+  name: Mistral Nemo Instruct 2407 TEE
+  description: Efficient Mistral-NVIDIA open model for multilingual chat and local deployment
+  context_window: 131072
+  output_limit: 131072
+  pricing:
+    input: 0.0245
+    cached_read: 0.01225
+    output: 0.0978
+  open_weights: true
+  release_date: '2024-07-01'
+  tags:
+  - open_weights
+  - low_cost
+- id: deepseek-ai/DeepSeek-V3.2-TEE
+  name: DeepSeek V3.2 TEE
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 131072
+  output_limit: 65536
+  pricing:
+    input: 1
+    cached_read: 0.5
+    output: 1
+  open_weights: true
+  structured_output: true
+  release_date: 2025-12
+  tags:
+  - reasoning
+  - open_weights
+- id: Qwen/Qwen3-32B-TEE
+  name: Qwen3 32B TEE
+  description: Dense open Qwen model for self-hosted chat, reasoning, and coding
+  context_window: 40960
+  output_limit: 40960
+  pricing:
+    input: 0.104
+    cached_read: 0.052
+    output: 0.416
+  open_weights: true
+  structured_output: true
+  release_date: 2025-04
+  tags:
+  - reasoning
+  - open_weights
+  - low_cost

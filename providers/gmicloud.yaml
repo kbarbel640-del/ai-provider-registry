@@ -1,0 +1,217 @@
+name: GMI Cloud
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.gmicloud.ai/inference-engine/api-reference/llm-api-reference
+  env_var: GMICLOUD_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.gmicloud.ai/inference-engine/api-reference/llm-api-reference
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.gmi-serving.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 13
+  listed_models: 13
+models:
+- id: openai/gpt-5.5
+  name: GPT-5.5
+  description: Default frontier GPT for coding, computer use, research, and knowledge work
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 30
+  structured_output: true
+  release_date: '2026-04-23'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: deepseek-ai/DeepSeek-V4-Pro
+  name: DeepSeek V4 Pro
+  description: Open MoE flagship with million-token context for coding and long agent runs
+  context_window: 1048576
+  output_limit: 384000
+  pricing:
+    input: 1.392
+    cached_read: 0.116
+    output: 2.784
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: deepseek-ai/DeepSeek-V4-Flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work
+  context_window: 1048575
+  output_limit: 384000
+  pricing:
+    input: 0.112
+    cached_read: 0.022
+    output: 0.224
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+  - low_cost
+- id: Qwen/Qwen3.7-Max
+  name: Qwen3.7 Max
+  description: Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    input: 2.5
+    cached_read: 0.25
+    output: 7.5
+  release_date: '2026-05-21'
+  tags:
+  - reasoning
+  - long_context
+- id: anthropic/claude-opus-4.8
+  name: Claude Opus 4.8
+  description: Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-05-28'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: zai-org/GLM-5.2-FP8
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 1000000
+  output_limit: 131072
+  pricing:
+    input: 0.979
+    cached_read: 0.182
+    output: 3.08
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: anthropic/claude-opus-4.7
+  name: Claude Opus 4.7
+  description: Stronger Opus tier for advanced software work and high-stakes reasoning
+  context_window: 409600
+  output_limit: 128000
+  pricing:
+    input: 4.5
+    cached_read: 0.45
+    output: 22.5
+  release_date: '2026-04-16'
+  tags:
+  - vision
+  - reasoning
+- id: anthropic/claude-sonnet-4.6
+  name: Claude Sonnet 4.6
+  description: Claude workhorse for coding agents, careful analysis, and production cost control
+  context_window: 409600
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2026-02-17'
+  tags:
+  - vision
+  - reasoning
+- id: anthropic/claude-opus-4.6
+  name: Claude Opus 4.6
+  description: High-end Claude for difficult coding, planning, and slower expert reasoning
+  context_window: 409600
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+- id: moonshotai/kimi-k2.7-code-highspeed
+  name: Kimi K2.7 Code Highspeed
+  description: Lower-latency Kimi Code variant for interactive edits and coding-agent loops
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 1.9
+    cached_read: 0.38
+    output: 8
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: zai-org/GLM-5.1-FP8
+  name: GLM-5.1
+  description: Strong GLM coding model for agentic engineering, terminals, and repository generation
+  context_window: 202752
+  output_limit: 131072
+  pricing:
+    input: 0.98
+    cached_read: 0.182
+    output: 3.08
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-07'
+  tags:
+  - reasoning
+  - open_weights
+- id: zai-org/GLM-5-FP8
+  name: GLM-5
+  description: General GLM flagship for coding, analysis, and tool-heavy engineering workflows
+  context_window: 202752
+  output_limit: 131072
+  pricing:
+    input: 0.6
+    cached_read: 0.12
+    output: 1.92
+  open_weights: true
+  release_date: '2026-02-12'
+  tags:
+  - reasoning
+  - open_weights
+- id: moonshotai/Kimi-K2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 65536
+  output_limit: 65536
+  pricing:
+    input: 0.855
+    cached_read: 0.144
+    output: 3.6
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-21'
+  tags:
+  - vision
+  - reasoning
+  - open_weights

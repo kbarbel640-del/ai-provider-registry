@@ -1,0 +1,53 @@
+name: Nova
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://nova.amazon.com/dev/documentation
+  env_var: NOVA_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://nova.amazon.com/dev/documentation
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- tools
+- reasoning
+- streaming
+endpoint: https://api.nova.amazon.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 2
+  listed_models: 2
+models:
+- id: nova-2-pro-v1
+  name: Nova 2 Pro
+  description: Multimodal reasoning model for visual analysis, planning, and tool use
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    free: true
+  release_date: '2025-12-03'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+  - free
+- id: nova-2-lite-v1
+  name: Nova 2 Lite
+  description: Multimodal reasoning model for visual analysis, planning, and tool use
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    free: true
+  release_date: '2025-12-01'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+  - free

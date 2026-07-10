@@ -1,0 +1,239 @@
+name: Neon
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://neon.com/docs
+  env_var: NEON_AI_GATEWAY_BASE_URL
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://neon.com/docs
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- image
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: ${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/mlflow/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 36
+  listed_models: 14
+models:
+- id: gpt-5-4
+  name: GPT-5.4
+  description: Agent-ready GPT for coding and computer-use workflows at a lower cost
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 2.5
+    cached_read: 0.25
+    output: 15
+  structured_output: true
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gemini-3-flash
+  name: Gemini 3 Flash Preview
+  description: New Gemini flash lane bringing frontier-style multimodal reasoning to cheaper runs
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.5
+    cached_read: 0.05
+    output: 3
+  structured_output: true
+  release_date: '2025-12-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-3-pro
+  name: Gemini 3 Pro Preview
+  description: Preview Gemini flagship for complex reasoning, coding, and rich multimodal prompts
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 2
+    cached_read: 0.2
+    output: 12
+  structured_output: true
+  release_date: '2025-11-18'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-3-1-flash-lite
+  name: Gemini 3.1 Flash Lite Preview
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.25
+    cached_read: 0.025
+    output: 1.5
+  structured_output: true
+  release_date: '2026-03-03'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-2-5-pro
+  name: Gemini 2.5 Pro
+  description: Google's proven reasoning model for coding, math, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 1.25
+    cached_read: 0.125
+    output: 10
+  structured_output: true
+  release_date: '2025-06-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-2-5-flash
+  name: Gemini 2.5 Flash
+  description: Fast Gemini workhorse for multimodal apps where latency and price matter
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.3
+    cached_read: 0.03
+    output: 2.5
+  structured_output: true
+  release_date: '2025-06-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-3-5-flash
+  name: Gemini 3.5 Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 1.5
+    cached_read: 0.15
+    output: 9
+  structured_output: true
+  release_date: '2026-05-19'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-3-1-pro
+  name: Gemini 3.1 Pro Preview Custom Tools
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 2
+    cached_read: 0.2
+    output: 12
+  structured_output: true
+  release_date: '2026-02-19'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: llama-4-maverick
+  name: Llama 4 Maverick 17B Instruct
+  description: Open multimodal Llama for strong reasoning with efficient everyday serving
+  context_window: 1000000
+  output_limit: 16384
+  pricing:
+    input: 0.5
+    output: 1.5
+  open_weights: true
+  release_date: '2025-04-05'
+  tags:
+  - vision
+  - open_weights
+  - long_context
+- id: claude-opus-4-7
+  name: Claude Opus 4.7
+  description: Stronger Opus tier for advanced software work and high-stakes reasoning
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-04-16'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-opus-4-8
+  name: Claude Opus 4.8
+  description: Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-05-28'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-opus-4-6
+  name: Claude Opus 4.6
+  description: High-end Claude for difficult coding, planning, and slower expert reasoning
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-sonnet-4-6
+  name: Claude Sonnet 4.6
+  description: Claude workhorse for coding agents, careful analysis, and production cost control
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2026-02-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5
+  name: GPT-5
+  description: Original GPT-5 workhorse for reasoning, coding, writing, and tool workflows
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.25
+    cached_read: 0.125
+    output: 10
+  structured_output: true
+  release_date: '2025-08-07'
+  tags:
+  - vision
+  - reasoning

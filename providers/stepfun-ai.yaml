@@ -1,0 +1,116 @@
+name: StepFun AI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://platform.stepfun.ai/docs/en/step-plan/integrations/open-code
+  env_var: STEPFUN_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://platform.stepfun.ai/docs/en/step-plan/integrations/open-code
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- reasoning
+- streaming
+endpoint: https://api.stepfun.ai/step_plan/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 8
+  listed_models: 8
+models:
+- id: step-3.5-flash
+  name: Step 3.5 Flash
+  description: StepFun flash lane for quick multimodal reasoning and coding assistance
+  context_window: 256000
+  output_limit: 256000
+  pricing:
+    input: 0.1
+    cached_read: 0.02
+    output: 0.3
+  open_weights: true
+  release_date: '2026-01-29'
+  tags:
+  - reasoning
+  - open_weights
+  - low_cost
+- id: step-3.5-flash-2603
+  name: Step 3.5 Flash 2603
+  description: StepFun flash model for efficient multimodal reasoning, coding, and tool use
+  context_window: 256000
+  output_limit: 256000
+  pricing:
+    input: 0.1
+    cached_read: 0.02
+    output: 0.3
+  open_weights: true
+  release_date: '2026-04-02'
+  tags:
+  - reasoning
+  - open_weights
+  - low_cost
+- id: step-3.7-flash
+  name: Step 3.7 Flash
+  description: Newer StepFun flash model for faster agents, coding, and multimodal prompts
+  context_window: 256000
+  output_limit: 256000
+  pricing:
+    input: 0.2
+    cached_read: 0.04
+    output: 1.15
+  open_weights: true
+  release_date: '2026-05-29'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: step-1-32k
+  name: Step 1 (32K)
+  description: StepFun flash model for efficient multimodal reasoning, coding, and tool use
+  context_window: 32768
+  output_limit: 32768
+  pricing:
+    input: 2.05
+    cached_read: 0.41
+    output: 9.59
+  release_date: '2025-01-01'
+  tags:
+  - reasoning
+- id: step-2-16k
+  name: Step 2 (16K)
+  description: StepFun flash model for efficient multimodal reasoning, coding, and tool use
+  context_window: 16384
+  output_limit: 8192
+  pricing:
+    input: 5.21
+    cached_read: 1.04
+    output: 16.44
+  release_date: '2025-01-01'
+  tags:
+  - reasoning
+- id: step-tts-2
+  name: Step TTS 2
+  description: Speech generation model for controllable voice, narration, and audio delivery
+  pricing: {}
+  release_date: '2026-03-01'
+  tags:
+  - general
+- id: stepaudio-2.5-asr
+  name: StepAudio 2.5 ASR
+  description: Speech transcription model for accurate audio-to-text and captioning workflows
+  pricing: {}
+  release_date: '2026-04-24'
+  tags:
+  - general
+- id: stepaudio-2.5-tts
+  name: StepAudio 2.5 TTS
+  description: Speech generation model for controllable voice, narration, and audio delivery
+  pricing: {}
+  release_date: '2026-04-16'
+  tags:
+  - general

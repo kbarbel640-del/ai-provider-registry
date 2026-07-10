@@ -1,0 +1,227 @@
+name: DigitalOcean
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.digitalocean.com/products/gradient-ai-platform/details/models/
+  env_var: DIGITALOCEAN_ACCESS_TOKEN
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.digitalocean.com/products/gradient-ai-platform/details/models/
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- image
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://inference.do-ai.run/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 82
+  listed_models: 14
+models:
+- id: deepseek-v4-pro
+  name: DeepSeek V4 Pro
+  description: Flagship DeepSeek model for coding, reasoning, and agentic work
+  context_window: 1048576
+  output_limit: 393216
+  pricing:
+    input: 1.74
+    output: 3.48
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: openai-gpt-4.1
+  name: GPT-4.1
+  description: GPT model for general reasoning, writing, coding, and tool-assisted tasks
+  context_window: 1047576
+  output_limit: 32768
+  pricing:
+    input: 2
+    cached_read: 0.5
+    output: 8
+  structured_output: true
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+- id: llama-4-maverick
+  name: Llama 4 Maverick 17B 128E Instruct
+  description: Open multimodal Llama model for strong reasoning and fast responses
+  context_window: 1000000
+  output_limit: 16384
+  pricing:
+    input: 0.25
+    output: 0.87
+  open_weights: true
+  structured_output: true
+  release_date: '2025-04-05'
+  tags:
+  - vision
+  - open_weights
+  - long_context
+- id: anthropic-claude-opus-4.7
+  name: Claude Opus 4.7
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-04-16'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic-claude-4.6-sonnet
+  name: Claude Sonnet 4.6
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost control
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2026-02-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic-claude-sonnet-4
+  name: Claude Sonnet 4
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost control
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2025-05-22'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic-claude-4.5-sonnet
+  name: Claude Sonnet 4.5
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost control
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2025-09-29'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic-claude-opus-4.6
+  name: Claude Opus 4.6
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic-claude-opus-4.8
+  name: Claude Opus 4.8
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-05-28'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: glm-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 1000000
+  output_limit: 131072
+  pricing:
+    input: 1.05
+    cached_read: 0.21
+    output: 4.4
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: openai-gpt-5.5
+  name: GPT-5.5
+  description: Frontier GPT model for professional reasoning, coding, and multimodal work
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 30
+  structured_output: true
+  release_date: '2026-04-23'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: openai-gpt-5.4
+  name: GPT-5.4
+  description: Frontier GPT model for professional reasoning, coding, and multimodal work
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 2.5
+    cached_read: 0.25
+    output: 15
+  structured_output: true
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic-claude-fable-5
+  name: Anthropic Claude Fable 5
+  description: Claude model for creative writing, analysis, and controlled agent workflows
+  context_window: 1000000
+  output_limit: 128000
+  pricing: {}
+  release_date: '2026-06-09'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: openai-gpt-5.4-nano
+  name: GPT-5.4 nano
+  description: Compact GPT model for low-latency assistance and high-volume workloads
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 0.2
+    cached_read: 0.02
+    output: 1.25
+  structured_output: true
+  release_date: '2026-03-17'
+  tags:
+  - vision
+  - reasoning

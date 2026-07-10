@@ -1,0 +1,226 @@
+name: Amazon Bedrock
+api_style: bedrock
+auth:
+  type: aws_sigv4
+  doc_url: https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html
+  env_var: AWS_ACCESS_KEY_ID
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 107
+  listed_models: 14
+models:
+- id: us.meta.llama4-scout-17b-instruct-v1:0
+  name: Llama 4 Scout 17B Instruct (US)
+  description: Open Llama with long-context vision for efficient multimodal agents
+  context_window: 3500000
+  output_limit: 16384
+  pricing:
+    input: 0.17
+    output: 0.66
+  open_weights: true
+  release_date: '2025-04-05'
+  tags:
+  - vision
+  - open_weights
+  - long_context
+- id: meta.llama4-scout-17b-instruct-v1:0
+  name: Llama 4 Scout 17B Instruct
+  description: Open multimodal Llama model for long-context analysis and efficient agents
+  context_window: 3500000
+  output_limit: 16384
+  pricing:
+    input: 0.17
+    output: 0.66
+  open_weights: true
+  release_date: '2025-04-05'
+  tags:
+  - vision
+  - open_weights
+  - long_context
+- id: writer.palmyra-x5-v1:0
+  name: Palmyra X5
+  description: Reasoning model for deliberate analysis, multi-step problem solving, and tool use
+  context_window: 1040000
+  output_limit: 8192
+  pricing:
+    input: 0.6
+    output: 6
+  release_date: '2025-04-28'
+  tags:
+  - reasoning
+  - long_context
+- id: anthropic.claude-opus-4-7
+  name: Claude Opus 4.7
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-04-16'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: eu.anthropic.claude-sonnet-4-6
+  name: Claude Sonnet 4.6 (EU)
+  description: Claude workhorse for coding agents, careful analysis, and production cost control
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    input: 3.3
+    cached_read: 0.33
+    output: 16.5
+  structured_output: true
+  release_date: '2026-02-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic.claude-opus-4-6-v1
+  name: Claude Opus 4.6
+  description: High-end Claude for difficult coding, planning, and slower expert reasoning
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  structured_output: true
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: global.anthropic.claude-fable-5
+  name: Claude Fable 5 (Global)
+  description: Claude model for creative writing, analysis, and controlled agent workflows
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 10
+    cached_read: 1
+    output: 50
+  release_date: '2026-06-09'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: us.anthropic.claude-opus-4-7
+  name: Claude Opus 4.7 (US)
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-04-16'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: jp.anthropic.claude-sonnet-4-6
+  name: Claude Sonnet 4.6 (JP)
+  description: Claude workhorse for coding agents, careful analysis, and production cost control
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  structured_output: true
+  release_date: '2026-02-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic.claude-sonnet-4-6
+  name: Claude Sonnet 4.6
+  description: Claude workhorse for coding agents, careful analysis, and production cost control
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  structured_output: true
+  release_date: '2026-02-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: eu.anthropic.claude-opus-4-6-v1
+  name: Claude Opus 4.6 (EU)
+  description: High-end Claude for difficult coding, planning, and slower expert reasoning
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5.5
+    cached_read: 0.55
+    output: 27.5
+  structured_output: true
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: au.anthropic.claude-opus-4-6-v1
+  name: AU Anthropic Claude Opus 4.6
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 16.5
+    cached_read: 1.65
+    output: 82.5
+  structured_output: true
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: jp.anthropic.claude-sonnet-5
+  name: Claude Sonnet 5 (JP)
+  description: Everyday Claude agent model for coding, planning, browsing, and general work
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 2
+    cached_read: 0.2
+    output: 10
+  structured_output: true
+  release_date: '2026-06-30'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: global.anthropic.claude-sonnet-5
+  name: Claude Sonnet 5 (Global)
+  description: Everyday Claude agent model for coding, planning, browsing, and general work
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 2
+    cached_read: 0.2
+    output: 10
+  structured_output: true
+  release_date: '2026-06-30'
+  tags:
+  - vision
+  - reasoning
+  - long_context

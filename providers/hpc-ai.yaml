@@ -1,0 +1,73 @@
+name: HPC-AI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://www.hpc-ai.com/doc/docs/quickstart/
+  env_var: HPC_AI_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://www.hpc-ai.com/doc/docs/quickstart/
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.hpc-ai.com/inference/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 3
+  listed_models: 3
+models:
+- id: minimax/minimax-m2.5
+  name: MiniMax M2.5
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 1000000
+  output_limit: 131072
+  pricing:
+    input: 0.3
+    cached_read: 0.03
+    output: 1.2
+  open_weights: true
+  release_date: '2026-02-12'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: moonshotai/kimi-k2.5
+  name: Kimi K2.5
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.3
+    cached_read: 0.05
+    output: 1.5
+  open_weights: true
+  structured_output: true
+  release_date: '2026-01-01'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: zai-org/glm-5.1
+  name: GLM 5.1
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202000
+  output_limit: 202000
+  pricing:
+    input: 0.615
+    cached_read: 0.133
+    output: 2.46
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-08'
+  tags:
+  - reasoning
+  - open_weights

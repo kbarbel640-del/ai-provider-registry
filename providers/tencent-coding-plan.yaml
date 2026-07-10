@@ -1,0 +1,116 @@
+name: Tencent Coding Plan (China)
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://cloud.tencent.com/document/product/1772/128947
+  env_var: TENCENT_CODING_PLAN_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://cloud.tencent.com/document/product/1772/128947
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- tools
+- reasoning
+- streaming
+endpoint: https://api.lkeap.cloud.tencent.com/coding/v3
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 8
+  listed_models: 8
+models:
+- id: kimi-k2.5
+  name: Kimi-K2.5
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262144
+  output_limit: 32768
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-01-27'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - free
+- id: minimax-m2.5
+  name: MiniMax-M2.5
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 204800
+  output_limit: 32768
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-02-12'
+  tags:
+  - reasoning
+  - open_weights
+  - free
+- id: glm-5
+  name: GLM-5
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202752
+  output_limit: 16384
+  pricing:
+    free: true
+  release_date: '2026-02-11'
+  tags:
+  - reasoning
+  - free
+- id: hunyuan-turbos
+  name: Hunyuan-TurboS
+  description: Tencent Hy reasoning model for coding, instruction following, and agent tasks
+  context_window: 131072
+  output_limit: 16384
+  pricing:
+    free: true
+  release_date: '2026-03-08'
+  tags:
+  - free
+- id: hunyuan-t1
+  name: Hunyuan-T1
+  description: Tencent Hy reasoning model for coding, instruction following, and agent tasks
+  context_window: 131072
+  output_limit: 16384
+  pricing:
+    free: true
+  release_date: '2026-03-08'
+  tags:
+  - reasoning
+  - free
+- id: tc-code-latest
+  name: Auto
+  description: Automatic model router for matching prompts to suitable backends and budgets
+  context_window: 131072
+  output_limit: 16384
+  pricing:
+    free: true
+  release_date: '2026-03-08'
+  tags:
+  - free
+- id: hunyuan-2.0-instruct
+  name: Tencent HY 2.0 Instruct
+  description: Tencent Hy reasoning model for coding, instruction following, and agent tasks
+  context_window: 131072
+  output_limit: 16384
+  pricing:
+    free: true
+  release_date: '2026-03-08'
+  tags:
+  - free
+- id: hunyuan-2.0-thinking
+  name: Tencent HY 2.0 Think
+  description: Tencent Hy reasoning model for coding, instruction following, and agent tasks
+  context_window: 131072
+  output_limit: 16384
+  pricing:
+    free: true
+  release_date: '2026-03-08'
+  tags:
+  - reasoning
+  - free

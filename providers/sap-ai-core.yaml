@@ -1,0 +1,236 @@
+name: SAP AI Core
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://help.sap.com/docs/sap-ai-core
+  env_var: AICORE_SERVICE_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://help.sap.com/docs/sap-ai-core
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 29
+  listed_models: 14
+models:
+- id: gpt-5.4
+  name: gpt-5.4
+  description: Frontier GPT model for professional reasoning, coding, and multimodal work
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 2.5
+    cached_read: 0.25
+    output: 15
+  structured_output: true
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5.5
+  name: gpt-5.5
+  description: Frontier GPT model for professional reasoning, coding, and multimodal work
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 30
+  structured_output: true
+  release_date: '2026-04-23'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gemini-3.1-flash-lite
+  name: gemini-3.1-flash-lite
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.25
+    cached_read: 0.025
+    output: 1.5
+  structured_output: true
+  release_date: '2026-05-07'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-2.5-pro
+  name: gemini-2.5-pro
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 1.25
+    cached_read: 0.125
+    output: 10
+  structured_output: true
+  release_date: '2025-03-25'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-2.5-flash
+  name: gemini-2.5-flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.3
+    cached_read: 0.03
+    output: 2.5
+  structured_output: true
+  release_date: '2025-04-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-3.5-flash
+  name: gemini-3.5-flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 1.5
+    cached_read: 0.15
+    output: 9
+  structured_output: true
+  release_date: '2026-05-19'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-2.5-flash-lite
+  name: gemini-2.5-flash-lite
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.1
+    cached_read: 0.01
+    output: 0.4
+  structured_output: true
+  release_date: '2025-06-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+  - low_cost
+- id: gpt-4.1
+  name: gpt-4.1
+  description: GPT model for general reasoning, writing, coding, and tool-assisted tasks
+  context_window: 1047576
+  output_limit: 32768
+  pricing:
+    input: 2
+    cached_read: 0.5
+    output: 8
+  structured_output: true
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+- id: gpt-4.1-mini
+  name: gpt-4.1-mini
+  description: Compact GPT model for low-latency assistance and high-volume workloads
+  context_window: 1047576
+  output_limit: 32768
+  pricing:
+    input: 0.4
+    cached_read: 0.1
+    output: 1.6
+  structured_output: true
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+- id: anthropic--claude-4.8-opus
+  name: anthropic--claude-4.8-opus
+  description: Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  structured_output: true
+  release_date: '2026-05-28'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic--claude-4.6-sonnet
+  name: anthropic--claude-4.6-sonnet
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost control
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2026-02-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic--claude-4.6-opus
+  name: anthropic--claude-4.6-opus
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic--claude-4.7-opus
+  name: anthropic--claude-4.7-opus
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-04-16'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5
+  name: gpt-5
+  description: GPT model for general reasoning, writing, coding, and tool-assisted tasks
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.25
+    cached_read: 0.125
+    output: 10
+  structured_output: true
+  release_date: '2025-08-07'
+  tags:
+  - vision
+  - reasoning

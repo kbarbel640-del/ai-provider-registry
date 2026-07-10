@@ -1,0 +1,188 @@
+name: Qiniu
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://developer.qiniu.com/aitokenapi
+  env_var: QINIU_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://developer.qiniu.com/aitokenapi
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- image
+- audio
+- tools
+- reasoning
+- streaming
+endpoint: https://api.qnaigc.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 91
+  listed_models: 14
+models:
+- id: kling-v2-6
+  name: Kling-V2 6
+  description: Video model for prompt-guided generation, editing, and motion workflows
+  context_window: 99999999
+  output_limit: 99999999
+  pricing: {}
+  release_date: '2026-01-13'
+  tags:
+  - vision
+  - multimodal
+  - long_context
+- id: x-ai/grok-4.1-fast-reasoning
+  name: X-Ai/Grok 4.1 Fast Reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 20000000
+  output_limit: 2000000
+  pricing: {}
+  release_date: '2025-12-19'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: x-ai/grok-4.1-fast-non-reasoning
+  name: X-Ai/Grok 4.1 Fast Non Reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 2000000
+  pricing: {}
+  release_date: '2025-12-19'
+  tags:
+  - vision
+  - multimodal
+  - long_context
+- id: x-ai/grok-4-fast-reasoning
+  name: X-Ai/Grok-4-Fast-Reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 2000000
+  pricing: {}
+  release_date: '2025-12-18'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: x-ai/grok-4-fast
+  name: x-AI/Grok-4-Fast
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 2000000
+  pricing: {}
+  release_date: '2025-09-20'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: x-ai/grok-4-fast-non-reasoning
+  name: X-Ai/Grok-4-Fast-Non-Reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 2000000
+  pricing: {}
+  release_date: '2025-12-18'
+  tags:
+  - vision
+  - multimodal
+  - long_context
+- id: x-ai/grok-4.1-fast
+  name: x-AI/Grok-4.1-Fast
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 2000000
+  pricing: {}
+  release_date: '2025-11-20'
+  tags:
+  - reasoning
+  - long_context
+- id: gemini-2.5-pro
+  name: Gemini 2.5 Pro
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing: {}
+  release_date: '2025-08-05'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-2.5-flash
+  name: Gemini 2.5 Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 64000
+  pricing: {}
+  release_date: '2025-08-05'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-2.0-flash
+  name: Gemini 2.0 Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 8192
+  pricing: {}
+  release_date: '2025-08-05'
+  tags:
+  - vision
+  - multimodal
+  - long_context
+- id: gemini-2.5-flash-lite
+  name: Gemini 2.5 Flash Lite
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 64000
+  pricing: {}
+  release_date: '2025-08-05'
+  tags:
+  - vision
+  - multimodal
+  - long_context
+- id: gemini-2.0-flash-lite
+  name: Gemini 2.0 Flash Lite
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 8192
+  pricing: {}
+  release_date: '2025-08-05'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-3.0-pro-preview
+  name: Gemini 3.0 Pro Preview
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1000000
+  output_limit: 64000
+  pricing: {}
+  release_date: '2025-11-19'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-3.0-flash-preview
+  name: Gemini 3.0 Flash Preview
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1000000
+  output_limit: 64000
+  pricing: {}
+  release_date: '2025-12-18'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context

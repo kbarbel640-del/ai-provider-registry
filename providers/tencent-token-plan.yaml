@@ -1,0 +1,37 @@
+name: Tencent Token Plan
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://cloud.tencent.com/document/product/1823/130060
+  env_var: TENCENT_TOKEN_PLAN_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://cloud.tencent.com/document/product/1823/130060
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- tools
+- reasoning
+- streaming
+endpoint: https://api.lkeap.cloud.tencent.com/plan/v3
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 1
+  listed_models: 1
+models:
+- id: hy3
+  name: Hy3
+  description: Tencent Hy reasoning model for coding, instruction following, and agent tasks
+  context_window: 256000
+  output_limit: 64000
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-07-06'
+  tags:
+  - reasoning
+  - open_weights
+  - free

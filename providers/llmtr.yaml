@@ -1,0 +1,100 @@
+name: LLMTR
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://llmtr.com/docs
+  env_var: LLMTR_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://llmtr.com/docs
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://llmtr.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 6
+  listed_models: 6
+models:
+- id: sincap
+  name: Sincap
+  description: General-purpose chat model for instruction following, writing, and analysis
+  context_window: 128000
+  output_limit: 8192
+  pricing:
+    free: true
+  release_date: '2026-05-05'
+  tags:
+  - free
+- id: gemma-4
+  name: Gemma 4
+  description: Open Gemma instruction model for efficient chat and self-hosted deployments
+  context_window: 32768
+  output_limit: 8192
+  pricing:
+    input: 5
+    output: 10
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - open_weights
+- id: trendyol-7b
+  name: Trendyol 7B
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 32768
+  output_limit: 8192
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-06-06'
+  tags:
+  - open_weights
+  - free
+- id: qwen3-6-35b
+  name: Qwen3.6 35B-A3B
+  description: Open multimodal Qwen MoE for local agents that need vision, audio, and code
+  context_window: 16384
+  output_limit: 65536
+  pricing:
+    input: 5
+    output: 10
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: magibu-11b-v8
+  name: Magibu 11B v8
+  description: General-purpose chat model for instruction following, writing, and analysis
+  context_window: 8192
+  output_limit: 4096
+  pricing:
+    free: true
+  release_date: '2026-06-05'
+  tags:
+  - free
+- id: medgemma-4b
+  name: MedGemma 4B
+  description: Multimodal model for analyzing text, images, documents, and rich media
+  context_window: 8192
+  output_limit: 4096
+  pricing:
+    input: 3
+    output: 5
+  open_weights: true
+  release_date: '2026-04-26'
+  tags:
+  - vision
+  - open_weights

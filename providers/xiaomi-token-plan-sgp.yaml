@@ -1,0 +1,116 @@
+name: Xiaomi Token Plan (Singapore)
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://platform.xiaomimimo.com/#/docs
+  env_var: XIAOMI_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://platform.xiaomimimo.com/#/docs
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- reasoning
+- streaming
+endpoint: https://token-plan-sgp.xiaomimimo.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 7
+  listed_models: 7
+models:
+- id: mimo-v2.5-pro
+  name: MiMo-V2.5-Pro
+  description: Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution
+  context_window: 1048576
+  output_limit: 131072
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+  - free
+- id: mimo-v2-pro
+  name: MiMo-V2-Pro
+  description: Earlier MiMo Pro model for multimodal agents, reasoning, and code tasks
+  context_window: 1048576
+  output_limit: 131072
+  pricing:
+    free: true
+  release_date: '2026-03-18'
+  tags:
+  - reasoning
+  - long_context
+  - free
+- id: mimo-v2.5
+  name: MiMo-V2.5
+  description: Open MiMo model for multimodal coding agents and long-context automation
+  context_window: 1048576
+  output_limit: 131072
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - long_context
+  - free
+- id: mimo-v2.5-tts
+  name: MiMo-V2.5-TTS
+  description: Speech generation model for controllable voice, narration, and audio delivery
+  context_window: 8192
+  output_limit: 8192
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - open_weights
+  - free
+- id: mimo-v2-tts
+  name: MiMo-V2-TTS
+  description: Speech generation model for controllable voice, narration, and audio delivery
+  context_window: 8192
+  output_limit: 8192
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-03-18'
+  tags:
+  - open_weights
+  - free
+- id: mimo-v2.5-tts-voicedesign
+  name: MiMo-V2.5-TTS-VoiceDesign
+  description: Speech generation model for controllable voice, narration, and audio delivery
+  context_window: 8192
+  output_limit: 8192
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - open_weights
+  - free
+- id: mimo-v2.5-tts-voiceclone
+  name: MiMo-V2.5-TTS-VoiceClone
+  description: Speech generation model for controllable voice, narration, and audio delivery
+  context_window: 8192
+  output_limit: 8192
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - open_weights
+  - free

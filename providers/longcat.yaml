@@ -1,0 +1,37 @@
+name: LongCat
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://longcat.chat/platform/docs/
+  env_var: LONGCAT_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://longcat.chat/platform/docs/
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- tools
+- reasoning
+- streaming
+endpoint: https://api.longcat.chat/openai
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 1
+  listed_models: 1
+models:
+- id: LongCat-2.0
+  name: LongCat-2.0
+  description: Meituan LongCat-2.0, a reasoning model with tool calling and a 1M-token context window
+  context_window: 1000000
+  output_limit: 131072
+  pricing:
+    input: 0.75
+    cached_read: 0.015
+    output: 2.95
+  release_date: '2026-06-30'
+  tags:
+  - reasoning
+  - long_context

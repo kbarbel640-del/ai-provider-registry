@@ -1,0 +1,91 @@
+name: CloudFerro Sherlock
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.sherlock.cloudferro.com/
+  env_var: CLOUDFERRO_SHERLOCK_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.sherlock.cloudferro.com/
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api-sherlock.cloudferro.com/openai/v1/
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 5
+  listed_models: 5
+models:
+- id: MiniMaxAI/MiniMax-M2.5
+  name: MiniMax-M2.5
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 196000
+  output_limit: 16000
+  pricing:
+    input: 0.3
+    output: 1.2
+  open_weights: true
+  structured_output: true
+  release_date: '2026-03-05'
+  tags:
+  - reasoning
+  - open_weights
+- id: openai/gpt-oss-120b
+  name: OpenAI GPT OSS 120B
+  description: Open GPT reasoning model for self-hosted agents and controllable deployments
+  context_window: 131000
+  output_limit: 131000
+  pricing:
+    input: 2.92
+    output: 2.92
+  open_weights: true
+  structured_output: true
+  release_date: '2025-08-28'
+  tags:
+  - reasoning
+  - open_weights
+- id: meta-llama/Llama-3.3-70B-Instruct
+  name: Llama 3.3 70B Instruct
+  description: Open Llama instruction model for multilingual chat, reasoning, and coding
+  context_window: 70000
+  output_limit: 70000
+  pricing:
+    input: 2.92
+    output: 2.92
+  open_weights: true
+  release_date: '2024-12-06'
+  tags:
+  - open_weights
+- id: speakleash/Bielik-11B-v3.0-Instruct
+  name: Bielik 11B v3.0 Instruct
+  description: Open-weight instruction model for adaptable chat and self-hosted production workloads
+  context_window: 32000
+  output_limit: 32000
+  pricing:
+    input: 0.67
+    output: 0.67
+  open_weights: true
+  structured_output: true
+  release_date: '2025-03-13'
+  tags:
+  - open_weights
+- id: speakleash/Bielik-11B-v2.6-Instruct
+  name: Bielik 11B v2.6 Instruct
+  description: Open-weight instruction model for adaptable chat and self-hosted production workloads
+  context_window: 32000
+  output_limit: 32000
+  pricing:
+    input: 0.67
+    output: 0.67
+  open_weights: true
+  structured_output: true
+  release_date: '2025-03-13'
+  tags:
+  - open_weights

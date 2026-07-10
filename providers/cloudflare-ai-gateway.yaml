@@ -1,0 +1,223 @@
+name: Cloudflare AI Gateway
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://developers.cloudflare.com/ai-gateway/
+  env_var: CLOUDFLARE_API_TOKEN
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://developers.cloudflare.com/ai-gateway/
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 78
+  listed_models: 14
+models:
+- id: openai/gpt-5.4
+  name: GPT-5.4
+  description: Frontier GPT model for professional reasoning, coding, and multimodal work
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 2.5
+    cached_read: 0.25
+    output: 15
+  structured_output: true
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: openai/gpt-5.5
+  name: GPT-5.5
+  description: Default frontier GPT for coding, computer use, research, and knowledge work
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 30
+  structured_output: true
+  release_date: '2026-04-23'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic/claude-opus-4-7
+  name: Claude Opus 4.7
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-04-16'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic/claude-sonnet-5
+  name: Claude Sonnet 5
+  description: Everyday Claude agent model for coding, planning, browsing, and general work
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 2
+    cached_read: 0.2
+    output: 10
+  release_date: '2026-06-30'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic/claude-opus-4-8
+  name: Claude Opus 4.8
+  description: Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-05-28'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic/claude-fable-5
+  name: Claude Fable 5
+  description: Claude model for creative writing, analysis, and controlled agent workflows
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 10
+    cached_read: 1
+    output: 50
+  release_date: '2026-06-09'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic/claude-opus-4-6
+  name: Claude Opus 4.6 (latest)
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: anthropic/claude-sonnet-4-6
+  name: Claude Sonnet 4.6
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost control
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2026-02-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: openai/gpt-5.1-codex
+  name: GPT-5.1 Codex
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic software work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.25
+    cached_read: 0.125
+    output: 10
+  structured_output: true
+  release_date: '2025-11-13'
+  tags:
+  - vision
+  - reasoning
+- id: openai/gpt-5.2
+  name: GPT-5.2
+  description: GPT model for general reasoning, writing, coding, and tool-assisted tasks
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.75
+    cached_read: 0.175
+    output: 14
+  release_date: '2025-12-11'
+  tags:
+  - vision
+  - reasoning
+- id: openai/gpt-5.3-codex
+  name: GPT-5.3 Codex
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic software work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.75
+    cached_read: 0.175
+    output: 14
+  structured_output: true
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+- id: openai/gpt-5.2-codex
+  name: GPT-5.2 Codex
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic software work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.75
+    cached_read: 0.175
+    output: 14
+  structured_output: true
+  release_date: '2025-12-11'
+  tags:
+  - vision
+  - reasoning
+- id: openai/gpt-5.1
+  name: GPT-5.1
+  description: GPT model for general reasoning, writing, coding, and tool-assisted tasks
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.25
+    cached_read: 0.13
+    output: 10
+  release_date: '2025-11-13'
+  tags:
+  - vision
+  - reasoning
+- id: workers-ai/@cf/moonshotai/kimi-k2.5
+  name: Kimi K2.5
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 256000
+  output_limit: 256000
+  pricing:
+    input: 0.6
+    cached_read: 0.1
+    output: 3
+  open_weights: true
+  structured_output: true
+  release_date: '2026-01-27'
+  tags:
+  - vision
+  - reasoning
+  - open_weights

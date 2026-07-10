@@ -1,0 +1,222 @@
+name: GitHub Copilot
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.github.com/en/copilot
+  env_var: GITHUB_TOKEN
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.github.com/en/copilot
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.githubcopilot.com
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 25
+  listed_models: 14
+models:
+- id: claude-sonnet-5
+  name: Claude Sonnet 5
+  description: Everyday Claude agent model for coding, planning, browsing, and general work
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 2
+    cached_read: 0.2
+    output: 10
+  release_date: '2026-06-30'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-fable-5
+  name: Claude Fable 5
+  description: Claude model for creative writing, analysis, and controlled agent workflows
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 10
+    cached_read: 1
+    output: 50
+  release_date: '2026-06-09'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5.4-nano
+  name: GPT-5.4 nano
+  description: Cheapest GPT-5.4 lane for simple routing, extraction, and bulk automation
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 0.2
+    cached_read: 0.02
+    output: 1.25
+  structured_output: true
+  release_date: '2026-03-17'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5.2
+  name: GPT-5.2
+  description: Reliable GPT generation for broad coding, writing, and tool-assisted product work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.75
+    cached_read: 0.175
+    output: 14
+  structured_output: true
+  release_date: '2025-12-11'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5.3-codex
+  name: GPT-5.3 Codex
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic software work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.75
+    cached_read: 0.175
+    output: 14
+  structured_output: true
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5.4
+  name: GPT-5.4
+  description: Agent-ready GPT for coding and computer-use workflows at a lower cost
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 2.5
+    cached_read: 0.25
+    output: 15
+  structured_output: true
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5.4-mini
+  name: GPT-5.4 mini
+  description: Strong small GPT for coding subagents, quick tool use, and high-volume work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 0.75
+    cached_read: 0.075
+    output: 4.5
+  structured_output: true
+  release_date: '2026-03-17'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5.2-codex
+  name: GPT-5.2 Codex
+  description: Code-specialist GPT for repository edits, reviews, and long-running software agents
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.75
+    cached_read: 0.175
+    output: 14
+  structured_output: true
+  release_date: '2025-12-11'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5.5
+  name: GPT-5.5
+  description: Default frontier GPT for coding, computer use, research, and knowledge work
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 30
+  structured_output: true
+  release_date: '2026-04-23'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5-mini
+  name: GPT-5 Mini
+  description: Small GPT-5 for responsive agents, coding help, and everyday automation
+  context_window: 264000
+  output_limit: 64000
+  pricing:
+    input: 0.25
+    cached_read: 0.025
+    output: 2
+  structured_output: true
+  release_date: '2025-08-07'
+  tags:
+  - vision
+  - reasoning
+- id: kimi-k2.7-code
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking
+  context_window: 256000
+  output_limit: 32000
+  pricing:
+    input: 0.95
+    cached_read: 0.19
+    output: 4
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: mai-code-1-flash-picker
+  name: MAI-Code-1-Flash
+  description: Microsoft coding model built for fast, efficient assistance in everyday developer workflows
+  context_window: 256000
+  output_limit: 128000
+  pricing:
+    input: 0.75
+    cached_read: 0.075
+    output: 4.5
+  structured_output: true
+  release_date: '2026-06-02'
+  tags:
+  - reasoning
+- id: claude-sonnet-4
+  name: Claude Sonnet 4 (latest)
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost control
+  context_window: 216000
+  output_limit: 16000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2025-05-22'
+  tags:
+  - vision
+  - reasoning
+- id: claude-sonnet-4.5
+  name: Claude Sonnet 4.5 (latest)
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost control
+  context_window: 200000
+  output_limit: 32000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2025-09-29'
+  tags:
+  - vision
+  - reasoning

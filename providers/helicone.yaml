@@ -1,0 +1,216 @@
+name: Helicone
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://helicone.ai/models
+  env_var: HELICONE_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://helicone.ai/models
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- image
+- audio
+- tools
+- reasoning
+- streaming
+endpoint: https://ai-gateway.helicone.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 90
+  listed_models: 14
+models:
+- id: grok-4-1-fast-non-reasoning
+  name: xAI Grok 4.1 Fast Non-Reasoning
+  description: Image model for prompt-driven generation, editing, and visual design workflows
+  context_window: 2000000
+  output_limit: 30000
+  pricing:
+    input: 0.19999999999999998
+    cached_read: 0.049999999999999996
+    output: 0.5
+  release_date: '2025-11-17'
+  tags:
+  - vision
+  - long_context
+- id: grok-4-fast-reasoning
+  name: 'xAI: Grok 4 Fast Reasoning'
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 2000000
+  pricing:
+    input: 0.19999999999999998
+    cached_read: 0.049999999999999996
+    output: 0.5
+  release_date: '2025-09-01'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: grok-4-1-fast-reasoning
+  name: xAI Grok 4.1 Fast Reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 2000000
+  pricing:
+    input: 0.19999999999999998
+    cached_read: 0.049999999999999996
+    output: 0.5
+  release_date: '2025-11-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: grok-4-fast-non-reasoning
+  name: xAI Grok 4 Fast Non-Reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 2000000
+  pricing:
+    input: 0.19999999999999998
+    cached_read: 0.049999999999999996
+    output: 0.5
+  release_date: '2025-09-19'
+  tags:
+  - vision
+  - long_context
+- id: gemini-2.5-pro
+  name: Google Gemini 2.5 Pro
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 1.25
+    cached_read: 0.3125
+    output: 10
+  release_date: '2025-06-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gemini-2.5-flash
+  name: Google Gemini 2.5 Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65535
+  pricing:
+    input: 0.3
+    cached_read: 0.075
+    output: 2.5
+  release_date: '2025-06-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gemini-2.5-flash-lite
+  name: Google Gemini 2.5 Flash Lite
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65535
+  pricing:
+    input: 0.09999999999999999
+    cached_read: 0.024999999999999998
+    output: 0.39999999999999997
+  release_date: '2025-07-22'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+  - low_cost
+- id: gemini-3-pro-preview
+  name: Google Gemini 3 Pro Preview
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 2
+    cached_read: 0.19999999999999998
+    output: 12
+  release_date: '2025-11-18'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gpt-4.1-mini-2025-04-14
+  name: OpenAI GPT-4.1 Mini
+  description: Compact GPT model for low-latency assistance and high-volume workloads
+  context_window: 1047576
+  output_limit: 32768
+  pricing:
+    input: 0.39999999999999997
+    cached_read: 0.09999999999999999
+    output: 1.5999999999999999
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+- id: gpt-4.1-nano
+  name: OpenAI GPT-4.1 Nano
+  description: Compact GPT model for low-latency assistance and high-volume workloads
+  context_window: 1047576
+  output_limit: 32768
+  pricing:
+    input: 0.09999999999999999
+    cached_read: 0.024999999999999998
+    output: 0.39999999999999997
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+  - low_cost
+- id: gpt-4.1
+  name: OpenAI GPT-4.1
+  description: GPT model for general reasoning, writing, coding, and tool-assisted tasks
+  context_window: 1047576
+  output_limit: 32768
+  pricing:
+    input: 2
+    cached_read: 0.5
+    output: 8
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+- id: gpt-4.1-mini
+  name: OpenAI GPT-4.1 Mini
+  description: Compact GPT model for low-latency assistance and high-volume workloads
+  context_window: 1047576
+  output_limit: 32768
+  pricing:
+    input: 0.39999999999999997
+    cached_read: 0.09999999999999999
+    output: 1.5999999999999999
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+- id: gpt-5
+  name: OpenAI GPT-5
+  description: GPT model for general reasoning, writing, coding, and tool-assisted tasks
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.25
+    cached_read: 0.12500000000000003
+    output: 10
+  release_date: '2025-01-01'
+  tags:
+  - vision
+- id: gpt-5.1-codex
+  name: 'OpenAI: GPT-5.1 Codex'
+  description: Image model for prompt-driven generation, editing, and visual design workflows
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 1.25
+    cached_read: 0.12500000000000003
+    output: 10
+  release_date: '2025-01-01'
+  tags:
+  - vision

@@ -1,0 +1,91 @@
+name: DInference
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://dinference.com
+  env_var: DINFERENCE_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://dinference.com
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.dinference.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 5
+  listed_models: 5
+models:
+- id: minimax-m2.5
+  name: MiniMax-M2.5
+  description: Prior MiniMax coding model for agent workflows, office edits, and automation
+  context_window: 200000
+  output_limit: 32000
+  pricing:
+    input: 0.22
+    output: 0.88
+  open_weights: true
+  release_date: '2026-02-12'
+  tags:
+  - reasoning
+  - open_weights
+- id: glm-4.7
+  name: GLM-4.7
+  description: Mature GLM model for dependable coding, reasoning, and structured agent tasks
+  context_window: 200000
+  output_limit: 128000
+  pricing:
+    input: 0.45
+    output: 1.65
+  open_weights: true
+  release_date: '2025-12-22'
+  tags:
+  - reasoning
+  - open_weights
+- id: glm-5.1
+  name: GLM-5.1
+  description: Strong GLM coding model for agentic engineering, terminals, and repository generation
+  context_window: 200000
+  output_limit: 128000
+  pricing:
+    input: 1.25
+    output: 3.89
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-07'
+  tags:
+  - reasoning
+  - open_weights
+- id: glm-5
+  name: GLM-5
+  description: General GLM flagship for coding, analysis, and tool-heavy engineering workflows
+  context_window: 200000
+  output_limit: 128000
+  pricing:
+    input: 0.75
+    output: 2.4
+  open_weights: true
+  release_date: '2026-02-12'
+  tags:
+  - reasoning
+  - open_weights
+- id: gpt-oss-120b
+  name: GPT OSS 120B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following workloads
+  context_window: 131072
+  output_limit: 32768
+  pricing:
+    input: 0.0675
+    output: 0.27
+  open_weights: true
+  release_date: 2025-08
+  tags:
+  - open_weights
+  - low_cost

@@ -1,0 +1,43 @@
+name: Meta
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://dev.meta.ai/docs
+  env_var: META_MODEL_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://dev.meta.ai/docs
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.meta.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 1
+  listed_models: 1
+models:
+- id: muse-spark-1.1
+  name: Muse Spark 1.1
+  description: Muse Spark is a natively multimodal reasoning model with support for tool-use, visual chain
+    of thought, and multi-agent orchestration.
+  context_window: 1000000
+  output_limit: 32000
+  pricing:
+    input: 1.25
+    cached_read: 0.15
+    output: 4.25
+  structured_output: true
+  release_date: '2026-04-08'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context

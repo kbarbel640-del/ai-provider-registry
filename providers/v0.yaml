@@ -1,0 +1,61 @@
+name: v0
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://sdk.vercel.ai/providers/ai-sdk-providers/vercel
+  env_var: V0_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://sdk.vercel.ai/providers/ai-sdk-providers/vercel
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- reasoning
+- streaming
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 3
+  listed_models: 3
+models:
+- id: v0-1.5-lg
+  name: v0-1.5-lg
+  description: Multimodal reasoning model for visual analysis, planning, and tool use
+  context_window: 512000
+  output_limit: 32000
+  pricing:
+    input: 15
+    output: 75
+  release_date: '2025-06-09'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: v0-1.0-md
+  name: v0-1.0-md
+  description: Multimodal reasoning model for visual analysis, planning, and tool use
+  context_window: 128000
+  output_limit: 32000
+  pricing:
+    input: 3
+    output: 15
+  release_date: '2025-05-22'
+  tags:
+  - vision
+  - reasoning
+- id: v0-1.5-md
+  name: v0-1.5-md
+  description: Multimodal reasoning model for visual analysis, planning, and tool use
+  context_window: 128000
+  output_limit: 32000
+  pricing:
+    input: 3
+    output: 15
+  release_date: '2025-06-09'
+  tags:
+  - vision
+  - reasoning

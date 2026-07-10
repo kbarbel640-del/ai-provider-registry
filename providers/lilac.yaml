@@ -1,0 +1,93 @@
+name: Lilac
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.getlilac.com/inference/models
+  env_var: LILAC_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.getlilac.com/inference/models
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.getlilac.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 4
+  listed_models: 4
+models:
+- id: minimaxai/minimax-m3
+  name: MiniMax M3
+  description: MiniMax multimodal model for long-context coding, perception, and agent planning
+  context_window: 1048576
+  output_limit: 1048576
+  pricing:
+    input: 0.28
+    cached_read: 0.05
+    output: 1.1
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-01'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - long_context
+- id: zai-org/glm-5.2
+  name: GLM 5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 524288
+  output_limit: 524288
+  pricing:
+    input: 0.9
+    cached_read: 0.27
+    output: 3
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: moonshotai/kimi-k2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.7
+    cached_read: 0.2
+    output: 3.5
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-21'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: google/gemma-4-31b-it
+  name: Gemma 4 31B IT
+  description: Largest Gemma 4 instruction model for open, self-hosted chat and reasoning
+  context_window: 262100
+  output_limit: 262100
+  pricing:
+    input: 0.11
+    output: 0.35
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-02'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - low_cost

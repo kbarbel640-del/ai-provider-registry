@@ -1,0 +1,223 @@
+name: Azure
+api_style: azure
+auth:
+  type: azure_api_key
+  doc_url: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models
+  env_var: AZURE_RESOURCE_NAME
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- image
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 109
+  listed_models: 14
+models:
+- id: grok-4-fast-reasoning
+  name: Grok 4 Fast (Reasoning)
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 30000
+  pricing:
+    input: 0.2
+    cached_read: 0.05
+    output: 0.5
+  release_date: '2025-09-19'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5.4
+  name: GPT-5.4
+  description: Agent-ready GPT for coding and computer-use workflows at a lower cost
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 2.5
+    cached_read: 0.25
+    output: 15
+  structured_output: true
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5.4-pro
+  name: GPT-5.4 Pro
+  description: More exact GPT-5.4 tier for demanding professional reasoning and agent tasks
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 30
+    output: 180
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5.5
+  name: GPT-5.5
+  description: Default frontier GPT for coding, computer use, research, and knowledge work
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 30
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-4.1-nano
+  name: GPT-4.1 nano
+  description: Tiny GPT-4.1 option for classification, routing, and very high-volume tasks
+  context_window: 1047576
+  output_limit: 32768
+  pricing:
+    input: 0.1
+    cached_read: 0.025
+    output: 0.4
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+  - low_cost
+- id: gpt-4.1
+  name: GPT-4.1
+  description: Long-lived GPT workhorse for coding, instruction following, and production apps
+  context_window: 1047576
+  output_limit: 32768
+  pricing:
+    input: 2
+    cached_read: 0.5
+    output: 8
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+- id: gpt-4.1-mini
+  name: GPT-4.1 mini
+  description: Affordable GPT-4.1 lane for fast coding help and structured extraction
+  context_window: 1047576
+  output_limit: 32768
+  pricing:
+    input: 0.4
+    cached_read: 0.1
+    output: 1.6
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+- id: deepseek-v4-flash
+  name: DeepSeek-V4-Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    input: 0.19
+    output: 0.51
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: deepseek-v4-pro
+  name: DeepSeek-V4-Pro
+  description: Open MoE flagship with million-token context for coding and long agent runs
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    input: 1.74
+    output: 3.48
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: claude-sonnet-5
+  name: Claude Sonnet 5
+  description: Everyday Claude agent model for coding, planning, browsing, and general work
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 2
+    cached_read: 0.2
+    output: 10
+  structured_output: true
+  release_date: '2026-06-30'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-fable-5
+  name: Claude Fable 5
+  description: Claude model for creative writing, analysis, and controlled agent workflows
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 10
+    cached_read: 1
+    output: 50
+  release_date: '2026-06-09'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-sonnet-4-6
+  name: Claude Sonnet 4.6
+  description: Claude workhorse for coding agents, careful analysis, and production cost control
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  structured_output: true
+  release_date: '2026-02-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gpt-5-pro
+  name: GPT-5 Pro
+  description: Higher-accuracy GPT-5 tier for tough analysis, coding reviews, and planning
+  context_window: 400000
+  output_limit: 272000
+  pricing:
+    input: 15
+    output: 120
+  structured_output: true
+  release_date: '2025-10-06'
+  tags:
+  - vision
+  - reasoning
+- id: gpt-5.4-nano
+  name: GPT-5.4 Nano
+  description: Cheapest GPT-5.4 lane for simple routing, extraction, and bulk automation
+  context_window: 400000
+  output_limit: 128000
+  pricing:
+    input: 0.2
+    cached_read: 0.02
+    output: 1.25
+  structured_output: true
+  release_date: '2026-03-17'
+  tags:
+  - vision
+  - reasoning

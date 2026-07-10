@@ -1,0 +1,50 @@
+name: Inception
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://platform.inceptionlabs.ai/docs
+  env_var: INCEPTION_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://platform.inceptionlabs.ai/docs
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.inceptionlabs.ai/v1/
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 2
+  listed_models: 2
+models:
+- id: mercury-edit-2
+  name: Mercury Edit 2
+  description: Reasoning model for deliberate analysis, multi-step problem solving, and tool use
+  context_window: 128000
+  output_limit: 8192
+  pricing:
+    input: 0.25
+    cached_read: 0.025
+    output: 0.75
+  release_date: '2026-03-30'
+  tags:
+  - reasoning
+- id: mercury-2
+  name: Mercury 2
+  description: Reasoning model for deliberate analysis, multi-step problem solving, and tool use
+  context_window: 128000
+  output_limit: 50000
+  pricing:
+    input: 0.25
+    cached_read: 0.025
+    output: 0.75
+  structured_output: true
+  release_date: '2026-02-24'
+  tags:
+  - reasoning

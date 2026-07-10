@@ -1,0 +1,184 @@
+name: Regolo AI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.regolo.ai/
+  env_var: REGOLO_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.regolo.ai/
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- image
+- tools
+- reasoning
+- streaming
+endpoint: https://api.regolo.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 13
+  listed_models: 13
+models:
+- id: qwen3.5-122b
+  name: Qwen3.5-122B
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 262144
+  output_limit: 16384
+  pricing:
+    input: 0.9
+    output: 3.6
+  open_weights: true
+  release_date: '2026-02-01'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: qwen3-coder-next
+  name: Qwen3-Coder-Next
+  description: Qwen coding model for software agents, repository edits, and code reasoning
+  context_window: 262144
+  output_limit: 16384
+  pricing:
+    input: 0.3
+    output: 1.2
+  open_weights: true
+  release_date: '2026-03-01'
+  tags:
+  - reasoning
+  - open_weights
+- id: qwen3.5-9b
+  name: Qwen3.5-9B
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 262144
+  output_limit: 8192
+  pricing:
+    input: 0.15
+    output: 0.6
+  open_weights: true
+  release_date: '2026-02-01'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: mistral-small-4-119b
+  name: Mistral Small 4 119B
+  description: Efficient Mistral model for fast chat, extraction, and production assistants
+  context_window: 256000
+  output_limit: 16384
+  pricing:
+    input: 0.75
+    output: 3
+  release_date: '2026-03-15'
+  tags:
+  - vision
+  - reasoning
+- id: minimax-m2.5
+  name: MiniMax 2.5
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 190000
+  output_limit: 64000
+  pricing:
+    input: 0.8
+    output: 3.5
+  release_date: '2026-03-10'
+  tags:
+  - reasoning
+- id: llama-3.3-70b-instruct
+  name: Llama 3.3 70B Instruct
+  description: Open Llama instruction model for multilingual chat, reasoning, and coding
+  context_window: 128000
+  output_limit: 16384
+  pricing:
+    input: 0.6
+    output: 2.7
+  release_date: '2025-04-28'
+  tags:
+  - general
+- id: gpt-oss-120b
+  name: GPT-OSS-120B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following workloads
+  context_window: 128000
+  output_limit: 16384
+  pricing:
+    input: 1
+    output: 4.2
+  release_date: '2025-08-05'
+  tags:
+  - reasoning
+- id: gpt-oss-20b
+  name: GPT-OSS-20B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following workloads
+  context_window: 128000
+  output_limit: 16384
+  pricing:
+    input: 0.4
+    output: 1.8
+  open_weights: true
+  release_date: '2026-03-01'
+  tags:
+  - reasoning
+  - open_weights
+- id: llama-3.1-8b-instruct
+  name: Llama 3.1 8B Instruct
+  description: Open Llama instruction model for multilingual chat, reasoning, and coding
+  context_window: 120000
+  output_limit: 120000
+  pricing:
+    input: 0.05
+    output: 0.25
+  release_date: '2025-04-07'
+  tags:
+  - low_cost
+- id: mistral-small3.2
+  name: Mistral Small 3.2
+  description: Efficient Mistral model for fast chat, extraction, and production assistants
+  context_window: 120000
+  output_limit: 120000
+  pricing:
+    input: 0.5
+    output: 2.2
+  release_date: '2025-01-31'
+  tags:
+  - reasoning
+- id: qwen3-reranker-4b
+  name: Qwen3-Reranker-4B
+  description: Reranking model for improving retrieval quality in search and recommendation systems
+  context_window: 32768
+  output_limit: 8192
+  pricing:
+    input: 0.12
+    output: 0.12
+  open_weights: true
+  release_date: '2026-02-01'
+  tags:
+  - open_weights
+  - low_cost
+- id: qwen3-embedding-8b
+  name: Qwen3-Embedding-8B
+  description: Embedding model for semantic search, retrieval, clustering, and ranking pipelines
+  context_window: 32768
+  output_limit: 8192
+  pricing:
+    input: 0.1
+    output: 0.1
+  open_weights: true
+  release_date: '2026-02-01'
+  tags:
+  - open_weights
+  - low_cost
+- id: qwen-image
+  name: Qwen-Image
+  description: Image model for prompt-driven generation, editing, and visual design workflows
+  context_window: 8192
+  output_limit: 4096
+  pricing:
+    input: 0.5
+    output: 2
+  release_date: '2026-03-01'
+  tags:
+  - general

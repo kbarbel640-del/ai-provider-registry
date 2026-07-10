@@ -1,0 +1,73 @@
+name: LucidQuery
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://lucidquery.com/docs
+  env_var: LUCIDQUERY_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://lucidquery.com/docs
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- reasoning
+- streaming
+endpoint: https://api.lucidquery.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 4
+  listed_models: 4
+models:
+- id: lucidquery-agi-01-swift
+  name: AGI-01 Swift
+  description: Multimodal reasoning model for visual analysis, planning, and tool use
+  context_window: 300000
+  output_limit: 120000
+  pricing:
+    input: 2.5
+    output: 15
+  release_date: '2026-06-16'
+  tags:
+  - vision
+  - reasoning
+- id: lucidquery-agi-01-frontier
+  name: AGI-01 Frontier
+  description: Multimodal reasoning model for visual analysis, planning, and tool use
+  context_window: 300000
+  output_limit: 120000
+  pricing:
+    input: 4.5
+    output: 22
+  release_date: '2026-06-16'
+  tags:
+  - vision
+  - reasoning
+- id: lucidquery-nexus-coder
+  name: LucidQuery Nexus Coder
+  description: Coding model for repository understanding, refactors, and agentic engineering tasks
+  context_window: 250000
+  output_limit: 60000
+  pricing:
+    input: 2
+    output: 5
+  release_date: '2025-09-01'
+  tags:
+  - vision
+  - reasoning
+- id: lucidnova-rf1-100b
+  name: LucidNova RF1 100B
+  description: Reasoning model for deliberate analysis, multi-step problem solving, and tool use
+  context_window: 120000
+  output_limit: 8000
+  pricing:
+    input: 2
+    output: 5
+  release_date: '2024-12-28'
+  tags:
+  - vision
+  - reasoning

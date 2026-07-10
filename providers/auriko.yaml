@@ -1,0 +1,239 @@
+name: Auriko
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.auriko.ai
+  env_var: AURIKO_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.auriko.ai
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.auriko.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 15
+  listed_models: 14
+models:
+- id: gemini-2.5-pro
+  name: Gemini 2.5 Pro
+  description: Google's proven reasoning model for coding, math, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 1.25
+    cached_read: 0.125
+    output: 10
+  structured_output: true
+  release_date: '2025-06-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-2.5-flash
+  name: Gemini 2.5 Flash
+  description: Fast Gemini workhorse for multimodal apps where latency and price matter
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.3
+    cached_read: 0.03
+    output: 2.5
+  structured_output: true
+  release_date: '2025-06-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-3.1-pro-preview
+  name: Gemini 3.1 Pro Preview
+  description: Reasoning-first Gemini preview for agentic coding and complex problem solving
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 2
+    cached_read: 0.2
+    output: 12
+  structured_output: true
+  release_date: '2026-02-19'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: deepseek-v4-flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    input: 0.14
+    cached_read: 0.0028
+    output: 0.28
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+  - low_cost
+- id: grok-4.3
+  name: Grok 4.3
+  description: xAI's default Grok for chat, coding, agentic tools, and lower hallucination risk
+  context_window: 1000000
+  output_limit: 30000
+  pricing:
+    input: 1.25
+    cached_read: 0.2
+    output: 2.5
+  structured_output: true
+  release_date: '2026-04-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: deepseek-v4-pro
+  name: DeepSeek V4 Pro
+  description: Open MoE flagship with million-token context for coding and long agent runs
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    input: 0.435
+    cached_read: 0.003625
+    output: 0.87
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: claude-opus-4-7
+  name: Claude Opus 4.7
+  description: Stronger Opus tier for advanced software work and high-stakes reasoning
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-04-16'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: qwen-3.6-plus
+  name: Qwen3.6 Plus
+  description: Earlier Qwen multimodal workhorse for million-token agent and document tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    input: 0.5
+    cached_read: 0.1
+    output: 3
+  release_date: '2026-04-02'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: claude-opus-4-6
+  name: Claude Opus 4.6
+  description: High-end Claude for difficult coding, planning, and slower expert reasoning
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 25
+  release_date: '2026-02-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-sonnet-4-6
+  name: Claude Sonnet 4.6
+  description: Claude workhorse for coding agents, careful analysis, and production cost control
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.3
+    output: 15
+  release_date: '2026-02-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: kimi-k2.5
+  name: Kimi K2.5
+  description: Earlier Kimi frontier model for long-context agents, coding, and multimodal work
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.5
+    output: 2.8
+  open_weights: true
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: kimi-k2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.95
+    cached_read: 0.16
+    output: 4
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-21'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: minimax-m2-7-highspeed
+  name: MiniMax-M2.7-highspeed
+  description: Low-latency M2.7 variant for interactive coding plans and agent loops
+  context_window: 204800
+  output_limit: 131072
+  pricing:
+    input: 0.6
+    output: 2.4
+  open_weights: true
+  release_date: '2026-03-18'
+  tags:
+  - reasoning
+  - open_weights
+- id: minimax-m2-7
+  name: MiniMax-M2.7
+  description: Open MiniMax flagship for coding agents, office automation, and complex environments
+  context_window: 204800
+  output_limit: 131072
+  pricing:
+    input: 0.3
+    output: 1.2
+  open_weights: true
+  release_date: '2026-03-18'
+  tags:
+  - reasoning
+  - open_weights

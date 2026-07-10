@@ -1,0 +1,60 @@
+name: D.Run (China)
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://www.d.run
+  env_var: DRUN_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://www.d.run
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- tools
+- reasoning
+- streaming
+endpoint: https://chat.d.run/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 3
+  listed_models: 3
+models:
+- id: public/minimax-m25
+  name: MiniMax M2.5
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 204800
+  output_limit: 131072
+  pricing:
+    input: 0.29
+    output: 1.16
+  release_date: '2025-03-01'
+  tags:
+  - reasoning
+- id: public/deepseek-v3
+  name: DeepSeek V3
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 131072
+  output_limit: 8192
+  pricing:
+    input: 0.28
+    output: 1.1
+  open_weights: true
+  release_date: '2024-12-26'
+  tags:
+  - open_weights
+- id: public/deepseek-r1
+  name: DeepSeek R1
+  description: DeepSeek reasoning model for multi-step analysis, math, coding, and tools
+  context_window: 131072
+  output_limit: 32000
+  pricing:
+    input: 0.55
+    output: 2.2
+  open_weights: true
+  release_date: '2025-01-20'
+  tags:
+  - reasoning
+  - open_weights

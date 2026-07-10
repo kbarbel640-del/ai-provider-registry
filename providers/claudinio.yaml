@@ -1,0 +1,54 @@
+name: Claudinio
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://claudin.io
+  env_var: CLAUDINIO_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://claudin.io
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- reasoning
+- streaming
+endpoint: https://api.claudin.io/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 2
+  listed_models: 2
+models:
+- id: claudinio
+  name: Claudinio
+  description: Multimodal reasoning model for visual analysis, planning, and tool use
+  context_window: 256000
+  output_limit: 64000
+  pricing:
+    input: 0.5
+    cached_read: 0.15
+    output: 2
+  release_date: '2026-05-12'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+- id: claudius
+  name: Claudius
+  description: Multimodal reasoning model for visual analysis, planning, and tool use
+  context_window: 256000
+  output_limit: 64000
+  pricing:
+    input: 3
+    cached_read: 0.9
+    output: 8
+  release_date: '2026-05-12'
+  tags:
+  - vision
+  - multimodal
+  - reasoning

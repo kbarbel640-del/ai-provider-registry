@@ -1,0 +1,233 @@
+name: Jiekou.AI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.jiekou.ai/docs/support/quickstart?utm_source=github_models.dev
+  env_var: JIEKOU_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://docs.jiekou.ai/docs/support/quickstart?utm_source=github_models.dev
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.jiekou.ai/openai
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 61
+  listed_models: 14
+models:
+- id: grok-4-1-fast-non-reasoning
+  name: grok-4-1-fast-non-reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 2000000
+  pricing:
+    input: 0.18
+    output: 0.45
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - long_context
+  - low_cost
+- id: grok-4-fast-reasoning
+  name: grok-4-fast-reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 2000000
+  pricing:
+    input: 0.18
+    output: 0.45
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - long_context
+  - low_cost
+- id: grok-4-1-fast-reasoning
+  name: grok-4-1-fast-reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 2000000
+  pricing:
+    input: 0.18
+    output: 0.45
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - long_context
+  - low_cost
+- id: grok-4-fast-non-reasoning
+  name: grok-4-fast-non-reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 2000000
+  pricing:
+    input: 0.18
+    output: 0.45
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - long_context
+  - low_cost
+- id: gemini-2.5-pro
+  name: gemini-2.5-pro
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65535
+  pricing:
+    input: 1.125
+    output: 9
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-2.5-flash
+  name: gemini-2.5-flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65535
+  pricing:
+    input: 0.27
+    output: 2.25
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-2.5-flash-lite-preview-09-2025
+  name: gemini-2.5-flash-lite-preview-09-2025
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.09
+    output: 0.36
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+  - low_cost
+- id: gemini-2.5-flash-lite
+  name: gemini-2.5-flash-lite
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65535
+  pricing:
+    input: 0.09
+    output: 0.36
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+  - low_cost
+- id: gemini-3-pro-preview
+  name: gemini-3-pro-preview
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 1.8
+    output: 10.8
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - long_context
+- id: gemini-3-flash-preview
+  name: gemini-3-flash-preview
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.5
+    output: 3
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - long_context
+- id: gemini-2.5-flash-preview-05-20
+  name: gemini-2.5-flash-preview-05-20
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 200000
+  pricing:
+    input: 0.135
+    output: 3.15
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: gemini-2.5-flash-lite-preview-06-17
+  name: gemini-2.5-flash-lite-preview-06-17
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65535
+  pricing:
+    input: 0.09
+    output: 0.36
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+  - low_cost
+- id: gemini-2.5-pro-preview-06-05
+  name: gemini-2.5-pro-preview-06-05
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1048576
+  output_limit: 200000
+  pricing:
+    input: 1.125
+    output: 9
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: claude-opus-4-6
+  name: claude-opus-4-6
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 5
+    output: 25
+  structured_output: true
+  release_date: 2026-02
+  tags:
+  - vision
+  - reasoning
+  - long_context

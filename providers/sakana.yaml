@@ -1,0 +1,68 @@
+name: Sakana AI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://console.sakana.ai/models
+  env_var: SAKANA_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://console.sakana.ai/models
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.sakana.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 3
+  listed_models: 3
+models:
+- id: fugu-ultra-20260615
+  name: Fugu Ultra
+  description: Quality-first multi-agent model for hard research, analysis, and competitions
+  context_window: 1000000
+  output_limit: 1000000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 30
+  structured_output: true
+  release_date: '2026-06-15'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: fugu
+  name: Fugu
+  description: Multi-agent model for routing expert agents across complex analytical tasks
+  context_window: 1000000
+  output_limit: 1000000
+  pricing: {}
+  structured_output: true
+  release_date: '2026-06-15'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: fugu-ultra
+  name: Fugu Ultra
+  description: Quality-first multi-agent model for hard research, analysis, and competitions
+  context_window: 1000000
+  output_limit: 1000000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 30
+  structured_output: true
+  release_date: '2026-06-15'
+  tags:
+  - vision
+  - reasoning
+  - long_context

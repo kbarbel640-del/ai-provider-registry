@@ -1,0 +1,120 @@
+name: Inceptron
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.inceptron.io
+  env_var: INCEPTRON_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.inceptron.io
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.inceptron.io/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 6
+  listed_models: 6
+models:
+- id: zai-org/GLM-5.2
+  name: GLM 5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 1000000
+  output_limit: 131072
+  pricing:
+    input: 1.2
+    cached_read: 0.26
+    output: 4.2
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: moonshotai/Kimi-K2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.66
+    cached_read: 0.2
+    output: 3.5
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-21'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: moonshotai/Kimi-K2.7-Code
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.75
+    cached_read: 0.2
+    output: 3.5
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: moonshotai/Kimi-K2.6-Fast
+  name: Kimi K2.6 Fast
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 1.32
+    cached_read: 0.4
+    output: 7
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-21'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: zai-org/GLM-5.1-FP8
+  name: GLM 5.1
+  description: Strong GLM coding model for agentic engineering, terminals, and repository generation
+  context_window: 202752
+  output_limit: 202752
+  pricing:
+    input: 1.4
+    cached_read: 0.26
+    output: 4.4
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-07'
+  tags:
+  - reasoning
+  - open_weights
+- id: MiniMaxAI/MiniMax-M2.5
+  name: MiniMax M2.5
+  description: Prior MiniMax coding model for agent workflows, office edits, and automation
+  context_window: 196608
+  output_limit: 196608
+  pricing:
+    input: 0.15
+    cached_read: 0.05
+    output: 0.9
+  open_weights: true
+  structured_output: true
+  release_date: '2026-02-12'
+  tags:
+  - reasoning
+  - open_weights

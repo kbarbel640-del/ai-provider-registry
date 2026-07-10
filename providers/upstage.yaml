@@ -1,0 +1,59 @@
+name: Upstage
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://developers.upstage.ai/docs/apis/chat
+  env_var: UPSTAGE_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://developers.upstage.ai/docs/apis/chat
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- tools
+- reasoning
+- streaming
+endpoint: https://api.upstage.ai/v1/solar
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 3
+  listed_models: 3
+models:
+- id: solar-pro3
+  name: solar-pro3
+  description: Flagship model for demanding analysis, coding, and production agent workflows
+  context_window: 131072
+  output_limit: 8192
+  pricing:
+    input: 0.25
+    output: 0.25
+  release_date: 2026-01
+  tags:
+  - reasoning
+  - low_cost
+- id: solar-pro2
+  name: solar-pro2
+  description: Flagship model for demanding analysis, coding, and production agent workflows
+  context_window: 65536
+  output_limit: 8192
+  pricing:
+    input: 0.25
+    output: 0.25
+  release_date: '2025-05-20'
+  tags:
+  - reasoning
+  - low_cost
+- id: solar-mini
+  name: solar-mini
+  description: Efficient model for low-latency assistance, extraction, and routine automation
+  context_window: 32768
+  output_limit: 4096
+  pricing:
+    input: 0.15
+    output: 0.15
+  release_date: '2024-06-12'
+  tags:
+  - low_cost

@@ -1,0 +1,228 @@
+name: Neuralwatt
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://portal.neuralwatt.com/docs
+  env_var: NEURALWATT_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://portal.neuralwatt.com/docs
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.neuralwatt.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 18
+  listed_models: 14
+models:
+- id: glm-5.2-flex
+  name: GLM 5.2 Flex
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 1048560
+  output_limit: 1048560
+  pricing:
+    input: 0.725
+    cached_read: 0.18125
+    output: 2.25
+  open_weights: true
+  release_date: '2026-06-17'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: glm-5.2
+  name: GLM 5.2
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 1048560
+  output_limit: 1048560
+  pricing:
+    input: 1.45
+    cached_read: 0.3625
+    output: 4.5
+  open_weights: true
+  release_date: '2026-06-17'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: glm-5.2-fast
+  name: GLM 5.2 Fast
+  description: Efficient GLM model for fast reasoning, coding, and agent workflows
+  context_window: 1048560
+  output_limit: 1048560
+  pricing:
+    input: 1.45
+    cached_read: 0.3625
+    output: 4.5
+  open_weights: true
+  release_date: '2026-06-17'
+  tags:
+  - open_weights
+  - long_context
+- id: kimi-k2.7-code-flex
+  name: Kimi K2.7 Code Flex
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.475
+    cached_read: 0.11875
+    output: 2
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: moonshotai/Kimi-K2.7-Code
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.95
+    cached_read: 0.2375
+    output: 4
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: kimi-k2.5-fast
+  name: Kimi K2.5 Fast
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262128
+  output_limit: 262128
+  pricing:
+    input: 0.52
+    cached_read: 0.13
+    output: 2.59
+  open_weights: true
+  release_date: '2026-01-27'
+  tags:
+  - vision
+  - open_weights
+- id: kimi-k2.6-flex
+  name: Kimi K2.6 Flex
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262128
+  output_limit: 262128
+  pricing:
+    input: 0.345
+    cached_read: 0.08625
+    output: 1.61
+  open_weights: true
+  release_date: '2026-04-21'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: qwen3.5-397b-fast
+  name: Qwen3.5 397B Fast
+  description: Efficient Qwen model for fast chat, extraction, and high-volume workloads
+  context_window: 262128
+  output_limit: 262128
+  pricing:
+    input: 0.69
+    cached_read: 0.1725
+    output: 4.14
+  open_weights: true
+  release_date: '2026-02-01'
+  tags:
+  - open_weights
+- id: kimi-k2.6-fast
+  name: Kimi K2.6 Fast
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262128
+  output_limit: 262128
+  pricing:
+    input: 0.69
+    cached_read: 0.1725
+    output: 3.22
+  open_weights: true
+  release_date: '2026-04-21'
+  tags:
+  - vision
+  - open_weights
+- id: moonshotai/Kimi-K2.6
+  name: Kimi K2.6
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262128
+  output_limit: 262128
+  pricing:
+    input: 0.69
+    cached_read: 0.1725
+    output: 3.22
+  open_weights: true
+  release_date: '2026-04-21'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: moonshotai/Kimi-K2.5
+  name: Kimi K2.5
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262128
+  output_limit: 262128
+  pricing:
+    input: 0.52
+    cached_read: 0.13
+    output: 2.59
+  open_weights: true
+  release_date: '2026-01-27'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: Qwen/Qwen3.5-397B-A17B-FP8
+  name: Qwen3.5 397B A17B FP8
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262128
+  output_limit: 262128
+  pricing:
+    input: 0.69
+    cached_read: 0.1725
+    output: 4.14
+  open_weights: true
+  release_date: '2026-02-01'
+  tags:
+  - reasoning
+  - open_weights
+- id: glm-5.2-short-fast-flex
+  name: GLM 5.2 Short Fast Flex
+  description: Efficient GLM model for fast reasoning, coding, and agent workflows
+  context_window: 199984
+  output_limit: 199984
+  pricing:
+    input: 0.725
+    cached_read: 0.18125
+    output: 2.25
+  open_weights: true
+  release_date: '2026-06-17'
+  tags:
+  - open_weights
+- id: glm-5.2-short-fast
+  name: GLM 5.2 Short Fast
+  description: Efficient GLM model for fast reasoning, coding, and agent workflows
+  context_window: 199984
+  output_limit: 199984
+  pricing:
+    input: 1.45
+    cached_read: 0.3625
+    output: 4.5
+  open_weights: true
+  release_date: '2026-06-17'
+  tags:
+  - open_weights

@@ -1,0 +1,170 @@
+name: Vultr
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://api.vultrinference.com/
+  env_var: VULTR_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://api.vultrinference.com/
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.vultrinference.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 10
+  listed_models: 10
+models:
+- id: XiaomiMiMo/MiMo-V2.5-Pro
+  name: MiMo-V2.5-Pro
+  description: Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution
+  context_window: 1048576
+  output_limit: 131072
+  pricing:
+    input: 0.55
+    output: 1.65
+  open_weights: true
+  release_date: '2026-04-22'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: deepseek-ai/DeepSeek-V4-Flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    input: 0.3
+    output: 1
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: zai-org/GLM-5.2-FP8
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 393216
+  output_limit: 131072
+  pricing:
+    input: 0.85
+    output: 3.1
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+- id: moonshotai/Kimi-K2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 131072
+  pricing:
+    input: 0.3
+    output: 1.2
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-21'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: Qwen/Qwen3.6-27B
+  name: Qwen3.6 27B
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 262144
+  output_limit: 65536
+  pricing:
+    input: 0.3
+    output: 2
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-22'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: Qwen/Qwen3.5-397B-A17B
+  name: Qwen3.5 397B-A17B
+  description: Large open Qwen multimodal MoE for visual agents and long technical tasks
+  context_window: 262144
+  output_limit: 65536
+  pricing:
+    input: 0.3
+    output: 2
+  open_weights: true
+  structured_output: true
+  release_date: '2026-02-15'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16
+  name: NVIDIA Nemotron 3 Nano Omni
+  description: Open Nemotron omni model combining reasoning with text, vision, and audio
+  context_window: 262144
+  output_limit: 131072
+  pricing:
+    input: 0.13
+    output: 0.38
+  open_weights: true
+  release_date: '2026-04-28'
+  tags:
+  - reasoning
+  - open_weights
+  - low_cost
+- id: nvidia/Nemotron-Cascade-2-30B-A3B
+  name: NVIDIA Nemotron Cascade 2
+  description: Nemotron model for efficient reasoning, coding, and specialized AI agents
+  context_window: 262144
+  output_limit: 131072
+  pricing:
+    input: 0.15
+    output: 0.6
+  open_weights: true
+  release_date: '2025-12-01'
+  tags:
+  - reasoning
+  - open_weights
+- id: MiniMaxAI/MiniMax-M2.7
+  name: MiniMax-M2.7
+  description: Open MiniMax flagship for coding agents, office automation, and complex environments
+  context_window: 204800
+  output_limit: 131072
+  pricing:
+    input: 0.3
+    output: 1.2
+  open_weights: true
+  release_date: '2026-03-18'
+  tags:
+  - reasoning
+  - open_weights
+- id: nvidia/DeepSeek-V3.2-NVFP4
+  name: DeepSeek V3.2
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 131072
+  output_limit: 131072
+  pricing:
+    input: 0.55
+    output: 1.65
+  open_weights: true
+  release_date: '2025-12-01'
+  tags:
+  - reasoning
+  - open_weights

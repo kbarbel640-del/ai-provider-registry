@@ -1,0 +1,208 @@
+name: Zhipu AI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.z.ai/guides/overview/pricing
+  env_var: ZHIPU_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://docs.z.ai/guides/overview/pricing
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://open.bigmodel.cn/api/paas/v4
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 13
+  listed_models: 13
+models:
+- id: glm-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 1000000
+  output_limit: 131072
+  pricing:
+    input: 1.4
+    cached_read: 0.26
+    output: 4.4
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - long_context
+- id: glm-5
+  name: GLM-5
+  description: General GLM flagship for coding, analysis, and tool-heavy engineering workflows
+  context_window: 204800
+  output_limit: 131072
+  pricing:
+    input: 1
+    cached_read: 0.2
+    output: 3.2
+  open_weights: true
+  release_date: '2026-02-11'
+  tags:
+  - reasoning
+  - open_weights
+- id: glm-4.6
+  name: GLM-4.6
+  description: Late GLM-4 workhorse for coding agents, reasoning, and structured tasks
+  context_window: 204800
+  output_limit: 131072
+  pricing:
+    input: 0.6
+    cached_read: 0.11
+    output: 2.2
+  open_weights: true
+  release_date: '2025-09-30'
+  tags:
+  - reasoning
+  - open_weights
+- id: glm-4.7
+  name: GLM-4.7
+  description: Mature GLM model for dependable coding, reasoning, and structured agent tasks
+  context_window: 204800
+  output_limit: 131072
+  pricing:
+    input: 0.6
+    cached_read: 0.11
+    output: 2.2
+  open_weights: true
+  release_date: '2025-12-22'
+  tags:
+  - reasoning
+  - open_weights
+- id: glm-5.1
+  name: GLM-5.1
+  description: Strong GLM coding model for agentic engineering, terminals, and repository generation
+  context_window: 200000
+  output_limit: 131072
+  pricing:
+    input: 1.4
+    cached_read: 0.26
+    output: 4.4
+  structured_output: true
+  release_date: '2026-03-27'
+  tags:
+  - reasoning
+- id: glm-5v-turbo
+  name: GLM-5V-Turbo
+  description: Fast GLM vision model for screenshots, documents, and multimodal agent tasks
+  context_window: 200000
+  output_limit: 131072
+  pricing:
+    input: 5
+    cached_read: 1.2
+    output: 22
+  release_date: '2026-04-01'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+- id: glm-4.7-flash
+  name: GLM-4.7-Flash
+  description: Budget GLM lane for fast coding help, routing, and everyday automation
+  context_window: 200000
+  output_limit: 131072
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-01-19'
+  tags:
+  - reasoning
+  - open_weights
+  - free
+- id: glm-4.7-flashx
+  name: GLM-4.7-FlashX
+  description: Efficient GLM model for fast reasoning, coding, and agent workflows
+  context_window: 200000
+  output_limit: 131072
+  pricing:
+    input: 0.07
+    cached_read: 0.01
+    output: 0.4
+  open_weights: true
+  release_date: '2026-01-19'
+  tags:
+  - reasoning
+  - open_weights
+  - low_cost
+- id: glm-4.5-flash
+  name: GLM-4.5-Flash
+  description: Efficient GLM model for fast reasoning, coding, and agent workflows
+  context_window: 131072
+  output_limit: 98304
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-07-28'
+  tags:
+  - reasoning
+  - open_weights
+  - free
+- id: glm-4.5-air
+  name: GLM-4.5-Air
+  description: Lighter GLM-4.5 variant for fast coding assistance and cheaper agents
+  context_window: 131072
+  output_limit: 98304
+  pricing:
+    input: 0.2
+    cached_read: 0.03
+    output: 1.1
+  open_weights: true
+  release_date: '2025-07-28'
+  tags:
+  - reasoning
+  - open_weights
+- id: glm-4.5
+  name: GLM-4.5
+  description: Hybrid-reasoning GLM release that made the 4.5 line broadly useful
+  context_window: 131072
+  output_limit: 98304
+  pricing:
+    input: 0.6
+    cached_read: 0.11
+    output: 2.2
+  open_weights: true
+  release_date: '2025-07-28'
+  tags:
+  - reasoning
+  - open_weights
+- id: glm-4.6v
+  name: GLM-4.6V
+  description: GLM vision model for visual reasoning, documents, and multimodal agents
+  context_window: 128000
+  output_limit: 32768
+  pricing:
+    input: 0.3
+    output: 0.9
+  open_weights: true
+  release_date: '2025-12-08'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: glm-4.5v
+  name: GLM-4.5V
+  description: GLM vision model for visual reasoning, documents, and multimodal agents
+  context_window: 64000
+  output_limit: 16384
+  pricing:
+    input: 0.6
+    output: 1.8
+  open_weights: true
+  release_date: '2025-08-11'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights

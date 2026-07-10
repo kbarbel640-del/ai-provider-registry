@@ -1,0 +1,220 @@
+name: Alibaba (China)
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://www.alibabacloud.com/help/en/model-studio/models
+  env_var: DASHSCOPE_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://www.alibabacloud.com/help/en/model-studio/models
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://dashscope.aliyuncs.com/compatible-mode/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 84
+  listed_models: 14
+models:
+- id: qwen-long
+  name: Qwen Long
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 10000000
+  output_limit: 8192
+  pricing:
+    input: 0.072
+    output: 0.287
+  release_date: '2025-01-25'
+  tags:
+  - long_context
+  - low_cost
+- id: qwen3-coder-plus
+  name: Qwen3 Coder Plus
+  description: Hosted Qwen coder for software agents, repo edits, and long-context code
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 1
+    output: 5
+  open_weights: true
+  release_date: '2025-07-23'
+  tags:
+  - open_weights
+  - long_context
+- id: deepseek-v4-flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    input: 0.14
+    cached_read: 0.0028
+    output: 0.28
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+  - low_cost
+- id: qwen-plus
+  name: Qwen Plus
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 1000000
+  output_limit: 32768
+  pricing:
+    input: 0.115
+    output: 0.287
+  release_date: '2024-01-25'
+  tags:
+  - reasoning
+  - long_context
+  - low_cost
+- id: qwen3.7-plus
+  name: Qwen3.7 Plus
+  description: Multimodal Qwen workhorse for long-context agents, visual inputs, and coding
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    input: 0.5
+    cached_read: 0.05
+    output: 3
+  release_date: '2026-06-02'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: qwen3.7-max
+  name: Qwen3.7 Max
+  description: Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    input: 2.5
+    cached_read: 0.5
+    output: 7.5
+  release_date: '2026-05-21'
+  tags:
+  - reasoning
+  - long_context
+- id: deepseek-v4-pro
+  name: DeepSeek V4 Pro
+  description: Open MoE flagship with million-token context for coding and long agent runs
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    input: 0.435
+    cached_read: 0.003625
+    output: 0.87
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: qwen3.5-flash
+  name: Qwen3.5 Flash
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    input: 0.172
+    output: 1.72
+  structured_output: true
+  release_date: '2026-02-23'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: glm-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 1000000
+  output_limit: 128000
+  pricing:
+    input: 1.1
+    cached_read: 0.275
+    output: 3.851
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: qwen3.6-flash
+  name: Qwen3.6 Flash
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    input: 0.1875
+    output: 1.125
+  structured_output: true
+  release_date: '2026-04-27'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: qwen3.5-plus
+  name: Qwen3.5 Plus
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    input: 0.573
+    output: 3.44
+  release_date: '2026-02-16'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: qwen-flash
+  name: Qwen Flash
+  description: Efficient Qwen model for fast chat, extraction, and high-volume workloads
+  context_window: 1000000
+  output_limit: 32768
+  pricing:
+    input: 0.022
+    output: 0.216
+  release_date: '2025-07-28'
+  tags:
+  - reasoning
+  - long_context
+  - low_cost
+- id: qwen-deep-research
+  name: Qwen Deep Research
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 1000000
+  output_limit: 32768
+  pricing:
+    input: 7.742
+    output: 23.367
+  release_date: 2024-01
+  tags:
+  - long_context
+- id: qwen3-coder-flash
+  name: Qwen3 Coder Flash
+  description: Qwen coding model for software agents, repository edits, and code reasoning
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    input: 0.144
+    output: 0.574
+  release_date: '2025-07-28'
+  tags:
+  - long_context

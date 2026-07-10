@@ -1,0 +1,46 @@
+name: Sarvam AI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.sarvam.ai/api-reference-docs/getting-started/models
+  env_var: SARVAM_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.sarvam.ai/api-reference-docs/getting-started/models
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- tools
+- reasoning
+- streaming
+endpoint: https://api.sarvam.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 2
+  listed_models: 2
+models:
+- id: sarvam-105b
+  name: Sarvam-105B
+  description: Flagship Indian-language reasoning model for enterprise multilingual applications
+  context_window: 131072
+  output_limit: 131072
+  pricing: {}
+  open_weights: true
+  release_date: '2026-02-18'
+  tags:
+  - reasoning
+  - open_weights
+- id: sarvam-30b
+  name: Sarvam-30B
+  description: Efficient Indian-language reasoning model for chat, coding, and multilingual work
+  context_window: 65536
+  output_limit: 65536
+  pricing: {}
+  open_weights: true
+  release_date: '2026-02-18'
+  tags:
+  - reasoning
+  - open_weights

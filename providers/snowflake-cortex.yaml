@@ -1,0 +1,185 @@
+name: Snowflake Cortex
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-rest-api
+  env_var: SNOWFLAKE_ACCOUNT
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-rest-api
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://${SNOWFLAKE_ACCOUNT}.snowflakecomputing.com/api/v2/cortex/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 18
+  listed_models: 14
+models:
+- id: openai-gpt-5.5
+  name: GPT-5.5
+  description: Default frontier GPT for coding, computer use, research, and knowledge work
+  context_window: 1050000
+  output_limit: 128000
+  pricing: {}
+  structured_output: true
+  release_date: '2026-04-23'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: openai-gpt-5.4
+  name: GPT-5.4
+  description: Agent-ready GPT for coding and computer-use workflows at a lower cost
+  context_window: 1050000
+  output_limit: 128000
+  pricing: {}
+  structured_output: true
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: gemini-3.1-pro
+  name: Gemini 3.1 Pro Preview
+  description: Reasoning-first Gemini preview for agentic coding and complex problem solving
+  context_window: 1048576
+  output_limit: 65536
+  pricing: {}
+  structured_output: true
+  release_date: '2026-02-19'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: openai-gpt-4.1
+  name: GPT-4.1
+  description: Long-lived GPT workhorse for coding, instruction following, and production apps
+  context_window: 1047576
+  output_limit: 32768
+  pricing: {}
+  structured_output: true
+  release_date: '2025-04-14'
+  tags:
+  - vision
+  - long_context
+- id: claude-opus-4-7
+  name: Claude Opus 4.7
+  description: Stronger Opus tier for advanced software work and high-stakes reasoning
+  context_window: 1000000
+  output_limit: 128000
+  pricing: {}
+  release_date: '2026-04-16'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-opus-4-8
+  name: Claude Opus 4.8
+  description: Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents
+  context_window: 1000000
+  output_limit: 128000
+  pricing: {}
+  release_date: '2026-05-28'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-fable-5
+  name: Claude Fable 5
+  description: Claude model for creative writing, analysis, and controlled agent workflows
+  context_window: 1000000
+  output_limit: 128000
+  pricing: {}
+  release_date: '2026-06-09'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: claude-sonnet-4-6
+  name: Claude Sonnet 4.6
+  description: Claude workhorse for coding agents, careful analysis, and production cost control
+  context_window: 1000000
+  output_limit: 16384
+  pricing: {}
+  release_date: '2026-02-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: openai-gpt-5.1
+  name: GPT-5.1
+  description: Sharper GPT-5 generation for coding, product work, and tool-assisted tasks
+  context_window: 400000
+  output_limit: 128000
+  pricing: {}
+  structured_output: true
+  release_date: '2025-11-13'
+  tags:
+  - vision
+  - reasoning
+- id: openai-gpt-5.2
+  name: GPT-5.2
+  description: Reliable GPT generation for broad coding, writing, and tool-assisted product work
+  context_window: 400000
+  output_limit: 128000
+  pricing: {}
+  structured_output: true
+  release_date: '2025-12-11'
+  tags:
+  - vision
+  - reasoning
+- id: openai-gpt-5
+  name: GPT-5
+  description: Original GPT-5 workhorse for reasoning, coding, writing, and tool workflows
+  context_window: 400000
+  output_limit: 128000
+  pricing: {}
+  structured_output: true
+  release_date: '2025-08-07'
+  tags:
+  - vision
+  - reasoning
+- id: openai-gpt-5-nano
+  name: GPT-5 Nano
+  description: Tiny GPT-5 lane for routing, extraction, classification, and bulk jobs
+  context_window: 400000
+  output_limit: 128000
+  pricing: {}
+  structured_output: true
+  release_date: '2025-08-07'
+  tags:
+  - vision
+  - reasoning
+- id: openai-gpt-5-mini
+  name: GPT-5 Mini
+  description: Small GPT-5 for responsive agents, coding help, and everyday automation
+  context_window: 272000
+  output_limit: 8192
+  pricing: {}
+  structured_output: true
+  release_date: '2025-08-07'
+  tags:
+  - vision
+  - reasoning
+- id: mistral-large2
+  name: Mistral Large (latest)
+  description: Flagship Mistral model for advanced reasoning, coding, and multilingual work
+  context_window: 262144
+  output_limit: 262144
+  pricing: {}
+  open_weights: true
+  release_date: '2024-11-01'
+  tags:
+  - vision
+  - open_weights

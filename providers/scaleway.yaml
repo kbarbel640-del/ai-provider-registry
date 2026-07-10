@@ -1,0 +1,217 @@
+name: Scaleway
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://www.scaleway.com/en/docs/generative-apis/
+  env_var: SCALEWAY_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://www.scaleway.com/en/docs/generative-apis/
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.scaleway.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 17
+  listed_models: 14
+models:
+- id: qwen3-235b-a22b-instruct-2507
+  name: Qwen3 235B A22B Instruct 2507
+  description: Large open Qwen MoE for multilingual reasoning, coding, and tool use
+  context_window: 260000
+  output_limit: 16384
+  pricing:
+    input: 0.75
+    output: 2.25
+  open_weights: true
+  release_date: '2025-07-01'
+  tags:
+  - reasoning
+  - open_weights
+- id: glm-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 256000
+  output_limit: 16384
+  pricing:
+    input: 1.8
+    output: 5.5
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+- id: gemma-4-26b-a4b-it
+  name: Gemma 4 26B A4B IT
+  description: Open Gemma instruction model for efficient chat and self-hosted deployments
+  context_window: 256000
+  output_limit: 16384
+  pricing:
+    input: 0.25
+    output: 0.5
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-01'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: mistral-medium-3.5-128b
+  name: Mistral Medium 3.5 128B
+  description: Balanced Mistral model for enterprise assistants, multilingual work, and tools
+  context_window: 256000
+  output_limit: 16384
+  pricing:
+    input: 1.5
+    output: 7.5
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-29'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: qwen3.5-397b-a17b
+  name: Qwen3.5 397B A17B
+  description: Large open Qwen multimodal MoE for visual agents and long technical tasks
+  context_window: 256000
+  output_limit: 16384
+  pricing:
+    input: 0.6
+    output: 3.6
+  open_weights: true
+  structured_output: true
+  release_date: '2026-03-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+- id: devstral-2-123b-instruct-2512
+  name: Devstral 2 123B Instruct (2512)
+  description: Mistral's coding-agent model for repository work, terminal tasks, and software fixes
+  context_window: 256000
+  output_limit: 16384
+  pricing:
+    input: 0.4
+    output: 2
+  open_weights: true
+  release_date: '2026-01-07'
+  tags:
+  - open_weights
+- id: qwen3-coder-30b-a3b-instruct
+  name: Qwen3-Coder 30B-A3B Instruct
+  description: Smaller Qwen coder for efficient local agents and repo-level fixes
+  context_window: 128000
+  output_limit: 32768
+  pricing:
+    input: 0.2
+    output: 0.8
+  open_weights: true
+  release_date: 2025-04
+  tags:
+  - open_weights
+- id: qwen3.6-35b-a3b
+  name: Qwen3.6 35B A3B
+  description: Open multimodal Qwen MoE for local agents that need vision, audio, and code
+  context_window: 128000
+  output_limit: 16384
+  pricing:
+    input: 0.25
+    output: 1.5
+  open_weights: true
+  structured_output: true
+  release_date: '2026-05-01'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: pixtral-12b-2409
+  name: Pixtral 12B 2409
+  description: Mistral vision-language model for image understanding and multimodal chat
+  context_window: 128000
+  output_limit: 4096
+  pricing:
+    input: 0.2
+    output: 0.2
+  open_weights: true
+  release_date: '2024-09-25'
+  tags:
+  - vision
+  - open_weights
+  - low_cost
+- id: mistral-small-3.2-24b-instruct-2506
+  name: Mistral Small 3.2 24B Instruct (2506)
+  description: Efficient Mistral model for fast chat, extraction, and production assistants
+  context_window: 128000
+  output_limit: 32768
+  pricing:
+    input: 0.15
+    output: 0.35
+  open_weights: true
+  release_date: '2025-06-20'
+  tags:
+  - vision
+  - open_weights
+  - low_cost
+- id: gpt-oss-120b
+  name: GPT-OSS 120B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following workloads
+  context_window: 128000
+  output_limit: 32768
+  pricing:
+    input: 0.15
+    output: 0.6
+  open_weights: true
+  release_date: '2024-01-01'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: llama-3.3-70b-instruct
+  name: Llama-3.3-70B-Instruct
+  description: Open Llama instruction model for multilingual chat, reasoning, and coding
+  context_window: 100000
+  output_limit: 16384
+  pricing:
+    input: 0.9
+    output: 0.9
+  open_weights: true
+  release_date: '2024-12-06'
+  tags:
+  - vision
+  - open_weights
+- id: gemma-3-27b-it
+  name: Gemma-3-27B-IT
+  description: Open Gemma instruction model for efficient chat and self-hosted deployments
+  context_window: 40000
+  output_limit: 8192
+  pricing:
+    input: 0.25
+    output: 0.5
+  release_date: '2024-12-01'
+  tags:
+  - vision
+  - reasoning
+- id: qwen3-embedding-8b
+  name: Qwen3 Embedding 8B
+  description: Embedding model for semantic search, retrieval, clustering, and ranking pipelines
+  context_window: 32768
+  output_limit: 4096
+  pricing:
+    input: 0.1
+    output: 0
+  release_date: '2025-25-11'
+  tags:
+  - general

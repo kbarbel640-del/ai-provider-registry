@@ -1,0 +1,232 @@
+name: Nebius Token Factory
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.tokenfactory.nebius.com/
+  env_var: NEBIUS_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.tokenfactory.nebius.com/
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.tokenfactory.nebius.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 30
+  listed_models: 14
+models:
+- id: deepseek-ai/DeepSeek-V4-Pro
+  name: DeepSeek V4 Pro
+  description: Open MoE flagship with million-token context for coding and long agent runs
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    input: 1.75
+    cached_read: 0.15
+    output: 3.5
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: zai-org/GLM-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 432000
+  output_limit: 432000
+  pricing:
+    input: 1.4
+    output: 4.4
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+- id: Qwen/Qwen3.5-397B-A17B
+  name: Qwen3.5-397B-A17B
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262144
+  output_limit: 8192
+  pricing:
+    input: 0.6
+    cached_read: 0.06
+    output: 3.6
+  open_weights: true
+  structured_output: true
+  release_date: '2025-07-15'
+  tags:
+  - reasoning
+  - open_weights
+- id: Qwen/Qwen3-235B-A22B-Instruct-2507
+  name: Qwen3 235B A22B Instruct 2507
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262144
+  output_limit: 8192
+  pricing:
+    input: 0.2
+    output: 0.6
+  release_date: '2025-07-25'
+  tags:
+  - general
+- id: moonshotai/Kimi-K2.5-fast
+  name: Kimi-K2.5-fast
+  description: Legacy model retained for compatibility with older integrations
+  context_window: 256000
+  output_limit: 8192
+  pricing:
+    input: 0.5
+    cached_read: 0.05
+    output: 2.5
+  open_weights: true
+  structured_output: true
+  release_date: '2025-12-15'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: moonshotai/Kimi-K2.5
+  name: Kimi-K2.5
+  description: Legacy model retained for compatibility with older integrations
+  context_window: 256000
+  output_limit: 8192
+  pricing:
+    input: 0.5
+    cached_read: 0.05
+    output: 2.5
+  open_weights: true
+  structured_output: true
+  release_date: '2025-12-15'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: nvidia/nemotron-3-super-120b-a12b
+  name: Nemotron-3-Super-120B-A12B
+  description: Nemotron middle tier for collaborative agents and high-volume reasoning workloads
+  context_window: 256000
+  output_limit: 32768
+  pricing:
+    input: 0.3
+    output: 0.9
+  open_weights: true
+  structured_output: true
+  release_date: '2026-03-11'
+  tags:
+  - reasoning
+  - open_weights
+- id: zai-org/GLM-5
+  name: GLM-5
+  description: Legacy model retained for compatibility with older integrations
+  context_window: 200000
+  output_limit: 16384
+  pricing:
+    input: 1
+    cached_read: 0.1
+    output: 3.2
+  structured_output: true
+  release_date: '2026-03-01'
+  tags:
+  - reasoning
+- id: MiniMaxAI/MiniMax-M2.5
+  name: MiniMax-M2.5
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 196608
+  output_limit: 8192
+  pricing:
+    input: 0.3
+    cached_read: 0.03
+    output: 1.2
+  open_weights: true
+  structured_output: true
+  release_date: '2025-01-20'
+  tags:
+  - reasoning
+  - open_weights
+- id: deepseek-ai/DeepSeek-V3.2
+  name: DeepSeek-V3.2
+  description: Legacy model retained for compatibility with older integrations
+  context_window: 163000
+  output_limit: 16384
+  pricing:
+    input: 0.3
+    cached_read: 0.03
+    output: 0.45
+  open_weights: true
+  structured_output: true
+  release_date: '2026-01-20'
+  tags:
+  - reasoning
+  - open_weights
+  - low_cost
+- id: meta-llama/Llama-3.3-70B-Instruct
+  name: Llama-3.3-70B-Instruct
+  description: Open Llama instruction model for multilingual chat, reasoning, and coding
+  context_window: 128000
+  output_limit: 8192
+  pricing:
+    input: 0.13
+    cached_read: 0.013
+    output: 0.4
+  open_weights: true
+  structured_output: true
+  release_date: '2025-12-05'
+  tags:
+  - open_weights
+  - low_cost
+- id: Qwen/Qwen2.5-VL-72B-Instruct
+  name: Qwen2.5-VL-72B-Instruct
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 128000
+  output_limit: 8192
+  pricing:
+    input: 0.25
+    cached_read: 0.025
+    output: 0.75
+  open_weights: true
+  structured_output: true
+  release_date: '2025-01-20'
+  tags:
+  - vision
+  - open_weights
+- id: Qwen/Qwen3-30B-A3B-Instruct-2507
+  name: Qwen3-30B-A3B-Instruct-2507
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 128000
+  output_limit: 8192
+  pricing:
+    input: 0.1
+    cached_read: 0.01
+    output: 0.3
+  open_weights: true
+  structured_output: true
+  release_date: '2026-01-28'
+  tags:
+  - open_weights
+  - low_cost
+- id: Qwen/Qwen3-Next-80B-A3B-Thinking
+  name: Qwen3-Next-80B-A3B-Thinking
+  description: Qwen reasoning model for deliberate problem solving, math, and coding
+  context_window: 128000
+  output_limit: 16384
+  pricing:
+    input: 0.15
+    cached_read: 0.015
+    output: 1.2
+  open_weights: true
+  structured_output: true
+  release_date: '2026-01-28'
+  tags:
+  - reasoning
+  - open_weights

@@ -1,0 +1,212 @@
+name: Meganova
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.meganova.ai
+  env_var: MEGANOVA_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://docs.meganova.ai
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.meganova.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 19
+  listed_models: 14
+models:
+- id: Qwen/Qwen3.5-Plus
+  name: Qwen3.5 Plus
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    input: 0.4
+    output: 2.4
+  release_date: 2026-02
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: moonshotai/Kimi-K2-Thinking
+  name: Kimi K2 Thinking
+  description: Kimi reasoning model for long-horizon research, planning, and tool use
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.6
+    output: 2.6
+  open_weights: true
+  release_date: '2025-11-06'
+  tags:
+  - reasoning
+  - open_weights
+- id: moonshotai/Kimi-K2.5
+  name: Kimi K2.5
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.45
+    output: 2.8
+  open_weights: true
+  release_date: '2026-01-27'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: XiaomiMiMo/MiMo-V2-Flash
+  name: MiMo V2 Flash
+  description: MiMo flash model for fast multimodal assistance and agent workflows
+  context_window: 262144
+  output_limit: 32000
+  pricing:
+    input: 0.1
+    output: 0.3
+  open_weights: true
+  release_date: '2025-12-17'
+  tags:
+  - reasoning
+  - open_weights
+  - low_cost
+- id: Qwen/Qwen3-235B-A22B-Instruct-2507
+  name: Qwen3 235B A22B Instruct 2507
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262000
+  output_limit: 262000
+  pricing:
+    input: 0.09
+    output: 0.6
+  open_weights: true
+  structured_output: true
+  release_date: '2025-07-23'
+  tags:
+  - open_weights
+- id: MiniMaxAI/MiniMax-M2.5
+  name: MiniMax M2.5
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 204800
+  output_limit: 131072
+  pricing:
+    input: 0.3
+    output: 1.2
+  open_weights: true
+  release_date: '2026-02-12'
+  tags:
+  - reasoning
+  - open_weights
+- id: zai-org/GLM-4.6
+  name: GLM-4.6
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202752
+  output_limit: 131072
+  pricing:
+    input: 0.45
+    output: 1.9
+  open_weights: true
+  release_date: '2025-09-30'
+  tags:
+  - reasoning
+  - open_weights
+- id: zai-org/GLM-5
+  name: GLM-5
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202752
+  output_limit: 131072
+  pricing:
+    input: 0.8
+    output: 2.56
+  open_weights: true
+  release_date: '2026-02-11'
+  tags:
+  - reasoning
+  - open_weights
+- id: zai-org/GLM-4.7
+  name: GLM-4.7
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202752
+  output_limit: 131072
+  pricing:
+    input: 0.2
+    output: 0.8
+  open_weights: true
+  release_date: '2025-12-22'
+  tags:
+  - reasoning
+  - open_weights
+- id: MiniMaxAI/MiniMax-M2.1
+  name: MiniMax M2.1
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 196608
+  output_limit: 131072
+  pricing:
+    input: 0.28
+    output: 1.2
+  open_weights: true
+  release_date: '2025-12-23'
+  tags:
+  - reasoning
+  - open_weights
+- id: deepseek-ai/DeepSeek-V3.1
+  name: DeepSeek V3.1
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 164000
+  output_limit: 164000
+  pricing:
+    input: 0.27
+    output: 1
+  open_weights: true
+  structured_output: true
+  release_date: '2025-08-25'
+  tags:
+  - open_weights
+- id: deepseek-ai/DeepSeek-V3.2-Exp
+  name: DeepSeek V3.2 Exp
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 164000
+  output_limit: 164000
+  pricing:
+    input: 0.27
+    output: 0.4
+  open_weights: true
+  structured_output: true
+  release_date: '2025-10-10'
+  tags:
+  - open_weights
+  - low_cost
+- id: deepseek-ai/DeepSeek-V3.2
+  name: DeepSeek V3.2
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 164000
+  output_limit: 164000
+  pricing:
+    input: 0.26
+    output: 0.38
+  open_weights: true
+  structured_output: true
+  release_date: '2025-12-03'
+  tags:
+  - open_weights
+  - low_cost
+- id: deepseek-ai/DeepSeek-V3-0324
+  name: DeepSeek V3 0324
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 163840
+  output_limit: 163840
+  pricing:
+    input: 0.25
+    output: 0.88
+  open_weights: true
+  release_date: '2025-03-24'
+  tags:
+  - open_weights

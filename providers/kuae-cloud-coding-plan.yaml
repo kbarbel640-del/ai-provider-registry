@@ -1,0 +1,37 @@
+name: KUAE Cloud Coding Plan
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.mthreads.com/kuaecloud/kuaecloud-doc-online/coding_plan/
+  env_var: KUAE_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://docs.mthreads.com/kuaecloud/kuaecloud-doc-online/coding_plan/
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- tools
+- reasoning
+- streaming
+endpoint: https://coding-plan-endpoint.kuaecloud.net/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 1
+  listed_models: 1
+models:
+- id: GLM-4.7
+  name: GLM-4.7
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 204800
+  output_limit: 131072
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-12-22'
+  tags:
+  - reasoning
+  - open_weights
+  - free

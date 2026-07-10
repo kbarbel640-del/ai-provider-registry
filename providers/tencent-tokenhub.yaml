@@ -1,0 +1,50 @@
+name: Tencent TokenHub
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://cloud.tencent.com/document/product/1823/130050
+  env_var: TENCENT_TOKENHUB_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://cloud.tencent.com/document/product/1823/130050
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- tools
+- reasoning
+- streaming
+endpoint: https://tokenhub.tencentmaas.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 2
+  listed_models: 2
+models:
+- id: hy3
+  name: Hy3
+  description: Tencent Hy reasoning model for coding, instruction following, and agent tasks
+  context_window: 256000
+  output_limit: 64000
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-07-06'
+  tags:
+  - reasoning
+  - open_weights
+  - free
+- id: hy3-preview
+  name: Hy3 preview
+  description: Tencent Hy reasoning model for coding, instruction following, and agent tasks
+  context_window: 256000
+  output_limit: 64000
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-04-20'
+  tags:
+  - reasoning
+  - open_weights
+  - free

@@ -1,0 +1,223 @@
+name: Alibaba Token Plan (China)
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://www.alibabacloud.com/help/zh/model-studio/token-plan-overview
+  env_var: ALIBABA_TOKEN_PLAN_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://www.alibabacloud.com/help/zh/model-studio/token-plan-overview
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- image
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 18
+  listed_models: 14
+models:
+- id: deepseek-v4-flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    free: true
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+  - free
+- id: qwen3.7-plus
+  name: Qwen3.7 Plus
+  description: Multimodal Qwen workhorse for long-context agents, visual inputs, and coding
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    free: true
+  release_date: '2026-06-02'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+  - free
+- id: qwen3.7-max
+  name: Qwen3.7 Max
+  description: Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    free: true
+  release_date: '2026-05-21'
+  tags:
+  - reasoning
+  - long_context
+  - free
+- id: deepseek-v4-pro
+  name: DeepSeek V4 Pro
+  description: Open MoE flagship with million-token context for coding and long agent runs
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    free: true
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+  - free
+- id: glm-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 1000000
+  output_limit: 131072
+  pricing:
+    free: true
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+  - free
+- id: qwen3.6-flash
+  name: Qwen3.6 Flash
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    free: true
+  structured_output: true
+  release_date: '2026-04-27'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+  - free
+- id: qwen3.6-plus
+  name: Qwen3.6 Plus
+  description: Earlier Qwen multimodal workhorse for million-token agent and document tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    free: true
+  release_date: '2026-04-02'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+  - free
+- id: kimi-k2.7-code
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - free
+- id: kimi-k2.5
+  name: Kimi K2.5
+  description: Earlier Kimi frontier model for long-context agents, coding, and multimodal work
+  context_window: 262144
+  output_limit: 32768
+  pricing:
+    free: true
+  open_weights: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - free
+- id: kimi-k2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 16384
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-04-21'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - free
+- id: glm-5.1
+  name: GLM-5.1
+  description: Strong GLM coding model for agentic engineering, terminals, and repository generation
+  context_window: 202752
+  output_limit: 128000
+  pricing:
+    free: true
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-07'
+  tags:
+  - reasoning
+  - open_weights
+  - free
+- id: glm-5
+  name: GLM-5
+  description: General GLM flagship for coding, analysis, and tool-heavy engineering workflows
+  context_window: 202752
+  output_limit: 16384
+  pricing:
+    free: true
+  release_date: '2026-02-12'
+  tags:
+  - reasoning
+  - free
+- id: MiniMax-M2.5
+  name: MiniMax-M2.5
+  description: Prior MiniMax coding model for agent workflows, office edits, and automation
+  context_window: 196608
+  output_limit: 24576
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-02-12'
+  tags:
+  - reasoning
+  - open_weights
+  - free
+- id: deepseek-v3.2
+  name: DeepSeek V3.2
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 131072
+  output_limit: 65536
+  pricing:
+    free: true
+  open_weights: true
+  structured_output: true
+  release_date: '2025-12-03'
+  tags:
+  - reasoning
+  - open_weights
+  - free

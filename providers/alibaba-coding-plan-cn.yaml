@@ -1,0 +1,181 @@
+name: Alibaba Coding Plan (China)
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://help.aliyun.com/zh/model-studio/coding-plan
+  env_var: ALIBABA_CODING_PLAN_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://help.aliyun.com/zh/model-studio/coding-plan
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://coding.dashscope.aliyuncs.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 12
+  listed_models: 12
+models:
+- id: qwen3-coder-plus
+  name: Qwen3 Coder Plus
+  description: Qwen coding model for software agents, repository edits, and code reasoning
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-07-23'
+  tags:
+  - open_weights
+  - long_context
+  - free
+- id: qwen3.7-plus
+  name: Qwen3.7 Plus
+  description: Multimodal Qwen workhorse for long-context agents, visual inputs, and coding
+  context_window: 1000000
+  output_limit: 64000
+  pricing:
+    free: true
+  release_date: '2026-06-02'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+  - free
+- id: qwen3.7-max
+  name: Qwen3.7 Max
+  description: Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    input: 2.5
+    cached_read: 0.5
+    output: 7.5
+  release_date: '2026-05-21'
+  tags:
+  - reasoning
+  - long_context
+- id: qwen3.6-flash
+  name: Qwen3.6 Flash
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    input: 0.1875
+    output: 1.125
+  structured_output: true
+  release_date: '2026-04-27'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: qwen3.5-plus
+  name: Qwen3.5 Plus
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    free: true
+  release_date: '2026-02-16'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+  - free
+- id: qwen3.6-plus
+  name: Qwen3.6 Plus
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 1000000
+  output_limit: 65536
+  pricing:
+    free: true
+  release_date: '2026-04-02'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+  - free
+- id: qwen3-max-2026-01-23
+  name: Qwen3 Max
+  description: Flagship Qwen model for complex reasoning, coding, and agentic workflows
+  context_window: 262144
+  output_limit: 32768
+  pricing:
+    free: true
+  release_date: '2026-01-23'
+  tags:
+  - free
+- id: kimi-k2.5
+  name: Kimi K2.5
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262144
+  output_limit: 32768
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-01-27'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+  - free
+- id: qwen3-coder-next
+  name: Qwen3 Coder Next
+  description: Qwen coding model for software agents, repository edits, and code reasoning
+  context_window: 262144
+  output_limit: 65536
+  pricing:
+    free: true
+  open_weights: true
+  structured_output: true
+  release_date: '2026-02-03'
+  tags:
+  - open_weights
+  - free
+- id: glm-4.7
+  name: GLM-4.7
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202752
+  output_limit: 16384
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-12-22'
+  tags:
+  - reasoning
+  - open_weights
+  - free
+- id: glm-5
+  name: GLM-5
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202752
+  output_limit: 16384
+  pricing:
+    free: true
+  release_date: '2026-02-11'
+  tags:
+  - reasoning
+  - free
+- id: MiniMax-M2.5
+  name: MiniMax-M2.5
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 196608
+  output_limit: 24576
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2026-02-12'
+  tags:
+  - reasoning
+  - open_weights
+  - free

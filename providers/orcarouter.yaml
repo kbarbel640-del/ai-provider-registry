@@ -1,0 +1,245 @@
+name: OrcaRouter
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.orcarouter.ai
+  env_var: ORCAROUTER_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://docs.orcarouter.ai
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.orcarouter.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 81
+  listed_models: 14
+models:
+- id: openai/gpt-5.4
+  name: GPT-5.4
+  description: Agent-ready GPT for coding and computer-use workflows at a lower cost
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.25
+    output: 22.5
+  structured_output: true
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: openai/gpt-5.4-pro
+  name: GPT-5.4 Pro
+  description: More exact GPT-5.4 tier for demanding professional reasoning and agent tasks
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 60
+    output: 270
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: openai/gpt-5.5-pro
+  name: GPT-5.5 Pro
+  description: Highest-accuracy GPT-5.5 tier for slower, precision-heavy reasoning and coding
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 30
+    output: 180
+  structured_output: true
+  release_date: '2026-04-23'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: openai/gpt-5.5
+  name: GPT-5.5
+  description: Default frontier GPT for coding, computer use, research, and knowledge work
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 5
+    cached_read: 0.5
+    output: 30
+  structured_output: true
+  release_date: '2026-04-23'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: google/gemini-2.5-pro
+  name: Gemini 2.5 Pro
+  description: Google's proven reasoning model for coding, math, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 2.5
+    cached_read: 0.125
+    output: 15
+  structured_output: true
+  release_date: '2025-06-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: google/gemini-2.5-flash
+  name: Gemini 2.5 Flash
+  description: Fast Gemini workhorse for multimodal apps where latency and price matter
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.3
+    cached_read: 0.03
+    output: 2.5
+  structured_output: true
+  release_date: '2025-06-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: google/gemini-3.1-pro-preview-customtools
+  name: Gemini 3.1 Pro Preview Custom Tools
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 4
+    cached_read: 0.2
+    output: 18
+  structured_output: true
+  release_date: '2026-02-19'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: google/gemini-flash-lite-latest
+  name: Gemini Flash-Lite Latest
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.25
+    cached_read: 0.025
+    output: 1.5
+  structured_output: true
+  release_date: '2025-09-25'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: google/gemini-2.5-flash-lite
+  name: Gemini 2.5 Flash-Lite
+  description: Lean Gemini 2.5 lane for cheap multimodal traffic and quick agents
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.1
+    cached_read: 0.01
+    output: 0.4
+  structured_output: true
+  release_date: '2025-06-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+  - low_cost
+- id: google/gemini-3.1-pro-preview
+  name: Gemini 3.1 Pro Preview
+  description: Reasoning-first Gemini preview for agentic coding and complex problem solving
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 4
+    cached_read: 0.2
+    output: 18
+  structured_output: true
+  release_date: '2026-02-19'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: google/gemini-3-pro-preview
+  name: Gemini 3 Pro Preview
+  description: Preview Gemini flagship for complex reasoning, coding, and rich multimodal prompts
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 4
+    cached_read: 0.2
+    output: 18
+  structured_output: true
+  release_date: '2025-11-18'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: google/gemini-3-flash-preview
+  name: Gemini 3 Flash Preview
+  description: New Gemini flash lane bringing frontier-style multimodal reasoning to cheaper runs
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.5
+    cached_read: 0.05
+    output: 3
+  structured_output: true
+  release_date: '2025-12-17'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: google/gemini-flash-latest
+  name: Gemini Flash Latest
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.5
+    cached_read: 0.075
+    output: 3
+  structured_output: true
+  release_date: '2025-09-25'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: google/gemini-3.1-flash-lite-preview
+  name: Gemini 3.1 Flash Lite Preview
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.25
+    cached_read: 0.025
+    output: 1.5
+  structured_output: true
+  release_date: '2026-03-03'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context

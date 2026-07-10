@@ -1,0 +1,55 @@
+name: Morph
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.morphllm.com/api-reference/introduction
+  env_var: MORPH_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.morphllm.com/api-reference/introduction
+  free_basis: no $0 model in models.dev
+supports:
+- chat
+- streaming
+endpoint: https://api.morphllm.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 3
+  listed_models: 3
+models:
+- id: morph-v3-large
+  name: Morph v3 Large
+  description: Flagship model for demanding analysis, coding, and production agent workflows
+  context_window: 32000
+  output_limit: 32000
+  pricing:
+    input: 0.9
+    output: 1.9
+  release_date: '2024-08-15'
+  tags:
+  - general
+- id: auto
+  name: Auto
+  description: Automatic model router for matching prompts to suitable backends and budgets
+  context_window: 32000
+  output_limit: 32000
+  pricing:
+    input: 0.85
+    output: 1.55
+  release_date: '2024-06-01'
+  tags:
+  - general
+- id: morph-v3-fast
+  name: Morph v3 Fast
+  description: Efficient model for low-latency assistance, extraction, and routine automation
+  context_window: 16000
+  output_limit: 16000
+  pricing:
+    input: 0.8
+    output: 1.2
+  release_date: '2024-08-15'
+  tags:
+  - general

@@ -1,0 +1,88 @@
+name: Kimi For Coding
+api_style: anthropic
+auth:
+  type: bearer
+  doc_url: https://www.kimi.com/code/docs/en/third-party-tools/other-coding-agents.html
+  env_var: KIMI_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://www.kimi.com/code/docs/en/third-party-tools/other-coding-agents.html
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.kimi.com/coding/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 4
+  listed_models: 4
+models:
+- id: k2p7
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking
+  context_window: 262144
+  output_limit: 32768
+  pricing:
+    free: true
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - free
+- id: kimi-k2-thinking
+  name: Kimi K2 Thinking
+  description: Kimi reasoning model for long-horizon research, planning, and tool use
+  context_window: 262144
+  output_limit: 32768
+  pricing:
+    free: true
+  open_weights: true
+  structured_output: true
+  release_date: 2025-11
+  tags:
+  - reasoning
+  - open_weights
+  - free
+- id: k2p5
+  name: Kimi K2.5
+  description: Kimi reasoning model for long-horizon research, planning, and tool use
+  context_window: 262144
+  output_limit: 32768
+  pricing:
+    free: true
+  open_weights: true
+  structured_output: true
+  release_date: 2026-01
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - free
+- id: k2p6
+  name: Kimi K2.6
+  description: Kimi reasoning model for long-horizon research, planning, and tool use
+  context_window: 262144
+  output_limit: 32768
+  pricing:
+    free: true
+  open_weights: true
+  structured_output: true
+  release_date: 2026-04
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - open_weights
+  - free

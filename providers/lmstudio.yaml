@@ -1,0 +1,61 @@
+name: LMStudio
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://lmstudio.ai/models
+  env_var: LMSTUDIO_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://lmstudio.ai/models
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- tools
+- reasoning
+- streaming
+endpoint: http://127.0.0.1:1234/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 3
+  listed_models: 3
+models:
+- id: qwen/qwen3-30b-a3b-2507
+  name: Qwen3 30B A3B 2507
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262144
+  output_limit: 16384
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-07-30'
+  tags:
+  - open_weights
+  - free
+- id: qwen/qwen3-coder-30b
+  name: Qwen3 Coder 30B
+  description: Qwen coding model for software agents, repository edits, and code reasoning
+  context_window: 262144
+  output_limit: 65536
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-07-23'
+  tags:
+  - open_weights
+  - free
+- id: openai/gpt-oss-20b
+  name: GPT OSS 20B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following workloads
+  context_window: 131072
+  output_limit: 32768
+  pricing:
+    free: true
+  open_weights: true
+  release_date: '2025-08-05'
+  tags:
+  - reasoning
+  - open_weights
+  - free

@@ -1,0 +1,38 @@
+name: Zeldoc
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://docs.zeldoc.ai
+  env_var: ZELDOC_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://docs.zeldoc.ai
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.zeldoc.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 1
+  listed_models: 1
+models:
+- id: z-code
+  name: Z-Code
+  description: Coding model for repository understanding, refactors, and agentic engineering tasks
+  context_window: 1000000
+  output_limit: 131072
+  pricing:
+    free: true
+  structured_output: true
+  release_date: '2026-04-15'
+  tags:
+  - reasoning
+  - long_context
+  - free
