@@ -54,6 +54,7 @@ docs/provider-schema.md
 docs/capability-schema.md
 docs/model-schema.md
 docs/api-styles.md
+docs/maintenance.md
 
 ## External Provider llms.txt
 - https://platform.kimi.ai/docs/llms.txt

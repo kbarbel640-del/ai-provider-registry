@@ -13,6 +13,21 @@ A **static, data-only registry** of AI providers, models, and capabilities — p
 - **Regenerate the OSINT tree**: `python3 split_osint_providers.py` — **not runnable in this repo as-is**: it reads source YAML from hardcoded local paths (`/home/ckmaenn/Desktop/PRIV8_DBs/mcp_osint/providers.yaml` and `dork_templates.yaml`) that are not checked in. The committed `osint-providers/` files are its output. Edit the per-file YAMLs directly for corrections; only rerun the script if you have the source files locally.
 - **Preview the site locally**: `python3 -m http.server 8000` then open `http://localhost:8000` (the `<base>` tag points to the Pages URL, so relative links work best against the deployed site, not localhost).
 
+## Validating consistency
+
+The registry is hand-maintained and redundant across `registry.json`, `llms.txt`,
+and `index.html` (including hardcoded stat counts). Before committing any change to
+`providers/`, `models/`, `capabilities/`, `registry.json`, `llms.txt`, or
+`index.html`, run:
+
+    python3 validate_registry.py -v   # exit 1 if anything is out of sync
+
+It cross-checks the directories against all three index files, the three stat
+counters, and the free-tier badges (`.github/workflows/validate.yml` runs the same
+check on every push/PR, so a desynced commit fails CI regardless of who pushed).
+Full step-by-step for adding a provider / model family / capability:
+`docs/maintenance.md`.
+
 ## Architecture
 
 ### Four parallel data axes, each a directory of YAML files
