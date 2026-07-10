@@ -127,9 +127,14 @@ def check_providers() -> None:
 
 def check_free_flags(fs: set[str], html: str, reg: dict) -> None:
     reg_free = {p.get("id"): p.get("free") for p in reg.get("providers", [])}
-    # Badges aus index.html: <a href="providers/x.yaml">..</a> ... free tier: yes/no
-    badge = dict(re.findall(
-        r'providers/([\w.-]+)\.yaml.*?free tier:\s*(yes|no)', html))
+    # Badges aus index.html je <li>-Block auslesen (unabhaengig vom Zeilen-Layout:
+    # ein Provider-Link + ein "free tier"-Badge pro Listeneintrag).
+    badge: dict[str, str] = {}
+    for li in re.findall(r'<li>.*?</li>', html, re.DOTALL):
+        m_name = re.search(r'providers/([\w.-]+)\.yaml', li)
+        m_free = re.search(r'free tier:\s*(yes|no)', li)
+        if m_name and m_free:
+            badge[m_name.group(1)] = m_free.group(1)
     mismatch = 0
     for name in sorted(fs):
         y = yaml.safe_load((ROOT / "providers" / f"{name}.yaml").read_text("utf-8"))

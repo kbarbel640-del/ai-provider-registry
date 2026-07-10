@@ -1,0 +1,22 @@
+name: Validate registry
+
+# Serverseitiges Gate: prueft bei jedem Push/PR, ob das Registry synchron ist.
+# Greift unabhaengig davon, von welcher Maschine oder welchem Agenten gepusht
+# wird — anders als ein lokaler pre-commit-Hook, den jeder Klon selbst braucht.
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pyyaml
+        run: pip install pyyaml
+      - name: Run consistency validator
+        run: python3 validate_registry.py -v
