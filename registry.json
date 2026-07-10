@@ -11,28 +11,416 @@
     "osint_registry_json": "https://kbarbel640-del.github.io/ai-provider-registry/osint-providers/osint-registry.json"
   },
   "providers": [
-    {"id": "openai",     "free": false, "api_style": "openai",    "supports": ["chat", "vision", "image", "tools", "json_mode", "streaming", "speech", "moderation", "embeddings"], "api_spec": "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml"},
-    {"id": "anthropic",  "free": false, "api_style": "anthropic", "supports": ["chat", "vision", "tools", "json_mode", "streaming"], "api_spec": "https://raw.githubusercontent.com/api-evangelist/anthropic/refs/heads/main/openapi/anthropic-messages-api-openapi.yml"},
-    {"id": "groq",       "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "json_mode", "streaming", "vision"], "api_spec": "https://storage.googleapis.com/stainless-sdk-openapi-specs/groqcloud/groqcloud-debd965baa031e12228c41e538741fa6055bf2813bcd062840a19f84a17cea95.yml"},
-    {"id": "mistral",    "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "json_mode", "streaming", "vision", "embeddings", "code"], "api_spec": "https://raw.githubusercontent.com/mistralai/platform-docs-public/main/openapi.yaml"},
-    {"id": "nvidia",     "free": true,  "api_style": "openai",    "supports": ["chat", "vision", "tools", "streaming", "json_mode", "image"], "api_spec": "api-specs/nvidia.md"},
-    {"id": "google",     "free": true,  "api_style": "google",    "supports": ["chat", "vision", "tools", "json_mode", "streaming", "embeddings"], "api_spec": "https://generativelanguage.googleapis.com/$discovery/rest?version=v1beta"},
-    {"id": "openrouter", "free": true,  "api_style": "openai",    "supports": ["chat", "vision", "tools", "json_mode", "streaming", "image"], "api_spec": "https://openrouter.ai/openapi.yaml"},
-    {"id": "together",   "free": true,  "api_style": "openai",    "supports": ["chat", "vision", "tools", "json_mode", "streaming", "image", "embeddings"], "api_spec": "https://docs.together.ai/openapi.yaml"},
-    {"id": "deepseek",   "free": false, "api_style": "openai",    "supports": ["chat", "tools", "json_mode", "streaming", "vision"], "api_spec": "https://raw.githubusercontent.com/api-evangelist/deepseek/main/openapi/deepseek-chat-completion-api-openapi.yml"},
-    {"id": "cohere",     "free": true,  "api_style": "cohere",    "supports": ["chat", "tools", "streaming", "embeddings", "rerank", "classification"], "api_spec": "https://raw.githubusercontent.com/cohere-ai/cohere-developer-experience/main/cohere-openapi.yaml"},
-    {"id": "cerebras",   "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "json_mode", "streaming"], "api_spec": "https://storage.googleapis.com/stainless-sdk-openapi-specs/cerebras/cerebras-cloud-4aaffc73ab32fa03ee756cc294fb940e2060f8c57108d5b479651dcc77db59ee.yml"},
-    {"id": "perplexity",  "free": false, "api_style": "openai",    "supports": ["chat", "streaming", "search"], "api_spec": "https://docs.perplexity.ai/openapi.json"},
-    {"id": "pollinations","free": true,  "api_style": "openai",    "supports": ["chat", "vision", "image", "video", "audio", "embeddings", "streaming", "tools", "realtime"], "api_spec": "https://api.pollination.solutions/openapi.json"},
-    {"id": "kimi",       "free": false, "api_style": "openai",    "supports": ["chat", "vision", "tools", "streaming", "json_mode", "web_search", "file_extraction", "reasoning"], "api_spec": "https://raw.githubusercontent.com/api-evangelist/moonshot-ai/refs/heads/main/openapi/moonshot-ai-openapi.json", "endpoint": "https://api.moonshot.ai/v1", "model_count": 10},
-    {"id": "opencode",    "free": true,  "api_style": "openai",    "supports": ["chat", "tools", "streaming", "json_mode", "reasoning"], "api_spec": "https://opencode.ai/openapi.json", "endpoint": "https://opencode.ai/zen/v1", "model_count": 44},
-    {"id": "opencode-go", "free": false, "api_style": "openai",    "supports": ["chat", "tools", "streaming", "json_mode", "reasoning"], "api_spec": "https://opencode.ai/openapi.json"},
-    {"id": "zai",         "free": true,  "api_style": "openai",    "supports": ["chat", "vision", "image", "video", "audio", "tools", "streaming", "json_mode", "reasoning", "web_search"], "api_spec": "https://docs.z.ai/openapi.json", "endpoint": "https://api.z.ai/api/paas/v4", "model_count": 28},
-    {"id": "huggingface", "free": true,  "api_style": "openai",    "supports": ["chat", "vision", "image", "video", "audio", "embeddings", "tools", "streaming", "json_mode", "reasoning"], "endpoint": "https://router.huggingface.co/v1", "model_count": 122, "note": "router/proxy to 17+ backend providers; no public OpenAPI spec; free tier is monthly credits, no $0 models"}
+    {
+      "id": "openai",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "image",
+        "tools",
+        "json_mode",
+        "streaming",
+        "speech",
+        "moderation",
+        "embeddings"
+      ],
+      "api_spec": "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml"
+    },
+    {
+      "id": "anthropic",
+      "free": false,
+      "api_style": "anthropic",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming"
+      ],
+      "api_spec": "https://raw.githubusercontent.com/api-evangelist/anthropic/refs/heads/main/openapi/anthropic-messages-api-openapi.yml"
+    },
+    {
+      "id": "groq",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "json_mode",
+        "streaming",
+        "vision"
+      ],
+      "api_spec": "https://storage.googleapis.com/stainless-sdk-openapi-specs/groqcloud/groqcloud-debd965baa031e12228c41e538741fa6055bf2813bcd062840a19f84a17cea95.yml"
+    },
+    {
+      "id": "mistral",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "json_mode",
+        "streaming",
+        "vision",
+        "embeddings",
+        "code"
+      ],
+      "api_spec": "https://raw.githubusercontent.com/mistralai/platform-docs-public/main/openapi.yaml"
+    },
+    {
+      "id": "nvidia",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "streaming",
+        "json_mode",
+        "image"
+      ],
+      "api_spec": "api-specs/nvidia.md"
+    },
+    {
+      "id": "google",
+      "free": true,
+      "api_style": "google",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "embeddings"
+      ],
+      "api_spec": "https://generativelanguage.googleapis.com/$discovery/rest?version=v1beta"
+    },
+    {
+      "id": "openrouter",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "image"
+      ],
+      "api_spec": "https://openrouter.ai/openapi.yaml"
+    },
+    {
+      "id": "together",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "image",
+        "embeddings"
+      ],
+      "api_spec": "https://docs.together.ai/openapi.yaml"
+    },
+    {
+      "id": "deepseek",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "json_mode",
+        "streaming",
+        "vision"
+      ],
+      "api_spec": "https://raw.githubusercontent.com/api-evangelist/deepseek/main/openapi/deepseek-chat-completion-api-openapi.yml"
+    },
+    {
+      "id": "cohere",
+      "free": true,
+      "api_style": "cohere",
+      "supports": [
+        "chat",
+        "tools",
+        "streaming",
+        "embeddings",
+        "rerank",
+        "classification"
+      ],
+      "api_spec": "https://raw.githubusercontent.com/cohere-ai/cohere-developer-experience/main/cohere-openapi.yaml"
+    },
+    {
+      "id": "cerebras",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "json_mode",
+        "streaming"
+      ],
+      "api_spec": "https://storage.googleapis.com/stainless-sdk-openapi-specs/cerebras/cerebras-cloud-4aaffc73ab32fa03ee756cc294fb940e2060f8c57108d5b479651dcc77db59ee.yml"
+    },
+    {
+      "id": "perplexity",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "streaming",
+        "search"
+      ],
+      "api_spec": "https://docs.perplexity.ai/openapi.json"
+    },
+    {
+      "id": "pollinations",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "image",
+        "video",
+        "audio",
+        "embeddings",
+        "streaming",
+        "tools",
+        "realtime"
+      ],
+      "api_spec": "https://api.pollination.solutions/openapi.json"
+    },
+    {
+      "id": "kimi",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "streaming",
+        "json_mode",
+        "web_search",
+        "file_extraction",
+        "reasoning"
+      ],
+      "api_spec": "https://raw.githubusercontent.com/api-evangelist/moonshot-ai/refs/heads/main/openapi/moonshot-ai-openapi.json",
+      "endpoint": "https://api.moonshot.ai/v1",
+      "model_count": 10
+    },
+    {
+      "id": "opencode",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "streaming",
+        "json_mode",
+        "reasoning"
+      ],
+      "api_spec": "https://opencode.ai/openapi.json",
+      "endpoint": "https://opencode.ai/zen/v1",
+      "model_count": 44
+    },
+    {
+      "id": "opencode-go",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "streaming",
+        "json_mode",
+        "reasoning"
+      ],
+      "api_spec": "https://opencode.ai/openapi.json"
+    },
+    {
+      "id": "zai",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "image",
+        "video",
+        "audio",
+        "tools",
+        "streaming",
+        "json_mode",
+        "reasoning",
+        "web_search"
+      ],
+      "api_spec": "https://docs.z.ai/openapi.json",
+      "endpoint": "https://api.z.ai/api/paas/v4",
+      "model_count": 28
+    },
+    {
+      "id": "huggingface",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "image",
+        "video",
+        "audio",
+        "embeddings",
+        "tools",
+        "streaming",
+        "json_mode",
+        "reasoning"
+      ],
+      "endpoint": "https://router.huggingface.co/v1",
+      "model_count": 122,
+      "note": "router/proxy to 17+ backend providers; no public OpenAPI spec; free tier is monthly credits, no $0 models"
+    },
+    {
+      "id": "xai",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "image",
+        "tools",
+        "json_mode",
+        "reasoning",
+        "streaming"
+      ],
+      "endpoint": "https://api.x.ai/v1",
+      "model_count": 9
+    },
+    {
+      "id": "deepinfra",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "reasoning",
+        "streaming"
+      ],
+      "endpoint": "https://api.deepinfra.com/v1",
+      "model_count": 40
+    },
+    {
+      "id": "fireworks",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "reasoning",
+        "streaming"
+      ],
+      "endpoint": "https://api.fireworks.ai/inference/v1/",
+      "model_count": 16
+    },
+    {
+      "id": "novita",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "reasoning",
+        "streaming"
+      ],
+      "endpoint": "https://api.novita.ai/openai",
+      "model_count": 105
+    },
+    {
+      "id": "siliconflow",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "reasoning",
+        "streaming"
+      ],
+      "endpoint": "https://api.siliconflow.com/v1",
+      "model_count": 49
+    },
+    {
+      "id": "github-models",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "reasoning",
+        "streaming"
+      ],
+      "endpoint": "https://models.github.ai/inference",
+      "model_count": 55
+    },
+    {
+      "id": "poe",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "image",
+        "audio",
+        "tools",
+        "json_mode",
+        "reasoning",
+        "streaming"
+      ],
+      "endpoint": "https://api.poe.com/v1",
+      "model_count": 137
+    },
+    {
+      "id": "minimax",
+      "free": false,
+      "api_style": "anthropic",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "reasoning",
+        "streaming"
+      ],
+      "endpoint": "https://api.minimax.io/anthropic/v1",
+      "model_count": 7
+    }
   ],
   "capabilities": [
-    "chat", "vision", "image", "tools", "streaming", "json_mode",
-    "embeddings", "rerank", "speech", "moderation", "search", "video", "audio",
-    "realtime", "reasoning", "web_search", "file_extraction"
+    "chat",
+    "vision",
+    "image",
+    "tools",
+    "streaming",
+    "json_mode",
+    "embeddings",
+    "rerank",
+    "speech",
+    "moderation",
+    "search",
+    "video",
+    "audio",
+    "realtime",
+    "reasoning",
+    "web_search",
+    "file_extraction"
   ]
 }

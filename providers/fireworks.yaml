@@ -1,0 +1,235 @@
+name: Fireworks AI
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: 'Bearer '
+  env_var: FIREWORKS_API_KEY
+  doc_url: https://fireworks.ai/docs/
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://fireworks.ai/docs/
+  free_basis: no $0 model in models.dev (free tier, if any, not reflected)
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.fireworks.ai/inference/v1/
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 16
+  listed_models: 14
+models:
+- id: accounts/fireworks/routers/glm-5p2-fast
+  name: GLM 5.2 Fast
+  description: Efficient GLM model for fast reasoning, coding, and agent workflows
+  context_window: 1048575
+  output_limit: 131072
+  pricing:
+    input: 2.1
+    cached_read: 0.21
+    output: 6.6
+  open_weights: true
+  release_date: '2026-06-26'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: accounts/fireworks/models/glm-5p2
+  name: GLM 5.2
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 1048575
+  output_limit: 131072
+  pricing:
+    input: 1.4
+    cached_read: 0.14
+    output: 4.4
+  open_weights: true
+  release_date: '2026-06-16'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: accounts/fireworks/models/deepseek-v4-flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    input: 0.14
+    cached_read: 0.028
+    output: 0.28
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+  - low_cost
+- id: accounts/fireworks/models/deepseek-v4-pro
+  name: DeepSeek V4 Pro
+  description: Open MoE flagship with million-token context for coding and long agent runs
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    input: 1.74
+    cached_read: 0.145
+    output: 3.48
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: accounts/fireworks/models/minimax-m3
+  name: MiniMax-M3
+  description: MiniMax multimodal coding model for long-context reasoning and agent tasks
+  context_window: 512000
+  output_limit: 512000
+  pricing:
+    input: 0.3
+    cached_read: 0.06
+    output: 1.2
+  open_weights: true
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+  - long_context
+- id: accounts/fireworks/models/qwen3p7-plus
+  name: Qwen 3.7 Plus
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 262144
+  output_limit: 65536
+  pricing:
+    input: 0.4
+    cached_read: 0.08
+    output: 1.6
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - reasoning
+- id: accounts/fireworks/routers/kimi-k2p6-turbo
+  name: Kimi K2.6 Turbo
+  description: Kimi reasoning model for long-horizon research, planning, and tool use
+  context_window: 262000
+  output_limit: 262000
+  pricing:
+    input: 2
+    cached_read: 0.3
+    output: 8
+  open_weights: true
+  release_date: '2026-04-17'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: accounts/fireworks/routers/kimi-k2p7-code-fast
+  name: Kimi K2.7 Code Fast
+  description: Kimi coding model for software agents, refactors, and repository reasoning
+  context_window: 262000
+  output_limit: 262000
+  pricing:
+    input: 1.9
+    cached_read: 0.38
+    output: 8
+  open_weights: true
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: accounts/fireworks/routers/kimi-k2p6-fast
+  name: Kimi K2.6 Fast
+  description: Kimi reasoning model for long-horizon research, planning, and tool use
+  context_window: 262000
+  output_limit: 262000
+  pricing:
+    input: 2
+    cached_read: 0.3
+    output: 8
+  open_weights: true
+  release_date: '2026-04-17'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: accounts/fireworks/models/kimi-k2p6
+  name: Kimi K2.6
+  description: Kimi reasoning model for long-horizon research, planning, and tool use
+  context_window: 262000
+  output_limit: 262000
+  pricing:
+    input: 0.95
+    cached_read: 0.16
+    output: 4
+  open_weights: true
+  release_date: '2026-04-17'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: accounts/fireworks/models/kimi-k2p7-code
+  name: Kimi K2.7 Code
+  description: Kimi coding model for software agents, refactors, and repository reasoning
+  context_window: 262000
+  output_limit: 262000
+  pricing:
+    input: 0.95
+    cached_read: 0.19
+    output: 4
+  open_weights: true
+  release_date: '2026-06-12'
+  tags:
+  - vision
+  - reasoning
+  - open_weights
+- id: accounts/fireworks/routers/glm-5p1-fast
+  name: GLM 5.1 Fast
+  description: Efficient GLM model for fast reasoning, coding, and agent workflows
+  context_window: 202800
+  output_limit: 131072
+  pricing:
+    input: 2.8
+    cached_read: 0.52
+    output: 8.8
+  open_weights: true
+  release_date: '2026-04-01'
+  tags:
+  - reasoning
+  - open_weights
+- id: accounts/fireworks/models/glm-5p1
+  name: GLM 5.1
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202800
+  output_limit: 131072
+  pricing:
+    input: 1.4
+    cached_read: 0.26
+    output: 4.4
+  open_weights: true
+  release_date: '2026-04-01'
+  tags:
+  - reasoning
+  - open_weights
+- id: accounts/fireworks/models/minimax-m2p7
+  name: MiniMax-M2.7
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 196608
+  output_limit: 196608
+  pricing:
+    input: 0.3
+    cached_read: 0.06
+    output: 1.2
+  open_weights: true
+  release_date: '2026-04-12'
+  tags:
+  - reasoning
+  - open_weights

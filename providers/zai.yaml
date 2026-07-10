@@ -29,196 +29,211 @@ notes:
   auth_alternative: JWT (HS256, id.secret key format) for higher-security scenarios
   rate_limits_doc: https://z.ai/manage-apikey/rate-limits      # account-tier dependent, behind login
   free_models: [glm-4.7-flash, glm-4.5-flash, glm-4.6v-flash]
+  env_var_alternative: ZHIPU_API_KEY (used by models.dev / ai-sdk npm)
+  source: Kontextfenster + Pricing autoritativ abgegichen gegen models.dev/api.json (Z.ai)
+# ---------------------------------------------------------------------------
+# Text models (chat/reasoning). Per-1M-token pricing unless `free`.
+# ---------------------------------------------------------------------------
 models:
-  # Flagship text models
+  # --- Flagship / long context ---
   - id: glm-5.2
+    name: GLM-5.2
+    description: Open flagship GLM for long-horizon coding agents and million-token context work
     context_window: 1000000
-    pricing:
-      input: 1.40
-      cached_read: 0.26
-      output: 4.40
-    tags: [flagship, reasoning, coding, long_context, multimodal]
+    output_limit: 131072
+    pricing: { input: 1.40, cached_read: 0.26, output: 4.40 }
+    structured_output: true
+    open_weights: true
+    release_date: 2026-06-13
+    tags: [flagship, reasoning, coding, long_context]
     reasoning_effort: [max, xhigh, high, medium, low, minimal, none]
   - id: glm-5.1
+    name: GLM-5.1
+    description: Strong GLM coding model for agentic engineering, terminals, and repository generation
     context_window: 200000
-    pricing:
-      input: 1.40
-      cached_read: 0.26
-      output: 4.40
+    output_limit: 131072
+    pricing: { input: 1.40, cached_read: 0.26, output: 4.40 }
+    structured_output: true
+    open_weights: true
+    release_date: 2026-04-07
     tags: [reasoning, coding]
   - id: glm-5-turbo
+    name: GLM-5-Turbo
+    description: Faster GLM-5 lane for coding agents that need lower latency
     context_window: 200000
-    pricing:
-      input: 1.20
-      cached_read: 0.24
-      output: 4.00
+    output_limit: 131072
+    pricing: { input: 1.20, cached_read: 0.24, output: 4.00 }
+    structured_output: true
+    open_weights: false
+    release_date: 2026-03-16
     tags: [reasoning, fast]
   - id: glm-5
-    context_window: 200000
-    pricing:
-      input: 1.00
-      cached_read: 0.20
-      output: 3.20
+    name: GLM-5
+    description: General GLM flagship for coding, analysis, and tool-heavy engineering workflows
+    context_window: 204800
+    output_limit: 131072
+    pricing: { input: 1.00, cached_read: 0.20, output: 3.20 }
+    open_weights: true
+    release_date: 2026-02-12
     tags: [reasoning]
-  # Mid-tier text models
+  # --- Mid-tier / workhorse ---
   - id: glm-4.7
-    context_window: 200000
-    pricing:
-      input: 0.60
-      cached_read: 0.11
-      output: 2.20
+    name: GLM-4.7
+    description: Mature GLM model for dependable coding, reasoning, and structured agent tasks
+    context_window: 204800
+    output_limit: 131072
+    pricing: { input: 0.60, cached_read: 0.11, output: 2.20 }
+    open_weights: true
+    release_date: 2025-12-22
     tags: [reasoning]
   - id: glm-4.7-flashx
+    name: GLM-4.7-FlashX
+    description: Efficient GLM model for fast reasoning, coding, and agent workflows
     context_window: 200000
-    pricing:
-      input: 0.07
-      cached_read: 0.01
-      output: 0.40
+    output_limit: 131072
+    pricing: { input: 0.07, cached_read: 0.01, output: 0.40 }
+    open_weights: true
+    release_date: 2026-01-19
     tags: [fast, low_cost]
   - id: glm-4.7-flash
+    name: GLM-4.7-Flash
+    description: Budget GLM lane for fast coding help, routing, and everyday automation
     context_window: 200000
-    pricing:
-      free: true
+    output_limit: 131072
+    pricing: { free: true }
+    open_weights: true
+    release_date: 2026-01-19
     tags: [free, fast]
   - id: glm-4.6
-    context_window: 200000
-    pricing:
-      input: 0.60
-      cached_read: 0.11
-      output: 2.20
+    name: GLM-4.6
+    description: Late GLM-4 workhorse for coding agents, reasoning, and structured tasks
+    context_window: 204800
+    output_limit: 131072
+    pricing: { input: 0.60, cached_read: 0.11, output: 2.20 }
+    open_weights: true
+    release_date: 2025-09-30
     tags: [coding]
   - id: glm-4.5
-    context_window: 128000
-    pricing:
-      input: 0.60
-      cached_read: 0.11
-      output: 2.20
+    name: GLM-4.5
+    description: Hybrid-reasoning GLM release that made the 4.5 line broadly useful
+    context_window: 131072
+    output_limit: 98304
+    pricing: { input: 0.60, cached_read: 0.11, output: 2.20 }
+    open_weights: true
+    release_date: 2025-07-28
     tags: [general]
   - id: glm-4.5-x
     context_window: 128000
-    pricing:
-      input: 2.20
-      cached_read: 0.45
-      output: 8.90
+    pricing: { input: 2.20, cached_read: 0.45, output: 8.90 }
     tags: [high_throughput]
   - id: glm-4.5-air
-    context_window: 128000
-    pricing:
-      input: 0.20
-      cached_read: 0.03
-      output: 1.10
+    name: GLM-4.5-Air
+    description: Lighter GLM-4.5 variant for fast coding assistance and cheaper agents
+    context_window: 131072
+    output_limit: 98304
+    pricing: { input: 0.20, cached_read: 0.03, output: 1.10 }
+    open_weights: true
+    release_date: 2025-07-28
     tags: [low_cost]
   - id: glm-4.5-airx
     context_window: 128000
-    pricing:
-      input: 1.10
-      cached_read: 0.22
-      output: 4.50
+    pricing: { input: 1.10, cached_read: 0.22, output: 4.50 }
     tags: [high_throughput, low_cost]
   - id: glm-4.5-flash
-    context_window: 128000
-    pricing:
-      free: true
+    name: GLM-4.5-Flash
+    description: Efficient GLM model for fast reasoning, coding, and agent workflows
+    context_window: 131072
+    output_limit: 98304
+    pricing: { free: true }
+    open_weights: true
+    release_date: 2025-07-28
     tags: [free]
   - id: glm-4-32b-0414-128k
     context_window: 128000
-    pricing:
-      input: 0.10
-      output: 0.10
+    pricing: { input: 0.10, output: 0.10 }
     tags: [open_weight, generation]
-  # Vision models
+  # --- Vision models (text+image+video input) ---
   - id: glm-5v-turbo
+    name: GLM-5V-Turbo
+    description: Fast GLM vision model for screenshots, documents, and multimodal agent tasks
     context_window: 200000
-    pricing:
-      input: 1.20
-      cached_read: 0.24
-      output: 4.00
+    output_limit: 131072
+    pricing: { input: 1.20, cached_read: 0.24, output: 4.00 }
+    open_weights: false
+    release_date: 2026-04-01
     tags: [vision, coding, multimodal]
   - id: glm-4.6v
-    context_window: 131072
-    pricing:
-      input: 0.30
-      cached_read: 0.05
-      output: 0.90
+    name: GLM-4.6V
+    description: GLM vision model for visual reasoning, documents, and multimodal agents
+    context_window: 128000
+    output_limit: 32768
+    pricing: { input: 0.30, cached_read: 0.05, output: 0.90 }
+    open_weights: true
+    release_date: 2025-12-08
     tags: [vision]
   - id: glm-4.6v-flashx
     context_window: 131072
-    pricing:
-      input: 0.04
-      cached_read: 0.004
-      output: 0.40
+    pricing: { input: 0.04, cached_read: 0.004, output: 0.40 }
     tags: [vision, fast]
   - id: glm-4.6v-flash
     context_window: 131072
-    pricing:
-      free: true
+    pricing: { free: true }
     tags: [vision, free]
   - id: glm-4.5v
-    context_window: 65536
-    pricing:
-      input: 0.60
-      cached_read: 0.11
-      output: 1.80
+    name: GLM-4.5V
+    description: GLM vision model for visual reasoning, documents, and multimodal agents
+    context_window: 64000
+    output_limit: 16384
+    pricing: { input: 0.60, output: 1.80 }
+    open_weights: true
+    release_date: 2025-08-11
     tags: [vision]
   - id: glm-ocr
     context_window: 131072
-    pricing:
-      input: 0.03
-      output: 0.03
+    pricing: { input: 0.03, output: 0.03 }
     tags: [vision, ocr]
-  # Non-chat modalities (priced per unit, not per-token)
+  # --- Non-chat modalities (per unit / per-MTok, not per-token chat) ---
   - id: glm-image
     modality: image
-    pricing:
-      per_unit: 0.015
+    pricing: { per_unit: 0.015 }
     tags: [image_generation]
   - id: cogview-4
     modality: image
-    pricing:
-      per_unit: 0.01
+    pricing: { per_unit: 0.01 }
     tags: [image_generation]
   - id: cogvideox-3
     modality: video
-    pricing:
-      per_unit: 0.20
+    pricing: { per_unit: 0.20 }
     tags: [video_generation]
   - id: vidu2-image
     modality: video
-    pricing:
-      per_unit: 0.20
+    pricing: { per_unit: 0.20 }
     tags: [video_generation]
   - id: vidu2-start-end
     modality: video
-    pricing:
-      per_unit: 0.20
+    pricing: { per_unit: 0.20 }
     tags: [video_generation]
   - id: vidu2-reference
     modality: video
-    pricing:
-      per_unit: 0.40
+    pricing: { per_unit: 0.40 }
     tags: [video_generation]
   - id: viduq1-text
     modality: video
-    pricing:
-      per_unit: 0.40
+    pricing: { per_unit: 0.40 }
     tags: [video_generation]
   - id: viduq1-image
     modality: video
-    pricing:
-      per_unit: 0.40
+    pricing: { per_unit: 0.40 }
     tags: [video_generation]
   - id: viduq1-start-end
     modality: video
-    pricing:
-      per_unit: 0.40
+    pricing: { per_unit: 0.40 }
     tags: [video_generation]
   - id: glm-asr-2512
     modality: audio
-    pricing:
-      per_mtok: 0.03
+    pricing: { per_mtok: 0.03 }
     tags: [speech_to_text]
   - id: web_search
     modality: tool
-    pricing:
-      per_use: 0.01
+    pricing: { per_use: 0.01 }
     tags: [builtin_tool]

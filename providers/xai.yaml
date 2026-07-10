@@ -1,0 +1,140 @@
+name: xAI
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: 'Bearer '
+  env_var: XAI_API_KEY
+  doc_url: https://docs.x.ai/docs/models
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.x.ai/docs/models
+  free_basis: no $0 model in models.dev (free tier, if any, not reflected)
+supports:
+- chat
+- vision
+- image
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.x.ai/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 9
+  listed_models: 9
+models:
+- id: grok-4.20-multi-agent-0309
+  name: Grok 4.20 Multi-Agent
+  description: Grok model for agentic tool use, reasoning, coding, and live assistance
+  context_window: 1000000
+  output_limit: 30000
+  pricing:
+    input: 1.25
+    cached_read: 0.2
+    output: 2.5
+  structured_output: true
+  release_date: '2026-03-09'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: grok-4.20-0309-non-reasoning
+  name: Grok 4.20 (Non-Reasoning)
+  description: Grok model for agentic tool use, reasoning, coding, and live assistance
+  context_window: 1000000
+  output_limit: 30000
+  pricing:
+    input: 1.25
+    cached_read: 0.2
+    output: 2.5
+  structured_output: true
+  release_date: '2026-03-09'
+  tags:
+  - vision
+  - long_context
+- id: grok-4.3
+  name: Grok 4.3
+  description: xAI's Grok for chat, coding, agentic tools, and lower hallucination risk
+  context_window: 1000000
+  output_limit: 30000
+  pricing:
+    input: 1.25
+    cached_read: 0.2
+    output: 2.5
+  structured_output: true
+  release_date: '2026-04-17'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: grok-4.20-0309-reasoning
+  name: Grok 4.20 (Reasoning)
+  description: Reasoning Grok for document-heavy analysis and long-horizon tool use
+  context_window: 1000000
+  output_limit: 30000
+  pricing:
+    input: 1.25
+    cached_read: 0.2
+    output: 2.5
+  structured_output: true
+  release_date: '2026-03-09'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: grok-4.5
+  name: Grok 4.5
+  description: xAI's latest Grok for chat, coding, agentic tools, and lower hallucination risk
+  context_window: 500000
+  output_limit: 500000
+  pricing:
+    input: 2
+    cached_read: 0.5
+    output: 6
+  structured_output: true
+  release_date: '2026-07-08'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: grok-build-0.1
+  name: Grok Build 0.1
+  description: Fast Grok coding model tuned for agentic engineering and iterative edits
+  context_window: 256000
+  output_limit: 256000
+  pricing:
+    input: 1
+    cached_read: 0.2
+    output: 2
+  structured_output: true
+  release_date: '2026-04-16'
+  tags:
+  - vision
+  - reasoning
+- id: grok-imagine-image-quality
+  name: Grok Imagine Image Quality
+  description: Image model for prompt-driven generation, editing, and visual design workflows
+  context_window: 8000
+  pricing: {}
+  release_date: '2026-04-03'
+  tags:
+  - vision
+- id: grok-imagine-image
+  name: Grok Imagine Image
+  description: Image model for prompt-driven generation, editing, and visual design workflows
+  context_window: 8000
+  pricing: {}
+  release_date: '2026-01-28'
+  tags:
+  - vision
+- id: grok-imagine-video
+  name: Grok Imagine Video
+  description: Image model for prompt-driven generation, editing, and visual design workflows
+  context_window: 1024
+  pricing: {}
+  release_date: '2026-01-28'
+  tags:
+  - vision
+  - multimodal

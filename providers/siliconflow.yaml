@@ -1,0 +1,211 @@
+name: SiliconFlow
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: 'Bearer '
+  env_var: SILICONFLOW_API_KEY
+  doc_url: https://cloud.siliconflow.com/models
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://cloud.siliconflow.com/models
+  free_basis: no $0 model in models.dev (free tier, if any, not reflected)
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.siliconflow.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 49
+  listed_models: 14
+models:
+- id: zai-org/GLM-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context work
+  context_window: 1049000
+  output_limit: 262000
+  pricing:
+    input: 1.4
+    output: 4.4
+  open_weights: true
+  structured_output: true
+  release_date: '2026-06-13'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: deepseek-ai/DeepSeek-V4-Flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    input: 0.14
+    cached_read: 0.028
+    output: 0.28
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+  - low_cost
+- id: deepseek-ai/DeepSeek-V4-Pro
+  name: DeepSeek V4 Pro
+  description: Open MoE flagship with million-token context for coding and long agent runs
+  context_window: 1000000
+  output_limit: 384000
+  pricing:
+    input: 1.74
+    cached_read: 0.145
+    output: 3.48
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-24'
+  tags:
+  - reasoning
+  - open_weights
+  - long_context
+- id: google/gemma-4-31B-it
+  name: Gemma 4 31B IT
+  description: Largest Gemma 4 instruction model for open, self-hosted chat and reasoning
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.13
+    output: 0.4
+  structured_output: true
+  release_date: '2026-04-02'
+  tags:
+  - low_cost
+- id: google/gemma-4-26B-A4B-it
+  name: Gemma 4 26B A4B IT
+  description: Open Gemma instruction model for efficient chat and self-hosted deployments
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.12
+    output: 0.4
+  structured_output: true
+  release_date: '2026-04-02'
+  tags:
+  - low_cost
+- id: Qwen/Qwen3.6-35B-A3B
+  name: Qwen3.6 35B-A3B
+  description: Open multimodal Qwen MoE for local agents that need vision, audio, and code
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.2
+    output: 1.6
+  structured_output: true
+  release_date: '2026-04-17'
+  tags:
+  - general
+- id: Qwen/Qwen3.6-27B
+  name: Qwen3.6 27B
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.3
+    output: 3.2
+  structured_output: true
+  release_date: '2026-04-22'
+  tags:
+  - general
+- id: Qwen/Qwen3.5-397B-A17B
+  name: Qwen3.5 397B-A17B
+  description: Large open Qwen multimodal MoE for visual agents and long technical tasks
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.39
+    output: 2.34
+  structured_output: true
+  release_date: '2026-02-15'
+  tags:
+  - general
+- id: Qwen/Qwen3.5-122B-A10B
+  name: Qwen3.5 122B-A10B
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.26
+    output: 2.08
+  structured_output: true
+  release_date: '2026-02-23'
+  tags:
+  - general
+- id: Qwen/Qwen3.5-27B
+  name: Qwen3.5 27B
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.25
+    output: 2
+  structured_output: true
+  release_date: '2026-02-23'
+  tags:
+  - general
+- id: Qwen/Qwen3.5-9B
+  name: Qwen/Qwen3.5-9B
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.1
+    output: 0.15
+  structured_output: true
+  release_date: '2026-03-03'
+  tags:
+  - low_cost
+- id: Qwen/Qwen3.5-35B-A3B
+  name: Qwen3.5 35B-A3B
+  description: Qwen vision-language model for visual reasoning, documents, and agent tasks
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.24
+    output: 1.8
+  structured_output: true
+  release_date: '2026-02-23'
+  tags:
+  - general
+- id: tencent/Hy3-preview
+  name: Hy3 preview
+  description: Tencent Hy reasoning model for coding, instruction following, and agent tasks
+  context_window: 262144
+  output_limit: 262144
+  pricing:
+    input: 0.066
+    cached_read: 0.029
+    output: 0.26
+  release_date: '2026-04-20'
+  tags:
+  - reasoning
+  - low_cost
+- id: moonshotai/Kimi-K2.6
+  name: moonshotai/Kimi-K2.6
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262000
+  output_limit: 262000
+  pricing:
+    input: 0.77
+    cached_read: 0.2
+    output: 4
+  open_weights: true
+  structured_output: true
+  release_date: '2026-04-21'
+  tags:
+  - vision
+  - reasoning
+  - open_weights

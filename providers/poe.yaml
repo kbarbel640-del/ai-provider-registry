@@ -1,0 +1,220 @@
+name: Poe
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: 'Bearer '
+  env_var: POE_API_KEY
+  doc_url: https://creator.poe.com/docs/external-applications/openai-compatible-api
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://creator.poe.com/docs/external-applications/openai-compatible-api
+  free_basis: $0 model present in models.dev
+supports:
+- chat
+- vision
+- image
+- audio
+- tools
+- json_mode
+- reasoning
+- streaming
+endpoint: https://api.poe.com/v1
+notes:
+  source: generated from https://models.dev/api.json
+  model_catalog_size: 137
+  listed_models: 14
+models:
+- id: xai/grok-4.1-fast-reasoning
+  name: Grok-4.1-Fast-Reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 30000
+  pricing: {}
+  release_date: '2025-11-19'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: xai/grok-4.1-fast-non-reasoning
+  name: Grok-4.1-Fast-Non-Reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 30000
+  pricing: {}
+  release_date: '2025-11-19'
+  tags:
+  - vision
+  - long_context
+- id: xai/grok-4-fast-reasoning
+  name: Grok-4-Fast-Reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 128000
+  pricing:
+    input: 0.2
+    cached_read: 0.05
+    output: 0.5
+  release_date: '2025-09-16'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: xai/grok-4-fast-non-reasoning
+  name: Grok-4-Fast-Non-Reasoning
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 2000000
+  output_limit: 128000
+  pricing:
+    input: 0.2
+    cached_read: 0.05
+    output: 0.5
+  release_date: '2025-09-16'
+  tags:
+  - vision
+  - long_context
+- id: google/gemini-2.5-pro
+  name: Gemini-2.5-Pro
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1065535
+  output_limit: 65535
+  pricing:
+    input: 0.87
+    cached_read: 0.087
+    output: 7
+  release_date: '2025-02-05'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: google/gemini-2.5-flash
+  name: Gemini-2.5-Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1065535
+  output_limit: 65535
+  pricing:
+    input: 0.21
+    cached_read: 0.021
+    output: 1.8
+  release_date: '2025-04-26'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: openai/gpt-5.4
+  name: GPT-5.4
+  description: Image model for prompt-driven generation, editing, and visual design workflows
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 2.2
+    cached_read: 0.22
+    output: 14
+  release_date: '2026-02-26'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: openai/gpt-5.4-pro
+  name: GPT-5.4-Pro
+  description: Image model for prompt-driven generation, editing, and visual design workflows
+  context_window: 1050000
+  output_limit: 128000
+  pricing:
+    input: 27
+    output: 160
+  release_date: '2026-03-05'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: google/gemini-3.1-flash-lite
+  name: Gemini-3.1-Flash-Lite
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.25
+    output: 1.5
+  release_date: '2026-02-18'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: google/gemini-deep-research
+  name: gemini-deep-research
+  description: Legacy model retained for compatibility with older integrations
+  context_window: 1048576
+  pricing:
+    input: 1.6
+    output: 9.6
+  release_date: '2025-12-11'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: google/gemini-3-flash
+  name: Gemini-3-Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 0.4
+    cached_read: 0.04
+    output: 2.4
+  release_date: '2025-10-07'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: google/gemini-3.5-flash
+  name: Gemini-3.5-Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 1.5152
+    cached_read: 0.1515
+    output: 9.0909
+  structured_output: true
+  release_date: '2026-05-19'
+  tags:
+  - vision
+  - reasoning
+  - long_context
+- id: google/gemini-3-pro
+  name: Gemini-3-Pro
+  description: Legacy model retained for compatibility with older integrations
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 1.6
+    cached_read: 0.16
+    output: 9.6
+  release_date: '2025-10-22'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context
+- id: google/gemini-3.1-pro
+  name: Gemini-3.1-Pro
+  description: Advanced Gemini model for complex reasoning, coding, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  pricing:
+    input: 2
+    cached_read: 0.2
+    output: 12
+  release_date: '2026-02-19'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - long_context

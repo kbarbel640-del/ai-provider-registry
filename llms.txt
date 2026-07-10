@@ -21,6 +21,14 @@ providers/opencode.yaml
 providers/opencode-go.yaml
 providers/zai.yaml
 providers/huggingface.yaml
+providers/xai.yaml
+providers/deepinfra.yaml
+providers/fireworks.yaml
+providers/novita.yaml
+providers/siliconflow.yaml
+providers/github-models.yaml
+providers/poe.yaml
+providers/minimax.yaml
 
 ## Models
 models/llama.yaml
