@@ -19,6 +19,7 @@ supports:
 - json_mode
 - reasoning
 - streaming
+endpoint: https://api.venice.ai/api/v1
 notes:
   source: generated from https://models.dev/api.json
   model_catalog_size: 84

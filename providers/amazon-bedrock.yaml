@@ -17,6 +17,7 @@ supports:
 - json_mode
 - reasoning
 - streaming
+endpoint: https://bedrock-agent-runtime.us-east-2.amazonaws.com/retrieveAndGenerate
 notes:
   source: generated from https://models.dev/api.json
   model_catalog_size: 107

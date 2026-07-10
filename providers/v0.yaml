@@ -17,6 +17,7 @@ supports:
 - tools
 - reasoning
 - streaming
+endpoint: https://api.v0.dev/v1
 notes:
   source: generated from https://models.dev/api.json
   model_catalog_size: 3

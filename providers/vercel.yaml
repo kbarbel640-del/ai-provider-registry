@@ -20,6 +20,7 @@ supports:
 - json_mode
 - reasoning
 - streaming
+endpoint: https://ai-gateway.vercel.sh/v1
 notes:
   source: generated from https://models.dev/api.json
   model_catalog_size: 306

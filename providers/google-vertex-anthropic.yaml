@@ -15,6 +15,7 @@ supports:
 - tools
 - reasoning
 - streaming
+endpoint: https://aiplatform.googleapis.com
 notes:
   source: generated from https://models.dev/api.json
   model_catalog_size: 12
