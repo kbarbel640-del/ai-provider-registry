@@ -1,0 +1,115 @@
+name: Crusoe
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: CRUSOE_API_KEY
+  doc_url: https://docs.crusoecloud.com/managed-inference/overview
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.crusoecloud.com/managed-inference/overview
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - audio
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.inference.crusoecloud.com/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 11
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: DeepSeek-V3-0324
+    family: deepseek
+    context_window: 163840
+    pricing:
+      input: 0.5
+      output: 1.5
+      cached_read: 0.25
+    tags: [tools, open_weights]
+  - id: NVIDIA-Nemotron-3-Nano-30B-A3B
+    family: nemotron
+    context_window: 262144
+    pricing:
+      input: 0.05
+      output: 0.2
+      cached_read: 0.03
+    tags: [reasoning, tools, open_weights]
+  - id: Nemotron-3-Nano-Omni-Reasoning-30B-A3B
+    family: nemotron
+    context_window: 256000
+    pricing:
+      input: 0.3
+      output: 1.83
+      cached_read: 0.3
+    tags: [reasoning, tools, open_weights, vision, audio, multimodal]
+  - id: NVIDIA-Nemotron-3-Super-120B-A12B
+    family: nemotron
+    context_window: 262144
+    pricing:
+      input: 0.3
+      output: 2.4
+      cached_read: 0.15
+    tags: [reasoning, tools, open_weights]
+  - id: gemma-4-31b-it
+    family: gemma
+    context_window: 262144
+    pricing:
+      input: 0.14
+      output: 0.4
+      cached_read: 0.14
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: Qwen3-235B-A22B-Instruct-2507
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.22
+      output: 0.8
+      cached_read: 0.11
+    tags: [tools, open_weights]
+  - id: Llama-3.3-70B-Instruct
+    family: llama
+    context_window: 128000
+    pricing:
+      input: 0.25
+      output: 0.75
+      cached_read: 0.13
+    tags: [tools, open_weights, multimodal]
+  - id: gpt-oss-120b
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.05
+      output: 0.2
+      cached_read: 0.05
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: Kimi-K2.6
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.7
+      output: 3.5
+      cached_read: 0.35
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: GLM-5.1
+    family: glm
+    context_window: 200000
+    pricing:
+      input: 1.2
+      output: 4.4
+      cached_read: 0.25
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: GLM-5.2
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.4
+      output: 4.4
+      cached_read: 0.26
+    tags: [reasoning, tools, json_mode, open_weights]

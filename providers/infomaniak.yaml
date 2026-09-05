@@ -1,0 +1,101 @@
+name: Infomaniak
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: INFOMANIAK_API_KEY
+  doc_url: https://www.infomaniak.com/en/hosting/ai-services/open-source-models
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://www.infomaniak.com/en/hosting/ai-services/open-source-models
+  free_basis: hat $0-Modelle in models.dev
+supports:
+  - chat
+  - vision
+  - audio
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.infomaniak.com/2/ai/${INFOMANIAK_PRODUCT_ID}/openai/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 10
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: bge_multilingual_gemma2
+    family: text-embedding
+    context_window: 8000
+    pricing:
+      input: 0.08
+      output: 0.0
+    tags: [open_weights]
+  - id: mini_lm_l12_v2
+    family: text-embedding
+    context_window: 128
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: Apertus-v1.5-70B
+    context_window: 100000
+    pricing:
+      input: 0.87
+      output: 3.1
+    beta: true
+    tags: [tools, open_weights, vision, audio, multimodal, beta]
+  - id: Mistral-Small-4-119B-2603
+    family: mistral-small
+    context_window: 256000
+    pricing:
+      input: 0.25
+      output: 0.93
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: Ministral-3-14B-Instruct-2512
+    family: ministral
+    context_window: 100000
+    pricing:
+      input: 0.37
+      output: 0.5
+    beta: true
+    tags: [tools, json_mode, open_weights, vision, multimodal, beta]
+  - id: NVIDIA-Nemotron-3-Nano-30B-A3B-FP8
+    family: nemotron
+    context_window: 1000000
+    pricing:
+      input: 0.06
+      output: 0.25
+    beta: true
+    tags: [reasoning, tools, open_weights, beta]
+  - id: gemma-4-31B-it
+    family: gemma
+    context_window: 100000
+    pricing:
+      input: 0.25
+      output: 0.5
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: Qwen3.5-122B-A10B-FP8
+    family: qwen
+    context_window: 200000
+    pricing:
+      input: 0.5
+      output: 3.97
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: Qwen3.5-397B-A17B-FP8
+    family: qwen
+    context_window: 200000
+    pricing:
+      input: 0.99
+      output: 4.46
+    beta: true
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal, beta]
+  - id: Kimi-K2.6
+    family: kimi-k2
+    context_window: 256000
+    pricing:
+      input: 0.74
+      output: 3.72
+    beta: true
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal, beta]

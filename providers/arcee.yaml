@@ -1,0 +1,88 @@
+name: Arcee
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: ARCEE_API_KEY
+  doc_url: https://docs.arcee.ai
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.arcee.ai
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.arcee.ai/api/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 7
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: trinity-large-thinking
+    family: trinity
+    context_window: 262144
+    pricing:
+      input: 0.25
+      output: 0.8
+      cached_read: 0.06
+    beta: true
+    tags: [reasoning, tools, open_weights, beta]
+  - id: glm-5.2
+    family: glm
+    context_window: 262144
+    pricing:
+      input: 1.4
+      output: 4.4
+      cached_read: 0.26
+    beta: true
+    tags: [reasoning, tools, json_mode, open_weights, beta]
+  - id: inkling-small
+    family: ling
+    context_window: 262144
+    pricing:
+      input: 0.5
+      output: 1.2
+      cached_read: 0.1
+    beta: true
+    tags: [reasoning, tools, open_weights, beta]
+  - id: deepseek-v4-pro-0813
+    family: deepseek-thinking
+    context_window: 1048576
+    pricing:
+      input: 1.32
+      output: 3.96
+      cached_read: 0.044
+    beta: true
+    tags: [reasoning, tools, json_mode, open_weights, beta]
+  - id: deepseek-v4-flash-latest
+    family: deepseek-flash
+    context_window: 1048576
+    pricing:
+      input: 0.14
+      output: 0.28
+      cached_read: 0.028
+    beta: true
+    tags: [reasoning, tools, json_mode, open_weights, beta]
+  - id: deepseek-v4-pro
+    family: deepseek-thinking
+    context_window: 512000
+    pricing:
+      input: 1.74
+      output: 3.48
+      cached_read: 0.2
+    beta: true
+    tags: [reasoning, tools, json_mode, open_weights, beta]
+  - id: kimi-k3
+    family: kimi-k3
+    context_window: 1048576
+    pricing:
+      input: 3.0
+      output: 15.0
+      cached_read: 0.3
+    beta: true
+    tags: [reasoning, tools, json_mode, open_weights, beta]

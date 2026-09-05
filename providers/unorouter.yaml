@@ -1,0 +1,187 @@
+name: UnoRouter
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: UNOROUTER_API_KEY
+  doc_url: https://unorouter.com/models
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://unorouter.com/models
+  free_basis: hat $0-Modelle in models.dev
+supports:
+  - chat
+  - vision
+  - audio
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.unorouter.com/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 23
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: deepseek-v4-pro:free
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: minimax-m2.7
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.819
+      output: 3.276
+    tags: [reasoning, tools, open_weights]
+  - id: deepseek-v4-flash:free
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: kimi-k2.6
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 1.2675
+      output: 5.3368
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: glm-5.2
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.6001
+      output: 5.0288
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: qwen3.5-397b-a17b:free
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, audio, multimodal]
+  - id: deepseek-v4-flash
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.0625
+      output: 0.125
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gpt-5.4
+    family: gpt
+    context_window: 1050000
+    pricing:
+      input: 1.8
+      output: 10.8
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gemini-3.5-flash
+    family: gemini-flash
+    context_window: 1048576
+    pricing:
+      input: 0.1857
+      output: 1.1142
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: glm-4.5-flash:free
+    family: glm-flash
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools]
+  - id: claude-haiku-4-5-20251001
+    family: claude-haiku
+    context_window: 200000
+    pricing:
+      input: 1.2
+      output: 6.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: step-3.7-flash:free
+    context_window: 256000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: nemotron-3-ultra-550b-a55b:free
+    family: nemotron
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: gemma-4-31b-it:free
+    family: gemma
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: glm-5.2:free
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: minimax-m2.7:free
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: gpt-5.4:free
+    family: gpt
+    context_window: 1050000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.5:free
+    family: gpt
+    context_window: 1050000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: claude-opus-4-8
+    family: claude-opus
+    context_window: 1000000
+    pricing:
+      input: 0.425
+      output: 2.125
+    tags: [reasoning, tools, vision, multimodal]
+  - id: deepseek-v4-pro
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 0.8999
+      output: 1.7999
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gpt-5.2
+    family: gpt
+    context_window: 400000
+    pricing:
+      input: 1.05
+      output: 8.4
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: claude-sonnet-5
+    family: claude-sonnet
+    context_window: 1000000
+    pricing:
+      input: 1.44
+      output: 7.2
+    tags: [reasoning, tools, vision, multimodal]
+  - id: gpt-5.5
+    family: gpt
+    context_window: 1050000
+    pricing:
+      input: 0.1875
+      output: 1.125
+    tags: [reasoning, tools, json_mode, vision, multimodal]

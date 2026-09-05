@@ -1,0 +1,988 @@
+name: Ofox
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: OFOX_API_KEY
+  doc_url: https://ofox.ai/docs
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://ofox.ai/docs
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - audio
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.ofox.ai/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 114
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: qwen3.7-max
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 2.5
+      output: 7.5
+      cached_read: 0.5
+      cached_write: 3.125
+    tags: [reasoning, tools]
+  - id: qwen3-coder-plus
+    family: qwen
+    context_window: 1048576
+    pricing:
+      input: 1.8
+      output: 9.0
+      cached_read: 0.2
+      cached_write: 1.0
+    tags: [tools]
+  - id: qwen-vl-max
+    family: qwen
+    context_window: 131072
+    pricing:
+      input: 0.23
+      output: 0.58
+      cached_read: 0.046
+    tags: [tools, vision]
+  - id: qwen3-coder-flash
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.5
+      output: 2.5
+      cached_read: 0.06
+      cached_write: 0.27
+    tags: [tools]
+  - id: qwen-max
+    family: qwen
+    context_window: 32768
+    pricing:
+      input: 0.35
+      output: 1.38
+      cached_read: 0.069
+    tags: [tools]
+  - id: qwen3.6-plus
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.5
+      output: 3.0
+      cached_read: 0.05
+      cached_write: 0.625
+    tags: [reasoning, tools, vision, multimodal]
+  - id: qwen3.5-27b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.29
+      output: 2.05
+      cached_read: 0.29
+    tags: [reasoning, tools, json_mode, open_weights, vision, audio, multimodal]
+  - id: qwen3.8-27b
+    family: qwen
+    context_window: 1131072
+    pricing:
+      input: 0.45
+      output: 3.2
+      cached_read: 0.05
+      cached_write: 0.5625
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3.5-35b-a3b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.29
+      output: 1.83
+      cached_read: 0.29
+    tags: [reasoning, tools, json_mode, open_weights, vision, audio, multimodal]
+  - id: qwen-flash
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.022
+      output: 0.22
+      cached_read: 0.0043
+      cached_write: 0.027
+    tags: [reasoning, tools]
+  - id: qwen-turbo
+    family: qwen
+    context_window: 128000
+    pricing:
+      input: 0.05
+      output: 0.09
+      cached_read: 0.0086
+    tags: [tools]
+  - id: qwen3.5-flash
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.1
+      output: 0.4
+      cached_read: 0.01
+      cached_write: 0.125
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: qwen3-coder-next
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.2
+      output: 1.5
+    tags: [tools, json_mode, open_weights]
+  - id: qwen3.5-397b-a17b
+    family: qwen
+    context_window: 256000
+    pricing:
+      input: 0.55
+      output: 3.5
+      cached_read: 0.55
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3.6-27b
+    family: qwen
+    context_window: 256000
+    pricing:
+      input: 0.6
+      output: 3.6
+    tags: [reasoning, tools, json_mode, open_weights, vision, audio, multimodal]
+  - id: qwen3.8-max-0902
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 2.0
+      output: 6.0
+      cached_read: 0.25
+      cached_write: 2.5
+    tags: [reasoning, tools, vision, multimodal]
+  - id: qwen3-max
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.36
+      output: 1.43
+      cached_read: 0.072
+    tags: [reasoning, tools]
+  - id: qwen-plus
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.12
+      output: 0.29
+      cached_read: 0.023
+    tags: [tools]
+  - id: qwen3.5-122b-a10b
+    family: qwen
+    context_window: 256000
+    pricing:
+      input: 0.29
+      output: 2.29
+      cached_read: 0.29
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3.6-flash
+    family: qwen3.6
+    context_window: 1000000
+    pricing:
+      input: 0.25
+      output: 1.5
+      cached_read: 0.025
+      cached_write: 0.31
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: qwen3.6-max-preview
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 2.15
+      output: 12.86
+      cached_read: 0.2
+      cached_write: 1.17
+    tags: [reasoning, tools]
+  - id: qwen3.8-max
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 2.0
+      output: 6.0
+      cached_read: 0.25
+      cached_write: 2.5
+    tags: [reasoning, tools, vision, multimodal]
+  - id: qwen3.7-plus
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.4
+      output: 1.6
+      cached_read: 0.08
+      cached_write: 0.5
+    tags: [reasoning, tools, vision, multimodal]
+  - id: qwen3.5-plus
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.4
+      output: 2.4
+      cached_read: 0.04
+      cached_write: 0.4
+    tags: [reasoning, tools, vision]
+  - id: doubao-seed-2.1-turbo
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.3536
+      output: 1.7696
+      cached_read: 0.068
+      cached_write: 0.0019
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-2.0-mini
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.06
+      output: 0.56
+      cached_read: 0.02
+      cached_write: 0.0024
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-2.1-pro
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.7072
+      output: 3.536
+      cached_read: 0.1416
+      cached_write: 0.002
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-2.0-code
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.67
+      output: 3.36
+      cached_read: 0.14
+      cached_write: 0.0024
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-2.0-pro
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.67
+      output: 3.36
+      cached_read: 0.14
+      cached_write: 0.0024
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-1-8
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.12
+      output: 0.29
+      cached_read: 0.023
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-evolving
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.884
+      output: 4.42
+      cached_read: 0.177
+      cached_write: 0.0025
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-character
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.177
+      output: 0.884
+      cached_read: 0.024
+      cached_write: 0.0025
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-1-6-vision
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.12
+      output: 1.15
+      cached_read: 0.023
+    tags: [tools, json_mode, vision, multimodal]
+  - id: doubao-seed-1-6-flash
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.03
+      output: 0.22
+      cached_read: 0.0043
+    tags: [tools, json_mode, vision, multimodal]
+  - id: doubao-seed-2.0-lite
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.13
+      output: 0.76
+      cached_read: 0.03
+      cached_write: 0.0024
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-1-6
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.12
+      output: 0.29
+      cached_read: 0.023
+    tags: [reasoning, tools, json_mode]
+  - id: minimax-m2.1-lightning
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.3
+      output: 2.4
+      cached_read: 0.03
+      cached_write: 0.375
+    tags: [reasoning, tools, open_weights]
+  - id: minimax-m2.1
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.3
+      output: 1.2
+      cached_read: 0.03
+      cached_write: 0.375
+    tags: [reasoning, tools, open_weights]
+  - id: m2-her
+    family: minimax
+    context_window: 65536
+    pricing:
+      input: 0.3
+      output: 1.2
+    tags: [reasoning, tools]
+  - id: minimax-m2
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.3
+      output: 1.2
+      cached_read: 0.03
+      cached_write: 0.375
+    tags: [reasoning, tools, open_weights]
+  - id: minimax-m2.7-highspeed
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.6
+      output: 2.4
+      cached_read: 0.06
+      cached_write: 0.375
+    tags: [reasoning, tools, open_weights]
+  - id: minimax-m2.7
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.3
+      output: 1.2
+      cached_read: 0.06
+      cached_write: 0.375
+    tags: [reasoning, tools, open_weights]
+  - id: minimax-m2.5
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.3
+      output: 1.2
+      cached_read: 0.03
+      cached_write: 0.375
+    tags: [reasoning, tools, open_weights]
+  - id: minimax-m3
+    family: minimax
+    context_window: 1048576
+    pricing:
+      input: 0.6
+      output: 2.4
+      cached_read: 0.12
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: minimax-m2.5-lightning
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.3
+      output: 2.4
+      cached_read: 0.03
+      cached_write: 0.375
+    tags: [reasoning, tools, open_weights]
+  - id: claude-opus-4.8
+    family: claude-opus
+    context_window: 1000000
+    pricing:
+      input: 5.0
+      output: 25.0
+      cached_read: 0.5
+      cached_write: 6.25
+    tags: [reasoning, tools, vision, multimodal]
+  - id: claude-opus-4.7
+    family: claude-opus
+    context_window: 1000000
+    pricing:
+      input: 5.0
+      output: 25.0
+      cached_read: 0.5
+      cached_write: 6.25
+    tags: [reasoning, tools, vision, multimodal]
+  - id: claude-opus-5
+    family: claude-opus
+    context_window: 1000000
+    pricing:
+      input: 5.0
+      output: 25.0
+      cached_read: 0.5
+      cached_write: 6.25
+    tags: [reasoning, tools, vision, multimodal]
+  - id: claude-sonnet-4.6
+    family: claude-sonnet
+    context_window: 1000000
+    pricing:
+      input: 3.0
+      output: 15.0
+      cached_read: 0.3
+      cached_write: 3.75
+    tags: [reasoning, tools, vision, multimodal]
+  - id: claude-haiku-4.5
+    family: claude-haiku
+    context_window: 200000
+    pricing:
+      input: 1.0
+      output: 5.0
+      cached_read: 0.1
+      cached_write: 1.25
+    tags: [reasoning, tools, vision, multimodal]
+  - id: claude-opus-4.6
+    family: claude-opus
+    context_window: 1000000
+    pricing:
+      input: 5.0
+      output: 25.0
+      cached_read: 0.5
+      cached_write: 6.25
+    tags: [reasoning, tools, vision, multimodal]
+  - id: claude-fable-5
+    family: claude-fable
+    context_window: 1000000
+    pricing:
+      input: 10.0
+      output: 50.0
+      cached_read: 1.0
+      cached_write: 12.5
+    tags: [reasoning, tools, vision, multimodal]
+  - id: claude-sonnet-4.5
+    family: claude-sonnet
+    context_window: 200000
+    pricing:
+      input: 3.0
+      output: 15.0
+      cached_read: 0.3
+      cached_write: 3.75
+    tags: [reasoning, tools, vision, multimodal]
+  - id: claude-opus-4.5
+    family: claude-opus
+    context_window: 200000
+    pricing:
+      input: 5.0
+      output: 25.0
+      cached_read: 0.5
+      cached_write: 6.25
+    tags: [reasoning, tools, vision, multimodal]
+  - id: claude-sonnet-5
+    family: claude-sonnet
+    context_window: 1000000
+    pricing:
+      input: 2.0
+      output: 10.0
+      cached_read: 0.2
+      cached_write: 2.5
+    tags: [reasoning, tools, vision, multimodal]
+  - id: claude-fable-5.1
+    family: claude-fable
+    context_window: 1000000
+    pricing:
+      input: 10.0
+      output: 50.0
+      cached_read: 0.25
+      cached_write: 12.5
+    tags: [reasoning, tools, vision, multimodal]
+  - id: gemini-3.1-pro-preview
+    family: gemini-pro
+    context_window: 1048576
+    pricing:
+      input: 2.0
+      output: 12.0
+      cached_read: 0.2
+      cached_write: 4.5
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-2.5-flash-lite
+    family: gemini-flash-lite
+    context_window: 1048576
+    pricing:
+      input: 0.1
+      output: 0.4
+      cached_read: 0.025
+      cached_write: 1.0
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-3.6-flash
+    family: gemini-flash
+    context_window: 1048576
+    pricing:
+      input: 0.75
+      output: 3.75
+      cached_read: 0.075
+      cached_write: 0.0415
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-3.1-flash-lite
+    family: gemini-flash-lite
+    context_window: 1048576
+    pricing:
+      input: 0.25
+      output: 1.5
+      cached_read: 0.025
+      cached_write: 1.0
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-3.5-flash
+    family: gemini-flash
+    context_window: 1048576
+    pricing:
+      input: 1.5
+      output: 9.0
+      cached_read: 0.15
+      cached_write: 0.083
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-3.5-flash-lite
+    family: gemini-flash-lite
+    context_window: 1048576
+    pricing:
+      input: 0.3
+      output: 2.5
+      cached_read: 0.03
+      cached_write: 0.083
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-3-flash-preview
+    family: gemini-flash
+    context_window: 1048576
+    pricing:
+      input: 0.5
+      output: 3.0
+      cached_read: 0.05
+      cached_write: 1.0
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-3.7-flash
+    family: gemini-flash
+    context_window: 1048576
+    pricing:
+      input: 0.75
+      output: 3.75
+      cached_read: 0.075
+      cached_write: 0.0415
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-2.5-pro
+    family: gemini-pro
+    context_window: 1048576
+    pricing:
+      input: 1.25
+      output: 10.0
+      cached_read: 0.125
+      cached_write: 4.5
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-2.5-flash
+    family: gemini-flash
+    context_window: 1048576
+    pricing:
+      input: 0.3
+      output: 2.5
+      cached_read: 0.03
+      cached_write: 1.0
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: deepseek-v4-flash-vision-exp
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.44
+      output: 1.32
+      cached_read: 0.014
+    beta: true
+    tags: [reasoning, tools, json_mode, vision, multimodal, beta]
+  - id: deepseek-v4-pro-0813
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 1.32
+      output: 3.96
+      cached_read: 0.044
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: deepseek-v4-flash-0731
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.44
+      output: 1.32
+      cached_read: 0.014
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: deepseek-v4-flash
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.44
+      output: 1.32
+      cached_read: 0.014
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: deepseek-v3.2
+    family: deepseek
+    context_window: 128000
+    pricing:
+      input: 0.29
+      output: 0.43
+      cached_read: 0.06
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: deepseek-v4-pro-0423
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 1.32
+      output: 3.96
+      cached_read: 0.044
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: deepseek-v4-pro
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 1.32
+      output: 3.96
+      cached_read: 0.044
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: grok-4.3
+    family: grok
+    context_window: 1000000
+    pricing:
+      input: 1.25
+      output: 2.5
+      cached_read: 0.2
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: grok-4.20
+    family: grok
+    context_window: 2000000
+    pricing:
+      input: 4.0
+      output: 12.0
+      cached_read: 0.4
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: grok-4.5
+    family: grok
+    context_window: 500000
+    pricing:
+      input: 2.0
+      output: 6.0
+      cached_read: 0.3
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: grok-4.6
+    family: grok
+    context_window: 500000
+    pricing:
+      input: 2.0
+      output: 6.0
+      cached_read: 0.5
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: grok-4.1-fast
+    family: grok
+    context_window: 2000000
+    pricing:
+      input: 0.2
+      output: 0.5
+      cached_read: 0.05
+    tags: [tools, json_mode, vision, multimodal]
+  - id: gpt-5-nano
+    family: gpt-nano
+    context_window: 400000
+    pricing:
+      input: 0.05
+      output: 0.4
+      cached_read: 0.01
+    tags: [tools, json_mode, vision, multimodal]
+  - id: gpt-5.1-codex-mini
+    family: gpt-codex
+    context_window: 256000
+    pricing:
+      input: 0.25
+      output: 2.0
+      cached_read: 0.03
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.6-sol
+    family: gpt-sol
+    context_window: 1050000
+    pricing:
+      input: 2.5
+      output: 15.0
+      cached_read: 0.25
+      cached_write: 3.125
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.2-codex
+    family: gpt-codex
+    context_window: 400000
+    pricing:
+      input: 1.75
+      output: 14.0
+      cached_read: 0.18
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-4.1-mini
+    family: gpt-mini
+    context_window: 1047576
+    pricing:
+      input: 0.4
+      output: 1.6
+      cached_read: 0.1
+    tags: [tools, json_mode, vision, multimodal]
+  - id: gpt-5.4
+    family: gpt
+    context_window: 1050000
+    pricing:
+      input: 2.5
+      output: 15.0
+      cached_read: 0.25
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.1
+    family: gpt
+    context_window: 400000
+    pricing:
+      input: 1.25
+      output: 10.0
+      cached_read: 0.13
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.1-codex-max
+    family: gpt-codex
+    context_window: 256000
+    pricing:
+      input: 1.25
+      output: 10.0
+      cached_read: 0.13
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-4o
+    family: gpt
+    context_window: 128000
+    pricing:
+      input: 2.5
+      output: 10.0
+      cached_read: 1.25
+    tags: [tools, json_mode, vision, multimodal]
+  - id: gpt-5.6-luna
+    family: gpt-luna
+    context_window: 1050000
+    pricing:
+      input: 0.2
+      output: 1.2
+      cached_read: 0.02
+      cached_write: 0.25
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.3-codex
+    family: gpt-codex
+    context_window: 400000
+    pricing:
+      input: 1.75
+      output: 14.0
+      cached_read: 0.18
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-4o-mini
+    family: gpt-mini
+    context_window: 128000
+    pricing:
+      input: 0.15
+      output: 0.6
+      cached_read: 0.075
+    tags: [tools, json_mode, vision, multimodal]
+  - id: gpt-4.1
+    family: gpt
+    context_window: 1047576
+    pricing:
+      input: 2.0
+      output: 8.0
+      cached_read: 0.5
+    tags: [tools, json_mode, vision, multimodal]
+  - id: gpt-5.4-nano
+    family: gpt-nano
+    context_window: 400000
+    pricing:
+      input: 0.2
+      output: 1.25
+      cached_read: 0.02
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.4-mini
+    family: gpt-mini
+    context_window: 400000
+    pricing:
+      input: 0.75
+      output: 4.5
+      cached_read: 0.075
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5-mini
+    family: gpt-mini
+    context_window: 256000
+    pricing:
+      input: 0.25
+      output: 2.0
+      cached_read: 0.03
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.4-pro
+    family: gpt-pro
+    context_window: 1050000
+    pricing:
+      input: 30.0
+      output: 180.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: gpt-5.6-terra
+    family: gpt-terra
+    context_window: 1050000
+    pricing:
+      input: 2.0
+      output: 12.0
+      cached_read: 0.2
+      cached_write: 2.5
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.2
+    family: gpt
+    context_window: 400000
+    pricing:
+      input: 1.75
+      output: 14.0
+      cached_read: 0.18
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5
+    family: gpt
+    context_window: 400000
+    pricing:
+      input: 1.25
+      output: 10.0
+      cached_read: 0.13
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.5
+    family: gpt
+    context_window: 1050000
+    pricing:
+      input: 5.0
+      output: 30.0
+      cached_read: 0.5
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: kimi-k2.7-code-highspeed
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 1.9
+      output: 8.0
+      cached_read: 0.38
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: kimi-k2.6
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.95
+      output: 4.0
+      cached_read: 0.16
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: kimi-k2.7-code
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.95
+      output: 4.0
+      cached_read: 0.19
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: kimi-k3
+    family: kimi-k3
+    context_window: 1048576
+    pricing:
+      input: 3.0
+      output: 15.0
+      cached_read: 0.3
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: kimi-k2.5
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.6
+      output: 3.0
+      cached_read: 0.1
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: glm-4.7
+    family: glm
+    context_window: 204800
+    pricing:
+      input: 0.4
+      output: 2.0
+      cached_read: 0.08
+    tags: [reasoning, tools, open_weights]
+  - id: glm-4.6
+    family: glm
+    context_window: 204800
+    pricing:
+      input: 0.4
+      output: 1.9
+      cached_read: 0.11
+    tags: [reasoning, tools, open_weights]
+  - id: glm-5.2
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 0.98
+      output: 3.08
+      cached_read: 0.182
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5.3-flash
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 0.075
+      output: 0.25
+      cached_read: 0.015
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: glm-4.7-flashx
+    family: glm-flash
+    context_window: 200000
+    pricing:
+      input: 0.072
+      output: 0.43
+      cached_read: 0.015
+    tags: [reasoning, tools, open_weights]
+  - id: glm-5
+    family: glm
+    context_window: 204800
+    pricing:
+      input: 1.0
+      output: 3.2
+      cached_read: 0.2
+    tags: [reasoning, tools, open_weights]
+  - id: glm-5.1
+    family: glm
+    context_window: 200000
+    pricing:
+      input: 1.4
+      output: 4.4
+      cached_read: 0.26
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5-turbo
+    family: glm
+    context_window: 200000
+    pricing:
+      input: 1.2
+      output: 4.0
+      cached_read: 0.24
+    tags: [reasoning, tools, json_mode]
+  - id: glm-5.3
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.26
+      output: 3.96
+      cached_read: 0.234
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5v-turbo
+    family: glm
+    context_window: 200000
+    pricing:
+      input: 1.2
+      output: 4.0
+      cached_read: 0.24
+    tags: [reasoning, tools, vision, multimodal]

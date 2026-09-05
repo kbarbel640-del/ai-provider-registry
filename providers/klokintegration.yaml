@@ -1,0 +1,44 @@
+name: klokintegration.se
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: KLOKINTEGRATION_API_KEY
+  doc_url: https://klokintegration.se/docs/ai-api
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://klokintegration.se/docs/ai-api
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - tools
+  - streaming
+endpoint: https://api-gw.klok.ipaas.se/proxy/kloker-key/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 3
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: Kloker-Integration-Developer
+    context_window: 200000
+    pricing:
+      input: 0.23
+      output: 1.16
+    beta: true
+    tags: [tools, beta]
+  - id: Kloker-Integration-Architect
+    context_window: 200000
+    pricing:
+      input: 0.23
+      output: 1.16
+    beta: true
+    tags: [tools, beta]
+  - id: Kloker
+    context_window: 200000
+    pricing:
+      input: 0.23
+      output: 1.16
+    beta: true
+    tags: [tools, beta]

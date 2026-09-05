@@ -1,0 +1,76 @@
+name: NaN
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: NAN_API_KEY
+  doc_url: https://nan.builders/docs/models
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://nan.builders/docs/models
+  free_basis: hat $0-Modelle in models.dev
+supports:
+  - chat
+  - vision
+  - audio
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.nan.builders/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 7
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: qwen3.6
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: deepseek-v4-flash
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm5.2
+    family: glm
+    context_window: 500000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gemma4
+    family: gemma
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3.8-flash
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: glm5.3-flash
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: mimo-v2.5
+    family: mimo
+    context_window: 1048576
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights, vision, audio, multimodal]

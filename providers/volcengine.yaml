@@ -1,0 +1,146 @@
+name: Volcengine Ark
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: ARK_API_KEY
+  doc_url: https://www.volcengine.com/docs/82379/1330310
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://www.volcengine.com/docs/82379/1330310
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://ark.cn-beijing.volces.com/api/v3
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 15
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: doubao-seed-2-0-lite-260428
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.08906
+      output: 0.53436
+      cached_read: 0.01781
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-character-260628
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.11875
+      output: 0.29687
+      cached_read: 0.02375
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-2-0-mini-260428
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.02969
+      output: 0.29687
+      cached_read: 0.00594
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-2-1-pro-260628
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.8906
+      output: 4.45301
+      cached_read: 0.17812
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-2-0-code-preview-260215
+    family: seed
+    context_window: 262144
+    pricing:
+      input: 0.47499
+      output: 2.37494
+      cached_read: 0.095
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-1-8-251228
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.11875
+      output: 1.18747
+      cached_read: 0.02375
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-1-6-flash-250828
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.02227
+      output: 0.22265
+      cached_read: 0.00445
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-1-6-251015
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.11875
+      output: 1.18747
+      cached_read: 0.02375
+    tags: [reasoning, tools, json_mode]
+  - id: deepseek-v4-pro-ga-260813
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 1.3359
+      output: 4.00771
+      cached_read: 0.04453
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: doubao-seed-evolving
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.8906
+      output: 4.45301
+      cached_read: 0.17812
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-2-0-pro-260215
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.47499
+      output: 2.37494
+      cached_read: 0.095
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: doubao-seed-1-6-vision-250815
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.11875
+      output: 1.18747
+      cached_read: 0.02375
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: glm-5-2-260617
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.18747
+      output: 4.15615
+      cached_read: 0.29687
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: doubao-seed-2-1-turbo-260628
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.4453
+      output: 2.22651
+      cached_read: 0.08906
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: deepseek-v4-flash-ga-260731
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.4453
+      output: 1.3359
+      cached_read: 0.01484
+    tags: [reasoning, tools, json_mode, open_weights]

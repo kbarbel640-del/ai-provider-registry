@@ -1,0 +1,102 @@
+name: DaoXE
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: DAOXE_API_KEY
+  doc_url: https://daoxe.com/pricing
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://daoxe.com/pricing
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - audio
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://daoxe.com/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 9
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: claude-sonnet-4-6
+    family: claude-sonnet
+    context_window: 1000000
+    pricing:
+      input: 3.0
+      output: 15.0
+      cached_read: 0.3
+      cached_write: 3.75
+    tags: [reasoning, tools, vision, multimodal]
+  - id: grok-4.3
+    family: grok
+    context_window: 1000000
+    pricing:
+      input: 1.25
+      output: 2.5
+      cached_read: 0.2
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gemini-3.1-pro-preview
+    family: gemini-pro
+    context_window: 1048576
+    pricing:
+      input: 2.0
+      output: 12.0
+      cached_read: 0.2
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: grok-4.5
+    family: grok
+    context_window: 500000
+    pricing:
+      input: 2.0
+      output: 6.0
+      cached_read: 0.5
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.4
+    family: gpt
+    context_window: 1050000
+    pricing:
+      input: 2.5
+      output: 15.0
+      cached_read: 0.25
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: claude-haiku-4-5-20251001
+    family: claude-haiku
+    context_window: 200000
+    pricing:
+      input: 1.0
+      output: 5.0
+      cached_read: 0.1
+      cached_write: 5.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: kimi-k2.5
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.6
+      output: 3.0
+      cached_read: 0.1
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: claude-opus-4-8
+    family: claude-opus
+    context_window: 1000000
+    pricing:
+      input: 5.0
+      output: 25.0
+      cached_read: 0.5
+      cached_write: 6.25
+    tags: [reasoning, tools, vision, multimodal]
+  - id: gpt-5.5
+    family: gpt
+    context_window: 1050000
+    pricing:
+      input: 5.0
+      output: 30.0
+      cached_read: 0.5
+    tags: [reasoning, tools, json_mode, vision, multimodal]

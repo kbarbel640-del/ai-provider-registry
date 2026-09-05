@@ -3,7 +3,7 @@
     "name": "AI Provider Registry",
     "description": "A structured registry of AI providers, models, and capabilities for LLM consumption.",
     "version": "1.0.0",
-    "last_updated": "2026-07-10",
+    "last_updated": "2026-09-05",
     "homepage": "https://kbarbel640-del.github.io/ai-provider-registry/",
     "llms_txt": "https://kbarbel640-del.github.io/ai-provider-registry/llms.txt",
     "registry_json": "https://kbarbel640-del.github.io/ai-provider-registry/registry.json",
@@ -2324,6 +2324,810 @@
       ],
       "endpoint": "https://api.claudin.io/v1",
       "model_count": 2
+    },
+    {
+      "id": "above",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.above.dev/v1",
+      "model_count": 9
+    },
+    {
+      "id": "agentrouter",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://agentrouter.org/v1",
+      "model_count": 3
+    },
+    {
+      "id": "agnes",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://apihub.agnes-ai.com/v1",
+      "model_count": 3
+    },
+    {
+      "id": "ai-router",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.ai-router.dev/v1",
+      "model_count": 5
+    },
+    {
+      "id": "aiand",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.aiand.com/v1",
+      "model_count": 11
+    },
+    {
+      "id": "aixy",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming"
+      ],
+      "endpoint": "https://api.aixy-gateway.com/v1",
+      "model_count": 1
+    },
+    {
+      "id": "aki-io",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://aki.io/v1",
+      "model_count": 7
+    },
+    {
+      "id": "amd",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://developer.amd.com.cn/radeon/api/v1",
+      "model_count": 4
+    },
+    {
+      "id": "arcee",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.arcee.ai/api/v1",
+      "model_count": 7
+    },
+    {
+      "id": "blueclaw",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://openai.blueclaw.network/v1",
+      "model_count": 2
+    },
+    {
+      "id": "bothub",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://openai.bothub.ru/v1",
+      "model_count": 2
+    },
+    {
+      "id": "cline-pass",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.cline.bot/api/v1",
+      "model_count": 14
+    },
+    {
+      "id": "coralbricks",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://inference.coralbricks.ai/v1",
+      "model_count": 3
+    },
+    {
+      "id": "crusoe",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.inference.crusoecloud.com/v1",
+      "model_count": 11
+    },
+    {
+      "id": "daoxe",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://daoxe.com/v1",
+      "model_count": 9
+    },
+    {
+      "id": "ebcloud",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://maas-api.ebcloud.com/v1",
+      "model_count": 4
+    },
+    {
+      "id": "echo",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://echo.tracerml.ai/v1",
+      "model_count": 1
+    },
+    {
+      "id": "edenai",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "image",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.edenai.run/v3",
+      "model_count": 247
+    },
+    {
+      "id": "empiriolabs",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.empiriolabs.ai/v1",
+      "model_count": 58
+    },
+    {
+      "id": "greenpt",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.greenpt.ai/v1",
+      "model_count": 37
+    },
+    {
+      "id": "hetzner",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://inference.hetzner.com/api/v1",
+      "model_count": 2
+    },
+    {
+      "id": "hyper",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://hyper.charm.land/v1",
+      "model_count": 32
+    },
+    {
+      "id": "impossibl",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.impossibl.com/v1",
+      "model_count": 76
+    },
+    {
+      "id": "inferx",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning",
+        "embeddings"
+      ],
+      "endpoint": "https://model.inferx.net/endpoints/v1",
+      "model_count": 12
+    },
+    {
+      "id": "infomaniak",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.infomaniak.com/2/ai/${INFOMANIAK_PRODUCT_ID}/openai/v1",
+      "model_count": 10
+    },
+    {
+      "id": "iteracompute",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.iteracompute.com/v1",
+      "model_count": 2
+    },
+    {
+      "id": "jalapeno",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.jalapeno-cloud.ai/v1",
+      "model_count": 17
+    },
+    {
+      "id": "klokintegration",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "streaming"
+      ],
+      "endpoint": "https://api-gw.klok.ipaas.se/proxy/kloker-key/v1",
+      "model_count": 3
+    },
+    {
+      "id": "kosmik",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.koscompute.com/v1",
+      "model_count": 1
+    },
+    {
+      "id": "llmtech",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.llmtech.eu/v1",
+      "model_count": 1
+    },
+    {
+      "id": "modal",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://inference.us-west.modal.direct/v1",
+      "model_count": 4
+    },
+    {
+      "id": "model-oracle-ai",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.modeloracle.com/api/v1",
+      "model_count": 15
+    },
+    {
+      "id": "modelis",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://modelishub.com/v1",
+      "model_count": 9
+    },
+    {
+      "id": "nan",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.nan.builders/v1",
+      "model_count": 7
+    },
+    {
+      "id": "neosmith",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://router.neosmith.ai/v1",
+      "model_count": 4
+    },
+    {
+      "id": "ofox",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.ofox.ai/v1",
+      "model_count": 114
+    },
+    {
+      "id": "openreason",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.openreason.app/v1",
+      "model_count": 3
+    },
+    {
+      "id": "opper",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.opper.ai/v3/compat",
+      "model_count": 40
+    },
+    {
+      "id": "pendra",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.pendra.ai/api/v1",
+      "model_count": 6
+    },
+    {
+      "id": "pioneer",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.pioneer.ai/v1",
+      "model_count": 103
+    },
+    {
+      "id": "runinfra",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.runinfra.ai/v1",
+      "model_count": 7
+    },
+    {
+      "id": "scnet-token-plan",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.scnet.cn/api/llm/v1",
+      "model_count": 20
+    },
+    {
+      "id": "scx-ai",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.scx.ai/v1",
+      "model_count": 4
+    },
+    {
+      "id": "sensenova",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://token.sensenova.cn/v1",
+      "model_count": 3
+    },
+    {
+      "id": "standardcompute",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.stdcmpt.com/v1",
+      "model_count": 1
+    },
+    {
+      "id": "tensorx",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.tensorx.ai/v1",
+      "model_count": 25
+    },
+    {
+      "id": "thinkingmachines",
+      "free": false,
+      "api_style": "anthropic",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://tinker.thinkingmachines.dev/services/tinker-prod/anthropic/api/v1",
+      "model_count": 2
+    },
+    {
+      "id": "tokengo",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.tokengo.com/v1",
+      "model_count": 13
+    },
+    {
+      "id": "tokenrouter",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.tokenrouter.com/v1",
+      "model_count": 1
+    },
+    {
+      "id": "unorouter",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "audio",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://api.unorouter.com/v1",
+      "model_count": 23
+    },
+    {
+      "id": "vancine",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://vancine.com/v1",
+      "model_count": 10
+    },
+    {
+      "id": "volcengine",
+      "free": false,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://ark.cn-beijing.volces.com/api/v3",
+      "model_count": 15
+    },
+    {
+      "id": "volcengine-coding-plan",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "streaming",
+        "reasoning"
+      ],
+      "endpoint": "https://ark.cn-beijing.volces.com/api/coding/v3",
+      "model_count": 8
     }
   ],
   "capabilities": [

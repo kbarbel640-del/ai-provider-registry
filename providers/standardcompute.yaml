@@ -1,0 +1,33 @@
+name: Standard Compute
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: STANDARDCOMPUTE_API_KEY
+  doc_url: https://standardcompute.com/models
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://standardcompute.com/models
+  free_basis: hat $0-Modelle in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.stdcmpt.com/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 1
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: standardcompute
+    family: auto
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]

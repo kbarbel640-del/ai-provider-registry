@@ -1,0 +1,484 @@
+name: EmpirioLabs AI
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: EMPIRIOLABS_API_KEY
+  doc_url: https://docs.empiriolabs.ai
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://docs.empiriolabs.ai
+  free_basis: hat $0-Modelle in models.dev
+supports:
+  - chat
+  - vision
+  - audio
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.empiriolabs.ai/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 58
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: glm-5-1
+    family: glm
+    context_window: 202000
+    pricing:
+      input: 0.825
+      output: 3.301
+      cached_read: 0.165
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: qwen3-5-9b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.09
+      output: 0.13
+      cached_read: 0.045
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: deepseek-v4-pro-0813
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 1.32
+      output: 3.96
+      cached_read: 1.32
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: kimi-k2-7-code-highspeed
+    family: kimi-k2
+    context_window: 256000
+    pricing:
+      input: 1.9
+      output: 8.0
+      cached_read: 1.9
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: deepseek-v4-flash-0731
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.424
+      output: 1.272
+      cached_read: 0.424
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: mistral-small-4
+    family: mistral-small
+    context_window: 256000
+    pricing:
+      input: 0.15
+      output: 0.6
+      cached_read: 0.15
+    tags: [tools, json_mode, open_weights, vision, multimodal]
+  - id: minimax-m2-7-highspeed
+    family: minimax
+    context_window: 200000
+    pricing:
+      input: 0.3
+      output: 1.2
+      cached_read: 0.03
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: qwen3-8-max-0902
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 2.0
+      output: 6.0
+      cached_read: 2.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: seed-2-0-pro
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.63
+      output: 3.79
+      cached_read: 0.63
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: qwen3-7-plus
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.4
+      output: 1.6
+      cached_read: 0.4
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: qwen3-6-flash
+    family: qwen3.6
+    context_window: 1000000
+    pricing:
+      input: 0.25
+      output: 1.5
+      cached_read: 0.25
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: qwen3-5-27b
+    family: qwen
+    context_window: 256000
+    pricing:
+      input: 0.086
+      output: 0.688
+      cached_read: 0.086
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: glm-4-6v-flash
+    family: glm
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: seed-2-0-mini
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.12
+      output: 0.5
+      cached_read: 0.12
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: minimax-m3
+    family: minimax
+    context_window: 1000000
+    pricing:
+      input: 0.225
+      output: 0.9
+      cached_read: 0.045
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: deepseek-v4-flash
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.14
+      output: 0.28
+      cached_read: 0.14
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: qwen3-5-4b
+    context_window: 262144
+    pricing:
+      input: 0.04
+      output: 0.07
+      cached_read: 0.02
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: glm-5-3
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.4
+      output: 4.4
+      cached_read: 1.4
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: kimi-k2-7-code
+    family: kimi-k2
+    context_window: 256000
+    pricing:
+      input: 0.95
+      output: 4.0
+      cached_read: 0.95
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: fugu-ultra-v1-1
+    family: fugu
+    context_window: 1000000
+    pricing:
+      input: 5.0
+      output: 30.0
+      cached_read: 0.5
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: step-3-5-flash-2603
+    context_window: 256000
+    pricing:
+      input: 0.1
+      output: 0.3
+      cached_read: 0.02
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: qwen3-5-397b-a17b
+    family: qwen
+    context_window: 256000
+    pricing:
+      input: 0.172
+      output: 1.032
+      cached_read: 0.172
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: seed-2-1-turbo
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.63
+      output: 3.13
+      cached_read: 0.63
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: deepseek-v3-2
+    family: deepseek
+    context_window: 128000
+    pricing:
+      input: 0.57
+      output: 1.71
+      cached_read: 0.57
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-4-7-flash
+    family: glm-flash
+    context_window: 200000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: kimi-k2-6
+    family: kimi-k2
+    context_window: 256000
+    pricing:
+      input: 0.8939
+      output: 3.7131
+      cached_read: 0.1788
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: gemma-4-26b-a4b
+    family: gemma
+    context_window: 262144
+    pricing:
+      input: 0.05
+      output: 0.29
+      cached_read: 0.025
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3-6-35b-a3b
+    family: qwen
+    context_window: 131072
+    pricing:
+      input: 0.07
+      output: 0.42
+      cached_read: 0.035
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: qwen3-5-35b-a3b
+    family: qwen
+    context_window: 256000
+    pricing:
+      input: 0.057
+      output: 0.459
+      cached_read: 0.057
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: muse-spark-1-2
+    family: muse
+    context_window: 1048576
+    pricing:
+      input: 1.25
+      output: 4.25
+      cached_read: 1.0
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: qwen3-6-plus
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.5
+      output: 3.0
+      cached_read: 0.5
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: kimi-k3
+    family: kimi-k3
+    context_window: 1000000
+    pricing:
+      input: 3.0
+      output: 15.0
+      cached_read: 3.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3-5-122b-a10b
+    family: qwen
+    context_window: 256000
+    pricing:
+      input: 0.115
+      output: 0.917
+      cached_read: 0.115
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3-max
+    family: qwen
+    context_window: 256000
+    pricing:
+      input: 1.08
+      output: 5.52
+      cached_read: 1.08
+    tags: [reasoning, tools, json_mode]
+  - id: glm-4-5-flash
+    family: glm-flash
+    context_window: 200000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode]
+  - id: glm-5-3-flash
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 0.075
+      output: 0.25
+      cached_read: 0.075
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: step-3-5-flash
+    context_window: 256000
+    pricing:
+      input: 0.1
+      output: 0.3
+      cached_read: 0.02
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: muse-glimmer-30b
+    family: muse
+    context_window: 131072
+    pricing:
+      input: 0.2
+      output: 0.8
+      cached_read: 0.05
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3-6-27b
+    family: qwen
+    context_window: 256000
+    pricing:
+      input: 0.412564
+      output: 2.475384
+      cached_read: 0.412564
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3-8-27b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.17
+      output: 0.5
+      cached_read: 0.08
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: muse-spark-1-1
+    family: muse
+    context_window: 1048576
+    pricing:
+      input: 1.25
+      output: 4.25
+      cached_read: 1.0
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: glm-5-2
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.4
+      output: 4.4
+      cached_read: 1.4
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: seed-2-0-code
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.4
+      output: 2.4
+      cached_read: 0.4
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: qwen3-7-max
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 2.5
+      output: 7.5
+      cached_read: 2.5
+    tags: [reasoning, tools, json_mode]
+  - id: mimo-v2-5
+    family: mimo
+    context_window: 1000000
+    pricing:
+      input: 0.7
+      output: 1.4
+      cached_read: 0.014
+    tags: [reasoning, tools, json_mode, open_weights, vision, audio, multimodal]
+  - id: qwen3-5-flash
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.09
+      output: 0.368
+      cached_read: 0.09
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: seed-2-0-lite
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.31
+      output: 2.5
+      cached_read: 0.31
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: muse-spark-1-3
+    family: muse
+    context_window: 1048576
+    pricing:
+      input: 1.25
+      output: 4.25
+      cached_read: 1.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: mimo-v2-5-pro
+    family: mimo
+    context_window: 1000000
+    pricing:
+      input: 2.175
+      output: 4.35
+      cached_read: 0.018
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: step-3-7-flash
+    context_window: 256000
+    pricing:
+      input: 0.2
+      output: 1.15
+      cached_read: 0.04
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: deepseek-v4-pro
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 1.65
+      output: 3.3
+      cached_read: 1.65
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: fugu-ultra-v1-0
+    family: fugu
+    context_window: 1000000
+    pricing:
+      input: 7.5
+      output: 45.0
+      cached_read: 1.5
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: qwen3-8-max
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 2.0
+      output: 6.0
+      cached_read: 2.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: minimax-m2-7
+    family: minimax
+    context_window: 200000
+    pricing:
+      input: 0.15
+      output: 0.6
+      cached_read: 0.03
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: qwen3-5-plus
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.36
+      output: 2.21
+      cached_read: 0.36
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: qwen3-7-flash
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.03
+      output: 0.13
+      cached_read: 0.006
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: qwen3-8-flash
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.16
+      output: 0.47
+      cached_read: 0.16
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: qwen3-6-max-preview
+    family: qwen
+    context_window: 256000
+    pricing:
+      input: 1.31
+      output: 7.88
+      cached_read: 1.31
+    tags: [reasoning, tools, json_mode]

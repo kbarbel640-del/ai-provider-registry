@@ -1,0 +1,247 @@
+name: TensorX
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: TENSORX_API_KEY
+  doc_url: https://docs.tensorx.ai/
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.tensorx.ai/
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - audio
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.tensorx.ai/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 25
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: qwen3.5-9b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.15
+      output: 0.2
+      cached_read: 0.0375
+      cached_write: 0.1875
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3-coder-30b-a3b-instruct
+    family: qwen
+    context_window: 262000
+    pricing:
+      input: 0.06
+      output: 0.25
+      cached_read: 0.015
+      cached_write: 0.075
+    tags: [tools, open_weights]
+  - id: qwen3-235b-a22b-2507
+    family: qwen
+    context_window: 131000
+    pricing:
+      input: 0.072
+      output: 0.464
+      cached_read: 0.018
+      cached_write: 0.09
+    tags: [tools, open_weights]
+  - id: qwen3.5-122b-a10b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.5
+      output: 3.5
+      cached_read: 0.125
+      cached_write: 0.625
+    tags: [reasoning, tools, json_mode, open_weights, vision, audio, multimodal]
+  - id: qwen3-vl-235b-a22b-instruct
+    family: qwen
+    context_window: 131000
+    pricing:
+      input: 0.21
+      output: 1.9
+      cached_read: 0.0525
+      cached_write: 0.2625
+    tags: [tools, open_weights, vision, multimodal]
+  - id: minimax-m2.5
+    family: minimax
+    context_window: 196608
+    pricing:
+      input: 0.3
+      output: 1.2
+      cached_read: 0.075
+      cached_write: 0.375
+    tags: [reasoning, tools, open_weights]
+  - id: minimax-m3
+    family: minimax
+    context_window: 1048576
+    pricing:
+      input: 0.4
+      output: 2.0
+      cached_read: 0.1
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: nemotron-3-super-120b-a12b
+    family: nemotron
+    context_window: 262144
+    pricing:
+      input: 0.3
+      output: 0.9
+      cached_read: 0.075
+      cached_write: 0.375
+    tags: [reasoning, tools, open_weights]
+  - id: deepseek-chat-v3.1
+    family: deepseek
+    context_window: 164000
+    pricing:
+      input: 0.2
+      output: 0.8
+      cached_read: 0.05
+      cached_write: 0.25
+    tags: [reasoning, tools, open_weights]
+  - id: deepseek-v4-flash-0731
+    family: deepseek-flash
+    context_window: 1048576
+    pricing:
+      input: 0.25
+      output: 0.3
+      cached_read: 0.06
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: deepseek-v4-flash
+    family: deepseek-flash
+    context_window: 1048576
+    pricing:
+      input: 0.15
+      output: 0.3
+      cached_read: 0.0375
+      cached_write: 0.1875
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: deepseek-r1-0528
+    family: deepseek-thinking
+    context_window: 164000
+    pricing:
+      input: 0.66
+      output: 2.6
+      cached_read: 0.165
+      cached_write: 0.825
+    tags: [reasoning, tools, open_weights]
+  - id: deepseek-v3.2
+    family: deepseek
+    context_window: 163840
+    pricing:
+      input: 0.3
+      output: 0.5
+      cached_read: 0.075
+      cached_write: 0.375
+    tags: [reasoning, tools, open_weights]
+  - id: deepseek-v4-pro
+    family: deepseek-thinking
+    context_window: 1048576
+    pricing:
+      input: 1.75
+      output: 3.5
+      cached_read: 0.4375
+      cached_write: 2.185
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gpt-oss-120b
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.04
+      output: 0.2
+      cached_read: 0.01
+      cached_write: 0.05
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: kimi-k2.6
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 1.0
+      output: 4.0
+      cached_read: 0.25
+      cached_write: 1.25
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: kimi-k2.7-code
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 1.25
+      output: 4.5
+      cached_read: 0.3125
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: kimi-k3
+    family: kimi-k3
+    context_window: 1048576
+    pricing:
+      input: 3.0
+      output: 15.0
+      cached_read: 0.75
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: kimi-k2.5
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.5
+      output: 2.8
+      cached_read: 0.125
+      cached_write: 0.625
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: glm-4.7
+    family: glm
+    context_window: 200000
+    pricing:
+      input: 0.6
+      output: 2.2
+      cached_read: 0.15
+      cached_write: 0.75
+    tags: [reasoning, tools, open_weights, vision]
+  - id: glm-5.2
+    family: glm
+    context_window: 1048576
+    pricing:
+      input: 1.5
+      output: 4.5
+      cached_read: 0.375
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5
+    family: glm
+    context_window: 202752
+    pricing:
+      input: 1.0
+      output: 3.2
+      cached_read: 0.25
+      cached_write: 1.25
+    tags: [reasoning, tools, open_weights]
+  - id: glm-5.1
+    family: glm
+    context_window: 202752
+    pricing:
+      input: 1.4
+      output: 4.4
+      cached_read: 0.35
+      cached_write: 1.75
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5-turbo
+    family: glm
+    context_window: 202752
+    pricing:
+      input: 1.2
+      output: 4.0
+      cached_read: 0.3
+      cached_write: 1.5
+    tags: [reasoning, tools, json_mode]
+  - id: glm-5v-turbo
+    family: glm
+    context_window: 202752
+    pricing:
+      input: 1.2
+      output: 4.0
+      cached_read: 0.3
+      cached_write: 1.5
+    tags: [reasoning, tools, vision, multimodal]

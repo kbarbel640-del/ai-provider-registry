@@ -1,0 +1,186 @@
+name: SCNet Token Plan
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: SCNET_API_KEY
+  doc_url: https://www.scnet.cn/ac/openapi/doc/2.0/moduleapi/plans/token-plan.html
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://www.scnet.cn/ac/openapi/doc/2.0/moduleapi/plans/token-plan.html
+  free_basis: hat $0-Modelle in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.scnet.cn/api/llm/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 20
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: DeepSeek-V4-Flash
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: GLM-5.1
+    family: glm
+    context_window: 200000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: Qwen3.8-Max
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: DeepSeek-V4-Flash-0731
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: Qwen3.8-Flash
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: Kimi-K2.5
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: GLM-5.3
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: Kimi-K2.7-Code
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: MiniMax-M2.5
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: GLM-5.2
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: MiMo-V2.5-Pro
+    family: mimo
+    context_window: 1048576
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: GLM-5
+    family: glm
+    context_window: 204800
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: Kimi-K2.6
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: MiniMax-M3
+    family: minimax
+    context_window: 1048576
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: DeepSeek-V4-Pro-0813
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: Kimi-K3
+    family: kimi-k3
+    context_window: 1048576
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: GLM-5.3-Flash
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: DeepSeek-V3.2
+    family: deepseek
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: DeepSeek-V4-Pro
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: MiniMax-M2.7
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, open_weights]

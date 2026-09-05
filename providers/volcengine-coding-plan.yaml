@@ -1,0 +1,90 @@
+name: Volcengine Ark Coding Plan
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: ARK_CODING_PLAN_API_KEY
+  doc_url: https://www.volcengine.com/docs/82379/1928261
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://www.volcengine.com/docs/82379/1928261
+  free_basis: hat $0-Modelle in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://ark.cn-beijing.volces.com/api/coding/v3
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 8
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: doubao-seed-2.1-turbo
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: minimax-m3
+    family: minimax
+    context_window: 1048576
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: deepseek-v4-flash
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: kimi-k2.7-code
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: doubao-seed-evolving
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: deepseek-v4-pro
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: doubao-seed-2.0-lite
+    family: seed
+    context_window: 256000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: glm-5.3
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]

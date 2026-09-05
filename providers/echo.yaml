@@ -1,0 +1,31 @@
+name: Echo
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: ECHO_API_KEY
+  doc_url: https://echo.tracerml.ai/docs/api
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://echo.tracerml.ai/docs/api
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - tools
+  - streaming
+  - reasoning
+endpoint: https://echo.tracerml.ai/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 1
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: echo
+    context_window: 262144
+    pricing:
+      input: 10.0
+      output: 50.0
+    beta: true
+    tags: [reasoning, tools, beta]

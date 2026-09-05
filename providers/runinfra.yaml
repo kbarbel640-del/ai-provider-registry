@@ -1,0 +1,82 @@
+name: RunInfra
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: RUNINFRA_GATEWAY_KEY
+  doc_url: https://runinfra.ai/docs
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://runinfra.ai/docs
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.runinfra.ai/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 7
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: Ornith-1.5-35B-A3B
+    family: ornith
+    context_window: 262144
+    pricing:
+      input: 0.1
+      output: 0.4
+      cached_read: 0.01
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: Qwen3.8-2.4T-A95B-NVFP4
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 2.0
+      output: 6.0
+      cached_read: 0.2
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: DeepSeek-V4-Flash-0731
+    family: deepseek-flash
+    context_window: 1048576
+    pricing:
+      input: 0.13
+      output: 0.27
+      cached_read: 0.01
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: DeepSeek-V4-Pro-0813
+    family: deepseek-thinking
+    context_window: 1048576
+    pricing:
+      input: 0.6
+      output: 1.9
+      cached_read: 0.03
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16
+    family: nemotron
+    context_window: 262144
+    pricing:
+      input: 0.05
+      output: 0.15
+      cached_read: 0.01
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: GLM-5.3-Flash
+    family: glm
+    context_window: 1048576
+    pricing:
+      input: 0.1
+      output: 0.4
+      cached_read: 0.01
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: Qwen3.8-27B
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.1
+      output: 0.4
+      cached_read: 0.01
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]

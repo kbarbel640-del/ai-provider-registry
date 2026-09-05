@@ -1,0 +1,90 @@
+name: Modelis
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: MODELIS_API_KEY
+  doc_url: https://modelishub.com/pricing
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://modelishub.com/pricing
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - audio
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://modelishub.com/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 9
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: claude-sonnet-4-6
+    family: claude-sonnet
+    context_window: 1000000
+    pricing:
+      input: 3.0
+      output: 15.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: deepseek-v4-flash
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.0983
+      output: 0.1966
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: claude-fable-5
+    family: claude-fable
+    context_window: 1000000
+    pricing:
+      input: 10.0
+      output: 50.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: claude-opus-4-8
+    family: claude-opus
+    context_window: 1000000
+    pricing:
+      input: 5.0
+      output: 25.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: deepseek-v4-pro
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 0.435
+      output: 0.87
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gemini-2.5-pro
+    family: gemini-pro
+    context_window: 1048576
+    pricing:
+      input: 1.25
+      output: 10.0
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-2.5-flash
+    family: gemini-flash
+    context_window: 1048576
+    pricing:
+      input: 0.3
+      output: 2.5
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: qwen3.7-max
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 3.0
+      output: 9.0
+    tags: [reasoning, tools]
+  - id: qwen3.7-plus
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.768
+      output: 3.072
+    tags: [reasoning, tools, vision, multimodal]

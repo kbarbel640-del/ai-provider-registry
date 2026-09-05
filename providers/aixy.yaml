@@ -1,0 +1,33 @@
+name: Aixy
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: AIXY_API_KEY
+  doc_url: https://docs.aixy-gateway.com/integrations/overview
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.aixy-gateway.com/integrations/overview
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+endpoint: https://api.aixy-gateway.com/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 1
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: gpt-4.1-mini
+    family: gpt-mini
+    context_window: 1047576
+    pricing:
+      input: 0.4
+      output: 1.6
+      cached_read: 0.1
+    tags: [tools, json_mode, vision, multimodal]

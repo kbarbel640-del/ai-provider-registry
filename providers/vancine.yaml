@@ -1,0 +1,106 @@
+name: Vancine
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: VANCINE_API_KEY
+  doc_url: https://vancine.com/docs
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://vancine.com/docs
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://vancine.com/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 10
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: deepseek-v4-flash-vision-exp
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.22
+      output: 0.66
+      cached_read: 0.007
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: deepseek-v4-flash
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.22
+      output: 0.66
+      cached_read: 0.007
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: hy4-preview
+    family: Hy
+    context_window: 1024000
+    pricing:
+      input: 0.67
+      output: 2.0
+      cached_read: 0.034
+    tags: [reasoning, tools, open_weights]
+  - id: kimi-k3
+    family: kimi-k3
+    context_window: 1048576
+    pricing:
+      input: 2.4
+      output: 12.0
+      cached_read: 0.24
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: glm-5.3-flash
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 0.06
+      output: 0.2
+      cached_read: 0.012
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: qwen3.8-flash
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.12
+      output: 0.38
+      cached_read: 0.013
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: qwen3.8-max
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 1.6
+      output: 4.8
+      cached_read: 0.2
+    tags: [reasoning, tools, vision, multimodal]
+  - id: MiniMax-M3
+    family: minimax
+    context_window: 1048576
+    pricing:
+      input: 0.24
+      output: 0.96
+      cached_read: 0.048
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: deepseek-v4-pro
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 0.66
+      output: 1.98
+      cached_read: 0.022
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5.3
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.12
+      output: 3.52
+      cached_read: 0.208
+    tags: [reasoning, tools, json_mode, open_weights]

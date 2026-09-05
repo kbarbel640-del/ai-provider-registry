@@ -1,0 +1,41 @@
+name: Thinking Machines
+api_style: anthropic
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: TINKER_API_KEY
+  doc_url: https://tinker-docs.thinkingmachines.ai/tinker/compatible-apis/anthropic/
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://tinker-docs.thinkingmachines.ai/tinker/compatible-apis/anthropic/
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - streaming
+  - reasoning
+endpoint: https://tinker.thinkingmachines.dev/services/tinker-prod/anthropic/api/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 2
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: Inkling
+    family: ling
+    context_window: 65536
+    pricing:
+      input: 1.87
+      output: 4.68
+      cached_read: 0.374
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: Inkling:peft:262144
+    family: ling
+    context_window: 262144
+    pricing:
+      input: 3.74
+      output: 9.36
+      cached_read: 0.748
+    tags: [reasoning, tools, open_weights, vision, multimodal]

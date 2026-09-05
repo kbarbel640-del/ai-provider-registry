@@ -1,0 +1,57 @@
+name: NeoSmith
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: NEOSMITH_API_KEY
+  doc_url: https://neosmith.ai/docs
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://neosmith.ai/docs
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - streaming
+  - reasoning
+endpoint: https://router.neosmith.ai/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 4
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: neosmith.intelligent-maestro
+    context_window: 1000000
+    pricing:
+      input: 2.4
+      output: 12.0
+      cached_read: 0.35
+      cached_write: 0.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: neosmith.intelligent-basic
+    context_window: 1000000
+    pricing:
+      input: 1.17
+      output: 4.37
+      cached_read: 0.22
+      cached_write: 0.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: neosmith.intelligent-pro
+    context_window: 1000000
+    pricing:
+      input: 1.81
+      output: 8.39
+      cached_read: 0.3
+      cached_write: 0.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: neosmith.neolite
+    context_window: 512000
+    pricing:
+      input: 0.6
+      output: 2.4
+      cached_read: 0.08
+      cached_write: 0.0
+    tags: [reasoning, tools, vision, multimodal]

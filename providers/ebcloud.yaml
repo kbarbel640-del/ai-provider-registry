@@ -1,0 +1,53 @@
+name: EBCloud
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: EBCLOUD_API_KEY
+  doc_url: https://docs.ebtech.com/ai/model-api.html
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.ebtech.com/ai/model-api.html
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://maas-api.ebcloud.com/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 4
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: DeepSeek-V4-Flash
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.143
+      output: 0.2857
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: GLM-5.1
+    family: glm
+    context_window: 200000
+    pricing:
+      input: 0.8571
+      output: 3.4286
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: Kimi-K2.6
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.9286
+      output: 3.8571
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: DeepSeek-V4-Pro
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 0.4286
+      output: 0.8571
+    tags: [reasoning, tools, json_mode, open_weights]

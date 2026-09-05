@@ -13,6 +13,11 @@ zu oeffnen:
                                              # als YAML-Entwurf anzeigen (dry-run)
     python3 sync_modelsdev.py enrich --all --write
                                              # alle Provider erweitern (Dateien schreiben)
+    python3 sync_modelsdev.py generate       # fehlende Provider anlegen (dry-run)
+    python3 sync_modelsdev.py generate --write
+                                             # Provider anlegen (4 Dateien je Provider:
+                                             # providers/*.yaml + registry.json +
+                                             # llms.txt + index.html)
 
 Prinzip: Die YAML-Dateien sind die Wahrheit. `enrich` ERGAENZT nur Modelle,
 die noch nicht in einer providers/*.yaml stehen, und fasst vorhandene
@@ -360,6 +365,185 @@ def _append_models(stem: str, fresh: list[dict], style: str) -> str | None:
     return None
 
 
+# ---------------------------------------------------------------------------
+# generate
+# ---------------------------------------------------------------------------
+# Reihenfolge der Supports-Liste in den Repo-Dateien (kanonisch).
+CANONICAL_SUPPORTS = ["chat", "vision", "image", "audio", "video", "tools",
+                      "json_mode", "streaming", "reasoning", "embeddings",
+                      "web_search", "file_extraction", "speech", "moderation",
+                      "rerank", "search"]
+
+
+def api_style_from_npm(npm: str | None) -> str:
+    n = (npm or "").lower()
+    for kw, style in (("anthropic", "anthropic"), ("google", "google"),
+                      ("cohere", "cohere"), ("bedrock", "bedrock"),
+                      ("azure", "azure")):
+        if kw in n:
+            return style
+    return "openai"
+
+
+def supports_from_mirror(mp: dict) -> list[str]:
+    s: set[str] = {"chat", "streaming"}
+    for mm in mp.get("models", {}).values():
+        if mm.get("tool_call"):
+            s.add("tools")
+        if mm.get("structured_output"):
+            s.add("json_mode")
+        if mm.get("reasoning"):
+            s.add("reasoning")
+        mod = mm.get("modalities") or {}
+        if "image" in (mod.get("input") or []):
+            s.add("vision")
+        if "audio" in (mod.get("input") or []):
+            s.add("audio")
+        if "image" in (mod.get("output") or []):
+            s.add("image")
+        slug = mm["id"].split("/", 1)[1] if "/" in mm["id"] else mm["id"]
+        if "embedding" in slug.lower() or "embedding" in (mm.get("name") or "").lower():
+            s.add("embeddings")
+    return [c for c in CANONICAL_SUPPORTS if c in s]
+
+
+def mirror_has_free_model(mp: dict) -> bool:
+    for mm in mp.get("models", {}).values():
+        if mm.get("status") == "deprecated":
+            continue
+        cost = mm.get("cost") or {}
+        if cost.get("input") == 0 and cost.get("output") == 0:
+            return True
+    return False
+
+
+def env_var_for(mid: str, mp: dict) -> str:
+    env = mp.get("env") or []
+    if env and env[0]:
+        return env[0]
+    return mid.upper().replace("-", "_") + "_API_KEY"
+
+
+def build_provider_file(mid: str, mp: dict) -> str:
+    """Neue providers/<mid>.yaml im kuratierten Stil B aus den Mirror-Daten."""
+    style = api_style_from_npm(mp.get("npm"))
+    free = mirror_has_free_model(mp)
+    doc = mp.get("doc") or ""
+    doc_url = doc if doc.startswith("https://") else None
+    supports = supports_from_mirror(mp)
+    models = list(mp.get("models", {}).values())
+
+    L = [f"name: {mp['name']}"]
+    L.append(f"api_style: {style}")
+    L.append("auth:")
+    L.append("  type: bearer")
+    L.append("  header: Authorization")
+    L.append('  prefix: "Bearer "')
+    L.append(f"  env_var: {env_var_for(mid, mp)}")
+    if doc_url:
+        L.append(f"  doc_url: {doc_url}")
+    L.append("pricing:")
+    L.append(f"  free: {str(free).lower()}")
+    L.append("  pay_as_you_go: true")
+    if doc_url:
+        L.append(f"  doc_url: {doc_url}")
+    L.append("  free_basis: "
+             + ("hat $0-Modelle in models.dev" if free
+                else "kein $0-Modell in models.dev"))
+    L.append("supports:")
+    L += [f"  - {c}" for c in supports]
+    L.append(f"endpoint: {mp['api']}")
+    L.append("notes:")
+    L.append("  source: generiert aus https://models.dev/api.json")
+    L.append(f"  model_catalog_size: {len(models)}")
+    L.append("  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet")
+    L.append("models:")
+    L += [fmt_model(model_entry(m, "B"), "B") for m in models]
+    return "\n".join(L) + "\n"
+
+
+def registry_entry(mid: str, mp: dict) -> dict:
+    return {
+        "id": mid,
+        "free": mirror_has_free_model(mp),
+        "api_style": api_style_from_npm(mp.get("npm")),
+        "supports": supports_from_mirror(mp),
+        "endpoint": mp.get("api"),
+        "model_count": len(mp.get("models", {})),
+    }
+
+
+def generate(write: bool) -> None:
+    mirror = load_mirror()
+    repo = repo_provider_stems()
+
+    missing = [mid for mid in sorted(mirror)
+               if not resolve_mirror_name(mid, repo)]
+    junk = [mid for mid in missing
+            if not (mirror[mid].get("api") or "").startswith("https://")]
+    todo = [mid for mid in missing if mid not in junk]
+
+    if write:
+        entries = [registry_entry(mid, mirror[mid]) for mid in todo]
+        # providers/*.yaml schreiben
+        for mid in todo:
+            (ROOT / "providers" / f"{mid}.yaml").write_text(
+                build_provider_file(mid, mirror[mid]), encoding="utf-8")
+        # registry.json: Eintraege ans Ende des providers-Arrays
+        reg_path = ROOT / "registry.json"
+        reg = json.loads(reg_path.read_text("utf-8"))
+        reg["providers"] += entries
+        import datetime
+        reg["metadata"]["last_updated"] = datetime.date.today().isoformat()
+        reg_path.write_text(json.dumps(reg, ensure_ascii=False,
+                                       indent=2) + "\n", encoding="utf-8")
+        # llms.txt: Eintraege ans Ende der Providers-Sektion
+        llms_path = ROOT / "llms.txt"
+        text = llms_path.read_text("utf-8")
+        lines = text.splitlines()
+        idx = next((i for i, l in enumerate(lines)
+                    if l.strip().startswith("## Providers")), 0)
+        end = next((i for i in range(idx + 1, len(lines))
+                    if not lines[i].strip()), len(lines))
+        add = [f"providers/{mid}.yaml" for mid in todo]
+        lines[end:end] = add
+        llms_path.write_text("\n".join(lines).rstrip("\n") + "\n", encoding="utf-8")
+        # index.html: <li>-Zeilen vor </ul> der Provider-Liste + Stat hochzaehlen
+        html_path = ROOT / "index.html"
+        html = html_path.read_text("utf-8")
+        items = [f'    <li><a href="providers/{mid}.yaml">{mid}.yaml</a> '
+                 f'<span class="badge">free tier: '
+                 f'{"yes" if registry_entry(mid, mirror[mid])["free"] else "no"}'
+                 f'</span></li>' for mid in todo]
+        mark = "  </ul>\n\n  <h2>Models</h2>"
+        if mark not in html:
+            sys.exit("generate: index.html-Struktur geaendert, Abbruch.")
+        html = html.replace(mark, "\n".join(items) + "\n" + mark)
+        html = re.sub(
+            r'(stat-value">\s*)(\d+)(\s*</div>\s*<div class="stat-label">Providers)',
+            lambda m: f"{m.group(1)}{len(repo) + len(todo)}{m.group(3)}",
+            html)
+        html_path.write_text(html, encoding="utf-8")
+
+        print(f"== {len(todo)} Provider angelegt "
+              f"(providers/*.yaml, registry.json, llms.txt, index.html) ==")
+        print(f"   Providers gesamt: {len(repo)} -> {len(repo) + len(todo)}")
+    else:
+        print(f"== {len(todo)} neue Provider wuerden angelegt (dry-run) ==\n")
+        for mid in todo:
+            mp = mirror[mid]
+            print(f"  {mid:<24} {len(mp['models']):>4} Modelle  free="
+                  f"{str(mirror_has_free_model(mp)).lower():<5}  "
+                  f"{mp['api']}")
+
+    if junk:
+        print(f"\nUebersprungen ({len(junk)}, kein HTTPS-Endpoint):")
+        for mid in junk:
+            print(f"  {mid:<24} api={mirror[mid].get('api') or '-'}")
+    print("Tipp: nach '--write' unbedingt  python3 validate_registry.py -v "
+          "laufen lassen.")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="models.dev-Abgleich fuer das Registry")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -374,6 +558,10 @@ def main() -> int:
     p.add_argument("--write", action="store_true", help="wirklich in die YAML-Dateien schreiben")
     p.add_argument("--limit", type=int, default=5000, help="max. neue Eintraege je Provider")
 
+    g = sub.add_parser("generate", help="fehlende Provider aus dem Mirror anlegen")
+    g.add_argument("--write", action="store_true",
+                   help="wirklich schreiben (4 Dateien je Provider)")
+
     args = ap.parse_args()
     if args.cmd == "fetch":
         fetch()
@@ -381,6 +569,8 @@ def main() -> int:
         report()
     elif args.cmd == "enrich":
         enrich(args.provider or "ALL", args.write, args.limit)
+    elif args.cmd == "generate":
+        generate(args.write)
     return 0
 
 

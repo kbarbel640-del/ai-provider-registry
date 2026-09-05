@@ -1,0 +1,69 @@
+name: AI-ROUTER
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: AI_ROUTER_API_KEY
+  doc_url: https://ai-router.dev/openai-compatible-api-gateway/
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://ai-router.dev/openai-compatible-api-gateway/
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.ai-router.dev/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 5
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: gpt-5.6-sol
+    family: gpt-sol
+    context_window: 1050000
+    pricing:
+      input: 5.0
+      output: 30.0
+      cached_read: 0.5
+      cached_write: 6.25
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.4
+    family: gpt
+    context_window: 1050000
+    pricing:
+      input: 2.5
+      output: 15.0
+      cached_read: 0.25
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.6-luna
+    family: gpt-luna
+    context_window: 1050000
+    pricing:
+      input: 1.0
+      output: 6.0
+      cached_read: 0.1
+      cached_write: 1.25
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.6-terra
+    family: gpt-terra
+    context_window: 1050000
+    pricing:
+      input: 2.5
+      output: 15.0
+      cached_read: 0.25
+      cached_write: 3.125
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.5
+    family: gpt
+    context_window: 1050000
+    pricing:
+      input: 5.0
+      output: 30.0
+      cached_read: 0.5
+    tags: [reasoning, tools, json_mode, vision, multimodal]

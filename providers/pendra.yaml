@@ -1,0 +1,68 @@
+name: Pendra
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: PENDRA_API_KEY
+  doc_url: https://pendra.ai/docs/integrations/opencode
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://pendra.ai/docs/integrations/opencode
+  free_basis: hat $0-Modelle in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.pendra.ai/api/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 6
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: deepseek-v4-flash
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gpt-oss:120b
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: qwen3-coder:30b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights]
+  - id: qwen3.6:27b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: llama3.3:70b
+    family: llama
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights]
+  - id: glm-4.7-flash
+    family: glm-flash
+    context_window: 200000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights]

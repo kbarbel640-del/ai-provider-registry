@@ -1,0 +1,298 @@
+name: GreenPT
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: GREENPT_API_KEY
+  doc_url: https://docs.greenpt.ai
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.greenpt.ai
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - audio
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.greenpt.ai/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 37
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: deepseek-v4-flash-0731
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.1596
+      output: 0.399
+      cached_read: 0.0456
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5.2-caveman-ultra
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.254
+      output: 5.016
+      cached_read: 0.3135
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5.2-ponytail-ultra
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.254
+      output: 5.016
+      cached_read: 0.3135
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5.2-honey-ultra
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.254
+      output: 5.016
+      cached_read: 0.3135
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: kimi-k2.6
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.7524
+      output: 4.275
+      cached_read: 0.2508
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: glm-5.2
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.254
+      output: 5.016
+      cached_read: 0.3135
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: minimax-m2.5
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.1938
+      output: 1.129
+      cached_read: 0.0627
+    tags: [reasoning, tools, open_weights]
+  - id: kimi-k2.7-code
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.9006
+      output: 4.389
+      cached_read: 0.1881
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: green-l
+    family: mistral-small
+    context_window: 128000
+    pricing:
+      input: 0.285
+      output: 0.912
+    tags: [tools, open_weights, vision, multimodal]
+  - id: devstral-2-123b-instruct-2512
+    family: devstral
+    context_window: 200000
+    pricing:
+      input: 0.57
+      output: 2.736
+    tags: [tools, open_weights]
+  - id: glm-5.2-honey-lite
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.254
+      output: 5.016
+      cached_read: 0.3135
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: qwen3-coder-30b-a3b-instruct
+    family: qwen
+    context_window: 128000
+    pricing:
+      input: 0.285
+      output: 1.083
+    tags: [tools, open_weights]
+  - id: green-l-raw
+    family: mistral-small
+    context_window: 128000
+    pricing:
+      input: 0.285
+      output: 0.912
+    tags: [tools, open_weights, vision, multimodal]
+  - id: qwen3.5-397b-a17b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.798
+      output: 4.959
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5.2-caveman
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.254
+      output: 5.016
+      cached_read: 0.3135
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: kimi-k3
+    family: kimi-k3
+    context_window: 1048576
+    pricing:
+      input: 3.762
+      output: 18.81
+      cached_read: 0.9405
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: gemma-3-27b-it
+    family: gemma
+    context_window: 40000
+    pricing:
+      input: 0.342
+      output: 0.684
+    tags: [tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3.6-35b-a3b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.342
+      output: 2.052
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: green-s
+    pricing:
+      input: 0.00437
+      output: 0.0
+    tags: [audio]
+  - id: glm-5.2-caveman-lite
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.254
+      output: 5.016
+      cached_read: 0.3135
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: mistral-medium-3.5-128b
+    family: mistral-medium
+    context_window: 262144
+    pricing:
+      input: 2.052
+      output: 10.26
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: glm-5.2-ponytail
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.254
+      output: 5.016
+      cached_read: 0.3135
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gemma4
+    family: gemma
+    context_window: 262144
+    pricing:
+      input: 0.57
+      output: 1.71
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: mistral-small-3.2-24b-instruct-2506
+    family: mistral-small
+    context_window: 128000
+    pricing:
+      input: 0.228
+      output: 0.456
+    tags: [tools, open_weights, vision, multimodal]
+  - id: glm-5.2-honey
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.254
+      output: 5.016
+      cached_read: 0.3135
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5.1
+    family: glm
+    context_window: 200000
+    pricing:
+      input: 1.756
+      output: 5.518
+    deprecated: true
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5.2-ponytail-lite
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.254
+      output: 5.016
+      cached_read: 0.3135
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: qwen3-235b-a22b-instruct-2507
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 1.026
+      output: 3.078
+    tags: [tools, json_mode, open_weights]
+  - id: green-r-raw
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.399
+      output: 1.083
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: gpt-oss-120b
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.228
+      output: 0.798
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: holo2-30b-a3b
+    context_window: 22016
+    pricing:
+      input: 0.399
+      output: 0.969
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: voxtral-small-24b-2507
+    family: mistral
+    context_window: 32768
+    pricing:
+      input: 0.228
+      output: 0.513
+    tags: [tools, open_weights, audio, multimodal]
+  - id: green-s-pro
+    pricing:
+      input: 0.00437
+      output: 0.0
+    tags: [audio]
+  - id: kimi-k2.6-fast
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 1.655
+      output: 8.778
+    deprecated: true
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: pixtral-12b-2409
+    family: pixtral
+    context_window: 128000
+    pricing:
+      input: 0.285
+      output: 0.285
+    tags: [tools, open_weights, vision, multimodal]
+  - id: green-r
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.399
+      output: 1.083
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: llama-3.3-70b-instruct
+    family: llama
+    context_window: 100000
+    pricing:
+      input: 1.254
+      output: 1.254
+    tags: [tools, open_weights]

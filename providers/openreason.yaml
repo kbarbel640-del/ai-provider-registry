@@ -1,0 +1,47 @@
+name: OpenReason
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: OPENREASON_API_KEY
+  doc_url: https://openreason.app/docs
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://openreason.app/docs
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.openreason.app/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 3
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: deepseek-v4-flash-0731
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.1371
+      output: 0.2743
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gpt-oss-120b
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.1055
+      output: 0.422
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: kimi-k2.7-code
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 1.0022
+      output: 4.22
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]

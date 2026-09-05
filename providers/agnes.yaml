@@ -1,0 +1,45 @@
+name: Agnes AI
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: AGNES_API_KEY
+  doc_url: https://agnes-ai.com/doc
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://agnes-ai.com/doc
+  free_basis: hat $0-Modelle in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://apihub.agnes-ai.com/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 3
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: agnes-2.5-pro-alpha
+    context_window: 1000000
+    pricing:
+      input: 0.45
+      output: 0.9
+      cached_read: 0.0038
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: agnes-2.5-flash
+    context_window: 512000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: agnes-2.0-flash
+    context_window: 512000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]

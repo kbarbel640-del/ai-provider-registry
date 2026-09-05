@@ -1,0 +1,105 @@
+name: ai&
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: AIAND_API_KEY
+  doc_url: https://docs.aiand.com/
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://docs.aiand.com/
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.aiand.com/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 11
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: qwen3.8-27b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.4
+      output: 3.0
+      cached_read: 0.2
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3.6-27b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.32
+      output: 3.2
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: motif-3
+    context_window: 262144
+    pricing:
+      input: 0.5
+      output: 2.0
+    tags: [reasoning]
+  - id: deepseek-v4-flash
+    family: deepseek-flash
+    context_window: 1048576
+    pricing:
+      input: 0.15
+      output: 0.25
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: deepseek-v4-pro
+    family: deepseek-thinking
+    context_window: 1048576
+    pricing:
+      input: 1.0
+      output: 2.5
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gemma-4-31b-it
+    family: gemma
+    context_window: 262144
+    pricing:
+      input: 0.2
+      output: 0.5
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: glm-5.2
+    family: glm
+    context_window: 1048576
+    pricing:
+      input: 1.0
+      output: 4.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5.3
+    family: glm
+    context_window: 1048576
+    pricing:
+      input: 1.0
+      output: 4.0
+      cached_read: 0.3
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gpt-oss-120b
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.15
+      output: 0.6
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: kimi-k2.7-code
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.75
+      output: 3.5
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: kimi-k3
+    family: kimi-k3
+    context_window: 1048576
+    pricing:
+      input: 3.0
+      output: 12.5
+      cached_read: 0.5
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]

@@ -1,0 +1,44 @@
+name: Hetzner
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: HETZNER_API_KEY
+  doc_url: https://experiments.hetzner.com/docs/inference
+pricing:
+  free: true
+  pay_as_you_go: true
+  doc_url: https://experiments.hetzner.com/docs/inference
+  free_basis: hat $0-Modelle in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://inference.hetzner.com/api/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 2
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: Qwen3.8-27B
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    beta: true
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal, beta]
+  - id: Qwen3.6-35B-A3B-FP8
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+      cached_read: 0.0
+    beta: true
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal, beta]

@@ -1,0 +1,98 @@
+name: above.dev
+api_style: openai
+auth:
+  type: bearer
+  header: Authorization
+  prefix: "Bearer "
+  env_var: ABOVE_API_KEY
+  doc_url: https://above.dev/docs
+pricing:
+  free: false
+  pay_as_you_go: true
+  doc_url: https://above.dev/docs
+  free_basis: kein $0-Modell in models.dev
+supports:
+  - chat
+  - vision
+  - tools
+  - json_mode
+  - streaming
+  - reasoning
+endpoint: https://api.above.dev/v1
+notes:
+  source: generiert aus https://models.dev/api.json
+  model_catalog_size: 9
+  kuratiert: auth/pricing/supports aus Mirror-Feldern abgeleitet
+models:
+  - id: deepseek-v4-flash-vision-exp
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.242
+      output: 0.726
+      cached_read: 0.0077
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: mimo-v2.5-pro-ultraspeed
+    family: mimo
+    context_window: 1048576
+    pricing:
+      input: 1.5231
+      output: 3.0462
+      cached_read: 0.0127
+    tags: [reasoning, tools, open_weights]
+  - id: glm-5.2
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.54
+      output: 4.84
+      cached_read: 0.154
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: deepseek-v4-flash
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.242
+      output: 0.726
+      cached_read: 0.0077
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5.2-fast
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 2.31
+      output: 7.26
+      cached_read: 0.231
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: glm-5.3-flash
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 0.165
+      output: 0.55
+      cached_read: 0.0319
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: qwen3.8-max
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 2.2
+      output: 6.6
+      cached_read: 0.275
+    tags: [reasoning, tools, vision]
+  - id: deepseek-v4-pro
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 0.726
+      output: 2.178
+      cached_read: 0.0242
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: mimo-v2.5-pro
+    family: mimo
+    context_window: 1048576
+    pricing:
+      input: 0.5077
+      output: 1.0154
+      cached_read: 0.0042
+    tags: [reasoning, tools, open_weights]
