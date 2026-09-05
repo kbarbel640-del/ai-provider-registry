@@ -189,12 +189,24 @@ def tag_from_model(m: dict) -> list[str]:
     return tags
 
 
-def model_entry(m: dict) -> dict:
-    e: dict = {"id": m["id"].split("/", 1)[1] if "/" in m["id"] else m["id"]}
+def model_entry(m: dict, style: str) -> dict:
+    slug = m["id"].split("/", 1)[1] if "/" in m["id"] else m["id"]
+    e: dict = {"id": slug}
+    lim = m.get("limit") or {}
+    if style == "A":
+        if m.get("name"):
+            e["name"] = m["name"]
+        if m.get("description"):
+            e["description"] = m["description"]
+        if lim.get("context"):
+            e["context_window"] = int(lim["context"])
+        if lim.get("output"):
+            e["output_limit"] = int(lim["output"])
+        if m.get("release_date"):
+            e["release_date"] = m["release_date"]
     if m.get("family"):
         e["family"] = m["family"]
-    lim = m.get("limit") or {}
-    if lim.get("context"):
+    if style == "B" and lim.get("context"):
         e["context_window"] = int(lim["context"])
     cost = m.get("cost") or {}
     pricing = {}
@@ -210,16 +222,42 @@ def model_entry(m: dict) -> dict:
     return e
 
 
-def fmt_model(e: dict) -> str:
-    """Ein Modell-Eintrag im Stil der kuratierten YAMLs (2er-Einrueckung,
-    'tags' als Flow-Liste am Ende). Mutiert das uebergebene Dict nicht."""
+def fmt_model(e: dict, style: str) -> str:
+    """Ein Modell-Eintrag im Stil der YAML-Dateien. Stil A: '- id:' auf
+    Spalte 0 (generierte Dateien, 'tags' als Blockliste). Stil B: '  - id:'
+    (kuratierte Dateien, 'tags' als Flow-Liste). Mutiert das Dict nicht."""
     e = dict(e)
     tags = e.pop("tags", None)
     body = yaml.safe_dump(e, sort_keys=False, allow_unicode=True).splitlines()
-    out = ["  - " + body[0]] + ["    " + line for line in body[1:]]
-    if tags:
-        out.append("    tags: [" + ", ".join(tags) + "]")
+    if style == "A":
+        out = ["- " + body[0]] + ["  " + line for line in body[1:]]
+        if tags:
+            out.append("  tags:")
+            out += ["  - " + t for t in tags]
+    else:
+        out = ["  - " + body[0]] + ["    " + line for line in body[1:]]
+        if tags:
+            out.append("    tags: [" + ", ".join(tags) + "]")
     return "\n".join(out)
+
+
+def _detect_style(stem: str) -> str:
+    """Stil der providers-Datei ermitteln: 'A' (Modelle auf Spalte 0,
+    generierte Dateien) oder 'B' (2er-Indent, kuratierte Dateien)."""
+    p = ROOT / "providers" / f"{stem}.yaml"
+    try:
+        lines = p.read_text("utf-8").splitlines()
+    except OSError:
+        return "B"
+    idx = next((i for i, l in enumerate(lines)
+                if re.match(r"^models:\s*$", l)), None)
+    if idx is None:
+        return "B"
+    for l in lines[idx + 1:]:
+        m = re.match(r"^(\s*)-\s", l)
+        if m:
+            return "A" if len(m.group(1)) == 0 else "B"
+    return "B"
 
 
 def enrich(provider: str | None, write: bool, limit: int) -> None:
@@ -240,43 +278,71 @@ def enrich(provider: str | None, write: bool, limit: int) -> None:
         hits = matched
 
     todo = 0
+    errors: list[str] = []
     for stem, mid in sorted(hits.items()):
         y = load_repo_provider(stem)
-        existing = {m.get("id") for m in y.get("models", []) if isinstance(m, dict)}
-        fresh = [model_entry(m) for m in mirror[mid].get("models", {}).values()
+        style = _detect_style(stem)
+        existing = set()
+        for m in y.get("models", []):
+            if isinstance(m, dict):
+                existing.add(m.get("id"))
+            elif isinstance(m, str):
+                existing.add(m)
+        fresh = [model_entry(m, style) for m in mirror[mid].get("models", {}).values()
                  if (m["id"].split("/", 1)[1] if "/" in m["id"] else m["id"]) not in existing]
         if not fresh:
             continue
         fresh = fresh[:limit]
         todo += len(fresh)
-        print(f"## {stem}  (aus '{mid}', {len(fresh)} neue Eintraege)")
+        print(f"## {stem}  (aus '{mid}', {len(fresh)} neue Eintraege, Stil {style})")
         if not write:
-            print("\n".join(fmt_model(m) for m in fresh))
+            print("\n".join(fmt_model(m, style) for m in fresh))
             continue
-        _append_models(stem, fresh)
+        if (err := _append_models(stem, fresh, style)):
+            errors.append(f"{stem}: {err}")
 
-    print(f"\n== {todo} neue Modell-Eintraege {'geschrieben' if write else 'als Entwurf (dry-run)'} ==\n"
-          "Tipp: nach '--write' unbedingt  python3 validate_registry.py -v  laufen lassen.")
+    print(f"\n== {todo} neue Modell-Eintraege {'geschrieben' if write else 'als Entwurf (dry-run)'} ==")
+    if errors:
+        print("Uebersprungen (manuell ergaenzen):")
+        for e in errors:
+            print("  -", e)
+    print("Tipp: nach '--write' unbedingt  python3 validate_registry.py -v  laufen lassen.")
 
 
-def _append_models(stem: str, fresh: list[dict]) -> None:
-    """Haengt neue Eintraege ans Ende von 'models:' an und laesst die
-    handgeschriebenen Dateien (inkl. Kommentare) unangetastet."""
+def _append_models(stem: str, fresh: list[dict], style: str) -> str | None:
+    """Fuegt neue Eintraege in die 'models:'-Sektion ein (vor dem naechsten
+    Top-Level-Key bzw. am Dateiende). Handgeschriebene Inhalte inkl.
+    Kommentare bleiben unangetastet. Rueckgabe: Fehlermeldung oder None."""
     p = ROOT / "providers" / f"{stem}.yaml"
-    lines = p.read_text("utf-8").splitlines()
+    text = p.read_text("utf-8")
+    lines = text.splitlines()
 
     idx = next((i for i, l in enumerate(lines)
                 if re.match(r"^models:\s*$", l)), None)
     if idx is None:
-        sys.exit(f"{stem}.yaml: keine 'models:'-Sektion gefunden, bitte manuell ergaenzen.")
-    after = lines[idx + 1:]
-    if any(re.match(r"^[A-Za-z_][\w-]*:\s*$", l) for l in after):
-        sys.exit(f"{stem}.yaml: 'models:' ist nicht die letzte Sektion, bitte manuell ergaenzen.")
+        return "keine 'models:'-Sektion gefunden"
 
-    block = "\n".join(fmt_model(m) for m in fresh)
-    text = p.read_text("utf-8")
-    text = text.rstrip("\n") + "\n" + block + "\n"
+    # Einschubpunkt: Zeilenindex des naechsten Top-Level-Keys nach 'models:'
+    ins = None
+    for i in range(idx + 1, len(lines)):
+        l = lines[i]
+        if l.strip() and not l.startswith((" ", "-", "\t")):
+            ins = i
+            break
+
+    block = "\n".join(fmt_model(m, style) for m in fresh)
+    if ins is None:
+        text = text.rstrip("\n") + "\n" + block + "\n"
+    else:
+        new_lines = lines[:ins] + block.splitlines()
+        if not new_lines[-1] or new_lines[-1].strip() == "":
+            pass
+        else:
+            new_lines.append("")
+        new_lines += lines[ins:]
+        text = "\n".join(new_lines).rstrip("\n") + "\n"
     p.write_text(text, encoding="utf-8")
+    return None
 
 
 def main() -> int:
