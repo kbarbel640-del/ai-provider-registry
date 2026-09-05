@@ -89,3 +89,19 @@ models:
   tags:
   - open_weights
   - low_cost
+- id: glm-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 1.25
+    output: 3.89
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights

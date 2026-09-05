@@ -226,3 +226,2691 @@ models:
   - vision
   - multimodal
   - reasoning
+- id: claude-sonnet-4-6
+  name: Claude Sonnet 4.6
+  description: Claude workhorse for coding agents, careful analysis, and production
+    cost control
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-02-17'
+  family: claude-sonnet
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+    cached_write: 3.75
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-4-7@eu
+  name: Claude Opus 4.7 (EU)
+  description: Stronger Opus tier for advanced software work and high-stakes reasoning
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-04-16'
+  family: claude-opus
+  pricing:
+    input: 5.5
+    output: 27.5
+    cached_read: 0.55
+    cached_write: 6.875
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: qwen3.7-max
+  name: Qwen3.7 Max
+  description: Qwen frontier model tuned for agent frameworks, coding assistants, and
+    long tasks
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-05-21'
+  family: qwen
+  pricing:
+    input: 2.5
+    output: 7.5
+    cached_read: 0.25
+    cached_write: 3.125
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: gemma-4-26b-a4b-it
+  name: Gemma 4 26B A4B IT
+  description: Open Gemma instruction model for efficient chat and self-hosted deployments
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-02'
+  family: gemma
+  pricing:
+    input: 0.07
+    output: 0.34
+    cached_read: 0.07
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: glm-5.3@eu
+  name: GLM-5.3 (EU)
+  description: Flagship GLM model for long-horizon coding, agents, and complex project
+    delivery
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-08-14'
+  family: glm
+  pricing:
+    input: 1.2
+    output: 4.2
+    cached_read: 0.26
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: kimi-k2.7-code@eu
+  name: Kimi K2.7 Code (EU)
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less
+    overthinking
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-06-12'
+  family: kimi-k2
+  pricing:
+    input: 1.25
+    output: 4.5
+    cached_read: 0.31
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: qwen3.8-2.4T-A95B
+  name: Qwen3.8 2.4T A95B
+  description: Open-weight sparse MoE (2.4T total, 95B active), the open-weight twin
+    of Qwen3.8 Max for coding, research, complex reasoning, and agentic workflows
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-08-12'
+  family: qwen
+  pricing:
+    input: 2.0
+    output: 6.0
+    cached_read: 0.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: nemotron-3.5-content-safety
+  name: Nemotron 3.5 Content Safety
+  description: Safety model for policy screening, moderation, and risk-aware routing
+    workflows
+  context_window: 131072
+  output_limit: 8192
+  release_date: '2026-06-04'
+  family: nemotron
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - open_weights
+  - vision
+  - multimodal
+- id: step-3.7-flash
+  name: Step 3.7 Flash
+  description: Newer StepFun flash model for faster agents, coding, and multimodal prompts
+  context_window: 262144
+  output_limit: 256000
+  release_date: '2026-05-29'
+  pricing:
+    input: 0.2
+    output: 1.15
+    cached_read: 0.04
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: deepseek-v4-pro-0813
+  name: DeepSeek V4 Pro 0813
+  description: DeepSeek V4 Pro snapshot with million-token context and support for thinking
+    and non-thinking modes
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-08-12'
+  family: deepseek-thinking
+  pricing:
+    input: 1.32
+    output: 3.96
+    cached_read: 0.044
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: mistral-medium-3-5
+  name: mistral-medium-3-5
+  description: Mistral Medium 3.5 is a dense 128B instruction following model from Mistral
+    AI. It supports text and image inputs with text output, and is designed for agentic
+    workflows, coding, and complex multi step reasoning. It is particularly strong at
+    reliable multi tool calling and long horizon tasks, with a 256K context window,
+    configurable reasoning effort per request, and a custom vision encoder that handles
+    variable image sizes and aspect ratios. Self hostable on as few as four GPUs and
+    available under open weights.
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-30'
+  family: mistral-medium
+  pricing:
+    input: 1.65
+    output: 8.25
+    cached_read: 1.65
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: ring-2.6-1t
+  name: ring-2.6-1t
+  description: Inclusion AI ring-2.6-1t
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-05-08'
+  family: ring
+  pricing:
+    input: 0.3
+    output: 2.5
+  tags:
+  - reasoning
+  - tools
+- id: gpt-4.1-mini@eu
+  name: GPT-4.1 mini (EU)
+  description: Affordable GPT-4.1 lane for fast coding help and structured extraction
+  context_window: 1047576
+  output_limit: 32768
+  release_date: '2025-04-14'
+  family: gpt-mini
+  pricing:
+    input: 0.44
+    output: 1.76
+    cached_read: 0.11
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: deepseek-v4-flash-0731
+  name: DeepSeek V4 Flash 0731
+  description: Official DeepSeek V4 Flash release with enhanced agentic capabilities
+    and integrated DSpark speculative decoding
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-07-31'
+  family: deepseek-flash
+  pricing:
+    input: 0.14
+    output: 0.28
+    cached_read: 0.07
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: gemini-3.7-flash@eu
+  name: Gemini 3.7 Flash (EU)
+  description: High-efficiency Gemini model for agentic workflows, coding, and multimodal
+    reasoning
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-08-13'
+  family: gemini-flash
+  pricing:
+    input: 0.825
+    output: 4.125
+    cached_read: 0.0825
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: qwen3.8-flash-next
+  name: Qwen3.8 Flash Next
+  description: 'Open-weight experimental preview of the Qwen4 architecture: hybrid-attention
+    MoE (125B total, 6B active) with vision encoder for coding, agent tasks, and image
+    and video understanding'
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-08-27'
+  family: qwen
+  pricing:
+    input: 0.2
+    output: 0.5
+    cached_read: 0.05
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: leanstral-1-5@eu
+  name: leanstral-1-5@eu
+  description: Leanstral 1.5 is an updated Lean 4 formal proof engineering model from
+    Mistral AI, optimized for automated theorem proving and autoformalization. It has
+    119B total parameters with 6.5B active and supports a 256K token context window.
+    It supports native function calling and structured output.
+  context_window: 262144
+  output_limit: 32768
+  release_date: '2026-05-27'
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - tools
+  - json_mode
+- id: deepseek-v4-pro-0813@eu
+  name: DeepSeek V4 Pro 0813 (EU)
+  description: DeepSeek V4 Pro snapshot with million-token context and support for thinking
+    and non-thinking modes
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-08-12'
+  family: deepseek-thinking
+  pricing:
+    input: 1.75
+    output: 3.5
+    cached_read: 0.44
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: ling-3.0-tiny
+  name: ling-3.0-tiny
+  description: Ling-3.0-tiny is an efficient 7.9B parameter MoE model from inclusionAI
+    with only 1.3B active parameters per token. Built for responsive agents, reliable
+    instruction following and multi turn conversation, with a 256K context window, native
+    function calling, prompt caching and switchable Thinking and Instant modes.
+  context_window: 262144
+  output_limit: 32768
+  release_date: '2026-08-05'
+  family: ling
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+- id: grok-4.3
+  name: Grok 4.3
+  description: xAI's default Grok for chat, coding, agentic tools, and lower hallucination
+    risk
+  context_window: 1000000
+  output_limit: 1000000
+  release_date: '2026-04-17'
+  family: grok
+  pricing:
+    input: 1.25
+    output: 2.5
+    cached_read: 0.2
+    cached_write: 1.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: qwen3.6-plus
+  name: Qwen3.6 Plus
+  description: Earlier Qwen multimodal workhorse for million-token agent and document
+    tasks
+  context_window: 1000000
+  output_limit: 65536
+  release_date: '2026-04-02'
+  family: qwen
+  pricing:
+    input: 0.5
+    output: 3.0
+    cached_read: 0.05
+    cached_write: 0.625
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: nvidia-nemotron-3-ultra
+  name: nvidia-nemotron-3-ultra
+  description: NVIDIA Nemotron 3 Ultra is NVIDIA's strongest open-weights reasoning
+    model, positioned near GPT-5.4 Mini (xhigh) and ahead of DeepSeek V4-Flash and Qwen3.5-397B-A17B.
+  context_window: 262144
+  output_limit: 131072
+  release_date: '2026-06-23'
+  family: nemotron
+  pricing:
+    input: 0.5
+    output: 2.5
+  tags:
+  - reasoning
+- id: nvidia-nemotron-3-super-120b-a12b
+  name: nvidia-nemotron-3-super-120b-a12b
+  description: NVIDIA Nemotron 3 Super is a hybrid Mixture-of-Experts (MoE) model engineered
+    for highest compute efficiency and accuracy in multi-agent applications and specialized
+    agentic systems. It is optimized to run many collaborating agents per application
+    on a single GPU, delivering high accuracy for reasoning, tool use, and instruction
+    following.
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-03-11'
+  family: nemotron
+  pricing:
+    input: 0.1
+    output: 0.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: minimax-m2.7-highspeed
+  name: MiniMax-M2.7-highspeed
+  description: Low-latency M2.7 variant for interactive coding plans and agent loops
+  context_window: 200000
+  output_limit: 128000
+  release_date: '2026-03-18'
+  family: minimax
+  pricing:
+    input: 0.6
+    output: 2.4
+    cached_read: 0.06
+    cached_write: 1.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: gpt-5.6-sol
+  name: GPT-5.6 Sol
+  description: Frontier GPT-5.6 model for complex professional work, coding, and agentic
+    workflows
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-sol
+  pricing:
+    input: 4.0
+    output: 20.0
+    cached_read: 0.4
+    cached_write: 5.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: fugu-ultra
+  name: Fugu Ultra
+  description: Quality-first multi-agent model for hard research, analysis, and competitions
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-06-15'
+  family: fugu
+  pricing:
+    input: 5.0
+    output: 30.0
+    cached_read: 0.5
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-fable-5.1@eu
+  name: Claude Fable 5.1 (EU)
+  description: Claude model for demanding reasoning and long-horizon agentic work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-09-01'
+  family: claude-fable
+  pricing:
+    input: 11.0
+    output: 55.0
+    cached_read: 0.275
+    cached_write: 13.75
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gemini-3-pro-image
+  name: Nano Banana Pro
+  description: Nano Banana Pro for higher-fidelity image generation and design-heavy
+    edits
+  context_window: 1048576
+  output_limit: 32768
+  release_date: '2026-05-28'
+  family: gemini-pro
+  pricing:
+    input: 2.0
+    output: 12.0
+    cached_read: 0.2
+    cached_write: 4.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: qwen3.5-27b
+  name: Qwen3.5 27B
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-02-23'
+  family: qwen
+  pricing:
+    input: 0.26
+    output: 2.6
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - audio
+  - multimodal
+- id: claude-opus-4-6@eu
+  name: Claude Opus 4.6 (EU)
+  description: High-end Claude for difficult coding, planning, and slower expert reasoning
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-02-05'
+  family: claude-opus
+  pricing:
+    input: 5.5
+    output: 27.5
+    cached_read: 0.55
+    cached_write: 6.875
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: qwen3.5-35b-a3b
+  name: Qwen3.5 35B-A3B
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-02-23'
+  family: qwen
+  pricing:
+    input: 0.14
+    output: 1.0
+    cached_read: 0.05
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - audio
+  - multimodal
+- id: claude-opus-5
+  name: Claude Opus 5
+  description: Strongest Claude Opus model for coding, agents, and professional work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-07-24'
+  family: claude-opus
+  pricing:
+    input: 5.0
+    output: 25.0
+    cached_read: 0.5
+    cached_write: 6.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: minimax-m2.7
+  name: MiniMax-M2.7
+  description: Open MiniMax flagship for coding agents, office automation, and complex
+    environments
+  context_window: 200000
+  output_limit: 128000
+  release_date: '2026-03-18'
+  family: minimax
+  pricing:
+    input: 0.3
+    output: 1.2
+    cached_read: 0.06
+    cached_write: 1.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: kimi-k2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-21'
+  family: kimi-k2
+  pricing:
+    input: 0.95
+    output: 4.0
+    cached_read: 0.16
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: gemini-3.1-pro-preview
+  name: Gemini 3.1 Pro Preview
+  description: Reasoning-first Gemini preview for agentic coding and complex problem
+    solving
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-02-19'
+  family: gemini-pro
+  pricing:
+    input: 2.0
+    output: 12.0
+    cached_read: 0.2
+    cached_write: 4.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: kat-coder-pro
+  name: kat-coder-pro
+  description: KAT-Coder-Pro V2 by KwaiKAT is a non-reasoning model optimized for agentic
+    coding. It delivers strong performance on reasoning-style tasks while requiring
+    significantly fewer output tokens than peer models. With the 1210 release, it achieved
+    a score of 64 on the Artificial Analysis Intelligence Index, placing it in the global
+    Top 10 and ranking first among all non-reasoning models.
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-03-27'
+  family: kat-coder
+  pricing:
+    input: 0.3
+    output: 1.2
+  tags:
+  - tools
+- id: gpt-5.6-terra@eu
+  name: GPT-5.6 Terra (EU)
+  description: Balanced GPT-5.6 model for capable, cost-efficient everyday work
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-terra
+  pricing:
+    input: 2.2
+    output: 13.2
+    cached_read: 0.22
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: glm-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 0.8
+    output: 2.55
+    cached_read: 0.16
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: gpt-5.4@eu
+  name: GPT-5.4 (EU)
+  description: Agent-ready GPT for coding and computer-use workflows at a lower cost
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-03-05'
+  family: gpt
+  pricing:
+    input: 2.5
+    output: 15.0
+    cached_read: 0.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gemini-3.8-flash@eu
+  name: Gemini 3.8 Flash (EU)
+  description: Google's most intelligent Flash model, engineered for long-horizon software
+    engineering, autonomous agents, and complex enterprise workflows
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-09-02'
+  family: gemini-flash
+  pricing:
+    input: 0.825
+    output: 4.125
+    cached_read: 0.0825
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: claude-opus-4-5
+  name: Claude Opus 4.5 (latest)
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-11-24'
+  family: claude-opus
+  pricing:
+    input: 5.0
+    output: 25.0
+    cached_read: 0.5
+    cached_write: 6.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-nano@eu
+  name: GPT-5 Nano (EU)
+  description: Tiny GPT-5 lane for routing, extraction, classification, and bulk jobs
+  context_window: 200000
+  output_limit: 100000
+  release_date: '2025-08-07'
+  family: gpt-nano
+  pricing:
+    input: 0.055
+    output: 0.44
+    cached_read: 0.0055
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: minimax-m3
+  name: MiniMax-M3
+  description: MiniMax multimodal model for long-context coding, perception, and agent
+    planning
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-01'
+  family: minimax
+  pricing:
+    input: 0.3
+    output: 1.2
+    cached_read: 0.06
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: deepseek-v4-flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context
+    work
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-04-24'
+  family: deepseek-flash
+  pricing:
+    input: 0.14
+    output: 0.28
+    cached_read: 0.07
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: kimi-k2.7-code
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less
+    overthinking
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-06-12'
+  family: kimi-k2
+  pricing:
+    input: 0.95
+    output: 4.0
+    cached_read: 0.19
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: claude-sonnet-5@eu
+  name: Claude Sonnet 5 (EU)
+  description: Everyday Claude agent model for coding, planning, browsing, and general
+    work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-30'
+  family: claude-sonnet
+  pricing:
+    input: 2.2
+    output: 11.0
+    cached_read: 0.22
+    cached_write: 2.75
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: grok-4.5
+  name: Grok 4.5
+  description: xAI's Grok model for chat, coding, agentic tools, and lower hallucination
+    risk
+  context_window: 500000
+  output_limit: 500000
+  release_date: '2026-07-08'
+  family: grok
+  pricing:
+    input: 2.0
+    output: 6.0
+    cached_read: 0.5
+    cached_write: 2.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gemini-3.6-flash
+  name: Gemini 3.6 Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-07-21'
+  family: gemini-flash
+  pricing:
+    input: 1.5
+    output: 7.0
+    cached_read: 0.15
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: nemotron-3-nano-omni-30b-a3b-reasoning
+  name: Nemotron 3 Nano Omni 30B A3B Reasoning
+  description: Open Nemotron omni model combining reasoning with text, vision, and audio
+  context_window: 131072
+  output_limit: 20480
+  release_date: '2026-04-28'
+  family: nemotron
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - audio
+  - multimodal
+- id: gpt-5.5@eu
+  name: GPT-5.5 (EU)
+  description: Default frontier GPT for coding, computer use, research, and knowledge
+    work
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-04-23'
+  family: gpt
+  pricing:
+    input: 5.0
+    output: 30.0
+    cached_read: 0.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.4
+  name: GPT-5.4
+  description: Agent-ready GPT for coding and computer-use workflows at a lower cost
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-03-05'
+  family: gpt
+  pricing:
+    input: 2.75
+    output: 16.5
+    cached_read: 0.275
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gemini-3.1-flash-lite
+  name: Gemini 3.1 Flash Lite
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-05-07'
+  family: gemini-flash-lite
+  pricing:
+    input: 0.25
+    output: 1.5
+    cached_read: 0.025
+    cached_write: 0.08333
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: seed-1.8
+  name: seed-1.8
+  description: Optimized specifically for multimodal agent scenarios. It features enhanced
+    agent capabilities, upgraded multimodal comprehension, and more flexible context
+    management.
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-05-27'
+  family: seed
+  pricing:
+    input: 0.25
+    output: 2.0
+    cached_read: 0.05
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: grok-build-0.1
+  name: Grok Build 0.1
+  description: Fast Grok coding model tuned for agentic engineering and iterative edits
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-04-16'
+  family: grok-build
+  pricing:
+    input: 1.0
+    output: 2.0
+    cached_read: 0.1
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-mini@eu
+  name: GPT-5 Mini (EU)
+  description: Small GPT-5 for responsive agents, coding help, and everyday automation
+  context_window: 200000
+  output_limit: 100000
+  release_date: '2025-08-07'
+  family: gpt-mini
+  pricing:
+    input: 0.275
+    output: 2.2
+    cached_read: 0.0275
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-4.1-nano@eu
+  name: GPT-4.1 nano (EU)
+  description: Tiny GPT-4.1 option for classification, routing, and very high-volume
+    tasks
+  context_window: 1047576
+  output_limit: 32768
+  release_date: '2025-04-14'
+  family: gpt-nano
+  pricing:
+    input: 0.11
+    output: 0.44
+    cached_read: 0.0275
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: hy3
+  name: Hy3
+  description: Tencent Hy reasoning model for coding, instruction following, and agent
+    tasks
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-07-06'
+  family: Hy
+  pricing:
+    input: 0.14
+    output: 0.58
+    cached_read: 0.035
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: claude-fable-5@eu
+  name: Claude Fable 5 (EU)
+  description: Claude model for creative writing, analysis, and controlled agent workflows
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-09'
+  family: claude-fable
+  pricing:
+    input: 11.0
+    output: 55.0
+    cached_read: 1.1
+    cached_write: 13.75
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: ling-2.6-1t
+  name: ling-2.6-1t
+  description: Inclusion AI ling-2.6-1t
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-23'
+  family: ling
+  pricing:
+    input: 0.3
+    output: 2.5
+  tags:
+  - tools
+- id: mistral-medium-latest
+  name: Mistral Medium (latest)
+  description: Balanced Mistral model for enterprise assistants, multilingual work,
+    and tools
+  context_window: 131072
+  output_limit: 131072
+  release_date: '2026-04-29'
+  family: mistral-medium
+  pricing:
+    input: 0.44
+    output: 2.2
+    cached_read: 0.44
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: seed-2.0-pro
+  name: Seed 2.0 Pro
+  description: Flagship ByteDance Seed 2.0 model for complex multimodal reasoning and
+    long-horizon agent workflows
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-02-14'
+  family: seed
+  pricing:
+    input: 0.5
+    output: 3.0
+    cached_read: 0.1
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: glm-5.1@eu
+  name: GLM-5.1 (EU)
+  description: Strong GLM coding model for agentic engineering, terminals, and repository
+    generation
+  context_window: 200000
+  output_limit: 200000
+  release_date: '2026-04-07'
+  family: glm
+  pricing:
+    input: 1.4
+    output: 4.4
+    cached_read: 1.4
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: qwen3.8-flash-next@eu
+  name: Qwen3.8 Flash Next (EU)
+  description: 'Open-weight experimental preview of the Qwen4 architecture: hybrid-attention
+    MoE (125B total, 6B active) with vision encoder for coding, agent tasks, and image
+    and video understanding'
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-08-27'
+  family: qwen
+  pricing:
+    input: 0.2
+    output: 0.5
+    cached_read: 0.05
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: thinkingcap-qwen3.6-27b
+  name: thinkingcap-qwen3.6-27b
+  description: ThinkingCap-Qwen3.6-27B is a reasoning tuned model from BottlecapAI built
+    on Qwen3.6 27B. It supports extended thinking with tool calling and a 256K context
+    window. Served via Sference.
+  context_window: 262144
+  output_limit: 32768
+  release_date: '2026-07-13'
+  family: qwen3.6
+  pricing:
+    input: 0.4
+    output: 3.0
+    cached_read: 0.26
+  tags:
+  - reasoning
+  - tools
+- id: nemotron-3-ultra-nvfp4
+  name: nemotron-3-ultra-nvfp4
+  description: Nemotron-3-Ultra-550B-A55B-NVFP4 is a frontier-scale large language model
+    (LLM) trained by NVIDIA, designed to deliver strong agentic, reasoning, and conversational
+    capabilities. It is optimized for the most demanding workloads, including complex
+    multi-step agents, long-context analysis, and high-accuracy reasoning over code,
+    math, and science. The model employs a hybrid Latent Mixture-of-Experts (LatentMoE)
+    architecture, utilizing interleaved Mamba-2 and MoE layers, along with select Attention
+    layers. Like the Super model, the Ultra model incorporates Multi-Token Prediction
+    (MTP) layers for faster text generation and improved quality, and it is trained
+    using an NVFP4 pre-training recipe to maximize compute efficiency. The model has
+    55B active parameters and 550B parameters in total.
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-06-13'
+  family: nemotron
+  pricing:
+    input: 0.6
+    output: 2.4
+    cached_read: 0.12
+  tags:
+  - reasoning
+  - tools
+- id: minimax-m3@eu
+  name: MiniMax-M3 (EU)
+  description: MiniMax multimodal model for long-context coding, perception, and agent
+    planning
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-06-01'
+  family: minimax
+  pricing:
+    input: 0.4
+    output: 2.0
+    cached_read: 0.1
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: claude-opus-4-6
+  name: Claude Opus 4.6
+  description: High-end Claude for difficult coding, planning, and slower expert reasoning
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-02-05'
+  family: claude-opus
+  pricing:
+    input: 5.0
+    output: 25.0
+    cached_read: 0.5
+    cached_write: 6.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: devstral-latest@eu
+  name: devstral-latest@eu
+  description: An enterprise grade text model, that excels at using tools to explore
+    codebases, editing multiple files and power software engineering agents.
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-05-27'
+  family: devstral
+  pricing:
+    input: 0.44
+    output: 2.2
+    cached_read: 0.44
+  tags:
+  - tools
+  - json_mode
+- id: gemini-3.5-flash
+  name: Gemini 3.5 Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-05-19'
+  family: gemini-flash
+  pricing:
+    input: 1.5
+    output: 9.0
+    cached_read: 0.15
+    cached_write: 1.583
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: mistral-medium-3-5@eu
+  name: mistral-medium-3-5@eu
+  description: Mistral Medium 3.5 is a dense 128B instruction following model from Mistral
+    AI. It supports text and image inputs with text output, and is designed for agentic
+    workflows, coding, and complex multi step reasoning. It is particularly strong at
+    reliable multi tool calling and long horizon tasks, with a 256K context window,
+    configurable reasoning effort per request, and a custom vision encoder that handles
+    variable image sizes and aspect ratios. Self hostable on as few as four GPUs and
+    available under open weights.
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-30'
+  family: mistral-medium
+  pricing:
+    input: 1.65
+    output: 8.25
+    cached_read: 1.65
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.6-luna
+  name: GPT-5.6 Luna
+  description: Cost-efficient GPT-5.6 model for fast, high-volume workloads
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-luna
+  pricing:
+    input: 0.2
+    output: 1.2
+    cached_read: 0.02
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: nemotron-lightning-3.5-30b-a3b
+  name: nemotron-lightning-3.5-30b-a3b
+  description: Nemotron-Lightning-3.5-30B-A3B is a 30B-parameter Mixture-of-Experts
+    language model (3B active) from NVIDIA's Nemotron-H family, built on a hybrid Mamba-Transformer
+    architecture for efficient long-context inference. Like other models in the family,
+    it responds to queries by first generating a reasoning trace and then concluding
+    with a final response, with reasoning behavior configurable through a flag in the
+    chat template. It includes a multi-token prediction (MTP) speculative decoding head
+    for low-latency serving.
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-08-15'
+  family: nemotron
+  pricing:
+    input: 0.05
+    output: 0.2
+    cached_read: 0.01
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: seed-2.0-code
+  name: Seed 2.0 Code
+  description: ByteDance Seed coding model for multimodal software engineering and long-running
+    agents
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-02-14'
+  family: seed
+  pricing:
+    input: 0.5
+    output: 3.0
+    cached_read: 0.1
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-opus-4-7
+  name: Claude Opus 4.7
+  description: Stronger Opus tier for advanced software work and high-stakes reasoning
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-04-16'
+  family: claude-opus
+  pricing:
+    input: 5.0
+    output: 25.0
+    cached_read: 0.5
+    cached_write: 6.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: kimi-k3
+  name: Kimi K3
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 1048576
+  output_limit: 262144
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 2.25
+    output: 11.25
+    cached_read: 0.225
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: mistral-medium-latest@eu
+  name: Mistral Medium (latest) (EU)
+  description: Balanced Mistral model for enterprise assistants, multilingual work,
+    and tools
+  context_window: 131072
+  output_limit: 131072
+  release_date: '2026-04-29'
+  family: mistral-medium
+  pricing:
+    input: 0.44
+    output: 2.2
+    cached_read: 0.44
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: gpt-5.6-sol@eu
+  name: GPT-5.6 Sol (EU)
+  description: Frontier GPT-5.6 model for complex professional work, coding, and agentic
+    workflows
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-sol
+  pricing:
+    input: 5.5
+    output: 33.0
+    cached_read: 0.55
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: glm-5.2-fast
+  name: glm-5.2-fast
+  description: GLM-5.2 introduces a robust 1M-token context and advanced, multi-effort
+    coding capabilities to significantly enhance performance on long-horizon tasks.
+    Its new IndexShare architecture and improved MTP layer simultaneously boost efficiency
+    by reducing per-token FLOPs and increasing speculative decoding lengths. A 743B-parameter
+    model in Zhipu AI's GLM series, designed to plan, execute, and iterate autonomously
+    on extended, engineering-grade tasks.
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-07-13'
+  family: glm
+  pricing:
+    input: 2.1
+    output: 6.6
+    cached_read: 0.21
+  tags:
+  - reasoning
+  - tools
+- id: gpt-5.3-codex
+  name: GPT-5.3 Codex
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic
+    software work
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2026-02-05'
+  family: gpt-codex
+  pricing:
+    input: 1.75
+    output: 14.0
+    cached_read: 0.175
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gemini-3.1-flash-image
+  name: Nano Banana 2
+  description: Image model for prompt-driven generation, editing, and visual design
+    workflows
+  context_window: 131072
+  output_limit: 32768
+  release_date: '2026-05-28'
+  family: gemini-flash
+  pricing:
+    input: 0.5
+    output: 2.0
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: glm-5.3-flash
+  name: GLM-5.3-Flash
+  description: Native multimodal GLM model for efficient coding and long-horizon agent
+    tasks
+  context_window: 1000000
+  output_limit: 262144
+  release_date: '2026-08-26'
+  family: glm
+  pricing:
+    input: 0.2
+    output: 0.5
+    cached_read: 0.07
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-sonnet-4-6@eu
+  name: Claude Sonnet 4.6 (EU)
+  description: Claude workhorse for coding agents, careful analysis, and production
+    cost control
+  context_window: 1000000
+  output_limit: 64000
+  release_date: '2026-02-17'
+  family: claude-sonnet
+  pricing:
+    input: 3.3
+    output: 16.5
+    cached_read: 0.3
+    cached_write: 4.125
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-fable-5
+  name: Claude Fable 5
+  description: Claude model for creative writing, analysis, and controlled agent workflows
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-09'
+  family: claude-fable
+  pricing:
+    input: 10.0
+    output: 50.0
+    cached_read: 1.0
+    cached_write: 12.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gemini-3.5-flash-lite
+  name: Gemini 3.5 Flash Lite
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-07-21'
+  family: gemini-flash-lite
+  pricing:
+    input: 0.3
+    output: 2.5
+    cached_read: 0.03
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: laguna-m.1
+  name: Laguna M.1
+  description: Poolside's open-weight model for agentic coding and long-horizon work
+  context_window: 32768
+  output_limit: 32768
+  release_date: '2026-04-28'
+  family: laguna
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - open_weights
+- id: leanstral-1-5
+  name: leanstral-1-5
+  description: Leanstral 1.5 is an updated Lean 4 formal proof engineering model from
+    Mistral AI, optimized for automated theorem proving and autoformalization. It has
+    119B total parameters with 6.5B active and supports a 256K token context window.
+    It supports native function calling and structured output.
+  context_window: 262144
+  output_limit: 32768
+  release_date: '2026-05-27'
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - tools
+  - json_mode
+- id: glm-5.3-flash@eu
+  name: GLM-5.3-Flash (EU)
+  description: Native multimodal GLM model for efficient coding and long-horizon agent
+    tasks
+  context_window: 1000000
+  output_limit: 262144
+  release_date: '2026-08-26'
+  family: glm
+  pricing:
+    input: 0.2
+    output: 0.5
+    cached_read: 0.07
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.4-nano
+  name: GPT-5.4 nano
+  description: Cheapest GPT-5.4 lane for simple routing, extraction, and bulk automation
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2026-03-17'
+  family: gpt-nano
+  pricing:
+    input: 0.2
+    output: 1.25
+    cached_read: 0.02
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: laguna-xs.2
+  name: Laguna XS.2
+  description: Agentic coding model from Poolside in the XS size class for local deployment
+  context_window: 32768
+  output_limit: 32768
+  release_date: '2026-04-28'
+  family: laguna
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - open_weights
+- id: gpt-5.5-pro
+  name: GPT-5.5 Pro
+  description: Highest-accuracy GPT-5.5 tier for slower, precision-heavy reasoning and
+    coding
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-04-23'
+  family: gpt-pro
+  pricing:
+    input: 30.0
+    output: 180.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: nemotron-3-nano-omni
+  name: nemotron-3-nano-omni
+  description: The most open, efficient, and accurate omni modal reasoning model for
+    agentic AI.
+  context_window: 300000
+  output_limit: 300000
+  release_date: '2026-05-20'
+  family: nemotron
+  pricing:
+    input: 0.06
+    output: 0.24
+    cached_read: 0.06
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: nemotron-3-super-120b-a12b
+  name: Nemotron 3 Super 120B A12B
+  description: Nemotron middle tier for collaborative agents and high-volume reasoning
+    workloads
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-03-11'
+  family: nemotron
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: gpt-5@eu
+  name: GPT-5 (EU)
+  description: Original GPT-5 workhorse for reasoning, coding, writing, and tool workflows
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2025-08-07'
+  family: gpt
+  pricing:
+    input: 1.375
+    output: 11.0
+    cached_read: 0.1375
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: thinkingcap-qwen3.6-27b@eu
+  name: thinkingcap-qwen3.6-27b@eu
+  description: ThinkingCap-Qwen3.6-27B is a reasoning tuned model from BottlecapAI built
+    on Qwen3.6 27B. It supports extended thinking with tool calling and a 256K context
+    window. Served via Sference.
+  context_window: 262144
+  output_limit: 32768
+  release_date: '2026-07-13'
+  family: qwen3.6
+  pricing:
+    input: 0.4
+    output: 3.0
+    cached_read: 0.26
+  tags:
+  - reasoning
+  - tools
+- id: seed-2.0-mini
+  name: Seed 2.0 Mini
+  description: Lightweight ByteDance Seed 2.0 model for low-latency multimodal reasoning
+    and high-volume tasks
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-02-14'
+  family: seed
+  pricing:
+    input: 0.1
+    output: 0.4
+    cached_read: 0.02
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: kimi-k2.6@eu
+  name: Kimi K2.6 (EU)
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 256000
+  output_limit: 128000
+  release_date: '2026-04-21'
+  family: kimi-k2
+  pricing:
+    input: 0.95
+    output: 4.0
+    cached_read: 0.95
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: muse-glimmer-30b
+  name: Muse Glimmer 30B
+  description: Muse Glimmer is a 30-billion-parameter open-weight multimodal model from
+    Meta Superintelligence Labs, distilled from Muse Spark for always-on local agents,
+    tool use, coding, and image understanding.
+  context_window: 131072
+  output_limit: 20480
+  release_date: '2026-08-10'
+  family: muse
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: nemotron-3-nano-omni@eu
+  name: nemotron-3-nano-omni@eu
+  description: The most open, efficient, and accurate omni modal reasoning model for
+    agentic AI.
+  context_window: 300000
+  output_limit: 300000
+  release_date: '2026-05-20'
+  family: nemotron
+  pricing:
+    input: 0.06
+    output: 0.24
+    cached_read: 0.06
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: ling-2.6-flash
+  name: ling-2.6-flash
+  description: Inclusion AI ling-2.6-flash
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-21'
+  family: ling
+  pricing:
+    input: 0.1
+    output: 0.3
+  tags:
+  - tools
+- id: deepseek-v4-pro@eu
+  name: DeepSeek V4 Pro (EU)
+  description: Open MoE flagship with million-token context for coding and long agent
+    runs
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-04-24'
+  family: deepseek-thinking
+  pricing:
+    input: 1.75
+    output: 3.5
+    cached_read: 0.44
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: qwen3.8-flash
+  name: Qwen3.8 Flash
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-08-26'
+  family: qwen
+  pricing:
+    input: 0.16
+    output: 0.47
+    cached_read: 0.016
+    cached_write: 0.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-sonnet-4@eu
+  name: Claude Sonnet 4 (latest) (EU)
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost
+    control
+  context_window: 1000000
+  output_limit: 64000
+  release_date: '2025-05-22'
+  family: claude-sonnet
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+    cached_write: 3.75
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gemini-3.5-flash-lite@eu
+  name: Gemini 3.5 Flash Lite (EU)
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-07-21'
+  family: gemini-flash-lite
+  pricing:
+    input: 0.33
+    output: 2.75
+    cached_read: 0.033
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gpt-5.4-mini
+  name: GPT-5.4 mini
+  description: Strong small GPT for coding subagents, quick tool use, and high-volume
+    work
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2026-03-17'
+  family: gpt-mini
+  pricing:
+    input: 0.75
+    output: 4.5
+    cached_read: 0.075
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: inkling
+  name: Inkling
+  description: Multimodal MoE reasoning model (975B total, 41B active) for text, image,
+    and audio
+  context_window: 65536
+  output_limit: 32768
+  release_date: '2026-07-15'
+  family: ling
+  pricing:
+    input: 1.87
+    output: 4.68
+    cached_read: 0.374
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - audio
+  - multimodal
+- id: claude-opus-5@eu
+  name: Claude Opus 5 (EU)
+  description: Strongest Claude Opus model for coding, agents, and professional work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-07-24'
+  family: claude-opus
+  pricing:
+    input: 5.5
+    output: 27.5
+    cached_read: 0.55
+    cached_write: 6.875
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: glm-5.2@eu
+  name: GLM-5.2 (EU)
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 1.2
+    output: 4.2
+    cached_read: 0.26
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: gemma-4-31b-it
+  name: Gemma 4 31B IT
+  description: Largest Gemma 4 instruction model for open, self-hosted chat and reasoning
+  context_window: 262144
+  output_limit: 8192
+  release_date: '2026-04-02'
+  family: gemma
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: grok-4.6
+  name: Grok 4.6
+  description: xAI's frontier model for long-running agents, coding, knowledge work,
+    and visual projects
+  context_window: 500000
+  output_limit: 500000
+  release_date: '2026-08-12'
+  family: grok
+  pricing:
+    input: 2.0
+    output: 6.0
+    cached_read: 0.5
+    cached_write: 2.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-haiku-4-5@eu
+  name: Claude Haiku 4.5 (latest) (EU)
+  description: Fast Claude lane for lightweight agents, office tasks, and responsive
+    chat
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-10-15'
+  family: claude-haiku
+  pricing:
+    input: 1.1
+    output: 5.5
+    cached_read: 0.11
+    cached_write: 1.375
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-4o-mini@eu
+  name: GPT-4o mini (EU)
+  description: Small omni GPT for cheap multimodal assistance and production-scale traffic
+  context_window: 128000
+  output_limit: 16000
+  release_date: '2024-07-18'
+  family: gpt-mini
+  pricing:
+    input: 0.165
+    output: 0.66
+    cached_read: 0.0825
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-haiku-4-5
+  name: Claude Haiku 4.5 (latest)
+  description: Fast Claude lane for lightweight agents, office tasks, and responsive
+    chat
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-10-15'
+  family: claude-haiku
+  pricing:
+    input: 1.0
+    output: 5.0
+    cached_read: 0.1
+    cached_write: 1.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-sonnet-4-5
+  name: Claude Sonnet 4.5 (latest)
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost
+    control
+  context_window: 1000000
+  output_limit: 64000
+  release_date: '2025-09-29'
+  family: claude-sonnet
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+    cached_write: 3.75
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-4-1
+  name: Claude Opus 4.1 (latest)
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 32000
+  release_date: '2025-08-05'
+  family: claude-opus
+  pricing:
+    input: 15.0
+    output: 75.0
+    cached_read: 1.5
+    cached_write: 18.75
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: qwen3.8-max
+  name: Qwen3.8 Max
+  description: 2.4-trillion-parameter MoE flagship for coding, professional work, multimodal
+    understanding, and long-horizon agentic workflows
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-08-03'
+  family: qwen
+  pricing:
+    input: 2.0
+    output: 6.0
+    cached_read: 0.25
+    cached_write: 2.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: glm-5.1
+  name: GLM-5.1
+  description: Strong GLM coding model for agentic engineering, terminals, and repository
+    generation
+  context_window: 200000
+  output_limit: 128000
+  release_date: '2026-04-07'
+  family: glm
+  pricing:
+    input: 1.4
+    output: 4.4
+    cached_read: 0.26
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: devstral-latest
+  name: devstral-latest
+  description: An enterprise grade text model, that excels at using tools to explore
+    codebases, editing multiple files and power software engineering agents.
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-05-27'
+  family: devstral
+  pricing:
+    input: 0.44
+    output: 2.2
+    cached_read: 0.44
+  tags:
+  - tools
+  - json_mode
+- id: kimi-k3@eu
+  name: Kimi K3 (EU)
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 1048576
+  output_limit: 262144
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 2.25
+    output: 11.25
+    cached_read: 0.225
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: qwen3.7-plus
+  name: Qwen3.7 Plus
+  description: Multimodal Qwen workhorse for long-context agents, visual inputs, and
+    coding
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-06-02'
+  family: qwen
+  pricing:
+    input: 0.32
+    output: 1.28
+    cached_read: 0.032
+    cached_write: 0.4
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gemini-2.5-flash-lite@eu
+  name: Gemini 2.5 Flash-Lite (EU)
+  description: Lean Gemini 2.5 lane for cheap multimodal traffic and quick agents
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2025-06-17'
+  family: gemini-flash-lite
+  pricing:
+    input: 0.1
+    output: 0.4
+    cached_read: 0.01
+    cached_write: 0.18333
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: mistral-small-2603
+  name: Mistral Small 4
+  description: Fast Mistral production model for chat, extraction, and cost-sensitive
+    agents
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-03-16'
+  family: mistral-small
+  pricing:
+    input: 0.165
+    output: 0.66
+    cached_read: 0.165
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: gemini-3.8-flash
+  name: Gemini 3.8 Flash
+  description: Google's most intelligent Flash model, engineered for long-horizon software
+    engineering, autonomous agents, and complex enterprise workflows
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-09-02'
+  family: gemini-flash
+  pricing:
+    input: 0.75
+    output: 3.75
+    cached_read: 0.075
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: claude-opus-4-8
+  name: Claude Opus 4.8
+  description: Top Claude Opus tier for the hardest reasoning, coding, and long-horizon
+    agents
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-05-28'
+  family: claude-opus
+  pricing:
+    input: 5.0
+    output: 25.0
+    cached_read: 0.5
+    cached_write: 6.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: grok-4.2-beta
+  name: grok-4.2-beta
+  description: Grok 4.20 Beta is xAI's newest flagship model with industry-leading speed
+    and agentic tool calling capabilities. It combines the lowest hallucination rate
+    on the market with strict prompt adherance, delivering consistently precise and
+    truthful responses.
+  context_window: 2000000
+  output_limit: 2000000
+  release_date: '2026-03-19'
+  family: grok
+  pricing:
+    input: 2.0
+    output: 6.0
+    cached_read: 0.2
+    cached_write: 2.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: deepseek-v4-pro
+  name: DeepSeek V4 Pro
+  description: Open MoE flagship with million-token context for coding and long agent
+    runs
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-04-24'
+  family: deepseek-thinking
+  pricing:
+    input: 1.32
+    output: 3.96
+    cached_read: 0.044
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: claude-sonnet-4-5@eu
+  name: Claude Sonnet 4.5 (latest) (EU)
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost
+    control
+  context_window: 1000000
+  output_limit: 64000
+  release_date: '2025-09-29'
+  family: claude-sonnet
+  pricing:
+    input: 3.3
+    output: 16.5
+    cached_read: 0.3
+    cached_write: 4.125
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: mistral-small-2603@eu
+  name: Mistral Small 4 (EU)
+  description: Fast Mistral production model for chat, extraction, and cost-sensitive
+    agents
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-03-16'
+  family: mistral-small
+  pricing:
+    input: 0.165
+    output: 0.66
+    cached_read: 0.165
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: qwen3.5-2b
+  name: qwen3.5-2b
+  description: Qwen3.5-2B is a compact yet capable model from Alibaba's Qwen3.5 series.
+    It features a 262K token context window, support for 201 languages, thinking/reasoning
+    mode, and tool calling for agentic workflows. A strong choice for prototyping, fine-tuning,
+    and efficient multilingual deployments.
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-03-10'
+  family: qwen3.5
+  pricing:
+    input: 0.02
+    output: 0.1
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-4-5@eu
+  name: Claude Opus 4.5 (latest) (EU)
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-11-24'
+  family: claude-opus
+  pricing:
+    input: 5.5
+    output: 27.5
+    cached_read: 0.55
+    cached_write: 6.875
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.4-pro
+  name: GPT-5.4 Pro
+  description: More exact GPT-5.4 tier for demanding professional reasoning and agent
+    tasks
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-03-05'
+  family: gpt-pro
+  pricing:
+    input: 30.0
+    output: 180.0
+    cached_read: 30.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gemini-3.1-flash-lite@eu
+  name: Gemini 3.1 Flash Lite (EU)
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-05-07'
+  family: gemini-flash-lite
+  pricing:
+    input: 0.275
+    output: 1.65
+    cached_read: 0.0275
+    cached_write: 0.091663
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gemini-3.7-flash
+  name: Gemini 3.7 Flash
+  description: High-efficiency Gemini model for agentic workflows, coding, and multimodal
+    reasoning
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-08-13'
+  family: gemini-flash
+  pricing:
+    input: 0.75
+    output: 3.75
+    cached_read: 0.075
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gemini-2.5-flash@eu
+  name: Gemini 2.5 Flash (EU)
+  description: Fast Gemini workhorse for multimodal apps where latency and price matter
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2025-06-17'
+  family: gemini-flash
+  pricing:
+    input: 0.3
+    output: 2.5
+    cached_read: 0.075
+    cached_write: 0.55
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gemini-2.5-pro@eu
+  name: Gemini 2.5 Pro (EU)
+  description: Google's proven reasoning model for coding, math, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2025-06-17'
+  family: gemini-pro
+  pricing:
+    input: 1.25
+    output: 10.0
+    cached_read: 0.31
+    cached_write: 2.375
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gpt-5.6-terra
+  name: GPT-5.6 Terra
+  description: Balanced GPT-5.6 model for capable, cost-efficient everyday work
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-terra
+  pricing:
+    input: 2.0
+    output: 12.0
+    cached_read: 0.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: glm-5.3
+  name: GLM-5.3
+  description: Flagship GLM model for long-horizon coding, agents, and complex project
+    delivery
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-08-14'
+  family: glm
+  pricing:
+    input: 1.2
+    output: 4.2
+    cached_read: 0.26
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: nemotron-3-ultra-550b-a55b
+  name: Nemotron 3 Ultra 550B A55B
+  description: Largest Nemotron 3 model for maximum open-weight reasoning and agent
+    accuracy
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-06-04'
+  family: nemotron
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: nemotron-3.5-lightning-30b-a3b
+  name: nemotron-3.5-lightning-30b-a3b
+  description: NVIDIA Nemotron 3.5 Lightning 30B-A3B is a hybrid Mamba-2 + MoE + Attention
+    model with 30B total and 3B active parameters, pre-trained on over 20T tokens with
+    an NVFP4 recipe and Multi-Token Prediction for fast generation. Up to 1M token context
+    for long-running autonomous agents, sub-agent workhorse deployments, and agentic
+    workflows. Supports reasoning and tool calling. English and coding languages plus
+    Spanish, French, German, Italian, and Japanese. Open weights under the OpenMDW License
+    Agreement v1.1. Part of the NVIDIA Nemotron family.
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-08-11'
+  family: nemotron
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+- id: inkling-256k
+  name: inkling-256k
+  description: Inkling 256K is the extended context variant of Inkling, a large MoE
+    hybrid reasoning model from Thinking Machines with audio and vision input support
+    and a 256K context window.
+  context_window: 262144
+  output_limit: 32768
+  release_date: '2026-07-16'
+  pricing:
+    input: 1.87
+    output: 4.68
+    cached_read: 0.374
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: gemini-3.5-flash@eu
+  name: Gemini 3.5 Flash (EU)
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-05-19'
+  family: gemini-flash
+  pricing:
+    input: 1.65
+    output: 9.9
+    cached_read: 0.165
+    cached_write: 1.7413
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gpt-5.6-luna@eu
+  name: GPT-5.6 Luna (EU)
+  description: Cost-efficient GPT-5.6 model for fast, high-volume workloads
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-luna
+  pricing:
+    input: 0.22
+    output: 1.32
+    cached_read: 0.022
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-4-8@eu
+  name: Claude Opus 4.8 (EU)
+  description: Top Claude Opus tier for the hardest reasoning, coding, and long-horizon
+    agents
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-05-28'
+  family: claude-opus
+  pricing:
+    input: 5.5
+    output: 27.5
+    cached_read: 0.55
+    cached_write: 6.875
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: o4-mini@eu
+  name: o4-mini (EU)
+  description: Fast o-series model for compact reasoning, coding, and tool use
+  context_window: 200000
+  output_limit: 100000
+  release_date: '2025-04-16'
+  family: o-mini
+  pricing:
+    input: 1.21
+    output: 4.84
+    cached_read: 0.3025
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-4.1@eu
+  name: GPT-4.1 (EU)
+  description: Long-lived GPT workhorse for coding, instruction following, and production
+    apps
+  context_window: 1047576
+  output_limit: 32768
+  release_date: '2025-04-14'
+  family: gpt
+  pricing:
+    input: 2.2
+    output: 8.8
+    cached_read: 0.55
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-sonnet-5
+  name: Claude Sonnet 5
+  description: Everyday Claude agent model for coding, planning, browsing, and general
+    work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-30'
+  family: claude-sonnet
+  pricing:
+    input: 2.0
+    output: 10.0
+    cached_read: 0.2
+    cached_write: 2.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: deepseek-v4-flash-0731@eu
+  name: DeepSeek V4 Flash 0731 (EU)
+  description: Official DeepSeek V4 Flash release with enhanced agentic capabilities
+    and integrated DSpark speculative decoding
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-07-31'
+  family: deepseek-flash
+  pricing:
+    input: 0.14
+    output: 0.28
+    cached_read: 0.07
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: claude-fable-5.1
+  name: Claude Fable 5.1
+  description: Claude model for demanding reasoning and long-horizon agentic work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-09-01'
+  family: claude-fable
+  pricing:
+    input: 10.0
+    output: 50.0
+    cached_read: 0.25
+    cached_write: 12.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: qwen3.8-2.4T-A95B@eu
+  name: Qwen3.8 2.4T A95B (EU)
+  description: Open-weight sparse MoE (2.4T total, 95B active), the open-weight twin
+    of Qwen3.8 Max for coding, research, complex reasoning, and agentic workflows
+  context_window: 1000000
+  output_limit: 262144
+  release_date: '2026-08-12'
+  family: qwen
+  pricing:
+    input: 2.5
+    output: 6.0
+    cached_read: 0.63
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: mimo-v2.5
+  name: MiMo-V2.5
+  description: Open MiMo model for multimodal coding agents and long-context automation
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-04-22'
+  family: mimo
+  pricing:
+    input: 0.14
+    output: 0.28
+    cached_read: 0.0028
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - audio
+  - multimodal
+- id: gpt-5.1@eu
+  name: GPT-5.1 (EU)
+  description: Sharper GPT-5 generation for coding, product work, and tool-assisted
+    tasks
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2025-11-13'
+  family: gpt
+  pricing:
+    input: 1.375
+    output: 11.0
+    cached_read: 0.1375
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: mimo-v2.5-pro
+  name: MiMo-V2.5-Pro
+  description: Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-04-22'
+  family: mimo
+  pricing:
+    input: 0.435
+    output: 0.87
+    cached_read: 0.0036
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: gpt-5.5
+  name: GPT-5.5
+  description: Default frontier GPT for coding, computer use, research, and knowledge
+    work
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-04-23'
+  family: gpt
+  pricing:
+    input: 5.5
+    output: 33.0
+    cached_read: 0.55
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal

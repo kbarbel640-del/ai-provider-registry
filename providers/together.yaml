@@ -20,5 +20,289 @@ models:
   - meta-llama/Llama-3.1-8B-Instruct-Turbo
   - deepseek-ai/DeepSeek-V3
   - Qwen/Qwen2.5-72B-Instruct-Turbo
+  - id: Rnj-1-Instruct
+    family: rnj
+    context_window: 32768
+    pricing:
+      input: 0.15
+      output: 0.15
+    tags: [tools, open_weights]
+  - id: DeepSeek-V3-1
+    family: deepseek
+    context_window: 131072
+    pricing:
+      input: 0.6
+      output: 1.7
+    tags: [reasoning, tools, open_weights]
+  - id: DeepSeek-V3
+    family: deepseek
+    context_window: 131072
+    pricing:
+      input: 1.25
+      output: 1.25
+    tags: [tools, open_weights]
+  - id: DeepSeek-V4-Flash-0731
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.14
+      output: 0.28
+      cached_read: 0.03
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: DeepSeek-V4-Pro-0813
+    family: deepseek-thinking
+    context_window: 1048576
+    pricing:
+      input: 1.32
+      output: 3.96
+      cached_read: 0.13
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: DeepSeek-R1
+    family: deepseek-thinking
+    context_window: 163839
+    pricing:
+      input: 3.0
+      output: 7.0
+    tags: [reasoning, open_weights]
+  - id: DeepSeek-V4-Pro
+    family: deepseek
+    context_window: 512000
+    pricing:
+      input: 1.74
+      output: 3.48
+      cached_read: 0.2
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gemma-4-31b-it
+    family: gemma
+    context_window: 32000
+    pricing:
+      input: 0.28
+      output: 0.86
+    tags: [reasoning]
+  - id: nemotron-3-ultra-550b-a55b
+    family: nemotron
+    context_window: 512300
+    pricing:
+      input: 0.6
+      output: 3.6
+      cached_read: 0.2
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gemma-4-31B-it
+    family: gemma
+    context_window: 262144
+    pricing:
+      input: 0.39
+      output: 0.97
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: gemma-3n-E4B-it
+    family: gemma
+    context_window: 32768
+    pricing:
+      input: 0.06
+      output: 0.12
+    tags: [json_mode, open_weights]
+  - id: GLM-5.1
+    family: glm
+    context_window: 202752
+    pricing:
+      input: 1.4
+      output: 4.4
+      cached_read: 0.26
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: GLM-5.3
+    family: glm
+    context_window: 1048576
+    pricing:
+      input: 1.4
+      output: 4.4
+      cached_read: 0.26
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: GLM-5.2
+    family: glm
+    context_window: 512000
+    pricing:
+      input: 1.4
+      output: 4.4
+      cached_read: 0.26
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: GLM-5
+    family: glm
+    context_window: 202752
+    pricing:
+      input: 1.0
+      output: 3.2
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: GLM-5.3-Flash
+    family: glm
+    context_window: 1048575
+    pricing:
+      input: 0.15
+      output: 0.5
+      cached_read: 0.03
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: LFM2-24B-A2B
+    family: liquid
+    context_window: 32768
+    pricing:
+      input: 0.03
+      output: 0.12
+    tags: [open_weights]
+  - id: Inkling
+    family: ling
+    context_window: 524288
+    pricing:
+      input: 1.0
+      output: 4.05
+      cached_read: 0.17
+    tags: [reasoning, tools, json_mode, open_weights, vision, audio, multimodal]
+  - id: Qwen3.7-Max
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 1.25
+      output: 3.75
+      cached_read: 0.125
+    tags: [tools]
+  - id: Qwen3-235B-A22B-Instruct-2507-tput
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.2
+      output: 0.6
+    tags: [tools, open_weights]
+  - id: Qwen3.6-Plus
+    family: qwen
+    context_window: 1000000
+    pricing:
+      input: 0.5
+      output: 3.0
+    tags: [reasoning, tools, open_weights]
+  - id: Qwen3.5-9B
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.17
+      output: 0.25
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: Qwen3.5-397B-A17B
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.6
+      output: 3.6
+      cached_read: 0.35
+    tags: [reasoning, tools, open_weights, vision]
+  - id: Qwen3-Coder-480B-A35B-Instruct-FP8
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 2.0
+      output: 2.0
+    tags: [tools, open_weights]
+  - id: Qwen2.5-7B-Instruct-Turbo
+    family: qwen
+    context_window: 32768
+    pricing:
+      input: 0.3
+      output: 0.3
+    tags: [tools, json_mode, open_weights]
+  - id: Qwen3-Coder-Next-FP8
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.5
+      output: 1.2
+    tags: [tools, open_weights]
+  - id: cogito-v2-1-671b
+    family: cogito
+    context_window: 163840
+    pricing:
+      input: 1.25
+      output: 1.25
+    tags: [reasoning]
+  - id: MiniMax-M2.5
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.3
+      output: 1.2
+      cached_read: 0.06
+    tags: [reasoning, tools, open_weights]
+  - id: MiniMax-M3
+    family: minimax
+    context_window: 524288
+    pricing:
+      input: 0.3
+      output: 1.2
+      cached_read: 0.06
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: MiniMax-M2.7
+    family: minimax
+    context_window: 202752
+    pricing:
+      input: 0.3
+      output: 1.2
+      cached_read: 0.06
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: Llama-3.3-70B-Instruct-Turbo
+    family: llama
+    context_window: 131072
+    pricing:
+      input: 1.04
+      output: 1.04
+    tags: [tools, open_weights]
+  - id: Meta-Llama-3-8B-Instruct-Lite
+    family: llama
+    context_window: 8192
+    pricing:
+      input: 0.14
+      output: 0.14
+    tags: [open_weights]
+  - id: gpt-oss-20b
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.05
+      output: 0.2
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gpt-oss-120b
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.15
+      output: 0.6
+    tags: [reasoning, tools, open_weights]
+  - id: Kimi-K2.5
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.5
+      output: 2.8
+    tags: [reasoning, tools, open_weights, vision]
+  - id: Kimi-K2.7-Code
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.95
+      output: 4.0
+      cached_read: 0.19
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: Kimi-K2.6
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 1.2
+      output: 4.5
+      cached_read: 0.2
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: Kimi-K3
+    family: kimi-k3
+    context_window: 1048576
+    pricing:
+      input: 3.0
+      output: 15.0
+      cached_read: 0.3
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+
 api_spec: https://docs.together.ai/openapi.yaml
 endpoint: https://api.together.xyz/v1

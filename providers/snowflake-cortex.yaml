@@ -183,3 +183,141 @@ models:
   tags:
   - vision
   - open_weights
+- id: openai-gpt-5.6-terra
+  name: GPT-5.6 Terra
+  description: Balanced GPT-5.6 model for capable, cost-efficient everyday work
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-terra
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-5
+  name: Claude Opus 5
+  description: Strongest Claude Opus model for coding, agents, and professional work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-07-24'
+  family: claude-opus
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-opus-4-5
+  name: Claude Opus 4.5 (latest)
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-11-24'
+  family: claude-opus
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: openai-gpt-5.6-luna
+  name: GPT-5.6 Luna
+  description: Cost-efficient GPT-5.6 model for fast, high-volume workloads
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-luna
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-4-6
+  name: Claude Opus 4.6
+  description: High-end Claude for difficult coding, planning, and slower expert reasoning
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-02-05'
+  family: claude-opus
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: deepseek-r1
+  name: DeepSeek-R1
+  description: Classic open reasoning model for transparent math, coding, and deliberate
+    problem solving
+  context_window: 128000
+  output_limit: 32768
+  release_date: '2025-01-20'
+  family: deepseek-thinking
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: openai-gpt-5.6-sol
+  name: GPT-5.6 Sol
+  description: Frontier GPT-5.6 model for complex professional work, coding, and agentic
+    workflows
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-sol
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-haiku-4-5
+  name: Claude Haiku 4.5 (latest)
+  description: Fast Claude lane for lightweight agents, office tasks, and responsive
+    chat
+  context_window: 200000
+  output_limit: 16384
+  release_date: '2025-10-15'
+  family: claude-haiku
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-sonnet-4-5
+  name: Claude Sonnet 4.5 (latest)
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost
+    control
+  context_window: 200000
+  output_limit: 16384
+  release_date: '2025-09-29'
+  family: claude-sonnet
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-sonnet-5
+  name: Claude Sonnet 5
+  description: Everyday Claude agent model for coding, planning, browsing, and general
+    work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-30'
+  family: claude-sonnet
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: snowflake-llama3.3-70b
+  name: Llama-3.3-70B-Instruct
+  description: Popular open Llama workhorse for multilingual chat, coding, and self-hosting
+  context_window: 128000
+  output_limit: 4096
+  release_date: '2024-12-06'
+  family: llama
+  tags:
+  - tools
+  - open_weights
+  - multimodal

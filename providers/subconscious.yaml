@@ -52,3 +52,35 @@ models:
   release_date: '2026-05-11'
   tags:
   - reasoning
+- id: glm-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 1.4
+    output: 4.4
+    cached_read: 0.26
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: tim-qwen3.6-27b
+  name: TIM-Qwen3.6 27B
+  description: Reasoning model for deliberate analysis, multi-step problem solving,
+    and tool use
+  context_window: 8192
+  output_limit: 5000
+  release_date: '2026-05-11'
+  pricing:
+    input: 0.3
+    output: 3.0
+    cached_read: 0.15
+  tags:
+  - reasoning
+  - tools
+  - json_mode

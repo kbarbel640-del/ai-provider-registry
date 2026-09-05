@@ -71,3 +71,158 @@ models:
   tags:
   - reasoning
   - open_weights
+- id: minimax-m2.5
+  name: MiniMax-M2.5
+  description: Prior MiniMax coding model for agent workflows, office edits, and automation
+  context_window: 196000
+  output_limit: 195000
+  release_date: '2026-02-12'
+  family: minimax
+  pricing:
+    input: 0.3
+    output: 1.2
+    cached_read: 0.03
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: claude-opus-4.7
+  name: Claude Opus 4.7
+  description: Stronger Opus tier for advanced software work and high-stakes reasoning
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-04-16'
+  family: claude-opus
+  pricing:
+    input: 5.0
+    output: 25.0
+    cached_read: 0.5
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: glm-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 1.4
+    output: 4.4
+    cached_read: 0.26
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: glm-5.1
+  name: GLM 5.1
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202000
+  output_limit: 202000
+  release_date: '2026-04-08'
+  family: glm
+  pricing:
+    input: 0.615
+    output: 2.46
+    cached_read: 0.133
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: deepseek-v4-flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context
+    work
+  context_window: 1048576
+  output_limit: 128000
+  release_date: '2026-04-24'
+  family: deepseek-flash
+  pricing:
+    input: 0.14
+    output: 0.28
+    cached_read: 0.028
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: deepseek-v4-pro
+  name: DeepSeek V4 Pro
+  description: Open MoE flagship with million-token context for coding and long agent
+    runs
+  context_window: 1002000
+  output_limit: 128000
+  release_date: '2026-04-24'
+  family: deepseek-thinking
+  pricing:
+    input: 1.74
+    output: 3.48
+    cached_read: 0.145
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: gpt-5.5
+  name: GPT-5.5
+  description: Default frontier GPT for coding, computer use, research, and knowledge
+    work
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-04-23'
+  family: gpt
+  pricing:
+    input: 5.0
+    output: 30.0
+    cached_read: 0.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: kimi-k2.7-code
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less
+    overthinking
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-06-12'
+  family: kimi-k2
+  pricing:
+    input: 0.95
+    output: 4.0
+    cached_read: 0.19
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: kimi-k2.5
+  name: Kimi K2.5
+  description: Earlier Kimi frontier model for long-context agents, coding, and multimodal
+    work
+  context_window: 256000
+  output_limit: 256000
+  release_date: 2026-01
+  family: kimi-k2
+  pricing:
+    input: 0.6
+    output: 3.0
+    cached_read: 0.1
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal

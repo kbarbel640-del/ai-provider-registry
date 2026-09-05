@@ -226,3 +226,267 @@ models:
   release_date: '2026-06-17'
   tags:
   - open_weights
+- id: glm-5.2-short-flex
+  name: GLM 5.2 Short Flex
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 199984
+  output_limit: 32000
+  release_date: '2026-06-17'
+  family: glm
+  pricing:
+    input: 0.9425
+    output: 2.925
+    cached_read: 0.09425
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: deepseek-v4-flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context
+    work
+  context_window: 1048560
+  output_limit: 65536
+  release_date: '2026-04-24'
+  family: deepseek-flash
+  pricing:
+    input: 0.14
+    output: 0.28
+    cached_read: 0.028
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: kimi-k2.7-code
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less
+    overthinking
+  context_window: 262128
+  output_limit: 262128
+  release_date: '2026-06-12'
+  family: kimi-k2
+  pricing:
+    input: 0.95
+    output: 4.0
+    cached_read: 0.095
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: kimi-k2.7-code-fast
+  name: Kimi K2.7 Code Fast
+  description: Kimi K2.7 Code with reasoning capped to a short budget for lower latency;
+    reasoning cannot be disabled on this model
+  context_window: 262128
+  output_limit: 262128
+  release_date: '2026-06-12'
+  family: kimi-k2
+  pricing:
+    input: 0.95
+    output: 4.0
+    cached_read: 0.095
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: kimi-k3
+  name: Kimi K3
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 1048560
+  output_limit: 1048560
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: kimi-k3-fast
+  name: Kimi K3 Fast
+  description: Kimi K3 with thinking disabled for low-latency tool calling, vision,
+    and JSON work
+  context_window: 1048560
+  output_limit: 1048560
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: kimi-k3-flex
+  name: Kimi K3 Flex
+  description: 'Kimi K3 on the flex tier: discounted, best-effort latency, requests
+    may be held under load'
+  context_window: 1048560
+  output_limit: 1048560
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 1.95
+    output: 9.75
+    cached_read: 0.195
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: qwen3.6-35b-fast
+  name: Qwen3.6 35B Fast
+  description: Efficient model for low-latency assistance, extraction, and routine automation
+  context_window: 131056
+  output_limit: 131056
+  release_date: '2026-04-01'
+  family: qwen3.6
+  pricing:
+    input: 0.29
+    output: 1.15
+    cached_read: 0.029
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: gemma-4-31b
+  name: Gemma 4 31B
+  description: Largest Gemma 4 instruction model for open, self-hosted chat and reasoning
+  context_window: 262128
+  output_limit: 16384
+  release_date: '2026-04-02'
+  family: gemma
+  pricing:
+    input: 0.144
+    output: 0.42
+    cached_read: 0.0144
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: deepseek-v4-pro
+  name: DeepSeek V4 Pro
+  description: Open MoE flagship with million-token context for coding and long agent
+    runs
+  context_window: 1048560
+  output_limit: 393216
+  release_date: '2026-04-24'
+  family: deepseek-thinking
+  pricing:
+    input: 1.0
+    output: 3.0
+    cached_read: 0.1
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: deepseek-v4-flash-flex
+  name: DeepSeek V4 Flash Flex
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context
+    work
+  context_window: 1048560
+  output_limit: 65536
+  release_date: '2026-04-24'
+  family: deepseek-flash
+  pricing:
+    input: 0.091
+    output: 0.182
+    cached_read: 0.0182
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: glm-5.3
+  name: GLM 5.3
+  description: Flagship GLM model for long-horizon coding, agents, and complex project
+    delivery
+  context_window: 1048560
+  output_limit: 1048560
+  release_date: '2026-08-14'
+  family: glm
+  pricing:
+    input: 1.45
+    output: 4.5
+    cached_read: 0.145
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: qwen3.6-35b
+  name: Qwen3.6 35B
+  description: Open multimodal Qwen MoE for local agents that need vision, audio, and
+    code
+  context_window: 131056
+  output_limit: 131056
+  release_date: '2026-04-17'
+  family: qwen
+  pricing:
+    input: 0.29
+    output: 1.15
+    cached_read: 0.029
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: qwen-3.8-27b
+  name: Qwen3.8 27B
+  description: Dense 27B vision-language model for coding, agent tasks, and image and
+    video understanding
+  context_window: 262128
+  output_limit: 65536
+  release_date: '2026-08-14'
+  family: qwen
+  pricing:
+    input: 0.45
+    output: 3.2
+    cached_read: 0.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: glm-5.2-short
+  name: GLM 5.2 Short
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 199984
+  output_limit: 32000
+  release_date: '2026-06-17'
+  family: glm
+  pricing:
+    input: 1.45
+    output: 4.5
+    cached_read: 0.145
+  tags:
+  - reasoning
+  - tools
+  - open_weights

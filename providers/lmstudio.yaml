@@ -59,3 +59,44 @@ models:
   - reasoning
   - open_weights
   - free
+- id: qwen3-coder-30b
+  name: Qwen3 Coder 30B
+  description: Qwen coding model for software agents, repository edits, and code reasoning
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2025-07-23'
+  family: qwen
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - tools
+  - open_weights
+- id: qwen3-30b-a3b-2507
+  name: Qwen3 30B A3B 2507
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262144
+  output_limit: 16384
+  release_date: '2025-07-30'
+  family: qwen
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - tools
+  - open_weights
+- id: gpt-oss-20b
+  name: GPT OSS 20B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following
+    workloads
+  context_window: 131072
+  output_limit: 32768
+  release_date: '2025-08-05'
+  family: gpt-oss
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights

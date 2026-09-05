@@ -14,5 +14,19 @@ supports:
 models:
   - sonar-pro
   - sonar
+  - id: sonar-reasoning-pro
+    family: sonar-reasoning
+    context_window: 128000
+    pricing:
+      input: 2.0
+      output: 8.0
+    tags: [reasoning, vision, multimodal]
+  - id: sonar-deep-research
+    context_window: 128000
+    pricing:
+      input: 2.0
+      output: 8.0
+    tags: [reasoning]
+
 api_spec: https://docs.perplexity.ai/openapi.json
 endpoint: https://api.perplexity.ai

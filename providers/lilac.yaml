@@ -91,3 +91,74 @@ models:
   - reasoning
   - open_weights
   - low_cost
+- id: gemma-4-31b-it
+  name: Gemma 4 31B IT
+  description: Largest Gemma 4 instruction model for open, self-hosted chat and reasoning
+  context_window: 262100
+  output_limit: 262100
+  release_date: '2026-04-02'
+  family: gemma
+  pricing:
+    input: 0.11
+    output: 0.35
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: glm-5.2
+  name: GLM 5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 524288
+  output_limit: 524288
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 0.9
+    output: 3.0
+    cached_read: 0.27
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: minimax-m3
+  name: MiniMax M3
+  description: MiniMax multimodal model for long-context coding, perception, and agent
+    planning
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-06-01'
+  family: minimax-m3
+  pricing:
+    input: 0.28
+    output: 1.1
+    cached_read: 0.05
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: kimi-k2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-21'
+  family: kimi-k2
+  pricing:
+    input: 0.7
+    output: 3.5
+    cached_read: 0.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal

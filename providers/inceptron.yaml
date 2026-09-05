@@ -118,3 +118,78 @@ models:
   tags:
   - reasoning
   - open_weights
+- id: DeepSeek-V4-Flash-0731
+  name: DeepSeek V4 Flash 0731
+  description: Official DeepSeek V4 Flash release with enhanced agentic capabilities
+    and integrated DSpark speculative decoding
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-07-31'
+  family: deepseek-flash
+  pricing:
+    input: 0.13
+    output: 0.28
+    cached_read: 0.03
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: GLM-5.2
+  name: GLM 5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 0.71
+    output: 2.35
+    cached_read: 0.12
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: Kimi-K2.7-Code
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less
+    overthinking
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-06-12'
+  family: kimi-k2
+  pricing:
+    input: 0.66
+    output: 3.4
+    cached_read: 0.18
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: Kimi-K2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-21'
+  family: kimi-k2
+  pricing:
+    input: 0.53
+    output: 3.39
+    cached_read: 0.17
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal

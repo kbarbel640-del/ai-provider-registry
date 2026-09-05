@@ -90,3 +90,69 @@ models:
   - vision
   - open_weights
   - free
+- id: kimi-latest
+  name: Kimi (latest)
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 256000
+  output_limit: 262144
+  release_date: '2026-04-21'
+  family: kimi-k2
+  pricing:
+    input: 1.791
+    output: 8.9436
+    cached_read: 0.1733
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: kimi-k2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 256000
+  output_limit: 262144
+  release_date: '2026-04-21'
+  family: kimi-k2
+  pricing:
+    input: 1.791
+    output: 8.9436
+    cached_read: 0.1733
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: voxtral-mini-3b
+  name: Voxtral Mini 3B
+  description: Speech-to-text model for audio transcription, translation, and audio
+    understanding
+  context_window: 32000
+  output_limit: 32000
+  release_date: 2025-07
+  family: voxtral
+  pricing:
+    input: 0.00462
+    output: 0.0
+  tags:
+  - open_weights
+  - audio
+  - multimodal
+- id: deepseek-ocr-2
+  name: DeepSeek OCR 2
+  description: High-accuracy OCR model for extracting text from documents, screenshots,
+    receipts, and natural scenes
+  context_window: 8192
+  output_limit: 8192
+  release_date: '2026-01-27'
+  pricing:
+    input: 0.8897
+    output: 1.4675
+    cached_read: 0.0924
+  tags:
+  - open_weights
+  - vision
+  - multimodal

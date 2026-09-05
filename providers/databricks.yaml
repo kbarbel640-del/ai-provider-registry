@@ -236,3 +236,282 @@ models:
   tags:
   - vision
   - reasoning
+- id: databricks-claude-opus-4-5
+  name: Claude Opus 4.5 (latest)
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-11-24'
+  family: claude-opus
+  pricing:
+    input: 5.0
+    output: 25.0
+    cached_read: 0.5
+    cached_write: 6.25
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: databricks-kimi-k2-7-code
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less
+    overthinking
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-06-12'
+  family: kimi-k2
+  pricing:
+    input: 0.95
+    output: 4.0
+    cached_read: 0.19
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: databricks-gpt-5-6-luna
+  name: GPT-5.6 Luna
+  description: Cost-efficient GPT-5.6 model for fast, high-volume workloads
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-luna
+  pricing:
+    input: 1.0
+    output: 6.0
+    cached_read: 0.1
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: databricks-claude-opus-4-1
+  name: Claude Opus 4.1 (latest)
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 32000
+  release_date: '2025-08-05'
+  family: claude-opus
+  pricing:
+    input: 15.0
+    output: 75.0
+    cached_read: 1.5
+    cached_write: 18.75
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: databricks-claude-haiku-4-5
+  name: Claude Haiku 4.5 (latest)
+  description: Fast Claude lane for lightweight agents, office tasks, and responsive
+    chat
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-10-15'
+  family: claude-haiku
+  pricing:
+    input: 1.0
+    output: 5.0
+    cached_read: 0.1
+    cached_write: 1.25
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: databricks-claude-sonnet-4-5
+  name: Claude Sonnet 4.5 (latest)
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost
+    control
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-09-29'
+  family: claude-sonnet
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+    cached_write: 3.75
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: databricks-gpt-5-6-sol
+  name: GPT-5.6 Sol
+  description: Frontier GPT-5.6 model for complex professional work, coding, and agentic
+    workflows
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-sol
+  pricing:
+    input: 5.0
+    output: 30.0
+    cached_read: 0.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: databricks-glm-5-2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 1.4
+    output: 4.4
+    cached_read: 0.26
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: databricks-gpt-5-4-nano
+  name: GPT-5.4 nano
+  description: Cheapest GPT-5.4 lane for simple routing, extraction, and bulk automation
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2026-03-17'
+  family: gpt-nano
+  pricing:
+    input: 0.2
+    output: 1.25
+    cached_read: 0.02
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: databricks-claude-sonnet-4
+  name: Claude Sonnet 4.5
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost
+    control
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-09-29'
+  family: claude-sonnet
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+    cached_write: 3.75
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: databricks-gpt-5-1
+  name: GPT-5.1
+  description: Sharper GPT-5 generation for coding, product work, and tool-assisted
+    tasks
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2025-11-13'
+  family: gpt
+  pricing:
+    input: 1.25
+    output: 10.0
+    cached_read: 0.125
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: databricks-gpt-oss-20b
+  name: GPT OSS 20B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following
+    workloads
+  context_window: 131072
+  output_limit: 32768
+  release_date: '2025-08-05'
+  family: gpt-oss
+  pricing:
+    input: 0.05
+    output: 0.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: databricks-gpt-5-4-mini
+  name: GPT-5.4 mini
+  description: Strong small GPT for coding subagents, quick tool use, and high-volume
+    work
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2026-03-17'
+  family: gpt-mini
+  pricing:
+    input: 0.75
+    output: 4.5
+    cached_read: 0.075
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: databricks-gpt-5-6-terra
+  name: GPT-5.6 Terra
+  description: Balanced GPT-5.6 model for capable, cost-efficient everyday work
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-terra
+  pricing:
+    input: 2.5
+    output: 15.0
+    cached_read: 0.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: databricks-gpt-oss-120b
+  name: GPT OSS 120B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following
+    workloads
+  context_window: 131072
+  output_limit: 32768
+  release_date: '2025-08-05'
+  family: gpt-oss
+  pricing:
+    input: 0.072
+    output: 0.28
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: databricks-gpt-5-2
+  name: GPT-5.2
+  description: Reliable GPT generation for broad coding, writing, and tool-assisted
+    product work
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2025-12-11'
+  family: gpt
+  pricing:
+    input: 1.75
+    output: 14.0
+    cached_read: 0.175
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal

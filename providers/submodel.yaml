@@ -130,3 +130,122 @@ models:
   release_date: '2025-08-23'
   tags:
   - reasoning
+- id: DeepSeek-V3-0324
+  name: DeepSeek V3 0324
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 75000
+  output_limit: 163840
+  release_date: '2025-08-23'
+  family: deepseek
+  pricing:
+    input: 0.2
+    output: 0.8
+  tags:
+  - tools
+- id: DeepSeek-V3.1
+  name: DeepSeek V3.1
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 75000
+  output_limit: 163840
+  release_date: '2025-08-23'
+  family: deepseek
+  pricing:
+    input: 0.2
+    output: 0.8
+  tags:
+  - reasoning
+  - tools
+- id: DeepSeek-R1-0528
+  name: DeepSeek R1 0528
+  description: DeepSeek reasoning model for multi-step analysis, math, coding, and tools
+  context_window: 75000
+  output_limit: 163840
+  release_date: '2025-08-23'
+  family: deepseek-thinking
+  pricing:
+    input: 0.5
+    output: 2.15
+  tags:
+  - reasoning
+  - tools
+- id: GLM-4.5-Air
+  name: GLM 4.5 Air
+  description: Efficient GLM model for fast reasoning, coding, and agent workflows
+  context_window: 131072
+  output_limit: 131072
+  release_date: '2025-07-28'
+  family: glm-air
+  pricing:
+    input: 0.1
+    output: 0.5
+  tags:
+  - tools
+  - open_weights
+- id: GLM-4.5-FP8
+  name: GLM 4.5 FP8
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 131072
+  output_limit: 131072
+  release_date: '2025-07-28'
+  family: glm
+  pricing:
+    input: 0.2
+    output: 0.8
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: Qwen3-235B-A22B-Instruct-2507
+  name: Qwen3 235B A22B Instruct 2507
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262144
+  output_limit: 131072
+  release_date: '2025-08-23'
+  family: qwen
+  pricing:
+    input: 0.2
+    output: 0.3
+  tags:
+  - tools
+  - open_weights
+- id: Qwen3-Coder-480B-A35B-Instruct-FP8
+  name: Qwen3 Coder 480B A35B Instruct
+  description: Qwen coding model for software agents, repository edits, and code reasoning
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2025-08-23'
+  family: qwen
+  pricing:
+    input: 0.2
+    output: 0.8
+  tags:
+  - tools
+- id: Qwen3-235B-A22B-Thinking-2507
+  name: Qwen3 235B A22B Thinking 2507
+  description: Qwen reasoning model for deliberate problem solving, math, and coding
+  context_window: 262144
+  output_limit: 131072
+  release_date: '2025-08-23'
+  family: qwen
+  pricing:
+    input: 0.2
+    output: 0.6
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: gpt-oss-120b
+  name: GPT OSS 120B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following
+    workloads
+  context_window: 131072
+  output_limit: 32768
+  release_date: '2025-08-23'
+  family: gpt-oss
+  pricing:
+    input: 0.1
+    output: 0.5
+  tags:
+  - reasoning
+  - tools
+  - open_weights

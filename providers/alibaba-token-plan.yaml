@@ -221,3 +221,161 @@ models:
   - reasoning
   - open_weights
   - free
+- id: happyhorse-1.1-r2v
+  name: HappyHorse 1.1 Reference-to-Video
+  description: Video model for reference-guided video generation
+  release_date: '2026-07-17'
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - vision
+  - multimodal
+- id: deepseek-v4-pro-0813
+  name: DeepSeek V4 Pro 0813
+  description: DeepSeek V4 Pro snapshot with million-token context and support for thinking
+    and non-thinking modes
+  context_window: 1000000
+  output_limit: 384000
+  release_date: '2026-08-12'
+  family: deepseek-thinking
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: deepseek-v4-flash-0731
+  name: DeepSeek V4 Flash 0731
+  description: Official DeepSeek V4 Flash release with enhanced agentic capabilities
+    and integrated DSpark speculative decoding
+  context_window: 1000000
+  output_limit: 384000
+  release_date: '2026-07-31'
+  family: deepseek-flash
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: qwen3.8-max-preview
+  name: Qwen3.8 Max Preview
+  description: Preview Qwen flagship for million-token multimodal reasoning and long-horizon
+    agentic workflows
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-07-19'
+  family: qwen
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: wan2.7-image-pro
+  name: Wan2.7 Image Pro
+  description: Image model for prompt-driven generation, editing, and visual design
+    workflows
+  context_window: 8192
+  release_date: '2026-05-29'
+  pricing:
+    input: 0.0
+    output: 0.0
+- id: happyhorse-1.1-t2v
+  name: HappyHorse 1.1 Text-to-Video
+  description: Video model for prompt-driven text-to-video generation
+  release_date: '2026-07-17'
+  pricing:
+    input: 0.0
+    output: 0.0
+- id: qwen-image-2.0-pro
+  name: Qwen Image 2.0 Pro
+  description: Image model for prompt-driven generation, editing, and visual design
+    workflows
+  context_window: 8192
+  release_date: '2026-03-03'
+  family: qwen
+  pricing:
+    input: 0.0
+    output: 0.0
+- id: happyhorse-1.1-i2v
+  name: HappyHorse 1.1 Image-to-Video
+  description: Video model for image-to-video generation
+  release_date: '2026-07-17'
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - vision
+  - multimodal
+- id: qwen-image-2.0
+  name: Qwen Image 2.0
+  description: Image model for prompt-driven generation, editing, and visual design
+    workflows
+  context_window: 8192
+  release_date: '2026-03-03'
+  family: qwen
+  pricing:
+    input: 0.0
+    output: 0.0
+- id: qwen3.8-flash
+  name: Qwen3.8 Flash
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-08-26'
+  family: qwen
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: qwen3.8-max
+  name: Qwen3.8 Max
+  description: 2.4-trillion-parameter MoE flagship for coding, professional work, multimodal
+    understanding, and long-horizon agentic workflows
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-08-03'
+  family: qwen
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: wan2.7-image
+  name: Wan2.7 Image
+  description: Image model for prompt-driven generation, editing, and visual design
+    workflows
+  context_window: 8192
+  release_date: '2026-05-29'
+  pricing:
+    input: 0.0
+    output: 0.0

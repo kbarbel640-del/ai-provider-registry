@@ -231,3 +231,717 @@ models:
   - vision
   - reasoning
   - long_context
+- id: gpt-5-nano
+  name: gpt-5-nano
+  description: Compact GPT model for low-latency assistance and high-volume workloads
+  context_window: 400000
+  output_limit: 128000
+  release_date: 2026-01
+  family: gpt-nano
+  pricing:
+    input: 0.045
+    output: 0.36
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-codex
+  name: gpt-5-codex
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic
+    software work
+  context_window: 400000
+  output_limit: 128000
+  release_date: 2026-01
+  family: gpt-codex
+  pricing:
+    input: 1.125
+    output: 9.0
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-pro
+  name: gpt-5-pro
+  description: Frontier GPT model for professional reasoning, coding, and multimodal
+    work
+  context_window: 400000
+  output_limit: 272000
+  release_date: 2026-01
+  family: gpt-pro
+  pricing:
+    input: 13.5
+    output: 108.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.1-codex-mini
+  name: gpt-5.1-codex-mini
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic
+    software work
+  context_window: 400000
+  output_limit: 128000
+  release_date: 2026-01
+  family: gpt-codex
+  pricing:
+    input: 0.225
+    output: 1.8
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.1-codex
+  name: gpt-5.1-codex
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic
+    software work
+  context_window: 400000
+  output_limit: 128000
+  release_date: 2026-01
+  family: gpt-codex
+  pricing:
+    input: 1.125
+    output: 9.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: grok-code-fast-1
+  name: grok-code-fast-1
+  description: Fast Grok model for responsive chat, reasoning, and tool-assisted work
+  context_window: 256000
+  output_limit: 256000
+  release_date: 2026-01
+  family: grok
+  pricing:
+    input: 0.18
+    output: 1.35
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.2-codex
+  name: gpt-5.2-codex
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic
+    software work
+  context_window: 400000
+  output_limit: 128000
+  release_date: 2026-01
+  family: gpt-codex
+  pricing:
+    input: 1.75
+    output: 14.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.2-pro
+  name: gpt-5.2-pro
+  description: Frontier GPT model for professional reasoning, coding, and multimodal
+    work
+  context_window: 400000
+  output_limit: 128000
+  release_date: 2026-01
+  family: gpt-pro
+  pricing:
+    input: 18.9
+    output: 151.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-4-1-20250805
+  name: claude-opus-4-1-20250805
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 32000
+  release_date: 2026-01
+  family: claude-opus
+  pricing:
+    input: 13.5
+    output: 67.5
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-chat-latest
+  name: gpt-5-chat-latest
+  description: Chat-tuned GPT model for conversational assistance, writing, and tool
+    workflows
+  context_window: 400000
+  output_limit: 128000
+  release_date: 2026-01
+  family: gpt
+  pricing:
+    input: 1.125
+    output: 9.0
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-4-20250514
+  name: claude-opus-4-20250514
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 32000
+  release_date: 2026-01
+  family: claude-opus
+  pricing:
+    input: 13.5
+    output: 67.5
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.1
+  name: gpt-5.1
+  description: GPT model for general reasoning, writing, coding, and tool-assisted tasks
+  context_window: 400000
+  output_limit: 128000
+  release_date: 2026-02
+  family: gpt
+  pricing:
+    input: 1.125
+    output: 9.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.1-codex-max
+  name: gpt-5.1-codex-max
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic
+    software work
+  context_window: 400000
+  output_limit: 128000
+  release_date: 2026-01
+  family: gpt-codex
+  pricing:
+    input: 1.125
+    output: 9.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-sonnet-4-5-20250929
+  name: claude-sonnet-4-5-20250929
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost
+    control
+  context_window: 200000
+  output_limit: 64000
+  release_date: 2026-01
+  family: claude-sonnet
+  pricing:
+    input: 2.7
+    output: 13.5
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-haiku-4-5-20251001
+  name: claude-haiku-4-5-20251001
+  description: Fast Claude model for responsive assistance, classification, and lightweight
+    agents
+  context_window: 20000
+  output_limit: 64000
+  release_date: 2026-01
+  family: claude-haiku
+  pricing:
+    input: 0.9
+    output: 4.5
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: grok-4-0709
+  name: grok-4-0709
+  description: Grok model for agentic tool use, reasoning, coding, and live assistance
+  context_window: 256000
+  output_limit: 8192
+  release_date: 2026-01
+  family: grok
+  pricing:
+    input: 2.7
+    output: 13.5
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-mini
+  name: gpt-5-mini
+  description: Compact GPT model for low-latency assistance and high-volume workloads
+  context_window: 400000
+  output_limit: 128000
+  release_date: 2026-01
+  family: gpt-mini
+  pricing:
+    input: 0.225
+    output: 1.8
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.2
+  name: gpt-5.2
+  description: GPT model for general reasoning, writing, coding, and tool-assisted tasks
+  context_window: 400000
+  output_limit: 128000
+  release_date: 2026-01
+  family: gpt
+  pricing:
+    input: 1.575
+    output: 12.6
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-sonnet-4-20250514
+  name: claude-sonnet-4-20250514
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost
+    control
+  context_window: 200000
+  output_limit: 64000
+  release_date: 2026-01
+  family: claude-sonnet
+  pricing:
+    input: 2.7
+    output: 13.5
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: o4-mini
+  name: o4-mini
+  description: O-series reasoning model for hard analysis, math, coding, and planning
+  context_window: 200000
+  output_limit: 100000
+  release_date: 2026-01
+  family: o
+  pricing:
+    input: 1.1
+    output: 4.4
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: o3-mini
+  name: o3-mini
+  description: O-series reasoning model for hard analysis, math, coding, and planning
+  context_window: 131072
+  output_limit: 131072
+  release_date: 2026-01
+  family: o
+  pricing:
+    input: 1.1
+    output: 4.4
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-4-5-20251101
+  name: claude-opus-4-5-20251101
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 65536
+  release_date: 2026-01
+  family: claude-opus
+  pricing:
+    input: 4.5
+    output: 22.5
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: o3
+  name: o3
+  description: O-series reasoning model for hard analysis, math, coding, and planning
+  context_window: 131072
+  output_limit: 131072
+  release_date: 2026-01
+  pricing:
+    input: 10.0
+    output: 40.0
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: qwen3-30b-a3b-fp8
+  name: Qwen3 30B A3B
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 40960
+  output_limit: 20000
+  release_date: 2026-01
+  family: qwen
+  pricing:
+    input: 0.09
+    output: 0.45
+  tags:
+  - reasoning
+  - open_weights
+- id: qwen3-next-80b-a3b-thinking
+  name: Qwen3 Next 80B A3B Thinking
+  description: Qwen reasoning model for deliberate problem solving, math, and coding
+  context_window: 65536
+  output_limit: 65536
+  release_date: 2026-01
+  family: qwen
+  pricing:
+    input: 0.15
+    output: 1.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: qwen3-235b-a22b-thinking-2507
+  name: Qwen3 235B A22b Thinking 2507
+  description: Qwen reasoning model for deliberate problem solving, math, and coding
+  context_window: 131072
+  output_limit: 131072
+  release_date: 2026-01
+  family: qwen
+  pricing:
+    input: 0.3
+    output: 3.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: qwen3-next-80b-a3b-instruct
+  name: Qwen3 Next 80B A3B Instruct
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 65536
+  output_limit: 65536
+  release_date: 2026-01
+  family: qwen
+  pricing:
+    input: 0.15
+    output: 1.5
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: qwen3-235b-a22b-fp8
+  name: Qwen3 235B A22B
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 40960
+  output_limit: 20000
+  release_date: 2026-01
+  family: qwen
+  pricing:
+    input: 0.2
+    output: 0.8
+  tags:
+  - reasoning
+  - open_weights
+- id: qwen3-coder-next
+  name: qwen/qwen3-coder-next
+  description: Qwen coding model for software agents, repository edits, and code reasoning
+  context_window: 262144
+  output_limit: 65536
+  release_date: 2026-02
+  family: qwen
+  pricing:
+    input: 0.2
+    output: 1.5
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: qwen3-32b-fp8
+  name: Qwen3 32B
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 40960
+  output_limit: 20000
+  release_date: 2026-01
+  family: qwen
+  pricing:
+    input: 0.1
+    output: 0.45
+  tags:
+  - reasoning
+  - open_weights
+- id: qwen3-235b-a22b-instruct-2507
+  name: Qwen3 235B A22B Instruct 2507
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 131072
+  output_limit: 16384
+  release_date: 2026-01
+  family: qwen
+  pricing:
+    input: 0.15
+    output: 0.8
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: qwen3-coder-480b-a35b-instruct
+  name: Qwen3 Coder 480B A35B Instruct
+  description: Qwen coding model for software agents, repository edits, and code reasoning
+  context_window: 262144
+  output_limit: 65536
+  release_date: 2026-01
+  family: qwen
+  pricing:
+    input: 0.29
+    output: 1.2
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: ernie-4.5-300b-a47b-paddle
+  name: ERNIE 4.5 300B A47B
+  description: Open-weight instruction model for adaptable chat and self-hosted production
+    workloads
+  context_window: 123000
+  output_limit: 12000
+  release_date: 2026-01
+  family: ernie
+  pricing:
+    input: 0.28
+    output: 1.1
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: ernie-4.5-vl-424b-a47b
+  name: ERNIE 4.5 VL 424B A47B
+  description: Multimodal reasoning model for visual analysis, planning, and tool use
+  context_window: 123000
+  output_limit: 16000
+  release_date: 2026-01
+  family: ernie
+  pricing:
+    input: 0.42
+    output: 1.25
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: minimax-m2.1
+  name: Minimax M2.1
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 204800
+  output_limit: 131072
+  release_date: 2026-01
+  family: minimax
+  pricing:
+    input: 0.3
+    output: 1.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: glm-4.7
+  name: GLM-4.7
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 204800
+  output_limit: 131072
+  release_date: 2026-01
+  family: glm
+  pricing:
+    input: 0.6
+    output: 2.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: glm-4.5
+  name: GLM-4.5
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 131072
+  output_limit: 98304
+  release_date: 2026-01
+  family: glm
+  pricing:
+    input: 0.6
+    output: 2.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: glm-4.5v
+  name: GLM 4.5V
+  description: GLM vision model for visual reasoning, documents, and multimodal agents
+  context_window: 65536
+  output_limit: 16384
+  release_date: 2026-01
+  family: glmv
+  pricing:
+    input: 0.6
+    output: 1.8
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: glm-4.7-flash
+  name: GLM-4.7-Flash
+  description: Efficient GLM model for fast reasoning, coding, and agent workflows
+  context_window: 200000
+  output_limit: 128000
+  release_date: 2026-01
+  family: glm
+  pricing:
+    input: 0.07
+    output: 0.4
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: minimax-m1-80k
+  name: MiniMax M1
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 1000000
+  output_limit: 40000
+  release_date: 2026-01
+  family: minimax
+  pricing:
+    input: 0.55
+    output: 2.2
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: deepseek-r1-0528
+  name: DeepSeek R1 0528
+  description: DeepSeek reasoning model for multi-step analysis, math, coding, and tools
+  context_window: 163840
+  output_limit: 32768
+  release_date: 2026-01
+  family: deepseek-thinking
+  pricing:
+    input: 0.7
+    output: 2.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: deepseek-v3-0324
+  name: DeepSeek V3 0324
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 163840
+  output_limit: 163840
+  release_date: 2026-01
+  family: deepseek
+  pricing:
+    input: 0.28
+    output: 1.14
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: deepseek-v3.1
+  name: DeepSeek V3.1
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 163840
+  output_limit: 32768
+  release_date: 2026-01
+  family: deepseek
+  pricing:
+    input: 0.27
+    output: 1.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: mimo-v2-flash
+  name: XiaomiMiMo/MiMo-V2-Flash
+  description: MiMo flash model for fast multimodal assistance and agent workflows
+  context_window: 262144
+  output_limit: 131072
+  release_date: 2026-01
+  family: mimo
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: kimi-k2-0905
+  name: Kimi K2 0905
+  description: Kimi model for long-context chat, coding, and agentic reasoning
+  context_window: 262144
+  output_limit: 262144
+  release_date: 2026-01
+  family: kimi-k2
+  pricing:
+    input: 0.6
+    output: 2.5
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: kimi-k2-instruct
+  name: Kimi K2 Instruct
+  description: Kimi model for long-context chat, coding, and agentic reasoning
+  context_window: 131072
+  output_limit: 131072
+  release_date: 2026-01
+  family: kimi-k2
+  pricing:
+    input: 0.57
+    output: 2.3
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: kimi-k2.5
+  name: Kimi K2.5
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262144
+  output_limit: 262144
+  release_date: 2026-01
+  family: kimi-k2
+  pricing:
+    input: 0.6
+    output: 3.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal

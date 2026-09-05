@@ -15,5 +15,20 @@ supports:
 models:
   - llama-3.1-8b
   - llama-3.1-70b
+  - id: gemma-4-31b
+    family: gemma
+    context_window: 131072
+    pricing:
+      input: 0.99
+      output: 1.49
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: gpt-oss-120b
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.35
+      output: 0.75
+    tags: [reasoning, tools, json_mode, open_weights]
+
 api_spec: https://storage.googleapis.com/stainless-sdk-openapi-specs/cerebras/cerebras-cloud-4aaffc73ab32fa03ee756cc294fb940e2060f8c57108d5b479651dcc77db59ee.yml
 endpoint: https://api.cerebras.ai/v1

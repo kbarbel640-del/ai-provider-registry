@@ -19,5 +19,88 @@ models:
   - command-r
   - embed-english-v3.0
   - embed-multilingual-v3.0
+  - id: command-r7b-arabic-02-2025
+    family: command-r
+    context_window: 128000
+    pricing:
+      input: 0.0375
+      output: 0.15
+    tags: [tools, open_weights]
+  - id: command-a-plus-05-2026
+    family: command-a
+    context_window: 128000
+    pricing:
+      input: 2.5
+      output: 10.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: command-a-reasoning-08-2025
+    family: command-a
+    context_window: 256000
+    pricing:
+      input: 2.5
+      output: 10.0
+    tags: [reasoning, tools, open_weights]
+  - id: command-a-vision-07-2025
+    family: command-a
+    context_window: 128000
+    pricing:
+      input: 2.5
+      output: 10.0
+    tags: [open_weights, vision, multimodal]
+  - id: north-mini-code-1-0
+    family: north
+    context_window: 256000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: command-r-plus-08-2024
+    family: command-r
+    context_window: 128000
+    pricing:
+      input: 2.5
+      output: 10.0
+    tags: [tools, open_weights]
+  - id: command-a-translate-08-2025
+    family: command-a
+    context_window: 8000
+    pricing:
+      input: 2.5
+      output: 10.0
+    tags: [tools, open_weights]
+  - id: command-a-03-2025
+    family: command-a
+    context_window: 256000
+    pricing:
+      input: 2.5
+      output: 10.0
+    tags: [tools, open_weights]
+  - id: c4ai-aya-expanse-32b
+    context_window: 128000
+    tags: [open_weights]
+  - id: c4ai-aya-expanse-8b
+    context_window: 8000
+    tags: [open_weights]
+  - id: c4ai-aya-vision-8b
+    context_window: 16000
+    tags: [open_weights, vision, multimodal]
+  - id: command-r7b-12-2024
+    family: command-r
+    context_window: 128000
+    pricing:
+      input: 0.0375
+      output: 0.15
+    tags: [tools, open_weights]
+  - id: c4ai-aya-vision-32b
+    context_window: 16000
+    tags: [open_weights, vision, multimodal]
+  - id: command-r-08-2024
+    family: command-r
+    context_window: 128000
+    pricing:
+      input: 0.15
+      output: 0.6
+    tags: [tools, open_weights]
+
 api_spec: https://raw.githubusercontent.com/cohere-ai/cohere-developer-experience/main/cohere-openapi.yaml
 endpoint: https://api.cohere.com/v1

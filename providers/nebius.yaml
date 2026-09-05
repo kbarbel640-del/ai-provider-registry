@@ -230,3 +230,272 @@ models:
   tags:
   - reasoning
   - open_weights
+- id: DeepSeek-V4-Flash-0731
+  name: DeepSeek V4 Flash 0731
+  description: Official DeepSeek V4 Flash release with enhanced agentic capabilities
+    and integrated DSpark speculative decoding
+  context_window: 1024000
+  output_limit: 1024000
+  release_date: '2026-07-31'
+  family: deepseek-flash
+  pricing:
+    input: 0.14
+    output: 0.28
+    cached_read: 0.14
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: DeepSeek-V4-Pro
+  name: DeepSeek V4 Pro
+  description: Open MoE flagship with million-token context for coding and long agent
+    runs
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-04-24'
+  family: deepseek-thinking
+  pricing:
+    input: 1.75
+    output: 3.5
+    cached_read: 0.15
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: Nemotron-3_5-Lightning
+  name: Nemotron 3.5 Lightning 30B A3B
+  description: Fast NVIDIA Nemotron MoE for reliable agentic tasks across enterprise
+    workloads
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-08-11'
+  family: nemotron
+  pricing:
+    input: 0.06
+    output: 0.24
+    cached_read: 0.06
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: Nemotron-3-Ultra-550b-a55b
+  name: Nemotron 3 Ultra 550B A55B
+  description: Largest Nemotron 3 model for maximum open-weight reasoning and agent
+    accuracy
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-06-04'
+  family: nemotron
+  pricing:
+    input: 1.0
+    output: 3.0
+    cached_read: 1.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: nemotron-3-super-120b-a12b
+  name: Nemotron-3-Super-120B-A12B
+  description: Nemotron middle tier for collaborative agents and high-volume reasoning
+    workloads
+  context_window: 262144
+  output_limit: 32768
+  release_date: '2026-03-11'
+  family: nemotron
+  pricing:
+    input: 0.3
+    output: 0.9
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: gemma-3-27b-it
+  name: Gemma-3-27b-it
+  description: Open Gemma instruction model for efficient chat and self-hosted deployments
+  context_window: 110000
+  output_limit: 8192
+  release_date: '2026-01-20'
+  pricing:
+    input: 0.1
+    output: 0.3
+    cached_read: 0.01
+    cached_write: 0.125
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: GLM-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 1.4
+    output: 4.4
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: GLM-5.3-Flash
+  name: GLM-5.3-Flash
+  description: Native multimodal GLM model for efficient coding and long-horizon agent
+    tasks
+  context_window: 1024000
+  output_limit: 1024000
+  release_date: '2026-08-26'
+  family: glm
+  pricing:
+    input: 0.15
+    output: 0.5
+    cached_read: 0.15
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: Qwen3-30B-A3B-Instruct-2507
+  name: Qwen3-30B-A3B-Instruct-2507
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262144
+  output_limit: 8192
+  release_date: '2026-01-28'
+  pricing:
+    input: 0.1
+    output: 0.3
+    cached_read: 0.01
+    cached_write: 0.125
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: Qwen3-235B-A22B-Instruct-2507
+  name: Qwen3 235B A22B Instruct 2507
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262144
+  output_limit: 8192
+  release_date: '2025-07-25'
+  family: qwen
+  pricing:
+    input: 0.2
+    output: 0.6
+  tags:
+  - tools
+- id: Qwen3.5-397B-A17B
+  name: Qwen3.5-397B-A17B
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262144
+  output_limit: 8192
+  release_date: '2025-07-15'
+  pricing:
+    input: 0.6
+    output: 3.6
+    cached_read: 0.06
+    cached_write: 0.75
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: Qwen3-Embedding-8B
+  name: Qwen3-Embedding-8B
+  description: Embedding model for semantic search, retrieval, clustering, and ranking
+    pipelines
+  context_window: 40960
+  release_date: '2026-01-10'
+  family: text-embedding
+  pricing:
+    input: 0.01
+    output: 0.0
+  tags:
+  - open_weights
+- id: Hermes-4-405B
+  name: Hermes-4-405B
+  description: Reasoning model for deliberate analysis, multi-step problem solving,
+    and tool use
+  context_window: 131072
+  output_limit: 8192
+  release_date: '2026-01-30'
+  pricing:
+    input: 1.0
+    output: 3.0
+    cached_read: 0.1
+    cached_write: 1.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: MiniMax-M3
+  name: MiniMax-M3
+  description: MiniMax multimodal model for long-context coding, perception, and agent
+    planning
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-06-01'
+  family: minimax
+  pricing:
+    input: 0.3
+    output: 1.2
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: gpt-oss-120b
+  name: gpt-oss-120b
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following
+    workloads
+  context_window: 131072
+  output_limit: 8192
+  release_date: '2026-01-10'
+  pricing:
+    input: 0.15
+    output: 0.6
+    cached_read: 0.015
+    cached_write: 0.18
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: Kimi-K2.7-Code
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less
+    overthinking
+  context_window: 262144
+  output_limit: 8000
+  release_date: '2026-06-12'
+  family: kimi-k2
+  pricing:
+    input: 0.95
+    output: 4.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: Kimi-K3
+  name: Kimi K3
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 1048576
+  output_limit: 8000
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 3.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights

@@ -195,3 +195,386 @@ models:
   - reasoning
   - open_weights
   - long_context
+- id: devstral-2512
+  name: Devstral 2
+  description: Mistral's coding-agent model for repository work, terminal tasks, and
+    software fixes
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2025-12-09'
+  family: devstral
+  tags:
+  - tools
+  - open_weights
+- id: mistral-large-2512
+  name: Mistral Large 3
+  description: Mistral's largest general model for enterprise agents, coding, and multilingual
+    reasoning
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2024-11-01'
+  family: mistral-large
+  tags:
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: claude-sonnet-4-6
+  name: Claude Sonnet 4.6
+  description: Claude workhorse for coding agents, careful analysis, and production
+    cost control
+  context_window: 1000000
+  output_limit: 64000
+  release_date: '2026-02-17'
+  family: claude-sonnet
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-opus-4-6
+  name: Claude Opus 4.6
+  description: High-end Claude for difficult coding, planning, and slower expert reasoning
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-02-05'
+  family: claude-opus
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-opus-4-7
+  name: Claude Opus 4.7
+  description: Stronger Opus tier for advanced software work and high-stakes reasoning
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-04-16'
+  family: claude-opus
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-haiku-4-5
+  name: Claude Haiku 4.5 (latest)
+  description: Fast Claude lane for lightweight agents, office tasks, and responsive
+    chat
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-10-15'
+  family: claude-haiku
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-sonnet-4-5
+  name: Claude Sonnet 4.5 (latest)
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost
+    control
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-09-29'
+  family: claude-sonnet
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: gemini-2.5-flash-lite
+  name: Gemini 2.5 Flash-Lite
+  description: Lean Gemini 2.5 lane for cheap multimodal traffic and quick agents
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2025-06-17'
+  family: gemini-flash-lite
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gemini-3-pro-preview
+  name: Gemini 3 Pro Preview
+  description: Preview Gemini flagship for complex reasoning, coding, and rich multimodal
+    prompts
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2025-11-18'
+  family: gemini-pro
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gemini-3-flash-preview
+  name: Gemini 3 Flash Preview
+  description: New Gemini flash lane bringing frontier-style multimodal reasoning to
+    cheaper runs
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2025-12-17'
+  family: gemini-flash
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gemini-2.5-pro
+  name: Gemini 2.5 Pro
+  description: Google's proven reasoning model for coding, math, and multimodal analysis
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2025-06-17'
+  family: gemini-pro
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gemini-2.5-flash
+  name: Gemini 2.5 Flash
+  description: Fast Gemini workhorse for multimodal apps where latency and price matter
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2025-06-17'
+  family: gemini-flash
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: deepseek-v4-flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context
+    work
+  context_window: 1000000
+  output_limit: 384000
+  release_date: '2026-04-24'
+  family: deepseek-flash
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: deepseek-r1
+  name: DeepSeek Reasoner
+  description: DeepSeek reasoning model for multi-step analysis, math, coding, and tools
+  context_window: 1000000
+  output_limit: 384000
+  release_date: '2025-12-01'
+  family: deepseek-thinking
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - multimodal
+- id: deepseek-chat
+  name: DeepSeek Chat
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 1000000
+  output_limit: 384000
+  release_date: '2025-12-01'
+  family: deepseek
+  tags:
+  - tools
+  - open_weights
+  - multimodal
+- id: deepseek-v4-pro
+  name: DeepSeek V4 Pro
+  description: Open MoE flagship with million-token context for coding and long agent
+    runs
+  context_window: 1000000
+  output_limit: 384000
+  release_date: '2026-04-24'
+  family: deepseek-thinking
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: gpt-4.1-mini
+  name: GPT-4.1 mini
+  description: Affordable GPT-4.1 lane for fast coding help and structured extraction
+  context_window: 1047576
+  output_limit: 32768
+  release_date: '2025-04-14'
+  family: gpt-mini
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.4
+  name: GPT-5.4
+  description: Agent-ready GPT for coding and computer-use workflows at a lower cost
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-03-05'
+  family: gpt
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.1
+  name: GPT-5.1
+  description: Sharper GPT-5 generation for coding, product work, and tool-assisted
+    tasks
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2025-11-13'
+  family: gpt
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-4.1
+  name: GPT-4.1
+  description: Long-lived GPT workhorse for coding, instruction following, and production
+    apps
+  context_window: 1047576
+  output_limit: 32768
+  release_date: '2025-04-14'
+  family: gpt
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-mini
+  name: GPT-5 Mini
+  description: Small GPT-5 for responsive agents, coding help, and everyday automation
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2025-08-07'
+  family: gpt-mini
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5.2
+  name: GPT-5.2
+  description: Reliable GPT generation for broad coding, writing, and tool-assisted
+    product work
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2025-12-11'
+  family: gpt
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5
+  name: GPT-5
+  description: Original GPT-5 workhorse for reasoning, coding, writing, and tool workflows
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2025-08-07'
+  family: gpt
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: o4-mini
+  name: o4-mini
+  description: Fast o-series model for compact reasoning, coding, and tool use
+  context_window: 200000
+  output_limit: 100000
+  release_date: '2025-04-16'
+  family: o-mini
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: o3-mini
+  name: o3-mini
+  description: Smaller o-series reasoner for economical coding, math, and planning tasks
+  context_window: 200000
+  output_limit: 100000
+  release_date: '2024-12-20'
+  family: o-mini
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: o3
+  name: o3
+  description: Deliberate o-series reasoner for hard math, coding, and multi-step analysis
+  context_window: 200000
+  output_limit: 100000
+  release_date: '2025-04-16'
+  family: o
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: command-r-plus-08-2024
+  name: Command R+
+  description: Cohere's RAG workhorse for long-context enterprise search and tool use
+  context_window: 128000
+  output_limit: 4000
+  release_date: '2024-08-30'
+  family: command-r
+  tags:
+  - tools
+  - open_weights
+- id: grok-4.3
+  name: Grok 4.3
+  description: xAI's default Grok for chat, coding, agentic tools, and lower hallucination
+    risk
+  context_window: 1000000
+  output_limit: 30000
+  release_date: '2026-04-17'
+  family: grok
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: sonar-reasoning-pro
+  name: Sonar Reasoning Pro
+  description: Web-grounded Sonar for multi-step research questions that need cited
+    reasoning
+  context_window: 128000
+  output_limit: 4096
+  release_date: '2024-01-01'
+  family: sonar-reasoning
+  tags:
+  - reasoning
+  - vision
+  - multimodal
+- id: sonar-pro
+  name: Sonar Pro
+  description: Deeper Sonar search model with broader retrieval and stronger synthesis
+  context_window: 200000
+  output_limit: 8192
+  release_date: '2024-01-01'
+  family: sonar-pro
+  tags:
+  - vision
+  - multimodal

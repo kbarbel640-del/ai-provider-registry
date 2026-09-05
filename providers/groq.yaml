@@ -18,5 +18,82 @@ models:
   - llama-3.1-8b-instant
   - mixtral-8x7b-32768
   - gemma2-9b-it
+  - id: whisper-large-v3
+    family: whisper
+    tags: [open_weights, audio]
+  - id: whisper-large-v3-turbo
+    family: whisper
+    tags: [open_weights, audio]
+  - id: allam-2-7b
+    context_window: 4096
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: qwen3.8-27b
+    family: qwen
+    context_window: 131042
+    pricing:
+      input: 0.8
+      output: 4.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3.6-27b
+    family: qwen
+    context_window: 131072
+    pricing:
+      input: 0.6
+      output: 3.0
+      cached_read: 0.3
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: compound
+    family: groq
+    context_window: 131072
+  - id: compound-mini
+    family: groq
+    context_window: 131072
+  - id: llama-prompt-guard-2-86m
+    family: llama
+    context_window: 512
+    pricing:
+      input: 0.04
+      output: 0.04
+    tags: [open_weights]
+  - id: llama-prompt-guard-2-22m
+    family: llama
+    context_window: 512
+    pricing:
+      input: 0.03
+      output: 0.03
+    tags: [open_weights]
+  - id: gpt-oss-20b
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.075
+      output: 0.3
+      cached_read: 0.0375
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gpt-oss-safeguard-20b
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.075
+      output: 0.3
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: gpt-oss-120b
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.15
+      output: 0.6
+      cached_read: 0.075
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: orpheus-v1-english
+    family: canopylabs
+    context_window: 4000
+  - id: orpheus-arabic-saudi
+    family: canopylabs
+    context_window: 4000
+
 api_spec: https://storage.googleapis.com/stainless-sdk-openapi-specs/groqcloud/groqcloud-debd965baa031e12228c41e538741fa6055bf2813bcd062840a19f84a17cea95.yml
 endpoint: https://api.groq.com/openai/v1

@@ -219,3 +219,20 @@ models:
   tags:
   - vision
   - open_weights
+- id: qwen3.8-27b
+  name: Qwen3.8-27B
+  description: Multimodal reasoning model for visual analysis, planning, and tool use
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-09-02'
+  family: qwen
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal

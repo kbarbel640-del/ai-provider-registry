@@ -71,3 +71,185 @@ models:
   tags:
   - reasoning
   - open_weights
+- id: large
+  name: Ambient Large
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202752
+  output_limit: 202752
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 0.6
+    output: 2.0
+    cached_read: 0.15
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: step-3.7-flash
+  name: Step 3.7 Flash
+  description: StepFun flash model for efficient multimodal reasoning, coding, and tool
+    use
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-05-29'
+  pricing:
+    input: 0.19
+    output: 1.14
+    cached_read: 0.03
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: mimo-v2.5
+  name: MiMo-V2.5
+  description: MiMo omni model for text, image, video, audio, and agents
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-04-22'
+  family: mimo
+  pricing:
+    input: 0.4
+    output: 2.0
+    cached_read: 0.08
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - audio
+  - multimodal
+- id: GLM-5.2-FP8
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 202752
+  output_limit: 202752
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 1.2
+    output: 4.2
+    cached_read: 0.26
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: GLM-5.1-FP8
+  name: GLM 5.1
+  description: Strong GLM coding model for agentic engineering, terminals, and repository
+    generation
+  context_window: 202752
+  output_limit: 131072
+  release_date: '2026-04-07'
+  family: glm
+  pricing:
+    input: 1.4
+    output: 4.4
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: deepseek-v4-flash-0731
+  name: DeepSeek V4 Flash 0731
+  description: Fast DeepSeek model for efficient chat, coding help, and agent loops
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-07-31'
+  family: deepseek-flash
+  pricing:
+    input: 0.08
+    output: 0.18
+    cached_read: 0.016
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: deepseek-v4-flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek model for efficient chat, coding help, and agent loops
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-04-24'
+  family: deepseek-flash
+  pricing:
+    input: 0.14
+    output: 0.28
+    cached_read: 0.028
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: kimi-k2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-21'
+  family: kimi-k2
+  pricing:
+    input: 0.95
+    output: 4.0
+    cached_read: 0.2
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: kimi-k2.7-code
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less
+    overthinking
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-06-12'
+  family: kimi-k2
+  pricing:
+    input: 0.69
+    output: 3.49
+    cached_read: 0.14
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: glm-5.2
+  name: GLM-5.2
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202752
+  output_limit: 202752
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 0.6
+    output: 2.0
+    cached_read: 0.15
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights

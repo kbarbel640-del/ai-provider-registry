@@ -36,3 +36,19 @@ models:
   - reasoning
   - long_context
   - free
+- id: zdev
+  name: ZDev
+  description: Coding model for repository understanding, refactors, and agentic engineering
+    tasks
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-04-15'
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal

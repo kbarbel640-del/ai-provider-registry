@@ -102,3 +102,76 @@ models:
   - reasoning
   - open_weights
   - free
+- id: glm-5.2-highspeed
+  name: GLM-5.2 Highspeed
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: glm-5.3-highspeed
+  name: GLM-5.3 Highspeed
+  description: Flagship GLM model for long-horizon coding, agents, and complex project
+    delivery
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-08-14'
+  family: glm
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: glm-5.3-flash
+  name: GLM-5.3-Flash
+  description: Native multimodal GLM model for efficient coding and long-horizon agent
+    tasks
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-08-26'
+  family: glm
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: glm-5.3
+  name: GLM-5.3
+  description: Flagship GLM model for long-horizon coding, agents, and complex project
+    delivery
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-08-14'
+  family: glm
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights

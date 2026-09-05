@@ -57,3 +57,18 @@ models:
   release_date: '2024-06-12'
   tags:
   - low_cost
+- id: solar-pro4
+  name: Solar Pro 4
+  description: Upstage's flagship model, specialized for agentic use
+  context_window: 524288
+  output_limit: 131072
+  release_date: '2026-08-06'
+  family: solar-pro
+  pricing:
+    input: 0.3
+    output: 1.2
+    cached_read: 0.06
+  tags:
+  - reasoning
+  - tools
+  - json_mode

@@ -159,3 +159,22 @@ models:
   release_date: '2025-07-14'
   tags:
   - open_weights
+- id: kimi-k3
+  name: Kimi K3
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal

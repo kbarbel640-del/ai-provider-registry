@@ -58,3 +58,43 @@ models:
   tags:
   - reasoning
   - open_weights
+- id: deepseek-v3
+  name: DeepSeek V3
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 131072
+  output_limit: 8192
+  release_date: '2024-12-26'
+  family: deepseek
+  pricing:
+    input: 0.28
+    output: 1.1
+  tags:
+  - tools
+  - open_weights
+- id: minimax-m25
+  name: MiniMax M2.5
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 204800
+  output_limit: 131072
+  release_date: '2025-03-01'
+  family: minimax
+  pricing:
+    input: 0.29
+    output: 1.16
+  tags:
+  - reasoning
+  - tools
+- id: deepseek-r1
+  name: DeepSeek R1
+  description: DeepSeek reasoning model for multi-step analysis, math, coding, and tools
+  context_window: 131072
+  output_limit: 32000
+  release_date: '2025-01-20'
+  family: deepseek-thinking
+  pricing:
+    input: 0.55
+    output: 2.2
+  tags:
+  - reasoning
+  - tools
+  - open_weights

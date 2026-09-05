@@ -227,3 +227,751 @@ models:
   - open_weights
   - long_context
   - free
+- id: gpt-5-6-terra
+  name: GPT-5.6 Terra
+  description: Balanced GPT-5.6 model for capable, cost-efficient everyday work
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-terra
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: glm-5-1
+  name: GLM-5.1
+  description: Strong GLM coding model for agentic engineering, terminals, and repository
+    generation
+  context_window: 200000
+  output_limit: 131072
+  release_date: '2026-04-07'
+  family: glm
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: gemini-3-7-flash
+  name: Gemini 3.7 Flash
+  description: High-efficiency Gemini model for agentic workflows, coding, and multimodal
+    reasoning
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-08-13'
+  family: gemini-flash
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gemini-2-5-flash
+  name: Gemini 2.5 Flash
+  description: Fast Gemini workhorse for multimodal apps where latency and price matter
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2025-06-17'
+  family: gemini-flash
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: minimax-m2-7-highspeed
+  name: MiniMax-M2.7-highspeed
+  description: Low-latency M2.7 variant for interactive coding plans and agent loops
+  context_window: 204800
+  output_limit: 131072
+  release_date: '2026-03-18'
+  family: minimax
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: kimi-k2-7-code:free
+  name: Kimi K2.7 Code (Free)
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less
+    overthinking
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-06-12'
+  family: kimi-k2
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: gemini-3-5-flash
+  name: Gemini 3.5 Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-05-19'
+  family: gemini-flash
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: claude-opus-5
+  name: Claude Opus 5
+  description: Strongest Claude Opus model for coding, agents, and professional work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-07-24'
+  family: claude-opus
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: gpt-5-6-sol
+  name: GPT-5.6 Sol
+  description: Frontier GPT-5.6 model for complex professional work, coding, and agentic
+    workflows
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-sol
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-6-luna
+  name: GPT-5.6 Luna
+  description: Cost-efficient GPT-5.6 model for fast, high-volume workloads
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-luna
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: mistral-medium-3-5:free
+  name: Mistral Medium 3.5 (Free)
+  description: Balanced Mistral model for enterprise assistants, multilingual work,
+    and tools
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-29'
+  family: mistral-medium
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: gemini-3-6-flash
+  name: Gemini 3.6 Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-07-21'
+  family: gemini-flash
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: glm-5-3
+  name: GLM-5.3
+  description: Flagship GLM model for long-horizon coding, agents, and complex project
+    delivery
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-08-14'
+  family: glm
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: step-3-7-flash:free
+  name: Step 3.7 Flash (Free)
+  description: Newer StepFun flash model for faster agents, coding, and multimodal prompts
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-05-29'
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: kimi-k2-7-code
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less
+    overthinking
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-06-12'
+  family: kimi-k2
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: gpt-oss-20b
+  name: GPT OSS 20B
+  description: Open-weight GPT reasoning model for self-hosted agents and controllable
+    deployments
+  context_window: 131072
+  output_limit: 32768
+  release_date: '2025-08-05'
+  family: gpt-oss
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: gemini-3-1-pro
+  name: Gemini 3.1 Pro Preview
+  description: Reasoning-first Gemini preview for agentic coding and complex problem
+    solving
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-02-19'
+  family: gemini-pro
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: hy3
+  name: Hy3
+  description: Tencent Hy reasoning model for coding, instruction following, and agent
+    tasks
+  context_window: 256000
+  output_limit: 128000
+  release_date: '2026-07-06'
+  family: Hy
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: grok-imagine-image-2-0
+  name: Grok Imagine Image 2.0
+  description: Image model for prompt-driven generation, editing, and visual design
+    workflows
+  context_window: 8000
+  release_date: '2026-08-07'
+  family: grok
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - vision
+  - multimodal
+- id: kimi-k2-6:free
+  name: Kimi K2.6 (Free)
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-21'
+  family: kimi-k2
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: kimi-k2-6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-21'
+  family: kimi-k2
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: gemini-3-1-flash-lite
+  name: Gemini 3.1 Flash Lite
+  description: Low-latency Gemini model for high-volume multimodal and agent workloads
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-05-07'
+  family: gemini-flash-lite
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: hy3:free
+  name: Hy3 (Free)
+  description: Tencent Hy reasoning model for coding, instruction following, and agent
+    tasks
+  context_window: 256000
+  output_limit: 128000
+  release_date: '2026-07-06'
+  family: Hy
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: kimi-k3
+  name: Kimi K3
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: mistral-large:free
+  name: Mistral Large (Free)
+  description: Flagship Mistral model for advanced reasoning, coding, and multilingual
+    work
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2024-11-01'
+  family: mistral-large
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: grok-4-5
+  name: Grok 4.5
+  description: xAI's Grok model for chat, coding, agentic tools, and lower hallucination
+    risk
+  context_window: 500000
+  output_limit: 500000
+  release_date: '2026-07-08'
+  family: grok
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: mimo-v2-5:free
+  name: MiMo-V2.5 (Free)
+  description: Open MiMo model for multimodal coding agents and long-context automation
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-04-22'
+  family: mimo
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - audio
+  - multimodal
+- id: claude-fable-5
+  name: Claude Fable 5
+  description: Claude model for creative writing, analysis, and controlled agent workflows
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-09'
+  family: claude-fable
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: glm-5-3-flash
+  name: GLM-5.3-Flash
+  description: Native multimodal GLM model for efficient coding and long-horizon agent
+    tasks
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-08-26'
+  family: glm
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: nemotron-3-super-120b-a12b
+  name: Nemotron 3 Super 120B A12B
+  description: Nemotron middle tier for collaborative agents and high-volume reasoning
+    workloads
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-03-11'
+  family: nemotron
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: gpt-5-4-mini
+  name: GPT-5.4 mini
+  description: Strong small GPT for coding subagents, quick tool use, and high-volume
+    work
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2026-03-17'
+  family: gpt-mini
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: nemotron-3-super-120b-a12b:free
+  name: Nemotron 3 Super 120B A12B (Free)
+  description: Nemotron middle tier for collaborative agents and high-volume reasoning
+    workloads
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-03-11'
+  family: nemotron
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: whisper-large-v3-turbo
+  name: Whisper Large v3 Turbo
+  description: Speech transcription model for accurate audio-to-text and captioning
+    workflows
+  context_window: 448
+  output_limit: 448
+  release_date: '2024-10-01'
+  family: whisper
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - open_weights
+  - audio
+- id: grok-build-0-1
+  name: Grok Build 0.1
+  description: Fast Grok coding model tuned for agentic engineering and iterative edits
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-04-16'
+  family: grok-build
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: glm-4-7-flash:free
+  name: GLM-4.7-Flash (Free)
+  description: Budget GLM lane for fast coding help, routing, and everyday automation
+  context_window: 200000
+  output_limit: 131072
+  release_date: '2026-01-19'
+  family: glm-flash
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: gemma-4-31b-it
+  name: Gemma 4 31B IT
+  description: Largest Gemma 4 instruction model for open, self-hosted chat and reasoning
+  context_window: 262144
+  output_limit: 32768
+  release_date: '2026-04-02'
+  family: gemma
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: gpt-image-2
+  name: GPT-Image-2
+  description: Image model for prompt-driven generation, editing, and visual design
+    workflows
+  context_window: 272000
+  output_limit: 16384
+  release_date: '2026-04-21'
+  family: gpt-image
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - vision
+  - multimodal
+- id: grok-4-6
+  name: Grok 4.6
+  description: xAI's frontier model for long-running agents, coding, knowledge work,
+    and visual projects
+  context_window: 500000
+  output_limit: 500000
+  release_date: '2026-08-12'
+  family: grok
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: step-3-7-flash
+  name: Step 3.7 Flash
+  description: Newer StepFun flash model for faster agents, coding, and multimodal prompts
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-05-29'
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: gemini-2-5-flash-lite
+  name: Gemini 2.5 Flash-Lite
+  description: Lean Gemini 2.5 lane for cheap multimodal traffic and quick agents
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2025-06-17'
+  family: gemini-flash-lite
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gpt-oss-120b
+  name: GPT OSS 120B
+  description: Open GPT reasoning model for self-hosted agents and controllable deployments
+  context_window: 131072
+  output_limit: 32768
+  release_date: '2025-08-05'
+  family: gpt-oss
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: qwen3-8-max
+  name: Qwen3.8 Max
+  description: 2.4-trillion-parameter MoE flagship for coding, professional work, multimodal
+    understanding, and long-horizon agentic workflows
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-08-03'
+  family: qwen
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: nemotron-3-ultra-550b-a55b
+  name: Nemotron 3 Ultra 550B A55B
+  description: Largest Nemotron 3 model for maximum open-weight reasoning and agent
+    accuracy
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-04'
+  family: nemotron
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: minimax-m2-7
+  name: MiniMax-M2.7
+  description: Open MiniMax flagship for coding agents, office automation, and complex
+    environments
+  context_window: 204800
+  output_limit: 131072
+  release_date: '2026-03-18'
+  family: minimax
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: claude-sonnet-5
+  name: Claude Sonnet 5
+  description: Everyday Claude agent model for coding, planning, browsing, and general
+    work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-30'
+  family: claude-sonnet
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: gemini-3-1-flash-tts
+  name: Gemini 3.1 Flash TTS Preview
+  description: Low-latency speech generation with steerable prompts and expressive audio
+    tags
+  context_window: 8192
+  output_limit: 16384
+  release_date: '2026-04-15'
+  family: gemini-flash
+  pricing:
+    input: 0.0
+    output: 0.0
+- id: nemotron-3-nano-30b-a3b
+  name: Nemotron 3 Nano 30B A3B
+  description: Small Nemotron 3 MoE for efficient coding, math, and long-context agents
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2025-12-15'
+  family: nemotron
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights

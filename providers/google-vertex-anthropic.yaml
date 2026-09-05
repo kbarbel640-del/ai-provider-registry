@@ -181,3 +181,55 @@ models:
   tags:
   - vision
   - reasoning
+- id: claude-fable-5@default
+  name: Claude Fable 5
+  description: Claude model for creative writing, analysis, and controlled agent workflows
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-09'
+  family: claude-fable
+  pricing:
+    input: 10.0
+    output: 50.0
+    cached_read: 1.0
+    cached_write: 12.5
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-fable-5-1@default
+  name: Claude Fable 5.1
+  description: Claude model for demanding reasoning and long-horizon agentic work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-09-01'
+  family: claude-fable
+  pricing:
+    input: 10.0
+    output: 50.0
+    cached_read: 0.25
+    cached_write: 12.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-5@default
+  name: Claude Opus 5
+  description: Strongest Claude Opus model for coding, agents, and professional work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-07-24'
+  family: claude-opus
+  pricing:
+    input: 5.0
+    output: 25.0
+    cached_read: 0.5
+    cached_write: 6.25
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal

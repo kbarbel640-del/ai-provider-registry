@@ -231,3 +231,699 @@ models:
   - vision
   - reasoning
   - open_weights
+- id: ERNIE-4.5-300B-A47B
+  name: baidu/ERNIE-4.5-300B-A47B
+  description: Tool-capable chat model for instruction following and agentic application
+    workflows
+  context_window: 131000
+  output_limit: 131000
+  release_date: '2025-07-02'
+  family: ernie
+  pricing:
+    input: 0.28
+    output: 1.1
+  tags:
+  - tools
+  - json_mode
+- id: Step-3.5-Flash
+  name: stepfun-ai/Step-3.5-Flash
+  description: StepFun flash model for efficient multimodal reasoning, coding, and tool
+    use
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2026-02-11'
+  family: step
+  pricing:
+    input: 0.1
+    output: 0.3
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: DeepSeek-V4-Flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context
+    work
+  context_window: 1000000
+  output_limit: 384000
+  release_date: '2026-04-24'
+  family: deepseek-flash
+  pricing:
+    input: 0.14
+    output: 0.28
+    cached_read: 0.003
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: DeepSeek-V3.1-Terminus
+  name: deepseek-ai/DeepSeek-V3.1-Terminus
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 164000
+  output_limit: 164000
+  release_date: '2025-09-29'
+  family: deepseek
+  pricing:
+    input: 0.27
+    output: 1.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: DeepSeek-OCR
+  name: deepseek-ai/DeepSeek-OCR
+  description: OCR model for extracting structured text from documents and screenshots
+  context_window: 8192
+  output_limit: 8192
+  release_date: '2025-10-20'
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - open_weights
+  - vision
+  - multimodal
+- id: DeepSeek-R1
+  name: deepseek-ai/DeepSeek-R1
+  description: DeepSeek reasoning model for multi-step analysis, math, coding, and tools
+  context_window: 164000
+  output_limit: 164000
+  release_date: '2025-05-28'
+  family: deepseek-thinking
+  pricing:
+    input: 0.5
+    output: 2.18
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: DeepSeek-V3.2
+  name: deepseek-ai/DeepSeek-V3.2
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 164000
+  output_limit: 164000
+  release_date: '2025-12-03'
+  family: deepseek
+  pricing:
+    input: 0.27
+    output: 0.42
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: DeepSeek-V4-Pro
+  name: deepseek-ai/DeepSeek-V4-Pro
+  description: Flagship DeepSeek model for coding, reasoning, and agentic work
+  context_window: 1049000
+  output_limit: 393000
+  release_date: '2026-04-24'
+  family: deepseek-thinking
+  pricing:
+    input: 1.74
+    output: 3.48
+    cached_read: 0.145
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: DeepSeek-V3
+  name: deepseek-ai/DeepSeek-V3
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 164000
+  output_limit: 164000
+  release_date: '2024-12-26'
+  family: deepseek
+  pricing:
+    input: 0.25
+    output: 1.0
+  tags:
+  - tools
+  - json_mode
+- id: Ling-flash-2.0
+  name: inclusionAI/Ling-flash-2.0
+  description: Efficient model for low-latency assistance, extraction, and routine automation
+  context_window: 131000
+  output_limit: 131000
+  release_date: '2025-09-18'
+  family: ling
+  pricing:
+    input: 0.14
+    output: 0.57
+  tags:
+  - tools
+  - json_mode
+- id: GLM-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 1049000
+  output_limit: 262000
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 1.4
+    output: 4.4
+    cached_read: 0.26
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: GLM-4.5-Air
+  name: zai-org/GLM-4.5-Air
+  description: Efficient GLM model for fast reasoning, coding, and agent workflows
+  context_window: 131000
+  output_limit: 131000
+  release_date: '2025-07-28'
+  family: glm-air
+  pricing:
+    input: 0.14
+    output: 0.86
+  tags:
+  - tools
+  - json_mode
+- id: Qwen3.5-27B
+  name: Qwen/Qwen3.5-27B
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-02-25'
+  family: qwen
+  pricing:
+    input: 0.26
+    output: 2.09
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+- id: Qwen3-8B
+  name: Qwen/Qwen3-8B
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 131000
+  output_limit: 131000
+  release_date: '2025-04-30'
+  family: qwen
+  pricing:
+    input: 0.06
+    output: 0.06
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: Qwen3-14B
+  name: Qwen/Qwen3-14B
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 131000
+  output_limit: 131000
+  release_date: '2025-04-30'
+  family: qwen
+  pricing:
+    input: 0.07
+    output: 0.28
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: Qwen3.5-4B
+  name: Qwen/Qwen3.5-4B
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-03-03'
+  family: qwen
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+- id: Qwen3.5-9B
+  name: Qwen/Qwen3.5-9B
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-03-03'
+  family: qwen
+  pricing:
+    input: 0.22
+    output: 1.74
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+- id: Qwen3.5-122B-A10B
+  name: Qwen/Qwen3.5-122B-A10B
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-02-26'
+  family: qwen
+  pricing:
+    input: 0.29
+    output: 2.32
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+- id: Qwen3.5-397B-A17B
+  name: Qwen/Qwen3.5-397B-A17B
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-02-16'
+  family: qwen
+  pricing:
+    input: 0.29
+    output: 1.74
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+- id: Qwen3.5-35B-A3B
+  name: Qwen/Qwen3.5-35B-A3B
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-02-25'
+  family: qwen
+  pricing:
+    input: 0.23
+    output: 1.86
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+- id: Qwen3-32B
+  name: Qwen/Qwen3-32B
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 131000
+  output_limit: 131000
+  release_date: '2025-04-30'
+  family: qwen
+  pricing:
+    input: 0.14
+    output: 0.57
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: Qwen3-235B-A22B-Thinking-2507
+  name: Qwen/Qwen3-235B-A22B-Thinking-2507
+  description: Qwen reasoning model for deliberate problem solving, math, and coding
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2025-07-28'
+  family: qwen
+  pricing:
+    input: 0.13
+    output: 0.6
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: Qwen3.6-35B-A3B
+  name: Qwen/Qwen3.6-35B-A3B
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-04-17'
+  family: qwen
+  pricing:
+    input: 0.23
+    output: 1.86
+  tags:
+  - tools
+  - open_weights
+  - vision
+- id: Qwen3-VL-30B-A3B-Instruct
+  name: Qwen/Qwen3-VL-30B-A3B-Instruct
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2025-10-05'
+  family: qwen
+  pricing:
+    input: 0.29
+    output: 1.0
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: Qwen3-VL-235B-A22B-Thinking
+  name: Qwen/Qwen3-VL-235B-A22B-Thinking
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2025-10-04'
+  family: qwen
+  pricing:
+    input: 0.45
+    output: 3.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: Qwen3-VL-8B-Instruct
+  name: Qwen/Qwen3-VL-8B-Instruct
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2025-10-15'
+  family: qwen
+  pricing:
+    input: 0.18
+    output: 0.68
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: Qwen3-VL-32B-Instruct
+  name: Qwen/Qwen3-VL-32B-Instruct
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2025-10-21'
+  family: qwen
+  pricing:
+    input: 0.2
+    output: 0.6
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: Qwen2.5-72B-Instruct
+  name: Qwen/Qwen2.5-72B-Instruct
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 33000
+  output_limit: 4000
+  release_date: '2024-09-18'
+  family: qwen
+  pricing:
+    input: 0.59
+    output: 0.59
+  tags:
+  - tools
+  - json_mode
+- id: Qwen2.5-7B-Instruct
+  name: Qwen/Qwen2.5-7B-Instruct
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 33000
+  output_limit: 4000
+  release_date: '2024-09-18'
+  family: qwen
+  pricing:
+    input: 0.05
+    output: 0.05
+  tags:
+  - tools
+  - json_mode
+- id: Qwen3-Coder-480B-A35B-Instruct
+  name: Qwen/Qwen3-Coder-480B-A35B-Instruct
+  description: Qwen coding model for software agents, repository edits, and code reasoning
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2025-07-31'
+  family: qwen
+  pricing:
+    input: 0.25
+    output: 1.0
+  tags:
+  - tools
+  - json_mode
+- id: Qwen3-VL-235B-A22B-Instruct
+  name: Qwen/Qwen3-VL-235B-A22B-Instruct
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2025-10-04'
+  family: qwen
+  pricing:
+    input: 0.3
+    output: 1.5
+  tags:
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: Qwen3-Coder-30B-A3B-Instruct
+  name: Qwen/Qwen3-Coder-30B-A3B-Instruct
+  description: Qwen coding model for software agents, repository edits, and code reasoning
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2025-08-01'
+  family: qwen
+  pricing:
+    input: 0.07
+    output: 0.28
+  tags:
+  - tools
+  - json_mode
+- id: Qwen3-VL-32B-Thinking
+  name: Qwen/Qwen3-VL-32B-Thinking
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2025-10-21'
+  family: qwen
+  pricing:
+    input: 0.2
+    output: 1.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: Qwen3-VL-30B-A3B-Thinking
+  name: Qwen/Qwen3-VL-30B-A3B-Thinking
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2025-10-11'
+  family: qwen
+  pricing:
+    input: 0.29
+    output: 1.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: Qwen3-30B-A3B-Instruct-2507
+  name: Qwen/Qwen3-30B-A3B-Instruct-2507
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2025-07-30'
+  family: qwen
+  pricing:
+    input: 0.09
+    output: 0.3
+  tags:
+  - tools
+  - json_mode
+- id: Seed-OSS-36B-Instruct
+  name: ByteDance-Seed/Seed-OSS-36B-Instruct
+  description: Tool-capable chat model for instruction following and agentic application
+    workflows
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2025-09-04'
+  family: seed
+  pricing:
+    input: 0.21
+    output: 0.57
+  tags:
+  - tools
+  - json_mode
+- id: deepseek-ai/DeepSeek-V3
+  name: Pro/deepseek-ai/DeepSeek-V3
+  description: Flagship DeepSeek model for coding, reasoning, and agentic work
+  context_window: 164000
+  output_limit: 164000
+  release_date: '2024-12-26'
+  family: deepseek
+  pricing:
+    input: 0.25
+    output: 1.0
+  tags:
+  - tools
+  - json_mode
+- id: deepseek-ai/DeepSeek-V3.1-Terminus
+  name: Pro/deepseek-ai/DeepSeek-V3.1-Terminus
+  description: Flagship DeepSeek model for coding, reasoning, and agentic work
+  context_window: 164000
+  output_limit: 164000
+  release_date: '2025-09-29'
+  family: deepseek
+  pricing:
+    input: 0.27
+    output: 1.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: deepseek-ai/DeepSeek-R1
+  name: Pro/deepseek-ai/DeepSeek-R1
+  description: DeepSeek reasoning model for multi-step analysis, math, coding, and tools
+  context_window: 164000
+  output_limit: 164000
+  release_date: '2025-05-28'
+  family: deepseek-thinking
+  pricing:
+    input: 0.5
+    output: 2.18
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: deepseek-ai/DeepSeek-V3.2
+  name: Pro/deepseek-ai/DeepSeek-V3.2
+  description: Flagship DeepSeek model for coding, reasoning, and agentic work
+  context_window: 164000
+  output_limit: 164000
+  release_date: '2025-12-03'
+  family: deepseek
+  pricing:
+    input: 0.27
+    output: 0.42
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: zai-org/GLM-5.1
+  name: Pro/zai-org/GLM-5.1
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 205000
+  output_limit: 205000
+  release_date: '2026-04-08'
+  family: glm
+  pricing:
+    input: 1.4
+    output: 4.4
+    cached_read: 0.26
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: zai-org/GLM-5
+  name: Pro/zai-org/GLM-5
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 205000
+  output_limit: 205000
+  release_date: '2026-02-12'
+  family: glm
+  pricing:
+    input: 1.0
+    output: 3.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: MiniMaxAI/MiniMax-M2.5
+  name: Pro/MiniMaxAI/MiniMax-M2.5
+  description: Frontier MiniMax model for engineering, office tasks, and agentic reasoning
+  context_window: 192000
+  output_limit: 131000
+  release_date: '2026-02-13'
+  family: minimax
+  pricing:
+    input: 0.3
+    output: 1.22
+  tags:
+  - tools
+  - json_mode
+- id: moonshotai/Kimi-K2.5
+  name: Pro/moonshotai/Kimi-K2.5
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2026-01-27'
+  family: kimi
+  pricing:
+    input: 0.45
+    output: 2.25
+    cached_read: 0.07
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+- id: moonshotai/Kimi-K2.6
+  name: Pro/moonshotai/Kimi-K2.6
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2026-04-21'
+  family: kimi
+  pricing:
+    input: 0.95
+    output: 4.0
+    cached_read: 0.16
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+- id: Hunyuan-A13B-Instruct
+  name: tencent/Hunyuan-A13B-Instruct
+  description: Tencent Hy reasoning model for coding, instruction following, and agent
+    tasks
+  context_window: 131000
+  output_limit: 131000
+  release_date: '2025-06-30'
+  family: hunyuan
+  pricing:
+    input: 0.14
+    output: 0.57
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+- id: PaddleOCR-VL-1.5
+  name: PaddlePaddle/PaddleOCR-VL-1.5
+  description: Multimodal model for analyzing text, images, documents, and rich media
+  context_window: 16384
+  output_limit: 16384
+  release_date: '2026-01-29'
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - open_weights
+  - vision
+  - multimodal

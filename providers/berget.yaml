@@ -145,3 +145,105 @@ models:
   - reasoning
   - open_weights
   - low_cost
+- id: Mistral-Small-3.2-24B-Instruct-2506
+  name: Mistral Small 3.2 24B Instruct 2506
+  description: Efficient Mistral model for fast chat, extraction, and production assistants
+  context_window: 32000
+  output_limit: 8192
+  release_date: '2025-10-01'
+  family: mistral-small
+  pricing:
+    input: 0.33
+    output: 0.33
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: gemma-4-31B-it
+  name: Gemma 4 31B Instruct
+  description: Open Gemma instruction model for efficient chat and self-hosted deployments
+  context_window: 128000
+  output_limit: 8192
+  release_date: '2026-04-02'
+  family: gemma
+  pricing:
+    input: 0.275
+    output: 0.55
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - audio
+  - multimodal
+- id: GLM-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 524288
+  output_limit: 32768
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 1.54
+    output: 4.84
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: GLM-5.3-Flash
+  name: GLM-5.3-Flash
+  description: Native multimodal GLM model for efficient coding and long-horizon agent
+    tasks
+  context_window: 524288
+  output_limit: 16384
+  release_date: '2026-08-26'
+  family: glm
+  pricing:
+    input: 0.29
+    output: 0.58
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: Qwen3.8-27B-FP8
+  name: Qwen3.8 27B
+  description: Dense 27B vision-language model for coding, agent tasks, and image and
+    video understanding
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-08-14'
+  family: qwen
+  pricing:
+    input: 0.46
+    output: 3.48
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: Kimi-K3
+  name: Kimi K3
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 327680
+  output_limit: 32768
+  release_date: '2026-07-27'
+  family: kimi-k3
+  pricing:
+    input: 3.0
+    output: 15.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal

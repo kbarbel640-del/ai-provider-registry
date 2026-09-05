@@ -94,3 +94,51 @@ models:
       input: 2.00
       output: 5.00
     tags: [vision, generation]
+  - id: kimi-k2-turbo-preview
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 2.4
+      output: 10.0
+      cached_read: 0.6
+    tags: [tools, open_weights]
+  - id: kimi-k2-thinking
+    family: kimi-thinking
+    context_window: 262144
+    pricing:
+      input: 0.6
+      output: 2.5
+      cached_read: 0.15
+    tags: [reasoning, tools, open_weights]
+  - id: kimi-k2-0711-preview
+    family: kimi-k2
+    context_window: 131072
+    pricing:
+      input: 0.6
+      output: 2.5
+      cached_read: 0.15
+    tags: [tools, open_weights]
+  - id: kimi-k3
+    family: kimi-k3
+    context_window: 1048576
+    pricing:
+      input: 3.0
+      output: 15.0
+      cached_read: 0.3
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: kimi-k2-0905-preview
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.6
+      output: 2.5
+      cached_read: 0.15
+    tags: [tools, open_weights]
+  - id: kimi-k2-thinking-turbo
+    family: kimi-thinking
+    context_window: 262144
+    pricing:
+      input: 1.15
+      output: 8.0
+      cached_read: 0.15
+    tags: [reasoning, tools, open_weights]

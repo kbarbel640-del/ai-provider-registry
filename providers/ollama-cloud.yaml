@@ -189,3 +189,194 @@ models:
   release_date: '2025-07-22'
   tags:
   - open_weights
+- id: gpt-oss:20b
+  name: gpt-oss:20b
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following
+    workloads
+  context_window: 131072
+  output_limit: 32768
+  release_date: '2025-08-05'
+  family: gpt-oss
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: deepseek-v4-flash:0731
+  name: DeepSeek V4 Flash 0731
+  description: Official DeepSeek V4 Flash release with enhanced agentic capabilities
+    and integrated DSpark speculative decoding
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-07-31'
+  family: deepseek-flash
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: minimax-m2.7
+  name: minimax-m2.7
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 196608
+  output_limit: 196608
+  release_date: '2026-03-18'
+  family: minimax
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: kimi-k2.6
+  name: kimi-k2.6
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-20'
+  family: kimi-k2
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: minimax-m2.5
+  name: minimax-m2.5
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 204800
+  output_limit: 131072
+  release_date: '2026-02-12'
+  family: minimax
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: qwen3.5:397b
+  name: qwen3.5:397b
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-02-15'
+  family: qwen
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: gpt-oss:120b
+  name: gpt-oss:120b
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following
+    workloads
+  context_window: 131072
+  output_limit: 32768
+  release_date: '2025-08-05'
+  family: gpt-oss
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: nemotron-3-ultra
+  name: nemotron-3-ultra
+  description: Largest Nemotron 3 model for maximum open-weight reasoning and agent
+    accuracy
+  context_window: 262144
+  output_limit: 128000
+  release_date: '2026-06-04'
+  family: nemotron
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: mistral-large-3:675b
+  name: mistral-large-3:675b
+  description: Flagship Mistral model for advanced reasoning, coding, and multilingual
+    work
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2025-12-02'
+  family: mistral-large
+  tags:
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: kimi-k3
+  name: kimi-k3
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-07-16'
+  family: kimi-k3
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: glm-5.3-flash
+  name: GLM-5.3-Flash
+  description: Native multimodal GLM model for efficient coding and long-horizon agent
+    tasks
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-08-26'
+  family: glm
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: gemma4:31b
+  name: gemma4:31b
+  description: Open Gemma instruction model for efficient chat and self-hosted deployments
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-04-02'
+  family: gemma
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: kimi-k2.5
+  name: kimi-k2.5
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-01-27'
+  family: kimi-k2
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: glm-5.1
+  name: glm-5.1
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202752
+  output_limit: 131072
+  release_date: '2026-03-27'
+  family: glm
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: glm-5.3
+  name: GLM-5.3
+  description: Flagship GLM model for long-horizon coding, agents, and complex project
+    delivery
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-08-14'
+  family: glm
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights

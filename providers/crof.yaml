@@ -249,3 +249,183 @@ models:
   release_date: '2026-01-27'
   tags:
   - low_cost
+- id: greg-2-super
+  name: Greg 2 Super
+  description: General-purpose chat model for instruction following, writing, and analysis
+  context_window: 229376
+  output_limit: 229376
+  release_date: '2026-06-14'
+  pricing:
+    input: 1.5
+    output: 5.0
+    cached_read: 0.25
+- id: deepseek-v4-pro-0813
+  name: DeepSeek V4 Pro (0813)
+  description: DeepSeek V4 Pro snapshot with million-token context and support for thinking
+    and non-thinking modes
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-08-12'
+  family: deepseek-thinking
+  pricing:
+    input: 0.35
+    output: 0.8
+    cached_read: 0.01
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: deepseek-v4-flash-0731
+  name: DeepSeek V4 Flash (New)
+  description: Official DeepSeek V4 Flash release with enhanced agentic capabilities
+    and integrated DSpark speculative decoding
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-07-31'
+  family: deepseek-flash
+  pricing:
+    input: 0.08
+    output: 0.1
+    cached_read: 0.003
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: qwen3.8-27b
+  name: Qwen3.8 27B
+  description: Dense 27B vision-language model for coding, agent tasks, and image and
+    video understanding
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-08-14'
+  family: qwen
+  pricing:
+    input: 0.2
+    output: 1.5
+    cached_read: 0.03
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: greg-1-mini
+  name: Greg 1 Mini
+  description: Efficient model for low-latency assistance, extraction, and routine automation
+  context_window: 229376
+  output_limit: 229376
+  release_date: '2026-01-27'
+  pricing:
+    input: 0.07
+    output: 0.15
+    cached_read: 0.01
+  tags:
+  - vision
+  - multimodal
+- id: kimi-k3
+  name: Kimi K3
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 1000000
+  output_limit: 262144
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 2.0
+    output: 8.0
+    cached_read: 0.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: deepseek-v3.2
+  name: DeepSeek V3.2
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 163840
+  output_limit: 163840
+  release_date: '2025-07-22'
+  family: deepseek
+  pricing:
+    input: 0.18
+    output: 0.35
+    cached_read: 0.04
+  tags:
+  - tools
+- id: glm-5.3-flash
+  name: GLM 5.3-Flash
+  description: Native multimodal GLM model for efficient coding and long-horizon agent
+    tasks
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-08-26'
+  family: glm
+  pricing:
+    input: 0.07
+    output: 0.22
+    cached_read: 0.01
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: glm-5.1
+  name: GLM-5.1
+  description: Strong GLM coding model for agentic engineering, terminals, and repository
+    generation
+  context_window: 202752
+  output_limit: 202752
+  release_date: '2026-04-07'
+  family: glm
+  pricing:
+    input: 0.45
+    output: 2.15
+    cached_read: 0.08
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: kimi-k3-eco
+  name: Kimi K3 Eco
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 1.0
+    output: 4.0
+    cached_read: 0.1
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: glm-5.3
+  name: GLM-5.3
+  description: Flagship GLM model for long-horizon coding, agents, and complex project
+    delivery
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-08-14'
+  family: glm
+  pricing:
+    input: 0.4
+    output: 1.4
+    cached_read: 0.06
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights

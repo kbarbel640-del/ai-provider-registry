@@ -105,3 +105,56 @@ models:
   - vision
   - reasoning
   - open_weights
+- id: umans-kimi-k3
+  name: Kimi K3
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: umans-deepseek-v4-flash-0731
+  name: DeepSeek V4 Flash
+  description: Official DeepSeek V4 Flash release with enhanced agentic capabilities
+    and integrated DSpark speculative decoding
+  context_window: 1048576
+  output_limit: 393215
+  release_date: '2026-07-31'
+  family: deepseek-flash
+  pricing:
+    input: 0.14
+    output: 0.28
+    cached_read: 0.028
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: umans-deepseek-v4-pro-0813
+  name: DeepSeek V4 Pro
+  description: DeepSeek V4 Pro snapshot with million-token context and support for thinking
+    and non-thinking modes
+  context_window: 1048576
+  output_limit: 393215
+  release_date: '2026-08-12'
+  family: deepseek-thinking
+  pricing:
+    input: 1.32
+    output: 3.96
+    cached_read: 0.044
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights

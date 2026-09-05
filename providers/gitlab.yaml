@@ -207,3 +207,179 @@ models:
   - vision
   - reasoning
   - free
+- id: duo-chat-gpt-5-6-luna
+  name: Agentic Chat (GPT-5.6 Luna)
+  description: Cost-efficient GPT-5.6 model for fast, high-volume workloads
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-luna
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: duo-chat-opus-5
+  name: Agentic Chat (Claude Opus 5)
+  description: Strongest Claude Opus model for coding, agents, and professional work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-07-24'
+  family: claude-opus
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: duo-chat-gpt-5-1
+  name: Agentic Chat (GPT-5.1)
+  description: Chat-tuned GPT model for conversational assistance, writing, and tool
+    workflows
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2026-01-22'
+  family: gpt
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: duo-chat-gpt-5-2
+  name: Agentic Chat (GPT-5.2)
+  description: Chat-tuned GPT model for conversational assistance, writing, and tool
+    workflows
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2026-01-23'
+  family: gpt
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: duo-chat-haiku-4-5
+  name: Agentic Chat (Claude Haiku 4.5)
+  description: Fast Claude model for responsive assistance, classification, and lightweight
+    agents
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2026-01-08'
+  family: claude-haiku
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: duo-chat-gpt-5-6-terra
+  name: Agentic Chat (GPT-5.6 Terra)
+  description: Balanced GPT-5.6 model for capable, cost-efficient everyday work
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-terra
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: duo-chat-opus-4-5
+  name: Agentic Chat (Claude Opus 4.5)
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2026-01-08'
+  family: claude-opus
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: duo-chat-fable-5-1
+  name: Agentic Chat (Claude Fable 5.1)
+  description: Claude model for demanding reasoning and long-horizon agentic work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-09-01'
+  family: claude-fable
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: duo-chat-gpt-5-6-sol
+  name: Agentic Chat (GPT-5.6 Sol)
+  description: Frontier GPT-5.6 model for complex professional work, coding, and agentic
+    workflows
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-sol
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: duo-chat-sonnet-4-5
+  name: Agentic Chat (Claude Sonnet 4.5)
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost
+    control
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2026-01-08'
+  family: claude-sonnet
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal

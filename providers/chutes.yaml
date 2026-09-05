@@ -228,3 +228,236 @@ models:
   - reasoning
   - open_weights
   - low_cost
+- id: Nemotron-3-Nano-Omni-30B-TEE
+  name: Nemotron 3 Nano Omni 30B TEE
+  description: Omni-modal model for text, vision, audio, and multimodal agent tasks
+  context_window: 131072
+  release_date: '2026-07-23'
+  family: nemotron
+  pricing:
+    input: 0.0245
+    output: 0.0978
+    cached_read: 0.0024499999999999995
+  tags:
+  - open_weights
+- id: DeepSeek-V4-Flash-0731-TEE
+  name: DeepSeek V4 Flash 0731 TEE
+  description: Official DeepSeek V4 Flash release with enhanced agentic capabilities
+    and integrated DSpark speculative decoding
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-07-31'
+  family: deepseek-flash
+  pricing:
+    input: 0.44
+    output: 1.32
+    cached_read: 0.04399999999999999
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: DeepSeek-V3.2-TEE
+  name: DeepSeek V3.2 TEE
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 131072
+  output_limit: 65536
+  release_date: 2025-12
+  family: deepseek
+  pricing:
+    input: 1.0
+    output: 1.0
+    cached_read: 0.09999999999999998
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: gemma-4-31B-turbo-TEE
+  name: gemma 4 31B turbo TEE
+  description: Largest Gemma 4 instruction model for open, self-hosted chat and reasoning
+  context_window: 131072
+  output_limit: 65536
+  release_date: '2026-04-02'
+  family: gemma
+  pricing:
+    input: 0.12
+    output: 0.37
+    cached_read: 0.011999999999999997
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: GLM-5.1-TEE
+  name: GLM 5.1 TEE
+  description: Strong GLM coding model for agentic engineering, terminals, and repository
+    generation
+  context_window: 202752
+  output_limit: 65535
+  release_date: '2026-04-07'
+  family: glm
+  pricing:
+    input: 0.98
+    output: 3.08
+    cached_read: 0.09799999999999998
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: GLM-5.2-TEE
+  name: GLM 5.2 TEE
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 1.25
+    output: 3.95
+    cached_read: 0.12499999999999997
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: Qwen3.8-27B-TEE
+  name: Qwen3.8 27B TEE
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-08-16'
+  family: qwen
+  pricing:
+    input: 0.32
+    output: 2.5
+    cached_read: 0.031999999999999994
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: Qwen3.6-27B-TEE
+  name: Qwen3.6 27B TEE
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-04-22'
+  family: qwen
+  pricing:
+    input: 0.3
+    output: 2.0
+    cached_read: 0.029999999999999992
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: Qwen3.5-397B-A17B-TEE
+  name: Qwen3.5 397B A17B TEE
+  description: Large open Qwen multimodal MoE for visual agents and long technical tasks
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-02-15'
+  family: qwen
+  pricing:
+    input: 0.45
+    output: 3.0
+    cached_read: 0.04499999999999999
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: Qwen3-235B-A22B-Thinking-2507-TEE
+  name: Qwen3 235B A22B Thinking 2507 TEE
+  description: Qwen reasoning model for deliberate problem solving, math, and coding
+  context_window: 262144
+  output_limit: 262144
+  release_date: 2025-07
+  family: qwen
+  pricing:
+    input: 0.2989
+    output: 1.1957
+    cached_read: 0.029889999999999993
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: Qwen3-32B-TEE
+  name: Qwen3 32B TEE
+  description: Dense open Qwen model for self-hosted chat, reasoning, and coding
+  context_window: 40960
+  output_limit: 40960
+  release_date: 2025-04
+  family: qwen
+  pricing:
+    input: 0.104
+    output: 0.416
+    cached_read: 0.010399999999999998
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: Mistral-Nemo-Instruct-2407-TEE
+  name: Mistral Nemo Instruct 2407 TEE
+  description: Efficient Mistral-NVIDIA open model for multilingual chat and local deployment
+  context_window: 131072
+  output_limit: 131072
+  release_date: '2024-07-01'
+  family: mistral-nemo
+  pricing:
+    input: 0.0245
+    output: 0.0978
+    cached_read: 0.0024499999999999995
+  tags:
+  - open_weights
+- id: Kimi-K3-TEE
+  name: Kimi K3 TEE
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 1048576
+  output_limit: 65535
+  release_date: '2026-07-29'
+  family: kimi-k3
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.29999999999999993
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: Kimi-K2.6-TEE
+  name: Kimi K2.6 TEE
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 65535
+  release_date: '2026-04-21'
+  family: kimi-k2
+  pricing:
+    input: 0.58
+    output: 3.4
+    cached_read: 0.05799999999999998
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal

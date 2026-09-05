@@ -115,3 +115,103 @@ models:
   tags:
   - reasoning
   - open_weights
+- id: DeepSeek-V3.2
+  name: DeepSeek-V3.2
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 163840
+  output_limit: 163840
+  release_date: '2025-12-01'
+  family: deepseek
+  pricing:
+    input: 0.5
+    output: 1.5
+    cached_read: 0.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: gemma-4-31B-it
+  name: Gemma 4 31B IT
+  description: Largest Gemma 4 instruction model for open, self-hosted chat and reasoning
+  context_window: 262144
+  output_limit: 32768
+  release_date: '2026-04-02'
+  family: gemma
+  pricing:
+    input: 0.14
+    output: 0.4
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: GLM-5.1
+  name: GLM-5.1
+  description: Strong GLM coding model for agentic engineering, terminals, and repository
+    generation
+  context_window: 202752
+  output_limit: 202752
+  release_date: '2026-04-07'
+  family: glm
+  pricing:
+    input: 1.4
+    output: 4.4
+    cached_read: 0.26
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: GLM-5.3
+  name: GLM-5.3
+  description: Flagship GLM model for long-horizon coding, agents, and complex project
+    delivery
+  context_window: 1048576
+  output_limit: 1048576
+  release_date: '2026-08-14'
+  family: glm
+  pricing:
+    input: 1.4
+    output: 4.4
+    cached_read: 0.26
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: GLM-5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 1000000
+  output_limit: 131072
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 1.4
+    output: 4.4
+    cached_read: 0.26
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: MiniMax-M2.5
+  name: MiniMax-M2.5
+  description: Prior MiniMax coding model for agent workflows, office edits, and automation
+  context_window: 196608
+  output_limit: 196608
+  release_date: '2026-02-12'
+  family: minimax
+  pricing:
+    input: 0.3
+    output: 1.2
+    cached_read: 0.06
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights

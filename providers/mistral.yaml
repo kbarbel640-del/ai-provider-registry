@@ -20,5 +20,222 @@ models:
   - mistral-small-2503
   - codestral-2505
   - mistral-embed
+  - id: pixtral-12b
+    family: pixtral
+    context_window: 128000
+    pricing:
+      input: 0.15
+      output: 0.15
+    tags: [tools, open_weights, vision, multimodal]
+  - id: devstral-small-2507
+    family: devstral
+    context_window: 128000
+    pricing:
+      input: 0.1
+      output: 0.3
+    tags: [tools, open_weights]
+  - id: mistral-small-2506
+    family: mistral-small
+    context_window: 128000
+    pricing:
+      input: 0.1
+      output: 0.3
+    tags: [tools, open_weights, vision]
+  - id: magistral-small
+    family: magistral-small
+    context_window: 128000
+    pricing:
+      input: 0.5
+      output: 1.5
+    tags: [reasoning, tools, open_weights]
+  - id: devstral-2512
+    family: devstral
+    context_window: 262144
+    pricing:
+      input: 0.4
+      output: 2.0
+    tags: [tools, open_weights]
+  - id: devstral-small-2505
+    family: devstral
+    context_window: 128000
+    pricing:
+      input: 0.1
+      output: 0.3
+    tags: [tools, open_weights]
+  - id: labs-devstral-small-2512
+    family: devstral
+    context_window: 256000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights, vision]
+  - id: magistral-medium-latest
+    family: magistral-medium
+    context_window: 128000
+    pricing:
+      input: 2.0
+      output: 5.0
+    tags: [reasoning, tools, open_weights]
+  - id: open-mixtral-8x22b
+    family: mixtral
+    context_window: 64000
+    pricing:
+      input: 2.0
+      output: 6.0
+    tags: [tools, open_weights]
+  - id: open-mixtral-8x7b
+    family: mixtral
+    context_window: 32000
+    pricing:
+      input: 0.7
+      output: 0.7
+    tags: [tools, open_weights]
+  - id: open-mistral-7b
+    family: mistral
+    context_window: 8000
+    pricing:
+      input: 0.25
+      output: 0.25
+    tags: [tools, open_weights]
+  - id: mistral-medium-latest
+    family: mistral-medium
+    context_window: 262144
+    pricing:
+      input: 1.5
+      output: 7.5
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: devstral-medium-2507
+    family: devstral
+    context_window: 128000
+    pricing:
+      input: 0.4
+      output: 2.0
+    tags: [tools, open_weights]
+  - id: mistral-medium-2604
+    family: mistral-medium
+    context_window: 262144
+    pricing:
+      input: 1.5
+      output: 7.5
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: mistral-large-2512
+    family: mistral-large
+    context_window: 262144
+    pricing:
+      input: 0.5
+      output: 1.5
+    tags: [tools, open_weights, vision, multimodal]
+  - id: devstral-medium-latest
+    family: devstral
+    context_window: 262144
+    pricing:
+      input: 0.4
+      output: 2.0
+    tags: [tools, open_weights]
+  - id: voxtral-small-latest
+    family: voxtral
+    context_window: 32000
+    pricing:
+      input: 0.1
+      output: 0.3
+    tags: [tools, open_weights, audio, multimodal]
+  - id: ministral-8b-latest
+    family: ministral
+    context_window: 128000
+    pricing:
+      input: 0.1
+      output: 0.1
+    tags: [tools, open_weights]
+  - id: mistral-nemo
+    family: mistral-nemo
+    context_window: 128000
+    pricing:
+      input: 0.15
+      output: 0.15
+    tags: [tools, open_weights]
+  - id: voxtral-mini-tts-latest
+    family: voxtral
+  - id: mistral-small-latest
+    family: mistral-small
+    context_window: 256000
+    pricing:
+      input: 0.15
+      output: 0.6
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: open-mistral-nemo
+    family: mistral-nemo
+    context_window: 128000
+    pricing:
+      input: 0.15
+      output: 0.15
+    tags: [tools, open_weights]
+  - id: mistral-large-latest
+    family: mistral-large
+    context_window: 262144
+    pricing:
+      input: 0.5
+      output: 1.5
+    tags: [tools, open_weights, vision, multimodal]
+  - id: voxtral-mini-latest
+    family: voxtral
+    tags: [audio]
+  - id: devstral-latest
+    family: devstral
+    context_window: 262144
+    pricing:
+      input: 0.4
+      output: 2.0
+    tags: [tools, open_weights]
+  - id: zai-glm-5-2
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.4
+      output: 4.4
+      cached_read: 0.14
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: mistral-small-2603
+    family: mistral-small
+    context_window: 256000
+    pricing:
+      input: 0.15
+      output: 0.6
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: mistral-medium-2505
+    family: mistral-medium
+    context_window: 131072
+    pricing:
+      input: 0.4
+      output: 2.0
+    tags: [tools, vision, multimodal]
+  - id: codestral-latest
+    family: codestral
+    context_window: 256000
+    pricing:
+      input: 0.3
+      output: 0.9
+    tags: [tools, open_weights]
+  - id: ministral-3b-latest
+    family: ministral
+    context_window: 128000
+    pricing:
+      input: 0.04
+      output: 0.04
+    tags: [tools, open_weights]
+  - id: mistral-medium-2508
+    family: mistral-medium
+    context_window: 262144
+    pricing:
+      input: 0.4
+      output: 2.0
+    tags: [tools, vision, multimodal]
+  - id: pixtral-large-latest
+    family: pixtral
+    context_window: 128000
+    pricing:
+      input: 2.0
+      output: 6.0
+    tags: [tools, open_weights, vision, multimodal]
+
 api_spec: https://raw.githubusercontent.com/mistralai/platform-docs-public/main/openapi.yaml
 endpoint: https://api.mistral.ai/v1

@@ -237,3 +237,504 @@ models:
   - vision
   - reasoning
   - long_context
+- id: gemini-2.5-flash-tts
+  name: Gemini 2.5 Flash TTS
+  description: Speech generation model for controllable voice, narration, and audio
+    delivery
+  context_window: 32768
+  output_limit: 16384
+  release_date: '2025-09-30'
+  family: gemini-flash
+  pricing:
+    input: 0.5
+    output: 10.0
+- id: gemini-2.5-pro-tts
+  name: Gemini 2.5 Pro TTS
+  description: Speech generation model for controllable voice, narration, and audio
+    delivery
+  context_window: 32768
+  output_limit: 16384
+  release_date: '2025-09-30'
+  family: gemini-pro
+  pricing:
+    input: 1.0
+    output: 20.0
+- id: claude-sonnet-4@20250514
+  name: Claude Sonnet 4
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost
+    control
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-05-22'
+  family: claude-sonnet
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+    cached_write: 3.75
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: gemini-2.5-flash-image
+  name: Nano Banana
+  description: Nano Banana image model for fast generation, edits, and character-consistent
+    assets
+  context_window: 32768
+  output_limit: 32768
+  release_date: '2025-08-26'
+  family: gemini-flash
+  pricing:
+    input: 0.3
+    output: 30.0
+  tags:
+  - vision
+  - multimodal
+- id: claude-opus-4-5@20251101
+  name: Claude Opus 4.5
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-11-01'
+  family: claude-opus
+  pricing:
+    input: 5.0
+    output: 25.0
+    cached_read: 0.5
+    cached_write: 6.25
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: gemini-3-pro-image
+  name: Nano Banana Pro
+  description: Nano Banana Pro for higher-fidelity image generation and design-heavy
+    edits
+  context_window: 65536
+  output_limit: 32768
+  release_date: '2026-05-28'
+  family: gemini-pro
+  pricing:
+    input: 2.0
+    output: 120.0
+    cached_read: 0.2
+  tags:
+  - reasoning
+  - vision
+  - multimodal
+- id: claude-sonnet-4-6@default
+  name: Claude Sonnet 4.6
+  description: Claude workhorse for coding agents, careful analysis, and production
+    cost control
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-02-17'
+  family: claude-sonnet
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+    cached_write: 3.75
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: gemini-3.6-flash
+  name: Gemini 3.6 Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-07-21'
+  family: gemini-flash
+  pricing:
+    input: 0.75
+    output: 3.75
+    cached_read: 0.075
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: claude-fable-5@default
+  name: Claude Fable 5
+  description: Claude model for creative writing, analysis, and controlled agent workflows
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-09'
+  family: claude-fable
+  pricing:
+    input: 10.0
+    output: 50.0
+    cached_read: 1.0
+    cached_write: 12.5
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-opus-4@20250514
+  name: Claude Opus 4
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 32000
+  release_date: '2025-05-22'
+  family: claude-opus
+  pricing:
+    input: 15.0
+    output: 75.0
+    cached_read: 1.5
+    cached_write: 18.75
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-haiku-4-5@20251001
+  name: Claude Haiku 4.5
+  description: Fast Claude model for responsive assistance, classification, and lightweight
+    agents
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-10-15'
+  family: claude-haiku
+  pricing:
+    input: 1.0
+    output: 5.0
+    cached_read: 0.1
+    cached_write: 1.25
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-opus-4-1@20250805
+  name: Claude Opus 4.1
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 32000
+  release_date: '2025-08-05'
+  family: claude-opus
+  pricing:
+    input: 15.0
+    output: 75.0
+    cached_read: 1.5
+    cached_write: 18.75
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: gemini-embedding-001
+  name: Gemini Embedding 001
+  description: Embedding model for semantic search, retrieval, clustering, and ranking
+    pipelines
+  context_window: 2048
+  output_limit: 1
+  release_date: '2025-05-20'
+  family: gemini
+  pricing:
+    input: 0.15
+    output: 0.0
+- id: gemini-3.1-flash-image
+  name: Nano Banana 2
+  description: Image model for prompt-driven generation, editing, and visual design
+    workflows
+  context_window: 131072
+  output_limit: 32768
+  release_date: '2026-05-28'
+  family: gemini-flash
+  pricing:
+    input: 0.5
+    output: 60.0
+    cached_read: 0.05
+  tags:
+  - reasoning
+  - vision
+  - multimodal
+- id: gemini-3.5-flash-lite
+  name: Gemini 3.5 Flash Lite
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-07-21'
+  family: gemini-flash-lite
+  pricing:
+    input: 0.3
+    output: 2.5
+    cached_read: 0.03
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: claude-fable-5-1@default
+  name: Claude Fable 5.1
+  description: Claude model for demanding reasoning and long-horizon agentic work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-09-01'
+  family: claude-fable
+  pricing:
+    input: 10.0
+    output: 50.0
+    cached_read: 0.25
+    cached_write: 12.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-5@default
+  name: Claude Opus 5
+  description: Strongest Claude Opus model for coding, agents, and professional work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-07-24'
+  family: claude-opus
+  pricing:
+    input: 5.0
+    output: 25.0
+    cached_read: 0.5
+    cached_write: 6.25
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: gemini-3.8-flash
+  name: Gemini 3.8 Flash
+  description: Google's most intelligent Flash model, engineered for long-horizon software
+    engineering, autonomous agents, and complex enterprise workflows
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-09-02'
+  family: gemini-flash
+  pricing:
+    input: 0.75
+    output: 3.75
+    cached_read: 0.075
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gemini-3.7-flash
+  name: Gemini 3.7 Flash
+  description: High-efficiency Gemini model for agentic workflows, coding, and multimodal
+    reasoning
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-08-13'
+  family: gemini-flash
+  pricing:
+    input: 0.75
+    output: 3.75
+    cached_read: 0.075
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: claude-opus-4-8@default
+  name: Claude Opus 4.8
+  description: Top Claude Opus tier for the hardest reasoning, coding, and long-horizon
+    agents
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-05-28'
+  family: claude-opus
+  pricing:
+    input: 5.0
+    output: 25.0
+    cached_read: 0.5
+    cached_write: 6.25
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: claude-sonnet-4-5@20250929
+  name: Claude Sonnet 4.5
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost
+    control
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-09-29'
+  family: claude-sonnet
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+    cached_write: 3.75
+  tags:
+  - reasoning
+  - tools
+  - vision
+  - multimodal
+- id: qwen3-235b-a22b-instruct-2507-maas
+  name: Qwen3 235B A22B Instruct
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262144
+  output_limit: 16384
+  release_date: '2025-08-13'
+  family: qwen
+  pricing:
+    input: 0.22
+    output: 0.88
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: deepseek-v3.1-maas
+  name: DeepSeek V3.1
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 163840
+  output_limit: 32768
+  release_date: '2025-08-28'
+  family: deepseek
+  pricing:
+    input: 0.6
+    output: 1.7
+    cached_read: 0.06
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: deepseek-v3.2-maas
+  name: DeepSeek V3.2
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 163840
+  output_limit: 65536
+  release_date: '2025-12-17'
+  family: deepseek
+  pricing:
+    input: 0.56
+    output: 1.68
+    cached_read: 0.056
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: glm-5-maas
+  name: GLM-5
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202752
+  output_limit: 131072
+  release_date: '2026-02-11'
+  family: glm
+  pricing:
+    input: 1.0
+    output: 3.2
+    cached_read: 0.1
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: glm-4.7-maas
+  name: GLM-4.7
+  description: GLM vision model for visual reasoning, documents, and multimodal agents
+  context_window: 200000
+  output_limit: 128000
+  release_date: '2026-01-06'
+  family: glm
+  pricing:
+    input: 0.6
+    output: 2.2
+    cached_read: 0.06
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: llama-4-maverick-17b-128e-instruct-maas
+  name: Llama 4 Maverick 17B 128E Instruct
+  description: Open multimodal Llama model for strong reasoning and fast responses
+  context_window: 524288
+  output_limit: 8192
+  release_date: '2025-04-29'
+  family: llama
+  pricing:
+    input: 0.35
+    output: 1.15
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: llama-3.3-70b-instruct-maas
+  name: Llama 3.3 70B Instruct
+  description: Open Llama instruction model for multilingual chat, reasoning, and coding
+  context_window: 128000
+  output_limit: 8192
+  release_date: '2025-04-29'
+  family: llama
+  pricing:
+    input: 0.72
+    output: 0.72
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: gpt-oss-120b-maas
+  name: GPT OSS 120B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following
+    workloads
+  context_window: 131072
+  output_limit: 32768
+  release_date: '2025-08-05'
+  family: gpt-oss
+  pricing:
+    input: 0.09
+    output: 0.36
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: gpt-oss-20b-maas
+  name: GPT OSS 20B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following
+    workloads
+  context_window: 131072
+  output_limit: 32768
+  release_date: '2025-08-05'
+  family: gpt-oss
+  pricing:
+    input: 0.07
+    output: 0.25
+    cached_read: 0.007
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: kimi-k2-thinking-maas
+  name: Kimi K2 Thinking
+  description: Kimi reasoning model for long-horizon research, planning, and tool use
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2025-11-13'
+  family: kimi-thinking
+  pricing:
+    input: 0.6
+    output: 2.5
+    cached_read: 0.06
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights

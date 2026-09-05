@@ -210,3 +210,273 @@ models:
   release_date: '2025-03-24'
   tags:
   - open_weights
+- id: DeepSeek-V3-0324
+  name: DeepSeek V3 0324
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 163840
+  output_limit: 163840
+  release_date: '2025-03-24'
+  family: deepseek
+  pricing:
+    input: 0.25
+    output: 0.88
+  tags:
+  - tools
+  - open_weights
+- id: DeepSeek-V3.1
+  name: DeepSeek V3.1
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 164000
+  output_limit: 164000
+  release_date: '2025-08-25'
+  family: deepseek
+  pricing:
+    input: 0.27
+    output: 1.0
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: DeepSeek-R1-0528
+  name: DeepSeek R1 0528
+  description: DeepSeek reasoning model for multi-step analysis, math, coding, and tools
+  context_window: 163840
+  output_limit: 64000
+  release_date: '2025-05-28'
+  family: deepseek-thinking
+  pricing:
+    input: 0.5
+    output: 2.15
+  tags:
+  - reasoning
+  - open_weights
+- id: DeepSeek-V3.2-Exp
+  name: DeepSeek V3.2 Exp
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 164000
+  output_limit: 164000
+  release_date: '2025-10-10'
+  family: deepseek
+  pricing:
+    input: 0.27
+    output: 0.4
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: DeepSeek-V3.2
+  name: DeepSeek V3.2
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 164000
+  output_limit: 164000
+  release_date: '2025-12-03'
+  family: deepseek
+  pricing:
+    input: 0.26
+    output: 0.38
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: Mistral-Small-3.2-24B-Instruct-2506
+  name: Mistral Small 3.2 24B Instruct
+  description: Efficient Mistral model for fast chat, extraction, and production assistants
+  context_window: 32768
+  output_limit: 8192
+  release_date: '2025-06-20'
+  family: mistral-small
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: Mistral-Nemo-Instruct-2407
+  name: Mistral Nemo Instruct 2407
+  description: Mistral model for multilingual chat, reasoning, and tool-assisted workflows
+  context_window: 131072
+  output_limit: 65536
+  release_date: '2024-07-18'
+  family: mistral
+  pricing:
+    input: 0.02
+    output: 0.04
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: GLM-4.7
+  name: GLM-4.7
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202752
+  output_limit: 131072
+  release_date: '2025-12-22'
+  family: glm
+  pricing:
+    input: 0.2
+    output: 0.8
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: GLM-5
+  name: GLM-5
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202752
+  output_limit: 131072
+  release_date: '2026-02-11'
+  family: glm
+  pricing:
+    input: 0.8
+    output: 2.56
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: GLM-4.6
+  name: GLM-4.6
+  description: Flagship GLM model for hybrid reasoning, coding, and agentic engineering
+  context_window: 202752
+  output_limit: 131072
+  release_date: '2025-09-30'
+  family: glm
+  pricing:
+    input: 0.45
+    output: 1.9
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: Qwen2.5-VL-32B-Instruct
+  name: Qwen2.5 VL 32B Instruct
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 16384
+  output_limit: 16384
+  release_date: '2025-03-24'
+  family: qwen
+  pricing:
+    input: 0.2
+    output: 0.6
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: Qwen3.5-Plus
+  name: Qwen3.5 Plus
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 1000000
+  output_limit: 65536
+  release_date: 2026-02
+  family: qwen
+  pricing:
+    input: 0.4
+    output: 2.4
+  tags:
+  - reasoning
+  - tools
+  - vision
+- id: Qwen3-235B-A22B-Instruct-2507
+  name: Qwen3 235B A22B Instruct 2507
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 262000
+  output_limit: 262000
+  release_date: '2025-07-23'
+  family: qwen
+  pricing:
+    input: 0.09
+    output: 0.6
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: MiniMax-M2.1
+  name: MiniMax M2.1
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 196608
+  output_limit: 131072
+  release_date: '2025-12-23'
+  family: minimax
+  pricing:
+    input: 0.28
+    output: 1.2
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: MiniMax-M2.5
+  name: MiniMax M2.5
+  description: MiniMax model for chat, coding, office work, and agentic tasks
+  context_window: 204800
+  output_limit: 131072
+  release_date: '2026-02-12'
+  family: minimax
+  pricing:
+    input: 0.3
+    output: 1.2
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: Llama-3.3-70B-Instruct
+  name: Llama 3.3 70B Instruct
+  description: Open Llama instruction model for multilingual chat, reasoning, and coding
+  context_window: 131072
+  output_limit: 16384
+  release_date: '2024-12-06'
+  family: llama
+  pricing:
+    input: 0.1
+    output: 0.3
+  tags:
+  - tools
+  - open_weights
+- id: Kimi-K2-Thinking
+  name: Kimi K2 Thinking
+  description: Kimi reasoning model for long-horizon research, planning, and tool use
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2025-11-06'
+  family: kimi-thinking
+  pricing:
+    input: 0.6
+    output: 2.6
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: Kimi-K2.5
+  name: Kimi K2.5
+  description: Kimi multimodal agent model for visual understanding, coding, and planning
+  context_window: 262144
+  output_limit: 262144
+  release_date: '2026-01-27'
+  family: kimi-k2
+  pricing:
+    input: 0.45
+    output: 2.8
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+- id: MiMo-V2-Flash
+  name: MiMo V2 Flash
+  description: MiMo flash model for fast multimodal assistance and agent workflows
+  context_window: 262144
+  output_limit: 32000
+  release_date: '2025-12-17'
+  family: mimo
+  pricing:
+    input: 0.1
+    output: 0.3
+  tags:
+  - reasoning
+  - tools
+  - open_weights

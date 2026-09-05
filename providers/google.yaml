@@ -19,5 +19,263 @@ models:
   - gemini-2.5-flash
   - gemini-2.0-flash
   - text-embedding-004
+  - id: gemma-4-26b-a4b-it
+    family: gemma
+    context_window: 262144
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: gemini-3.1-pro-preview-customtools
+    family: gemini-pro
+    context_window: 1048576
+    pricing:
+      input: 2.0
+      output: 12.0
+      cached_read: 0.2
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-3.1-flash-lite-image
+    family: gemini-flash-lite
+    context_window: 65536
+    pricing:
+      input: 0.25
+      output: 30.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: lyria-3-clip-preview
+    family: lyria
+    context_window: 1048576
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [vision, multimodal]
+  - id: gemini-2.5-flash-image
+    family: gemini-flash
+    context_window: 32768
+    pricing:
+      input: 0.3
+      output: 30.0
+      cached_read: 0.075
+    tags: [reasoning, vision, multimodal]
+  - id: deep-research-max-preview-04-2026
+    family: gemini-pro
+    context_window: 131072
+    pricing:
+      input: 2.0
+      output: 12.0
+      cached_read: 0.2
+    tags: [reasoning, tools, vision, audio, multimodal]
+  - id: gemini-3-pro-image
+    family: gemini-pro
+    context_window: 131072
+    pricing:
+      input: 2.0
+      output: 120.0
+    tags: [reasoning, vision, multimodal]
+  - id: gemini-3.1-pro-preview
+    family: gemini-pro
+    context_window: 1048576
+    pricing:
+      input: 2.0
+      output: 12.0
+      cached_read: 0.2
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: deep-research-preview-04-2026
+    family: gemini-pro
+    context_window: 131072
+    pricing:
+      input: 2.0
+      output: 12.0
+      cached_read: 0.2
+    tags: [reasoning, tools, vision, audio, multimodal]
+  - id: gemini-2.5-flash-lite
+    family: gemini-flash-lite
+    context_window: 1048576
+    pricing:
+      input: 0.1
+      output: 0.4
+      cached_read: 0.01
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-2.5-computer-use-preview-10-2025
+    family: gemini-pro
+    context_window: 131072
+    pricing:
+      input: 1.25
+      output: 10.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: gemini-3.6-flash
+    family: gemini-flash
+    context_window: 1048576
+    pricing:
+      input: 0.75
+      output: 3.75
+      cached_read: 0.075
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-3.1-flash-lite
+    family: gemini-flash-lite
+    context_window: 1048576
+    pricing:
+      input: 0.25
+      output: 1.5
+      cached_read: 0.025
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-3.1-flash-live-preview
+    family: gemini-flash
+    context_window: 131072
+    pricing:
+      input: 0.75
+      output: 4.5
+    tags: [reasoning, tools, vision, audio, multimodal]
+  - id: gemini-2.5-pro-preview-tts
+    family: gemini-flash
+    context_window: 8192
+    pricing:
+      input: 1.0
+      output: 20.0
+  - id: gemini-3.5-flash
+    family: gemini-flash
+    context_window: 1048576
+    pricing:
+      input: 1.5
+      output: 9.0
+      cached_read: 0.15
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: veo-3.1-generate-preview
+    family: veo
+    context_window: 480
+    tags: [vision, multimodal]
+  - id: gemini-3.1-flash-lite-preview
+    family: gemini-flash-lite
+    context_window: 1048576
+    pricing:
+      input: 0.25
+      output: 1.5
+      cached_read: 0.025
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: veo-3.1-fast-generate-preview
+    family: veo
+    context_window: 480
+    tags: [vision, multimodal]
+  - id: gemini-2.5-flash-preview-tts
+    family: gemini-flash
+    context_window: 8192
+    pricing:
+      input: 0.5
+      output: 10.0
+  - id: gemini-embedding-001
+    family: gemini
+    context_window: 2048
+    pricing:
+      input: 0.15
+      output: 0.0
+  - id: gemini-3.1-flash-image
+    family: gemini-flash
+    context_window: 65536
+    pricing:
+      input: 0.5
+      output: 60.0
+    tags: [reasoning, vision, multimodal]
+  - id: gemini-3.5-flash-lite
+    family: gemini-flash-lite
+    context_window: 1048576
+    pricing:
+      input: 0.3
+      output: 2.5
+      cached_read: 0.03
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-3-pro-image-preview
+    family: gemini-pro
+    context_window: 131072
+    pricing:
+      input: 2.0
+      output: 120.0
+    tags: [reasoning, vision, multimodal]
+  - id: gemini-3.1-flash-tts-preview
+    family: gemini-flash
+    context_window: 8192
+    pricing:
+      input: 1.0
+      output: 20.0
+    tags: [reasoning]
+  - id: veo-3.1-lite-generate-preview
+    family: veo
+    context_window: 480
+    tags: [vision, multimodal]
+  - id: gemini-flash-lite-latest
+    family: gemini-flash-lite
+    context_window: 1048576
+    pricing:
+      input: 0.3
+      output: 2.5
+      cached_read: 0.03
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemma-4-31b-it
+    family: gemma
+    context_window: 262144
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: gemini-embedding-2
+    family: gemini
+    context_window: 8192
+    pricing:
+      input: 0.2
+      output: 0.0
+    tags: [vision, audio, multimodal]
+  - id: gemini-3-flash-preview
+    family: gemini-flash
+    context_window: 1048576
+    pricing:
+      input: 0.5
+      output: 3.0
+      cached_read: 0.05
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-3.8-flash
+    family: gemini-flash
+    context_window: 1048576
+    pricing:
+      input: 0.75
+      output: 3.75
+      cached_read: 0.075
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-3.5-live-translate-preview
+    family: gemini-pro
+    context_window: 16384
+    pricing:
+      input: 3.5
+      output: 21.0
+    tags: [audio]
+  - id: lyria-3-pro-preview
+    family: lyria
+    context_window: 1048576
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [vision, multimodal]
+  - id: gemini-3.7-flash
+    family: gemini-flash
+    context_window: 1048576
+    pricing:
+      input: 0.75
+      output: 3.75
+      cached_read: 0.075
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-flash-latest
+    family: gemini-flash
+    context_window: 1048576
+    pricing:
+      input: 0.75
+      output: 3.75
+      cached_read: 0.075
+    tags: [reasoning, tools, json_mode, vision, audio, multimodal]
+  - id: gemini-3.1-flash-image-preview
+    family: gemini-flash
+    context_window: 65536
+    pricing:
+      input: 0.5
+      output: 60.0
+    tags: [reasoning, vision, multimodal]
+  - id: gemini-omni-flash-preview
+    family: gemini
+    context_window: 131072
+    pricing:
+      input: 1.5
+      output: 17.5
+    tags: [reasoning, vision, multimodal]
+
 api_spec: https://generativelanguage.googleapis.com/$discovery/rest?version=v1beta
 endpoint: https://generativelanguage.googleapis.com/v1beta

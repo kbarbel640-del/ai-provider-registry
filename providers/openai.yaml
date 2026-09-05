@@ -26,5 +26,298 @@ models:
   - gpt-4.1-mini
   - text-embedding-3-large
   - text-embedding-3-small
+  - id: gpt-5-nano
+    family: gpt-nano
+    context_window: 400000
+    pricing:
+      input: 0.05
+      output: 0.4
+      cached_read: 0.005
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-4.1-nano
+    family: gpt-nano
+    context_window: 1047576
+    pricing:
+      input: 0.1
+      output: 0.4
+      cached_read: 0.025
+    tags: [tools, json_mode, vision, multimodal]
+  - id: gpt-4o-2024-05-13
+    family: gpt
+    context_window: 128000
+    pricing:
+      input: 5.0
+      output: 15.0
+    tags: [tools, json_mode, vision, multimodal]
+  - id: gpt-5-pro
+    family: gpt-pro
+    context_window: 400000
+    pricing:
+      input: 15.0
+      output: 120.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: chatgpt-image-latest
+    family: gpt-image
+    tags: [vision, multimodal]
+  - id: gpt-5.6-sol
+    family: gpt-sol
+    context_window: 1050000
+    pricing:
+      input: 4.0
+      output: 20.0
+      cached_read: 0.4
+      cached_write: 5.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-4o-2024-08-06
+    family: gpt
+    context_window: 128000
+    pricing:
+      input: 2.5
+      output: 10.0
+      cached_read: 1.25
+    tags: [tools, json_mode, vision, multimodal]
+  - id: gpt-6-astra
+    family: gpt-astra
+    context_window: 1050000
+    pricing:
+      input: 10.0
+      output: 50.0
+      cached_read: 1.0
+      cached_write: 12.5
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.2-pro
+    family: gpt-pro
+    context_window: 400000
+    pricing:
+      input: 21.0
+      output: 168.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: gpt-5.3-codex-spark
+    family: gpt-codex-spark
+    context_window: 128000
+    pricing:
+      input: 1.75
+      output: 14.0
+      cached_read: 0.175
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.4
+    family: gpt
+    context_window: 1050000
+    pricing:
+      input: 2.5
+      output: 15.0
+      cached_read: 0.25
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-4-turbo
+    family: gpt
+    context_window: 128000
+    pricing:
+      input: 10.0
+      output: 30.0
+    tags: [tools, vision, multimodal]
+  - id: gpt-5.1
+    family: gpt
+    context_window: 400000
+    pricing:
+      input: 1.25
+      output: 10.0
+      cached_read: 0.125
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: o1
+    family: o
+    context_window: 200000
+    pricing:
+      input: 15.0
+      output: 60.0
+      cached_read: 7.5
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.6-luna
+    family: gpt-luna
+    context_window: 1050000
+    pricing:
+      input: 0.2
+      output: 1.2
+      cached_read: 0.02
+      cached_write: 0.25
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.3-codex
+    family: gpt-codex
+    context_window: 400000
+    pricing:
+      input: 1.75
+      output: 14.0
+      cached_read: 0.175
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-image-1.5
+    family: gpt-image
+    tags: [vision, multimodal]
+  - id: o1-pro
+    family: o-pro
+    context_window: 200000
+    pricing:
+      input: 150.0
+      output: 600.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: text-embedding-ada-002
+    family: text-embedding
+    context_window: 8192
+    pricing:
+      input: 0.1
+      output: 0.0
+  - id: gpt-image-1
+    family: gpt-image
+    tags: [vision, multimodal]
+  - id: gpt-5.4-nano
+    family: gpt-nano
+    context_window: 400000
+    pricing:
+      input: 0.2
+      output: 1.25
+      cached_read: 0.02
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.5-pro
+    family: gpt-pro
+    context_window: 1050000
+    pricing:
+      input: 30.0
+      output: 180.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-image-1-mini
+    family: gpt-image
+    tags: [vision, multimodal]
+  - id: gpt-5.4-mini
+    family: gpt-mini
+    context_window: 400000
+    pricing:
+      input: 0.75
+      output: 4.5
+      cached_read: 0.075
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-image-2
+    family: gpt-image
+    pricing:
+      input: 5.0
+      output: 30.0
+      cached_read: 1.25
+    tags: [vision, multimodal]
+  - id: gpt-3.5-turbo
+    family: gpt
+    context_window: 16385
+    pricing:
+      input: 0.5
+      output: 1.5
+      cached_read: 0.0
+  - id: gpt-5.6
+    family: gpt-sol
+    context_window: 1050000
+    pricing:
+      input: 4.0
+      output: 20.0
+      cached_read: 0.4
+      cached_write: 5.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5-mini
+    family: gpt-mini
+    context_window: 400000
+    pricing:
+      input: 0.25
+      output: 2.0
+      cached_read: 0.025
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.4-pro
+    family: gpt-pro
+    context_window: 1050000
+    pricing:
+      input: 30.0
+      output: 180.0
+    tags: [reasoning, tools, vision, multimodal]
+  - id: gpt-5.6-terra
+    family: gpt-terra
+    context_window: 1050000
+    pricing:
+      input: 2.0
+      output: 12.0
+      cached_read: 0.2
+      cached_write: 2.5
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-4
+    family: gpt
+    context_window: 8192
+    pricing:
+      input: 30.0
+      output: 60.0
+    tags: [tools, multimodal]
+  - id: gpt-5.2
+    family: gpt
+    context_window: 400000
+    pricing:
+      input: 1.75
+      output: 14.0
+      cached_read: 0.175
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5
+    family: gpt
+    context_window: 400000
+    pricing:
+      input: 1.25
+      output: 10.0
+      cached_read: 0.125
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.2-chat-latest
+    family: gpt-codex
+    context_window: 128000
+    pricing:
+      input: 1.75
+      output: 14.0
+      cached_read: 0.175
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-realtime-2.1
+    family: gpt
+    context_window: 128000
+    pricing:
+      input: 4.0
+      output: 24.0
+      cached_read: 0.4
+    tags: [reasoning, tools, vision, audio, multimodal]
+  - id: o3-mini
+    family: o-mini
+    context_window: 200000
+    pricing:
+      input: 1.1
+      output: 4.4
+      cached_read: 0.55
+    tags: [reasoning, tools, json_mode]
+  - id: o3-pro
+    family: o-pro
+    context_window: 200000
+    pricing:
+      input: 20.0
+      output: 80.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-5.3-chat-latest
+    family: gpt
+    context_window: 128000
+    pricing:
+      input: 1.75
+      output: 14.0
+      cached_read: 0.175
+    tags: [tools, json_mode, vision, multimodal]
+  - id: gpt-5.5
+    family: gpt
+    context_window: 1050000
+    pricing:
+      input: 5.0
+      output: 30.0
+      cached_read: 0.5
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: gpt-4o-2024-11-20
+    family: gpt
+    context_window: 128000
+    pricing:
+      input: 2.5
+      output: 10.0
+      cached_read: 1.25
+    tags: [tools, json_mode, vision, multimodal]
+
 api_spec: https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml
 endpoint: https://api.openai.com/v1

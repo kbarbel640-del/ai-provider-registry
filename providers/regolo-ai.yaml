@@ -182,3 +182,123 @@ models:
   release_date: '2026-03-01'
   tags:
   - general
+- id: qwen3.8-27b
+  name: Qwen3.8 27B
+  description: Dense 27B vision-language model for coding, agent tasks, and image and
+    video understanding
+  context_window: 120000
+  output_limit: 120000
+  release_date: '2026-08-14'
+  family: qwen
+  pricing:
+    input: 0.58
+    output: 2.42
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: faster-whisper-large-v3
+  name: Faster Whisper Large v3
+  description: Open Whisper checkpoint for robust multilingual transcription and captioning
+  context_window: 448
+  output_limit: 4096
+  release_date: '2024-10-01'
+  family: whisper
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - open_weights
+  - audio
+- id: gemma4-31b
+  name: Gemma 4 31B IT
+  description: Largest Gemma 4 instruction model for open, self-hosted chat and reasoning
+  context_window: 100000
+  output_limit: 100000
+  release_date: '2026-04-02'
+  family: gemma
+  pricing:
+    input: 0.46
+    output: 2.42
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: brick-complexity-pro
+  name: Brick Complexity Pro
+  description: Complexity classifier that powers the Brick semantic router by extracting
+    query difficulty
+  context_window: 100000
+  output_limit: 15000
+  release_date: '2026-02-06'
+  pricing:
+    input: 0.12
+    output: 0.46
+  tags:
+  - tools
+  - vision
+  - multimodal
+- id: apertus-70b
+  name: Apertus 70B
+  description: Fully open 70B multilingual LLM supporting 1800+ languages with 65K context.
+    Trained on 15T tokens of compliant open data. Apache 2.0, EU AI Act compliant.
+  context_window: 30000
+  output_limit: 30000
+  release_date: '2025-09-02'
+  pricing:
+    input: 0.46
+    output: 2.42
+  tags:
+  - tools
+  - open_weights
+- id: glm5.2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 96000
+  output_limit: 96000
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 2.31
+    output: 6.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: brick-v1-beta
+  name: Brick v1 Beta
+  description: Semantic router by Regolo.ai that directs each request to the most suitable
+    model, optimizing costs and performance
+  context_window: 100000
+  output_limit: 15000
+  release_date: '2026-02-06'
+  family: model-router
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - tools
+  - vision
+  - multimodal
+- id: deepseek-ocr-2
+  name: DeepSeek OCR 2
+  description: High-accuracy OCR model for extracting text from documents, screenshots,
+    receipts, and natural scenes
+  context_window: 4000
+  output_limit: 4000
+  release_date: '2026-01-27'
+  pricing:
+    input: 0.0
+    output: 0.0
+  tags:
+  - open_weights
+  - vision
+  - multimodal

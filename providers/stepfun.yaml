@@ -114,3 +114,12 @@ models:
   release_date: '2026-03-01'
   tags:
   - general
+- id: step-router-v1
+  name: Step Router v1
+  description: StepFun routing model that dispatches requests to the appropriate Step
+    model.
+  context_window: 256000
+  output_limit: 256000
+  release_date: '2026-05-29'
+  tags:
+  - tools

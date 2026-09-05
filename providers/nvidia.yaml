@@ -31,6 +31,673 @@ models:
   - meta/llama-3.2-11b-vision-instruct
   - meta/llama-3.2-90b-vision-instruct
   - meta/llama-4-maverick-17b-128e-instruct
+  - id: qwen3-next-80b-a3b-instruct
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools]
+  - id: qwen3.5-397b-a17b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: qwen3.5-122b-a10b
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, audio, multimodal]
+  - id: qwen-image
+    family: qwen
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [vision, multimodal]
+  - id: qwen3-coder-480b-a35b-instruct
+    family: qwen
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools]
+  - id: qwen-image-edit
+    family: qwen
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [vision, multimodal]
+  - id: qwen2.5-coder-32b-instruct
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, json_mode, open_weights]
+  - id: step-3.7-flash
+    context_window: 256000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: step-3.5-flash
+    context_window: 256000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: deepseek-v4-pro-0813
+    family: deepseek-thinking
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: deepseek-v4-flash-0731
+    family: deepseek-flash
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: deepseek-v4-flash
+    family: deepseek-flash
+    context_window: 1048576
+    pricing:
+      input: 0.14
+      output: 0.28
+      cached_read: 0.0028
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: deepseek-v4-pro
+    family: deepseek-thinking
+    context_window: 1048576
+    pricing:
+      input: 0.435
+      output: 0.87
+      cached_read: 0.003625
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: laguna-xs-2.1
+    family: laguna
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: mistral-large-3-675b-instruct-2512
+    family: mistral-large
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, json_mode, open_weights, vision, multimodal]
+  - id: mistral-nemotron
+    family: nemotron
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights]
+  - id: mixtral-8x22b-instruct
+    context_window: 65536
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights]
+  - id: ministral-14b-instruct-2512
+    family: ministral
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights, vision, multimodal]
+  - id: mistral-small-4-119b-2603
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: mixtral-8x7b-instruct
+    context_window: 32768
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights]
+  - id: mistral-medium-3.5-128b
+    family: mistral-medium
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: mistral-7b-instruct-v0.3
+    context_window: 65536
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, json_mode, open_weights]
+  - id: mistral-medium-3-instruct
+    family: mistral-medium
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [vision, multimodal]
+  - id: magistral-small-2506
+    context_window: 32768
+    pricing:
+      input: 0.0
+      output: 0.0
+  - id: streampetr
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, multimodal]
+  - id: llama-3.3-nemotron-super-49b-v1.5
+    family: nemotron
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: usdcode
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+  - id: nemotron-3-nano-omni-30b-a3b-reasoning
+    family: nemotron
+    context_window: 256000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, audio, multimodal]
+  - id: cosmos-transfer1-7b
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, vision, multimodal]
+  - id: nemotron-voicechat
+    family: nemotron
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights, audio, multimodal]
+  - id: studiovoice
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: nemotron-3-content-safety
+    family: nemotron
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: cosmos-transfer2_5-2b
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, vision, multimodal]
+  - id: bevformer
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, multimodal]
+  - id: llama-3.1-nemotron-nano-vl-8b-v1
+    family: nemotron
+    context_window: 32768
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: magpie-tts-zeroshot
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, audio, multimodal]
+  - id: nemotron-nano-12b-v2-vl
+    family: nemotron
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: sparsedrive
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, multimodal]
+  - id: llama-nemotron-embed-vl-1b-v2
+    family: nemotron
+    context_window: 32768
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, vision, multimodal]
+  - id: synthetic-video-detector
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, multimodal]
+  - id: nemotron-3-super-120b-a12b
+    family: nemotron
+    context_window: 262144
+    pricing:
+      input: 0.2
+      output: 0.8
+    tags: [reasoning, tools, open_weights]
+  - id: llama-nemotron-rerank-vl-1b-v2
+    family: nemotron
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, vision, multimodal]
+  - id: usdvalidate
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: active-speaker-detection
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, multimodal]
+  - id: llama-3.1-nemotron-ultra-253b-v1
+    family: nemotron
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: llama-3_2-nemoretriever-300m-embed-v1
+    context_window: 32768
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: nv-embedcode-7b-v1
+    context_window: 32768
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: llama-3.1-nemotron-safety-guard-8b-v3
+    family: nemotron
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: nemotron-mini-4b-instruct
+    family: nemotron
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights]
+  - id: cosmos-predict1-5b
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, vision, multimodal]
+  - id: nemotron-content-safety-reasoning-4b
+    family: nemotron
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, open_weights]
+  - id: riva-translate-4b-instruct-v1.1
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: nvidia-nemotron-nano-9b-v2
+    family: nemotron
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: gliner-pii
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: llama-3.1-nemotron-nano-8b-v1
+    family: nemotron
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: nv-embed-v1
+    context_window: 32768
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: rerank-qa-mistral-4b
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: nemotron-3-ultra-550b-a55b
+    family: nemotron
+    context_window: 1000000
+    pricing:
+      input: 0.5
+      output: 2.5
+      cached_read: 0.15
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: nemotron-3.5-lightning-30b-a3b
+    family: nemotron
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: llama-3.3-nemotron-super-49b-v1
+    family: nemotron
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: nemotron-3-nano-30b-a3b
+    family: nemotron
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: llama-3.1-nemotron-70b-instruct
+    family: nemotron
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights]
+  - id: cosmos-reason2-8b
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: gemma-3-4b-it
+    family: gemma
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights, vision, multimodal]
+  - id: gemma-3n-e2b-it
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, json_mode, open_weights, vision, multimodal]
+  - id: google-paligemma
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, vision, multimodal]
+  - id: gemma-2-2b-it
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, json_mode, open_weights]
+  - id: gemma-4-31b-it
+    family: gemma
+    context_window: 256000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: gemma-3n-e4b-it
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, json_mode, open_weights, vision, multimodal]
+  - id: gemma-3-12b-it
+    family: gemma
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights, vision, multimodal]
+  - id: inkling
+    family: ling
+    context_window: 1048576
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights, vision, audio, multimodal]
+  - id: llama-3.1-8b-instruct
+    family: llama
+    context_window: 16000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights]
+  - id: llama-guard-4-12b
+    family: llama
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, vision, multimodal]
+  - id: llama-3.2-90b-vision-instruct
+    family: llama
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights, vision, multimodal]
+  - id: llama-3.2-3b-instruct
+    family: llama
+    context_window: 32768
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [json_mode, open_weights]
+  - id: llama-3.2-1b-instruct
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, json_mode, open_weights]
+  - id: esmfold
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: llama-4-maverick-17b-128e-instruct
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, json_mode, open_weights, vision, multimodal]
+  - id: muse-glimmer-30b
+    family: muse
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: esm2-650m
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: llama-3.2-11b-vision-instruct
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, json_mode, open_weights, vision, multimodal]
+  - id: llama-3.1-70b-instruct
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, json_mode, open_weights]
+  - id: llama-3.3-70b-instruct
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, json_mode, open_weights]
+  - id: seed-oss-36b-instruct
+    family: seed
+    context_window: 262000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, json_mode]
+  - id: sarvam-m
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights]
+  - id: phi-4-multimodal-instruct
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+  - id: phi-4-mini-instruct
+    family: phi
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights]
+  - id: minimax-m2.7
+    family: minimax
+    context_window: 204800
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights]
+  - id: minimax-m3
+    family: minimax
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, open_weights, vision, multimodal]
+  - id: bge-m3
+    family: bge
+    context_window: 8192
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: dracarys-llama-3.1-70b-instruct
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights]
+  - id: gpt-oss-20b
+    family: gpt-oss
+    context_window: 131072
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: whisper-large-v3
+    family: whisper
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, audio]
+  - id: gpt-oss-120b
+    family: gpt-oss
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: kimi-k2.6
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: kimi-k2-instruct-0905
+    family: kimi-k2
+    context_window: 262144
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights]
+  - id: kimi-k3
+    family: kimi-k3
+    context_window: 1048576
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
+  - id: solar-10.7b-instruct
+    context_window: 128000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [tools, open_weights]
+  - id: glm-5.2
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]
+  - id: flux_1-kontext-dev
+    context_window: 40960
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, vision, multimodal]
+  - id: flux_1-schnell
+    context_window: 77
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights]
+  - id: flux_2-klein-4b
+    family: flux
+    context_window: 40960
+    pricing:
+      input: 0.0
+      output: 0.0
+    tags: [open_weights, vision]
+  - id: flux.1-dev
+    family: flux
+    context_window: 4096
+    pricing:
+      input: 0.0
+      output: 0.0
+
 api_spec: api-specs/nvidia.md
 endpoint: https://integrate.api.nvidia.com/v1
 docs_url: https://build.nvidia.com/docs

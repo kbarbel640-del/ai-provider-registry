@@ -66,3 +66,21 @@ models:
   - vision
   - reasoning
   - long_context
+- id: sakana-namazu
+  name: Sakana Namazu
+  description: Japanese-specialized reasoning model based on Kimi K2.6 and tuned for
+    Japanese language, culture, and business workflows
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-08-03'
+  family: sakana-namazu
+  pricing:
+    input: 0.95
+    output: 4.0
+    cached_read: 0.15
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal

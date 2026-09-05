@@ -86,3 +86,83 @@ models:
   - reasoning
   - open_weights
   - free
+- id: kimi-for-coding-highspeed
+  name: Kimi For Coding HighSpeed
+  description: Lower-latency Kimi Code variant for interactive edits and coding-agent
+    loops
+  context_window: 262144
+  output_limit: 32768
+  release_date: '2026-06-12'
+  family: kimi-k2
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: k3-256k
+  name: Kimi K3-256K
+  description: 256K-context version of Kimi K3, reducing token consumption for shorter
+    coding sessions
+  context_window: 262144
+  output_limit: 131072
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: kimi-for-coding
+  name: Kimi K2.7 Code
+  description: Coding-focused Kimi model, stronger on long-horizon repo work with less
+    overthinking
+  context_window: 262144
+  output_limit: 32768
+  release_date: '2026-06-12'
+  family: kimi-k2
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: k3
+  name: Kimi K3
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 0.0
+    output: 0.0
+    cached_read: 0.0
+    cached_write: 0.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal

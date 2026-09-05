@@ -122,3 +122,57 @@ models:
   release_date: 2024-02
   tags:
   - open_weights
+- id: deepseek-v4-flash
+  name: DeepSeek V4 Flash 0731
+  description: Official DeepSeek V4 Flash release with enhanced agentic capabilities
+    and integrated DSpark speculative decoding
+  context_window: 1048576
+  output_limit: 384000
+  release_date: '2026-07-31'
+  family: deepseek-flash
+  pricing:
+    input: 0.3
+    output: 0.7
+    cached_read: 0.06
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: kimi-k3
+  name: Kimi K3
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 262144
+  output_limit: 131072
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 4.0
+    output: 20.0
+    cached_read: 0.8
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: glm-5-3-flash
+  name: GLM-5.3-Flash
+  description: Native multimodal GLM model for efficient coding and long-horizon agent
+    tasks
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-08-26'
+  family: glm
+  pricing:
+    input: 0.4
+    output: 1.25
+    cached_read: 0.1
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal

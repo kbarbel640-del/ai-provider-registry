@@ -127,3 +127,116 @@ models:
   tags:
   - open_weights
   - low_cost
+- id: gemma-3-27b-it
+  name: Gemma 3 27B
+  description: Open Gemma instruction model for efficient chat and self-hosted deployments
+  context_window: 37000
+  output_limit: 4096
+  release_date: '2025-05-17'
+  family: gemma
+  pricing:
+    input: 0.53
+    output: 0.76
+  tags:
+  - open_weights
+  - vision
+  - multimodal
+- id: Qwen3-VL-Embedding-8B
+  name: Qwen3-VL Embedding 8B
+  description: Embedding model for semantic search, retrieval, clustering, and ranking
+    pipelines
+  context_window: 32000
+  output_limit: 4096
+  release_date: '2026-02-05'
+  family: qwen
+  pricing:
+    input: 0.09
+    output: 0.09
+  tags:
+  - open_weights
+  - vision
+  - multimodal
+- id: Qwen3-VL-235B-A22B-Instruct-FP8
+  name: Qwen3-VL 235B
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 218000
+  output_limit: 16384
+  release_date: '2024-11-01'
+  family: qwen
+  pricing:
+    input: 1.76
+    output: 2.05
+  tags:
+  - tools
+  - open_weights
+  - vision
+  - multimodal
+- id: Qwen3.6-27B
+  name: Qwen3.6 27B
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 16384
+  release_date: '2026-04-22'
+  family: qwen
+  pricing:
+    input: 0.53
+    output: 0.76
+  tags:
+  - tools
+  - open_weights
+- id: e5-mistral-7b-instruct
+  name: E5 Mistral 7B
+  description: Embedding model for semantic search, retrieval, clustering, and ranking
+    pipelines
+  context_window: 4096
+  output_limit: 4096
+  release_date: '2023-12-11'
+  family: mistral
+  pricing:
+    input: 0.02
+    output: 0.02
+  tags:
+  - open_weights
+- id: gpt-oss-20b
+  name: GPT OSS 20B
+  description: Open GPT reasoning model for self-hosted agents and controllable deployments
+  context_window: 131072
+  output_limit: 8192
+  release_date: '2025-08-05'
+  family: gpt-oss
+  pricing:
+    input: 0.18
+    output: 0.29
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: gpt-oss-120b
+  name: GPT OSS 120B
+  description: Open GPT reasoning model for self-hosted agents and controllable deployments
+  context_window: 131000
+  output_limit: 8192
+  release_date: '2025-08-05'
+  family: gpt-oss
+  pricing:
+    input: 0.53
+    output: 0.76
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: Llama-3.3-70B-Instruct-FP8-Dynamic
+  name: Llama 3.3 70B
+  description: Open Llama instruction model for multilingual chat, reasoning, and coding
+  context_window: 128000
+  output_limit: 4096
+  release_date: '2024-12-05'
+  family: llama
+  pricing:
+    input: 0.53
+    output: 0.76
+  tags:
+  - tools
+  - open_weights

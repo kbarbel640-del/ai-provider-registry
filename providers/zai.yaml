@@ -237,3 +237,21 @@ models:
     modality: tool
     pricing: { per_use: 0.01 }
     tags: [builtin_tool]
+  - id: glm-5.3-flash
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 0.075
+      output: 0.25
+      cached_read: 0.015
+      cached_write: 0.0
+    tags: [reasoning, tools, json_mode, vision, multimodal]
+  - id: glm-5.3
+    family: glm
+    context_window: 1000000
+    pricing:
+      input: 1.4
+      output: 4.4
+      cached_read: 0.26
+      cached_write: 0.0
+    tags: [reasoning, tools, json_mode, open_weights]

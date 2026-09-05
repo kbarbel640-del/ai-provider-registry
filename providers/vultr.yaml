@@ -168,3 +168,159 @@ models:
   tags:
   - reasoning
   - open_weights
+- id: DeepSeek-V4-Flash
+  name: DeepSeek V4 Flash
+  description: Fast DeepSeek V4 lane for economical reasoning, coding, and long-context
+    work
+  context_window: 1000000
+  output_limit: 384000
+  release_date: '2026-04-24'
+  family: deepseek-flash
+  pricing:
+    input: 0.3
+    output: 1.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: DeepSeek-V3.2-NVFP4
+  name: DeepSeek V3.2
+  description: DeepSeek chat model for instruction following, coding, and analysis
+  context_window: 131072
+  output_limit: 131072
+  release_date: '2025-12-01'
+  family: deepseek
+  pricing:
+    input: 0.55
+    output: 1.65
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16
+  name: NVIDIA Nemotron 3 Nano Omni
+  description: Open Nemotron omni model combining reasoning with text, vision, and audio
+  context_window: 262144
+  output_limit: 131072
+  release_date: '2026-04-28'
+  family: nemotron
+  pricing:
+    input: 0.13
+    output: 0.38
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: Nemotron-Cascade-2-30B-A3B
+  name: NVIDIA Nemotron Cascade 2
+  description: Nemotron model for efficient reasoning, coding, and specialized AI agents
+  context_window: 262144
+  output_limit: 131072
+  release_date: '2025-12-01'
+  family: nemotron
+  pricing:
+    input: 0.15
+    output: 0.6
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: GLM-5.2-FP8
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 393216
+  output_limit: 131072
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 0.85
+    output: 3.1
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: Qwen3.5-397B-A17B
+  name: Qwen3.5 397B-A17B
+  description: Large open Qwen multimodal MoE for visual agents and long technical tasks
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-02-15'
+  family: qwen
+  pricing:
+    input: 0.3
+    output: 2.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - audio
+  - multimodal
+- id: Qwen3.6-27B
+  name: Qwen3.6 27B
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 65536
+  release_date: '2026-04-22'
+  family: qwen
+  pricing:
+    input: 0.3
+    output: 2.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - audio
+  - multimodal
+- id: MiniMax-M2.7
+  name: MiniMax-M2.7
+  description: Open MiniMax flagship for coding agents, office automation, and complex
+    environments
+  context_window: 204800
+  output_limit: 131072
+  release_date: '2026-03-18'
+  family: minimax
+  pricing:
+    input: 0.3
+    output: 1.2
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+- id: Kimi-K2.6
+  name: Kimi K2.6
+  description: Multimodal Kimi workhorse for agent loops, coding tasks, and visual context
+  context_window: 262144
+  output_limit: 131072
+  release_date: '2026-04-21'
+  family: kimi-k2
+  pricing:
+    input: 0.3
+    output: 1.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - multimodal
+- id: MiMo-V2.5-Pro
+  name: MiMo-V2.5-Pro
+  description: Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution
+  context_window: 1048576
+  output_limit: 131072
+  release_date: '2026-04-22'
+  family: mimo
+  pricing:
+    input: 0.55
+    output: 1.65
+  tags:
+  - reasoning
+  - tools
+  - open_weights

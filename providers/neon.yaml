@@ -237,3 +237,542 @@ models:
   tags:
   - vision
   - reasoning
+- id: gpt-5-6-terra
+  name: GPT-5.6 Terra
+  description: Balanced GPT-5.6 model for capable, cost-efficient everyday work
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-terra
+  pricing:
+    input: 2.0
+    output: 12.0
+    cached_read: 0.2
+    cached_write: 2.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-nano
+  name: GPT-5 Nano
+  description: Tiny GPT-5 lane for routing, extraction, classification, and bulk jobs
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2025-08-07'
+  family: gpt-nano
+  pricing:
+    input: 0.05
+    output: 0.4
+    cached_read: 0.005
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: qwen35-122b-a10b
+  name: Qwen3.5 122B-A10B
+  description: Qwen vision-language model for visual reasoning, documents, and agent
+    tasks
+  context_window: 262144
+  output_limit: 25000
+  release_date: '2026-02-23'
+  family: qwen
+  pricing:
+    input: 0.22
+    output: 2.2
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: qwen3-next-80b-a3b-instruct
+  name: Qwen3-Next 80B-A3B Instruct
+  description: Qwen instruction model for multilingual chat, reasoning, and tool use
+  context_window: 131072
+  output_limit: 10000
+  release_date: 2025-09
+  family: qwen
+  pricing:
+    input: 0.15
+    output: 1.2
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: gpt-5-4-nano
+  name: GPT-5.4 nano
+  description: Cheapest GPT-5.4 lane for simple routing, extraction, and bulk automation
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2026-03-17'
+  family: gpt-nano
+  pricing:
+    input: 0.2
+    output: 1.25
+    cached_read: 0.02
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-5
+  name: Claude Opus 5
+  description: Strongest Claude Opus model for coding, agents, and professional work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-07-24'
+  family: claude-opus
+  pricing:
+    input: 5.0
+    output: 25.0
+    cached_read: 0.5
+    cached_write: 6.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-6-sol
+  name: GPT-5.6 Sol
+  description: Frontier GPT-5.6 model for complex professional work, coding, and agentic
+    workflows
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-sol
+  pricing:
+    input: 5.0
+    output: 30.0
+    cached_read: 0.5
+    cached_write: 6.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: meta-llama-3-3-70b-instruct
+  name: Llama-3.3-70B-Instruct
+  description: Popular open Llama workhorse for multilingual chat, coding, and self-hosting
+  context_window: 128000
+  output_limit: 8192
+  release_date: '2024-12-06'
+  family: llama
+  pricing:
+    input: 0.5
+    output: 1.5
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: gpt-5-3-codex
+  name: GPT-5.3 Codex
+  description: Coding-optimized GPT model for repository edits, reviews, and agentic
+    software work
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2026-02-05'
+  family: gpt-codex
+  pricing:
+    input: 1.75
+    output: 14.0
+    cached_read: 0.175
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-6-luna
+  name: GPT-5.6 Luna
+  description: Cost-efficient GPT-5.6 model for fast, high-volume workloads
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-07-09'
+  family: gpt-luna
+  pricing:
+    input: 0.2
+    output: 1.2
+    cached_read: 0.02
+    cached_write: 0.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-4-5
+  name: Claude Opus 4.5 (latest)
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-11-24'
+  family: claude-opus
+  pricing:
+    input: 5.0
+    output: 25.0
+    cached_read: 0.5
+    cached_write: 6.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gemini-3-6-flash
+  name: Gemini 3.6 Flash
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-07-21'
+  family: gemini-flash
+  pricing:
+    input: 1.5
+    output: 7.5
+    cached_read: 0.15
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: gpt-oss-20b
+  name: GPT OSS 20B
+  description: Open-weight GPT model for self-hosted reasoning and instruction-following
+    workloads
+  context_window: 131072
+  output_limit: 25000
+  release_date: '2025-08-05'
+  family: gpt-oss
+  pricing:
+    input: 0.07
+    output: 0.3
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: gpt-5-2
+  name: GPT-5.2
+  description: Reliable GPT generation for broad coding, writing, and tool-assisted
+    product work
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2025-12-11'
+  family: gpt
+  pricing:
+    input: 1.75
+    output: 14.0
+    cached_read: 0.175
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gemini-3-5-flash-lite
+  name: Gemini 3.5 Flash Lite
+  description: Fast Gemini model balancing multimodal reasoning, tool use, and cost
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-07-21'
+  family: gemini-flash-lite
+  pricing:
+    input: 0.3
+    output: 2.5
+    cached_read: 0.03
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - audio
+  - multimodal
+- id: kimi-k3
+  name: Kimi K3
+  description: Multimodal Kimi model with 1M context and toggleable max-effort thinking
+    for long-horizon agent work
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-07-16'
+  family: kimi-k3
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: claude-fable-5
+  name: Claude Fable 5
+  description: Claude model for creative writing, analysis, and controlled agent workflows
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-09'
+  family: claude-fable
+  pricing:
+    input: 10.0
+    output: 50.0
+    cached_read: 1.0
+    cached_write: 12.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-5
+  name: GPT-5.5
+  description: Default frontier GPT for coding, computer use, research, and knowledge
+    work
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-04-23'
+  family: gpt
+  pricing:
+    input: 5.0
+    output: 30.0
+    cached_read: 0.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: meta-llama-3-1-8b-instruct
+  name: Llama 3.1 8B Instruct
+  description: Meta's compact open-weight Llama 3.1 model for fast, low-cost text generation
+  context_window: 131072
+  output_limit: 8192
+  release_date: '2024-07-23'
+  family: llama
+  pricing:
+    input: 0.15
+    output: 0.45
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+- id: gpt-5-4-mini
+  name: GPT-5.4 mini
+  description: Strong small GPT for coding subagents, quick tool use, and high-volume
+    work
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2026-03-17'
+  family: gpt-mini
+  pricing:
+    input: 0.75
+    output: 4.5
+    cached_read: 0.075
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: glm-5-2
+  name: GLM-5.2
+  description: Open flagship GLM for long-horizon coding agents and million-token context
+    work
+  context_window: 1000000
+  output_limit: 65536
+  release_date: '2026-06-13'
+  family: glm
+  pricing:
+    input: 1.4
+    output: 4.4
+    cached_read: 0.26
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: inkling
+  name: Inkling
+  description: Multimodal MoE reasoning model (975B total, 41B active) for text, image,
+    and audio
+  context_window: 1048576
+  output_limit: 65536
+  release_date: '2026-07-15'
+  family: ling
+  pricing:
+    input: 1.0
+    output: 4.05
+    cached_read: 0.17
+  tags:
+  - reasoning
+  - tools
+  - open_weights
+  - vision
+  - audio
+  - multimodal
+- id: claude-haiku-4-5
+  name: Claude Haiku 4.5 (latest)
+  description: Fast Claude lane for lightweight agents, office tasks, and responsive
+    chat
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-10-15'
+  family: claude-haiku
+  pricing:
+    input: 1.0
+    output: 5.0
+    cached_read: 0.1
+    cached_write: 1.25
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-sonnet-4-5
+  name: Claude Sonnet 4.5 (latest)
+  description: Balanced Claude model for coding, analysis, agent workflows, and cost
+    control
+  context_window: 200000
+  output_limit: 64000
+  release_date: '2025-09-29'
+  family: claude-sonnet
+  pricing:
+    input: 3.0
+    output: 15.0
+    cached_read: 0.3
+    cached_write: 3.75
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: claude-opus-4-1
+  name: Claude Opus 4.1 (latest)
+  description: Flagship Claude model for deep reasoning, coding, and long-horizon agents
+  context_window: 200000
+  output_limit: 32000
+  release_date: '2025-08-05'
+  family: claude-opus
+  pricing:
+    input: 15.0
+    output: 75.0
+    cached_read: 1.5
+    cached_write: 18.75
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-1
+  name: GPT-5.1
+  description: Sharper GPT-5 generation for coding, product work, and tool-assisted
+    tasks
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2025-11-13'
+  family: gpt
+  pricing:
+    input: 1.25
+    output: 10.0
+    cached_read: 0.125
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-5-pro
+  name: GPT-5.5 Pro
+  description: Highest-accuracy GPT-5.5 tier for slower, precision-heavy reasoning and
+    coding
+  context_window: 1050000
+  output_limit: 128000
+  release_date: '2026-04-23'
+  family: gpt-pro
+  pricing:
+    input: 30.0
+    output: 180.0
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-5-mini
+  name: GPT-5 Mini
+  description: Small GPT-5 for responsive agents, coding help, and everyday automation
+  context_window: 400000
+  output_limit: 128000
+  release_date: '2025-08-07'
+  family: gpt-mini
+  pricing:
+    input: 0.25
+    output: 2.0
+    cached_read: 0.025
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
+- id: gpt-oss-120b
+  name: GPT OSS 120B
+  description: Open GPT reasoning model for self-hosted agents and controllable deployments
+  context_window: 131072
+  output_limit: 25000
+  release_date: '2025-08-05'
+  family: gpt-oss
+  pricing:
+    input: 0.15
+    output: 0.6
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+- id: gemma-3-12b
+  name: Gemma 3 12B
+  description: Google's open-weight Gemma 3 vision-language model for text and image
+    understanding
+  context_window: 131072
+  output_limit: 8192
+  release_date: '2025-03-13'
+  family: gemma
+  pricing:
+    input: 0.15
+    output: 0.5
+  tags:
+  - tools
+  - json_mode
+  - open_weights
+  - vision
+  - multimodal
+- id: claude-sonnet-5
+  name: Claude Sonnet 5
+  description: Everyday Claude agent model for coding, planning, browsing, and general
+    work
+  context_window: 1000000
+  output_limit: 128000
+  release_date: '2026-06-30'
+  family: claude-sonnet
+  pricing:
+    input: 2.0
+    output: 10.0
+    cached_read: 0.2
+    cached_write: 2.5
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - vision
+  - multimodal
