@@ -38,8 +38,10 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent
 MIRROR = ROOT / "catalog" / "models-dev" / "api.json"
+MODELS_JSON = ROOT / "catalog" / "models-dev" / "models.json"
 META = ROOT / "catalog" / "models-dev" / "meta.json"
 URL = "https://models.dev/api.json"
+URL_MODELS = "https://models.dev/models.json"
 
 # models.dev-Schreibweisen, die im Repo anders heissen.
 PROVIDER_ALIASES = {
@@ -62,29 +64,36 @@ def norm(name: str) -> str:
 # fetch
 # ---------------------------------------------------------------------------
 def fetch() -> None:
+    import datetime
     import urllib.request
 
     MIRROR.parent.mkdir(parents=True, exist_ok=True)
-    req = urllib.request.Request(URL, headers={"User-Agent": "ai-provider-registry/1.0"})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        raw = r.read()
-    provs = json.loads(raw)
-    if not isinstance(provs, dict):
-        sys.exit("Achtung: api.json hat unerwartete Struktur, Abbruch.")
+    parts: list[tuple[Path, str]] = [(MIRROR, URL), (MODELS_JSON, URL_MODELS)]
+    blob: dict[str, bytes] = {}
+    for target, url in parts:
+        req = urllib.request.Request(url, headers={"User-Agent": "ai-provider-registry/1.0"})
+        with urllib.request.urlopen(req, timeout=120) as r:
+            blob[target.name] = r.read()
+        raw = blob[target.name]
+        if target == MIRROR and json.loads(raw) and not isinstance(json.loads(raw), dict):
+            sys.exit("Achtung: api.json hat unerwartete Struktur, Abbruch.")
+        target.write_bytes(raw)
 
-    MIRROR.write_bytes(raw)
+    provs = json.loads(blob["api.json"])
     meta = {
-        "fetched_at": __import__("datetime").datetime.now(tz=__import__("datetime").timezone.utc).isoformat(),
+        "fetched_at": datetime.datetime.now(tz=datetime.timezone.utc).isoformat(),
         "source": URL,
-        "bytes": len(raw),
-        "sha256": hashlib.sha256(raw).hexdigest(),
+        "api_bytes": len(blob["api.json"]),
+        "api_sha256": hashlib.sha256(blob["api.json"]).hexdigest(),
+        "models_json_bytes": len(blob["models.json"]),
         "providers": len(provs),
         "models": sum(len(p.get("models", {})) for p in provs.values()),
         "providers_with_api": sum(1 for p in provs.values() if p.get("api")),
     }
     META.write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
     print(f"Mirror aktualisiert: {meta['providers']} Provider, "
-          f"{meta['models']} Modelle ({len(raw)//1024} KiB).")
+          f"{meta['models']} Modelle (api.json {meta['api_bytes']//1024} KiB, "
+          f"models.json {meta['models_json_bytes']//1024} KiB).")
 
 
 # ---------------------------------------------------------------------------
@@ -186,6 +195,8 @@ def tag_from_model(m: dict) -> list[str]:
         tags.append("audio")
     if m.get("attachment"):
         tags.append("multimodal")
+    if m.get("status") == "beta":
+        tags.append("beta")
     return tags
 
 
@@ -216,6 +227,10 @@ def model_entry(m: dict, style: str) -> dict:
             pricing[dst] = float(cost[src])
     if pricing:
         e["pricing"] = pricing
+    if m.get("status") == "deprecated":
+        e["deprecated"] = True
+    if m.get("status") == "beta":
+        e["beta"] = True
     tags = tag_from_model(m)
     if tags:
         e["tags"] = tags
