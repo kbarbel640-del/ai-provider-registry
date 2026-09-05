@@ -13,12 +13,28 @@ capabilities:
 variants:
   - name: kimi-k2.5
     provider: kimi
+    context_window: 262144
+    output_limit: 262144
+    release_date: 2026-01
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
   - name: kimi-k2.6
     provider: kimi
+    context_window: 262144
+    output_limit: 262144
+    release_date: 2026-04-21
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
   - name: kimi-k2.7-code
     provider: kimi
+    context_window: 262144
+    output_limit: 262144
+    release_date: 2026-06-12
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
   - name: kimi-k2.7-code-highspeed
     provider: kimi
+    context_window: 262144
+    output_limit: 262144
+    release_date: 2026-06-12
+    tags: [reasoning, tools, json_mode, open_weights, vision, multimodal]
   - name: moonshot-v1-8k
     provider: kimi
   - name: moonshot-v1-32k

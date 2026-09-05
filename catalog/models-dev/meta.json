@@ -1,8 +1,9 @@
 {
-  "fetched_at": "2026-09-05T00:03:27.203358+00:00",
+  "fetched_at": "2026-09-05T00:21:43.370085+00:00",
   "source": "https://models.dev/api.json",
-  "bytes": 4483697,
-  "sha256": "fa5132d4ad09cc6edda9731a9d2adcdd0a7d15365f50e7fb60032cea50699d66",
+  "api_bytes": 4483697,
+  "api_sha256": "fa5132d4ad09cc6edda9731a9d2adcdd0a7d15365f50e7fb60032cea50699d66",
+  "models_json_bytes": 296948,
   "providers": 213,
   "models": 7551,
   "providers_with_api": 187

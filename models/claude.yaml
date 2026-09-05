@@ -16,6 +16,10 @@ variants:
     provider: anthropic
   - name: claude-sonnet-5
     provider: opencode
+    context_window: 1000000
+    output_limit: 128000
+    release_date: 2026-06-30
+    tags: [reasoning, tools, vision, multimodal]
   - name: claude-haiku-4.5
     provider: opencode
   - name: claude-sonnet-4.5
@@ -32,3 +36,7 @@ variants:
     provider: opencode
   - name: claude-fable-5
     provider: opencode
+    context_window: 1000000
+    output_limit: 128000
+    release_date: 2026-06-09
+    tags: [reasoning, tools, vision, multimodal]

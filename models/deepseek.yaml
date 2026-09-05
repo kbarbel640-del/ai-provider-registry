@@ -10,9 +10,25 @@ capabilities:
 variants:
   - name: deepseek-chat
     provider: deepseek
+    context_window: 1000000
+    output_limit: 384000
+    release_date: 2025-12-01
+    tags: [tools, open_weights, multimodal]
   - name: deepseek-reasoner
     provider: deepseek
+    context_window: 1000000
+    output_limit: 384000
+    release_date: 2025-12-01
+    tags: [reasoning, tools, open_weights, multimodal]
   - name: deepseek-v4-pro
     provider: opencode
+    context_window: 1000000
+    output_limit: 384000
+    release_date: 2026-04-24
+    tags: [reasoning, tools, json_mode, open_weights]
   - name: deepseek-v4-flash
     provider: opencode
+    context_window: 1000000
+    output_limit: 384000
+    release_date: 2026-04-24
+    tags: [reasoning, tools, json_mode, open_weights]

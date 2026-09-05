@@ -11,6 +11,10 @@ capabilities:
 variants:
   - name: mistral-large-2411
     provider: mistral
+    context_window: 131072
+    output_limit: 16384
+    release_date: 2024-11-18
+    tags: [tools, open_weights]
   - name: mistral-small-2503
     provider: mistral
   - name: codestral-2505

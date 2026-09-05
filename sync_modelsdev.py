@@ -544,6 +544,103 @@ def generate(write: bool) -> None:
           "laufen lassen.")
 
 
+# ---------------------------------------------------------------------------
+# families (models/<family>.yaml aus models.json anreichern)
+# ---------------------------------------------------------------------------
+def load_models_index() -> dict[str, dict]:
+    """models.json nach name und id-Slug indexieren (klein geschrieben)."""
+    mj = json.loads(MODELS_JSON.read_text("utf-8"))
+    idx: dict[str, dict] = {}
+    for k, e in mj.items():
+        for key in (e.get("name"), k.split("/", 1)[1]):
+            if key:
+                idx.setdefault(str(key).lower(), e)
+    return idx
+
+
+def variant_entry(v: dict, src: dict) -> dict:
+    """Varianten-Eintrag fuer models/<family>.yaml: name/provider bleiben
+    (name = Repo-Modell-ID), ergaenzt um Fakten aus models.json."""
+    e: dict = {"name": v["name"], "provider": v["provider"]}
+    lim = (src or {}).get("limit") or {}
+    if lim.get("context"):
+        e["context_window"] = int(lim["context"])
+    if lim.get("output"):
+        e["output_limit"] = int(lim["output"])
+    if src and src.get("release_date"):
+        e["release_date"] = src["release_date"]
+    if src:
+        tags = tag_from_model(src)
+        if tags:
+            e["tags"] = tags
+    return e
+
+
+def render_family(data: dict, head: str) -> str:
+    """models/<family>.yaml im Repo-Stil: name/provider/context_window,
+    capabilities als 2er-Indent-Blockliste, Varianten 2er-Indent mit Tags
+    als Flow-Liste. Fuehrende Kommentare (head) bleiben erhalten."""
+    L = []
+    if head.strip():
+        L.append(head.rstrip("\n"))
+    L.append(f"name: {data['name']}")
+    L.append(f"provider: {data['provider']}")
+    L.append(f"context_window: {data['context_window']}")
+    L.append("capabilities:")
+    L += [f"  - {c}" for c in (data.get("capabilities") or [])]
+    L.append("variants:")
+    for v in data.get("variants", []):
+        if not isinstance(v, dict):
+            L.append(f"  - {v}")
+            continue
+        tags = v.pop("tags", None)
+        body = yaml.safe_dump(v, sort_keys=False, allow_unicode=True).splitlines()
+        out = ["  - " + body[0]] + ["    " + line for line in body[1:]]
+        if tags:
+            out.append("    tags: [" + ", ".join(tags) + "]")
+        L += out
+    text = "\n".join(L) + "\n"
+    return re.sub(r"(release_date: )'([0-9-]+)'", r"\1\2", text)
+
+
+def families(write: bool) -> None:
+    idx = load_models_index()
+    total = done = 0
+    for p in sorted((ROOT / "models").glob("*.yaml")):
+        text = p.read_text("utf-8")
+        data = yaml.safe_load(text) or {}
+        m = re.search(r"^name:", text, re.MULTILINE)
+        head = text[:m.start()] if m else ""
+        variants: list = []
+        for v in data.get("variants", []):
+            if not isinstance(v, dict):
+                variants.append(v)
+                continue
+            total += 1
+            src = idx.get(str(v["name"]).lower())
+            if src:
+                done += 1
+                variants.append(variant_entry(v, src))
+            else:
+                variants.append(dict(v))
+        data["variants"] = variants
+        if write:
+            p.write_text(render_family(data, head), encoding="utf-8")
+    if write:
+        print(f"== models/*.yaml angereichert: {done}/{total} Varianten "
+              f"mit Fakten aus models.json ==")
+    else:
+        print(f"== {done}/{total} Varianten koennten angereichert werden "
+              f"(dry-run) ==\n")
+        for p in sorted((ROOT / "models").glob("*.yaml")):
+            d = yaml.safe_load(p.read_text("utf-8"))
+            n = sum(1 for v in d.get("variants", [])
+                    if isinstance(v, dict) and v["name"].lower() in idx)
+            print(f"  {p.stem:<12} {n}/{len(d.get('variants', []))} matched")
+    print("Tipp: nach '--write' unbedingt  python3 validate_registry.py -v "
+          "laufen lassen.")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="models.dev-Abgleich fuer das Registry")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -562,6 +659,11 @@ def main() -> int:
     g.add_argument("--write", action="store_true",
                    help="wirklich schreiben (4 Dateien je Provider)")
 
+    f = sub.add_parser("families", help="models/<family>.yaml mit Fakten aus "
+                                        "models.json anreichern")
+    f.add_argument("--write", action="store_true",
+                   help="wirklich in models/*.yaml schreiben")
+
     args = ap.parse_args()
     if args.cmd == "fetch":
         fetch()
@@ -571,6 +673,8 @@ def main() -> int:
         enrich(args.provider or "ALL", args.write, args.limit)
     elif args.cmd == "generate":
         generate(args.write)
+    elif args.cmd == "families":
+        families(args.write)
     return 0
 
 

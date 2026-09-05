@@ -12,33 +12,97 @@ capabilities:
 variants:
   - name: gpt-4o
     provider: openai
+    context_window: 128000
+    output_limit: 16384
+    release_date: 2024-05-13
+    tags: [tools, json_mode, vision, multimodal]
   - name: gpt-4o-mini
     provider: openai
+    context_window: 128000
+    output_limit: 16384
+    release_date: 2024-07-18
+    tags: [tools, json_mode, vision, multimodal]
   - name: o3
     provider: openai
+    context_window: 200000
+    output_limit: 100000
+    release_date: 2025-04-16
+    tags: [reasoning, tools, json_mode, vision, multimodal]
   - name: o4-mini
     provider: openai
+    context_window: 200000
+    output_limit: 100000
+    release_date: 2025-04-16
+    tags: [reasoning, tools, json_mode, vision, multimodal]
   - name: gpt-4.1
     provider: openai
+    context_window: 1047576
+    output_limit: 32768
+    release_date: 2025-04-14
+    tags: [tools, json_mode, vision, multimodal]
   - name: gpt-4.1-mini
     provider: openai
+    context_window: 1047576
+    output_limit: 32768
+    release_date: 2025-04-14
+    tags: [tools, json_mode, vision, multimodal]
   - name: gpt-5
     provider: opencode
+    context_window: 400000
+    output_limit: 128000
+    release_date: 2025-08-07
+    tags: [reasoning, tools, json_mode, vision, multimodal]
   - name: gpt-5.1
     provider: opencode
+    context_window: 400000
+    output_limit: 128000
+    release_date: 2025-11-13
+    tags: [reasoning, tools, json_mode, vision, multimodal]
   - name: gpt-5.2
     provider: opencode
+    context_window: 400000
+    output_limit: 128000
+    release_date: 2025-12-11
+    tags: [reasoning, tools, json_mode, vision, multimodal]
   - name: gpt-5.4
     provider: opencode
+    context_window: 1050000
+    output_limit: 128000
+    release_date: 2026-03-05
+    tags: [reasoning, tools, json_mode, vision, multimodal]
   - name: gpt-5.4-mini
     provider: opencode
+    context_window: 400000
+    output_limit: 128000
+    release_date: 2026-03-17
+    tags: [reasoning, tools, json_mode, vision, multimodal]
   - name: gpt-5.4-nano
     provider: opencode
+    context_window: 400000
+    output_limit: 128000
+    release_date: 2026-03-17
+    tags: [reasoning, tools, json_mode, vision, multimodal]
   - name: gpt-5.4-pro
     provider: opencode
+    context_window: 1050000
+    output_limit: 128000
+    release_date: 2026-03-05
+    tags: [reasoning, tools, vision, multimodal]
   - name: gpt-5.5
     provider: opencode
+    context_window: 1050000
+    output_limit: 128000
+    release_date: 2026-04-23
+    tags: [reasoning, tools, json_mode, vision, multimodal]
   - name: gpt-5.5-pro
     provider: opencode
+    context_window: 1050000
+    output_limit: 128000
+    release_date: 2026-04-23
+    tags: [reasoning, tools, json_mode, vision, multimodal]
   - name: gpt-5-nano
     provider: opencode
+    context_window: 400000
+    output_limit: 128000
+    release_date: 2025-08-07
+    tags: [reasoning, tools, json_mode, vision, multimodal]
