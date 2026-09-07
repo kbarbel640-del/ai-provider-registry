@@ -59,6 +59,9 @@ providers/venice.yaml
 providers/crossmodel.yaml
 providers/lmstudio.yaml
 providers/poolside.yaml
+providers/dots-studio.yaml
+providers/inclusionai.yaml
+providers/liquid.yaml
 providers/zenifra.yaml
 providers/zenmux.yaml
 providers/kenari.yaml

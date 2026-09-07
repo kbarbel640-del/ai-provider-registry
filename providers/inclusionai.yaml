@@ -1,0 +1,50 @@
+name: inclusionAI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://openrouter.ai/inclusionai/ling-3.0-flash-sante:free
+  env_var: INCLUSIONAI_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: false
+  doc_url: https://openrouter.ai/inclusionai
+  free_basis: $0 OpenRouter free routes (ling-3.0-flash-sante:free, ling-3.0-flash-fin:free)
+supports:
+- chat
+- tools
+- reasoning
+- streaming
+notes:
+  free_access: via OpenRouter aggregators; related Ant Ling hosted API exists at https://api.ant-ling.com/v1 (different model id scheme, not listed for these free variants in models.dev)
+  source: openrouter + models.dev openrouter/models catalog
+  model_catalog_size: 2
+  listed_models: 2
+models:
+- id: inclusionai/ling-3.0-flash-sante
+  name: Ling 3.0 Flash Sante
+  description: Efficient model for low-latency assistance, extraction, and routine automation
+  context_window: 262144
+  output_limit: 32768
+  pricing:
+    free: true
+  release_date: '2026-09-04'
+  family: ling
+  tags:
+  - reasoning
+  - tools
+  - free
+- id: inclusionai/ling-3.0-flash-fin
+  name: Ling 3.0 Flash Fin
+  description: Finance-enhanced model for financial research, multi-step investment workflows, and long-horizon planning and execution
+  context_window: 262144
+  output_limit: 32768
+  pricing:
+    free: true
+  release_date: '2026-08-27'
+  family: ling
+  tags:
+  - reasoning
+  - tools
+  - free

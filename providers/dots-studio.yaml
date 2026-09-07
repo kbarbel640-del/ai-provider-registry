@@ -1,0 +1,42 @@
+name: Dots Studio
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://openrouter.ai/dots-studio/dots-3-note-preview:free
+  env_var: DOTS_STUDIO_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: false
+  doc_url: https://openrouter.ai/dots-studio/dots-3-note-preview:free
+  free_basis: $0 OpenRouter free route (dots-studio/dots-3-note-preview:free)
+supports:
+- chat
+- vision
+- tools
+- json_mode
+- reasoning
+- streaming
+notes:
+  free_access: via OpenRouter aggregators (https://openrouter.ai/dots-studio/dots-3-note-preview:free); no openai-compatible endpoint listed in models.dev for a native dots-studio provider
+  source: openrouter + models.dev openrouter catalog
+  model_catalog_size: 1
+  listed_models: 1
+models:
+- id: dots-studio/dots-3-note-preview
+  name: Dots3-Note Preview
+  description: Multimodal reasoning model for visual analysis, planning, and tool use
+  context_window: 512000
+  output_limit: 460800
+  pricing:
+    free: true
+  structured_output: true
+  release_date: '2026-08-14'
+  tags:
+  - vision
+  - multimodal
+  - reasoning
+  - tools
+  - json_mode
+  - free
