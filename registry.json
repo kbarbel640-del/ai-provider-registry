@@ -857,6 +857,48 @@
       "model_count": 3
     },
     {
+      "id": "dots-studio",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "vision",
+        "tools",
+        "json_mode",
+        "reasoning",
+        "streaming"
+      ],
+      "model_count": 1,
+      "note": "Free access via OpenRouter aggregators; no official hosted openai-compatible endpoint in models.dev"
+    },
+    {
+      "id": "inclusionai",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "reasoning",
+        "streaming"
+      ],
+      "model_count": 2,
+      "note": "Free access via OpenRouter aggregators; related Ant Ling API at https://api.ant-ling.com/v1 uses different model ids"
+    },
+    {
+      "id": "liquid",
+      "free": true,
+      "api_style": "openai",
+      "supports": [
+        "chat",
+        "tools",
+        "json_mode",
+        "reasoning",
+        "streaming"
+      ],
+      "model_count": 1,
+      "note": "Free access via OpenRouter aggregators (10 req/min on :free); no official hosted openai-compatible endpoint in models.dev"
+    },
+    {
       "id": "zenifra",
       "free": false,
       "api_style": "openai",

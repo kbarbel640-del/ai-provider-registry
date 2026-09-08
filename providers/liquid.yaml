@@ -1,0 +1,42 @@
+name: LiquidAI
+api_style: openai
+auth:
+  type: bearer
+  doc_url: https://openrouter.ai/liquid/lfm-2.5-2.6b:free
+  env_var: LIQUID_API_KEY
+  header: Authorization
+  prefix: 'Bearer '
+pricing:
+  free: true
+  pay_as_you_go: false
+  doc_url: https://openrouter.ai/liquid/lfm-2.5-2.6b:free
+  free_basis: $0 OpenRouter free route (liquid/lfm-2.5-2.6b:free), 10 req/min
+supports:
+- chat
+- tools
+- json_mode
+- reasoning
+- streaming
+notes:
+  free_access: via OpenRouter aggregators (https://openrouter.ai/liquid/lfm-2.5-2.6b:free); no official hosted openai-compatible endpoint in models.dev (self-host via vLLM / docs.liquid.ai)
+  source: openrouter + models.dev openrouter catalog
+  model_catalog_size: 1
+  listed_models: 1
+models:
+- id: liquid/lfm-2.5-2.6b
+  name: LFM2.5-2.6B
+  description: Free provider route for experiments, demos, and cost-sensitive chat workloads
+  context_window: 65536
+  output_limit: 8192
+  pricing:
+    free: true
+  open_weights: true
+  structured_output: true
+  release_date: '2026-08-11'
+  family: liquid
+  tags:
+  - reasoning
+  - tools
+  - json_mode
+  - open_weights
+  - free
